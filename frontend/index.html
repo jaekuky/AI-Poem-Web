@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>AI & Poem</title>
+    <!-- 반응형 웹을 위한 viewport 메타 태그 추가 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <h1>AI & Poem</h1>
+            <h3>Your Topics, Our AI Poems</h3>
+        </div>
+        <div class="header-right">
+            <label for="language">Select Language</label>
+            <select id="language">
+                <option value="de">Deutsch</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="it">Italiano</option>
+                <option value="ja">日本語</option>
+                <option value="ko" selected>한국어</option>
+                <option value="ru">русский</option>
+                <option value="zh">中文</option>
+            </select>
+        </div>
+    </div>
+    <div class="container">
+        <div id="image-box">
+            <img src="/frontend/image/robot_poet.png" alt=""/>
+        </div>
+        <form id="poem-form">
+            <input type="text" id="topic" placeholder="시의 주제를 입력하세요" required>
+            <button id="poetry-writing-button" type="submit">시 작성</button>
+        </form>
+        <div id="poem"></div>
+        <div class="buttons">
+            <button id="tts-button" disabled>🔊 시 낭송</button>
+            <button id="share-button" disabled>📤 공유하기</button>
+        </div>
+    </div>
+    <!-- LangChain.js 라이브러리 추가 -->
+    <script src="https://unpkg.com/langchain@latest/dist/langchain.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
