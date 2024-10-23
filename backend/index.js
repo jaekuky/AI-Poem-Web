@@ -30,7 +30,7 @@ app.post('/generate-poem', async (req, res) => {
         'de': { prompt: 'auf Deutsch', ttsLang: 'de-DE' },
     };
 
-    const langPrompt = languageMap[language]?.prompt || 'in English';
+    const langPrompt = languageMap[language]?.prompt || '한국어로';
 
     try {
         const response = await axios.post('https://api.openai.com/v1/chat/completions', {

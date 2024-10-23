@@ -40,7 +40,7 @@ body {
     justify-content: right;
     align-items: center;
 }
-.header-right label{
+.header-right #language-label{
     margin-left: 20px;
     margin-right: 10px;
 }
@@ -58,7 +58,6 @@ body {
     text-align: center;
     padding: 20px;
 }
-
 
 #poem-form {
     display: flex;
@@ -114,12 +113,19 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-    h1 {
-        font-size: 18px;
+    .header-left h1 {
+        font-size: 1.2rem;
+    }
+    .header-left h3 {
+        font-size: 0.5rem;
     }
 
-    #topic, #language, button[type="submit"] {
+    #topic, #language, #language-label, button[type="submit"] {
         font-size: 14px;
+    }
+
+    .header-right #language{
+        width: 100px;
     }
 
     .buttons button {

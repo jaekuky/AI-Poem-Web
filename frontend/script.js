@@ -16,7 +16,6 @@ document.getElementById('language').addEventListener('change', async function(ev
     const topicInput = document.getElementById('topic');
     const poetryWritingButton = document.getElementById('poetry-writing-button');
     const ttsButton = document.getElementById('tts-button');
-    const shareButton = document.getElementById('share-button');
 
     const language = document.getElementById('language').value;
     switch(language){
@@ -24,55 +23,46 @@ document.getElementById('language').addEventListener('change', async function(ev
             topicInput.placeholder = '시의 주제를 입력하세요';
             poetryWritingButton.innerText = '시 작성';
             ttsButton.innerText = '🔊 시 낭송';
-            shareButton.innerText = '📤 공유하기';
             break;
         case 'en':
             topicInput.placeholder = 'Enter the topic of your poem';
             poetryWritingButton.innerText = 'Write a poem';
             ttsButton.innerText = '🔊 Recite a poem';
-            shareButton.innerText = '📤 Share a poem';
             break;
         case 'ja':
             topicInput.placeholder = '市のテーマを入力してください';
             poetryWritingButton.innerText = '詩の作成';
             ttsButton.innerText = '🔊 詩の朗読';
-            shareButton.innerText = '📤 市を共有する';
             break;
         case 'zh':
             topicInput.placeholder = '请输入你的诗的主题';
             poetryWritingButton.innerText = '诗歌写作';
             ttsButton.innerText = '🔊 朗诵诗歌';
-            shareButton.innerText = '📤 分享你的诗';
             break;
         case 'es':
             topicInput.placeholder = 'Por favor ingresa el tema de tu poema';
             poetryWritingButton.innerText = 'Escritura de poesía';
             ttsButton.innerText = '🔊 Recitar poesía';
-            shareButton.innerText = '📤 Comparte tu poesía';
             break;
         case 'fr':
             topicInput.placeholder = 'Veuillez indiquer le sujet de votre poème';
             poetryWritingButton.innerText = 'Écriture de poésie';
             ttsButton.innerText = '🔊 Réciter de la poésie';
-            shareButton.innerText = '📤 Partagez votre poésie';
             break;
         case 'ru':
             topicInput.placeholder = 'Пожалуйста, укажите тему вашего стихотворения';
             poetryWritingButton.innerText = 'Написание стихов';
             ttsButton.innerText = '🔊 Чтение стихов';
-            shareButton.innerText = '📤 Поделитесь своими стихами';
             break;
         case 'it':
             topicInput.placeholder = 'Inserisci l\'argomento della tua poesia';
             poetryWritingButton.innerText = 'Scrittura di poesie';
             ttsButton.innerText = '🔊 Recitare poesie';
-            shareButton.innerText = '📤 Condividi la tua poesia';
             break;
         case 'de':
             topicInput.placeholder = 'Bitte geben Sie das Thema Ihres Gedichts ein';
             poetryWritingButton.innerText = 'Gedichte schreiben';
             ttsButton.innerText = '🔊 Gedichte rezitieren';
-            shareButton.innerText = '📤 Teilen Sie Ihre Gedichte';
             break;
         default:
             break;
