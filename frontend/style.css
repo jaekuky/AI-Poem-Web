@@ -56,10 +56,20 @@ body {
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 20px;
 }
 
+#image-box img{
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+}
+
 #poem-form {
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
 }
@@ -91,23 +101,70 @@ body {
 }
 
 .buttons {
-    margin-top: 20px;
+    margin-top: 5px;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
-.buttons button {
+.buttons #tts-button{
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    margin: 5px;
-    flex: 1 1 150px;
+    margin-right: 10px;
     max-width: 200px;
 }
+#tts-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
 
-#tts-button:disabled,
-#share-button:disabled {
+.buttons #facebook-button{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 5px;
+    background-image: url('./image/icon-facebook.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: transparent;
+    
+}
+#facebook-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.buttons #kakao-button{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 5px;
+    background-image: url('./image/icon-kakao.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    color: transparent;
+}
+#kakao-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.buttons #x-button{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 5px;
+    background-image: url('./image/icon-x.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    color: transparent;
+}
+#x-button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }

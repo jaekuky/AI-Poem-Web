@@ -115,9 +115,8 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
             
             console.log("Poem: " + poem);
 
-            // TTS 및 공유 버튼 활성화
+            // TTS 버튼 활성화
             ttsButton.disabled = false;
-            shareButton.disabled = false;
 
             // 선택한 언어의 TTS 설정
             const ttsLang = languageMap[language]?.ttsLang || 'ko-KR';
@@ -128,19 +127,6 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
                 utterance.lang = ttsLang;
                 window.speechSynthesis.speak(utterance);
             };
-
-            // 공유 버튼 클릭 이벤트 추가
-            shareButton.onclick = () => {
-                if (navigator.share) {
-                    navigator.share({
-                        title: topic,
-                        text: poem,
-                        url: window.location.href
-                    }).catch((error) => console.log('공유 실패:', error));
-                } else {
-                    alert('이 브라우저에서는 공유 기능을 지원하지 않습니다.');
-                }
-            };
         } else {
             const errorData = await response.json();
             poemDiv.textContent = `오류 발생: ${errorData.error}`;
@@ -148,4 +134,14 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
     } catch (error) {
         poemDiv.textContent = `오류 발생: ${error.message}`;
     }
+});
+
+// Facebook 공유 버튼 함수 
+document.getElementById('facebook-button').addEventListener('click', async function(event) {
+});
+// Kakao 공유 버튼 함수 
+document.getElementById('kakao-button').addEventListener('click', async function(event) {
+});
+// X 공유 버튼 함수 
+document.getElementById('x-button').addEventListener('click', async function(event) {
 });
