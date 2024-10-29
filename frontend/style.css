@@ -62,10 +62,9 @@ body {
     padding: 20px;
 }
 
-#image-box img{
+#image-box #video{
     width: 70%;
     height: 70%;
-    object-fit: cover;
 }
 
 #poem-form {
@@ -175,6 +174,12 @@ body {
     }
     .header-left h3 {
         font-size: 0.5rem;
+    }
+    
+    
+    #image-box #video{
+        width: 50%;
+        height: 50%;
     }
 
     #topic, #language, #language-label, button[type="submit"] {

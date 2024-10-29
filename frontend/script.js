@@ -1,3 +1,4 @@
+
 // 언어 코드와 이름 매핑
 const languageMap = {
     'ko': { name: '한국어', ttsLang: 'ko-KR' },
@@ -11,13 +12,33 @@ const languageMap = {
     'de': { name: 'Deutsch', ttsLang: 'de-DE' },
 };
 
+// 시 작성 중 메시지 설정
+const processingMessage = {
+    'ko': '시를 작성하는 중입니다. 잠시만 기다려 주세요.',
+    'en': 'I am writing a poem. Please wait a moment.',
+    'ja': '詩を書いています。しばらくお待ちください。',
+    'zh': '我正在写一首诗。请稍等。',
+    'es': 'Estoy escribiendo un poema. Por favor espera un momento.',
+    'fr': 'J\'écris un poème. S\'il vous plaît, attendez un moment.',
+    'ru': 'Я пишу стихотворение. Пожалуйста, подождите немного.',
+    'it': 'Sto scrivendo una poesia. Per favore aspetta un attimo.',
+    'de': 'Ich schreibe ein Gedicht. Bitte warten Sie einen Moment.',
+};
+
+const languageSelect = document.getElementById('language');
+const processingVideo = document.getElementById('processing-video');
+const topicInput = document.getElementById('topic');
+const poemDiv = document.getElementById('poem');
+const poetryWritingButton = document.getElementById('poetry-writing-button');
+const ttsButton = document.getElementById('tts-button');
+const facebookButton = document.getElementById('facebook-button');
+const kakaoButton = document.getElementById('kakao-button');
+const xButton = document.getElementById('x-button');
+
 document.getElementById('language').addEventListener('change', async function(event) {
     event.preventDefault();
-    const topicInput = document.getElementById('topic');
-    const poetryWritingButton = document.getElementById('poetry-writing-button');
-    const ttsButton = document.getElementById('tts-button');
 
-    const language = document.getElementById('language').value;
+    const language = languageSelect.value;
     switch(language){
         case 'ko':
             topicInput.placeholder = '시의 주제를 입력하세요';
@@ -72,29 +93,23 @@ document.getElementById('language').addEventListener('change', async function(ev
 document.getElementById('poem-form').addEventListener('submit', async function(event) {
     event.preventDefault();
 
-    const topic = document.getElementById('topic').value.trim();
-    const language = document.getElementById('language').value;
-    const poemDiv = document.getElementById('poem');
-    const ttsButton = document.getElementById('tts-button');
-    const shareButton = document.getElementById('share-button');
-    
-    // 시 작성 중 메시지 설정
-    const processingMessage = {
-        'ko': '시를 작성하는 중입니다. 잠시만 기다려 주세요.',
-        'en': 'I am writing a poem. Please wait a moment.',
-        'ja': '詩を書いています。しばらくお待ちください。',
-        'zh': '我正在写一首诗。请稍等。',
-        'es': 'Estoy escribiendo un poema. Por favor espera un momento.',
-        'fr': 'J\'écris un poème. S\'il vous plaît, attendez un moment.',
-        'ru': 'Я пишу стихотворение. Пожалуйста, подождите немного.',
-        'it': 'Sto scrivendo una poesia. Per favore aspetta un attimo.',
-        'de': 'Ich schreibe ein Gedicht. Bitte warten Sie einen Moment.',
-    };
+    const topic = topicInput.value.trim();
+    const language = languageSelect.value;
 
     poemDiv.textContent = processingMessage[language] || processingMessage['ko'];
-    
+
+    // 비디오 재생
+    processingVideo.play();
+    // TTS 버튼 비활성화
     ttsButton.disabled = true;
-    shareButton.disabled = true;
+    // Facebook 버튼 비활성화
+    facebookButton.disabled = true;
+    // Kakao 버튼 비활성화
+    kakaoButton.disabled = true;
+    // X 버튼 비활성화
+    ttsButton.disabled = true;
+    
+
 
     try {
         const response = await fetch('http://localhost:3000/generate-poem', {
@@ -113,10 +128,14 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
             const poem = data.poem;
             poemDiv.textContent = poem;
             
-            console.log("Poem: " + poem);
-
             // TTS 버튼 활성화
             ttsButton.disabled = false;
+            // Facebook 버튼 활성화
+            facebookButton.disabled = false;
+            // Kakao 버튼 활성화
+            kakaoButton.disabled = false;
+            // X 버튼 활성화
+            xButton.disabled = false;
 
             // 선택한 언어의 TTS 설정
             const ttsLang = languageMap[language]?.ttsLang || 'ko-KR';
@@ -131,6 +150,10 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
             const errorData = await response.json();
             poemDiv.textContent = `오류 발생: ${errorData.error}`;
         }
+
+        // 비디오 정지
+        processingVideo.pause();
+
     } catch (error) {
         poemDiv.textContent = `오류 발생: ${error.message}`;
     }
