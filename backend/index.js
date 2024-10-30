@@ -1,3 +1,4 @@
+const serverless =require('serverless-http'); // serverless-http 설정
 const express = require('express');
 const cors = require('cors'); // CORS 허용을 위해 필요
 const bodyParser = require('body-parser');
@@ -5,10 +6,16 @@ const axios = require('axios'); // HTTP 요청을 위해 axios 사용
 require('dotenv').config(); // 환경 변수 사용을 위해 dotenv 사용
 
 const app = express();
-const port = 3000;
+// const port = 3000;
 
+// CORS 설정
+let corsOptions = {
+    origin: 'https://ai-and-poem-jaekuky.pages.dev/',
+    credentials: true 
+};
 // 미들웨어 설정
-app.use(cors());
+// app.use(cors());
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // OpenAI API 키 설정 (환경 변수에서 가져옴)
@@ -58,6 +65,8 @@ app.post('/generate-poem', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`서버가 포트 ${port}에서 실행 중입니다.`);
-});
+// app.listen(port, () => {
+//     console.log(`서버가 포트 ${port}에서 실행 중입니다.`);
+// });
+module.exports.handler = serverless(app); // app을 serverless()함수로 감싸서
+                                          // AWSLambda에서 실행할 수 있도록 만듦
