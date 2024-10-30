@@ -160,6 +160,9 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
         } else {
             const errorData = await response.json();
             poemDiv.textContent = `${errorMessage[language]} ${errorData.error}`;
+            
+            // 비디오 정지
+            processingVideo.pause();
         }
 
         // 비디오 정지
@@ -167,6 +170,9 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
 
     } catch (error) {
         poemDiv.textContent = `${errorMessage[language]} ${error.message}`;
+        
+        // 비디오 정지
+        processingVideo.pause();
     }
 });
 
