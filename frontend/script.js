@@ -25,6 +25,19 @@ const processingMessage = {
     'de': 'Ich schreibe ein Gedicht. Bitte warten Sie einen Moment.',
 };
 
+// 오류 메시지 설정
+const errorMessage = {
+    'ko': '오류 발생: ',
+    'en': 'An error occurred: ',
+    'ja': 'エラーが発生しました: ',
+    'zh': '发生错误: ',
+    'es': 'Se produjo un error: ',
+    'fr': 'Une erreur s\'est produite: ',
+    'ru': 'Произошла ошибка: ',
+    'it': 'Si è verificato un errore: ',
+    'de': 'Es ist ein Fehler aufgetreten: '
+};
+
 const languageSelect = document.getElementById('language');
 const processingVideo = document.getElementById('processing-video');
 const topicInput = document.getElementById('topic');
@@ -108,8 +121,6 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
     kakaoButton.disabled = true;
     // X 버튼 비활성화
     ttsButton.disabled = true;
-    
-
 
     try {
         const response = await fetch('http://localhost:3000/generate-poem', {
@@ -148,14 +159,14 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
             };
         } else {
             const errorData = await response.json();
-            poemDiv.textContent = `오류 발생: ${errorData.error}`;
+            poemDiv.textContent = `${errorMessage[language]} ${errorData.error}`;
         }
 
         // 비디오 정지
         processingVideo.pause();
 
     } catch (error) {
-        poemDiv.textContent = `오류 발생: ${error.message}`;
+        poemDiv.textContent = `${errorMessage[language]} ${error.message}`;
     }
 });
 
