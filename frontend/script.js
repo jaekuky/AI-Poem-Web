@@ -123,7 +123,7 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
     ttsButton.disabled = true;
 
     try {
-        const response = await fetch('http://localhost:3000/generate-poem', {
+        const response = await fetch('https://mlvpfnsdxpkw5wwdbcz6sh52xe0aqkpm.lambda-url.ap-northeast-2.on.aws/generate-poem', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

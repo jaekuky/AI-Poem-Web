@@ -10,7 +10,7 @@ const app = express();
 
 // CORS 설정
 let corsOptions = {
-    origin: 'https://ai-and-poem-jaekuky.pages.dev/',
+    origin: 'https://ai-and-poem-jaekuky.pages.dev',
     credentials: true 
 };
 // 미들웨어 설정
