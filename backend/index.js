@@ -6,15 +6,14 @@ const axios = require('axios'); // HTTP 요청을 위해 axios 사용
 require('dotenv').config(); // 환경 변수 사용을 위해 dotenv 사용
 
 const app = express();
-// const port = 3000;
 
 // CORS 설정
 let corsOptions = {
-    origin: 'https://ai-and-poem-jaekuky.pages.dev',
+    origin: ['https://ai-and-poem-jaekuky.pages.dev',
+             'https://www.ai-and-poem.art'],
     credentials: true 
 };
 // 미들웨어 설정
-// app.use(cors());
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
