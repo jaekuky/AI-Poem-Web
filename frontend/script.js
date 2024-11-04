@@ -159,7 +159,11 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
                 const utterance = new SpeechSynthesisUtterance(poem);
                 utterance.lang = ttsLang;
                 window.speechSynthesis.speak(utterance);
+
             };
+            
+            // 비디오 정지
+            processingVideo.pause();
         } else {
             const errorData = await response.json();
             poemDiv.textContent = `${errorMessage[language]} ${errorData.error}`;
@@ -167,10 +171,6 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
             // 비디오 정지
             processingVideo.pause();
         }
-
-        // 비디오 정지
-        processingVideo.pause();
-
     } catch (error) {
         poemDiv.textContent = `${errorMessage[language]} ${error.message}`;
         
