@@ -103,10 +103,9 @@ body {
 }
 
 #poem {
-    margin-top: 30px;
+    margin-top: 20px;
     white-space: pre-wrap;
-    text-align: left;
-    padding: 0 10px;
+    text-align: center;
     width: 100%;
 }
 
