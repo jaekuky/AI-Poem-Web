@@ -7,7 +7,7 @@ const languageMap = {
     'zh': { name: '中文', ttsLang: 'zh-CN' },
     'es': { name: 'Español', ttsLang: 'es-ES' },
     'fr': { name: 'Français', ttsLang: 'fr-FR' },
-    'ru': { name: 'русский', ttsLang: 'ru-RU' },
+    'ru': { name: 'Русский', ttsLang: 'ru-RU' },
     'it': { name: 'Italiano', ttsLang: 'it-IT' },
     'de': { name: 'Deutsch', ttsLang: 'de-DE' },
 };
@@ -37,6 +37,19 @@ const errorMessage = {
     'it': 'Si è verificato un errore: ',
     'de': 'Es ist ein Fehler aufgetreten: '
 };
+
+// 제목 표시
+const title ={
+    'ko': '제목: ',
+    'en': 'Title: ',
+    'ja': 'タイトル: ',
+    'zh': '标题: ',
+    'es': 'Título: ',
+    'fr': 'Titre: ',
+    'ru': 'Заголовок',
+    'it': 'Titolo',
+    'de': 'Titel'
+}
 
 const languageSelect = document.getElementById('language');
 const processingVideo = document.getElementById('processing-video');
@@ -181,6 +194,20 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
 
 // Facebook 공유 버튼 함수 
 document.getElementById('facebook-button').addEventListener('click', async function(event) {
+    const language = languageSelect.value;
+    const messageToShare = `${title[language]}` + `${topicInput.value.trim()}` + '\n' + `${poemDiv.textContent}` + '\n' + 'AI & Poem: https://www.ai-and-poem.art/';
+    const encodedMessage = encodeURIComponent(messageToShare);
+    const pageUrl = encodeURIComponent(window.location.href);
+
+    console.log("messageToShare: " + messageToShare);
+    console.log("encodedMessage: " + encodedMessage);
+    console.log("pageUrl: " + pageUrl);
+
+    // Facebook 공유 URL 생성
+    let facebookShareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + pageUrl + '&quote=' + encodedMessage;
+
+    // 새 창으로 열기
+    window.open(facebookShareUrl, '_blank');
 });
 // Kakao 공유 버튼 함수 
 document.getElementById('kakao-button').addEventListener('click', async function(event) {
