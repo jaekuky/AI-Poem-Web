@@ -23,6 +23,9 @@ const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 // Kakao API 키 설정 (환경 변수에서 가져옴)
 const KAKAO_API_KEY = process.env.KAKAO_API_KEY;
 
+// Facebook App ID 설정 (환경 변수에서 가져옴)
+const FACEBOOK_APP_ID = process.env.FACEBOOK_APP_ID; 
+
 app.post('/generate-poem', async (req, res) => {
     const { topic, language } = req.body;
 
@@ -64,8 +67,10 @@ app.post('/generate-poem', async (req, res) => {
     }
 });
 
-// app.listen(port, () => {
-//     console.log(`서버가 포트 ${port}에서 실행 중입니다.`);
-// });
+// 프론트엔드에서 Facebook App ID를 요청할 때, 응답하는 엔드포인트 추가
+app.post('/get-facebook-app-id', (req, res) => {
+    res.json({ 'appId': `${FACEBOOK_APP_ID}` });
+}); 
+
 module.exports.handler = serverless(app); // app을 serverless()함수로 감싸서
                                           // AWSLambda에서 실행할 수 있도록 만듦

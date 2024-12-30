@@ -193,22 +193,66 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
 });
 
 // Facebook 공유 버튼 함수 
-document.getElementById('facebook-button').addEventListener('click', async function(event) {
-    const language = languageSelect.value;
-    const messageToShare = `${title[language]}` + `${topicInput.value.trim()}` + '\n' + `${poemDiv.textContent}` + '\n' + 'AI & Poem: https://www.ai-and-poem.art/';
-    const encodedMessage = encodeURIComponent(messageToShare);
-    const pageUrl = encodeURIComponent(window.location.href);
+document.getElementById('facebook-button').addEventListener('click', function() {
+    const poem = poemDiv.textContent;
 
-    console.log("messageToShare: " + messageToShare);
-    console.log("encodedMessage: " + encodedMessage);
-    console.log("pageUrl: " + pageUrl);
+    if (!poem) {
+        alert('먼저 시를 생성해주세요.');
+        return;
+    }
 
-    // Facebook 공유 URL 생성
-    let facebookShareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + pageUrl + '&quote=' + encodedMessage;
+    // 클립보드에 텍스트 복사
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(poem).then(() => {
+            console.log('Poem copied to clipboard successfully!');
 
-    // 새 창으로 열기
-    window.open(facebookShareUrl, '_blank');
+            // Facebook 공유 다이얼로그 열기
+            FB.ui({
+                method: 'feed',
+                href: window.location.href, // 현재 페이지 URL
+                quote: poem, // 공유 다이얼로그에 시 내용 자동 삽입
+            }, function(response) {
+                if (response && !response.error_message) {
+                    console.log('공유가 성공적으로 완료되었습니다.');
+                } else {
+                    console.log('공유에 실패했습니다.');
+                }
+            });
+
+        }).catch(err => {
+            console.error('클립보드 복사 중 오류 발생:', err);
+        });
+    } else {
+        // Clipboard API를 지원하지 않는 브라우저를 위한 대안
+        const textarea = document.createElement('textarea');
+        textarea.value = poem;
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+            document.execCommand('copy');
+            console.log('시가 클립보드에 복사되었습니다.');
+            
+            // Facebook 공유 다이얼로그 열기
+            FB.ui({
+                method: 'feed',
+                href: window.location.href,
+                quote: poem, // 공유 다이얼로그에 시 내용 자동 삽입
+            }, function(response) {
+                if (response && !response.error_message) {
+                    alert('공유가 성공적으로 완료되었습니다.');
+                } else {
+                    alert('공유에 실패했습니다.');
+                }
+            });
+        } catch (err) {
+            console.error('클립보드 복사 중 오류 발생:', err);
+            alert('시를 클립보드에 복사하지 못했습니다.');
+        }
+        document.body.removeChild(textarea);
+    }
+
 });
+
 // Kakao 공유 버튼 함수 
 document.getElementById('kakao-button').addEventListener('click', async function(event) {
 });
