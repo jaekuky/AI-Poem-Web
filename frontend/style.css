@@ -90,8 +90,8 @@ body {
     box-sizing: border-box;
     font-size: 20px;
 }
-#poem-form button[type="submit"] {
-    width: 35%;
+#poem-form #poetry-writing-button {
+    width: 40%;
     max-width: 400px;
     min-width: 70px;
     height: 60px;
@@ -146,22 +146,6 @@ body {
     cursor: not-allowed;
 }
 
-.buttons #kakao-button{
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    margin-left: 5px;
-    background-image: url('./image/icon-kakao.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: transparent;
-    color: transparent;
-}
-#kakao-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-
 .buttons #x-button{
     width: 40px;
     height: 40px;
@@ -194,7 +178,7 @@ body {
     #topic, #language, #language-label {
         font-size: 14px;
     }
-    #poem-form button[type="submit"]{
+    #poem-form #poetry-writing-button{
         padding: 5px;
         font-size: 14px;
     }
