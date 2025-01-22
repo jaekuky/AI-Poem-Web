@@ -209,9 +209,7 @@ document.getElementById('facebook-button').addEventListener('click', async funct
     // 새 창으로 열기
     window.open(facebookShareUrl, '_blank');
 });
-// Kakao 공유 버튼 함수 
-document.getElementById('kakao-button').addEventListener('click', async function(event) {
-});
+
 // X 공유 버튼 함수 
 document.getElementById('x-button').addEventListener('click', async function(event) {
 });
