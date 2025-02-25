@@ -129,38 +129,6 @@ body {
     cursor: not-allowed;
 }
 
-/* .buttons #facebook-button{
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    margin-left: 5px;
-    background-image: url('./image/icon-facebook.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    color: transparent;
-    
-}
-#facebook-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-
-.buttons #x-button{
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    margin-left: 5px;
-    background-image: url('./image/icon-x.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: transparent;
-    color: transparent;
-}
-#x-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-} */
 
 @media screen and (max-width: 480px) {
     .header-left h1 {

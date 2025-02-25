@@ -57,8 +57,6 @@ const topicInput = document.getElementById('topic');
 const poemDiv = document.getElementById('poem');
 const poetryWritingButton = document.getElementById('poetry-writing-button');
 const ttsButton = document.getElementById('tts-button');
-const facebookButton = document.getElementById('facebook-button');
-const xButton = document.getElementById('x-button');
 
 document.getElementById('language').addEventListener('change', async function(event) {
     event.preventDefault();
@@ -128,10 +126,6 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
     processingVideo.play();
     // TTS 버튼 비활성화
     ttsButton.disabled = true;
-    // Facebook 버튼 비활성화https://dash.cloudflare.com/ba72b9828f815dab99916944070399f3/analytics
-    // facebookButton.disabled = true;
-    // X 버튼 비활성화
-    // ttsButton.disabled = true;
 
     try {
         const response = await fetch('https://mlvpfnsdxpkw5wwdbcz6sh52xe0aqkpm.lambda-url.ap-northeast-2.on.aws/generate-poem', {
@@ -155,10 +149,6 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
             
             // TTS 버튼 활성화
             ttsButton.disabled = false;
-            // Facebook 버튼 활성화
-            // facebookButton.disabled = false;
-            // X 버튼 활성화
-            // xButton.disabled = false;
 
             // 비디오 정지
             processingVideo.pause();
@@ -188,15 +178,3 @@ ttsButton.addEventListener('click', async function(event) {
     window.speechSynthesis.speak(utterance);
 });
 
-// Facebook 공유 버튼 함수 
-// document.getElementById('facebook-button').addEventListener('click', async function(event){
-//     const language = languageSelect.value;
-//     const poem = poemDiv.textContent;
-//     const title = title[language];
-//     const url = 'https://www.facebook.com/sharer/sharer.php?u=https://ai-and-poem.art&quote=' + title + poem;
-//     window.open(url, '_blank');
-// });
-
-// X 공유 버튼 함수 
-// document.getElementById('x-button').addEventListener('click', async function(event) {
-// });
