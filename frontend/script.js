@@ -58,7 +58,6 @@ const poemDiv = document.getElementById('poem');
 const poetryWritingButton = document.getElementById('poetry-writing-button');
 const ttsButton = document.getElementById('tts-button');
 const facebookButton = document.getElementById('facebook-button');
-const kakaoButton = document.getElementById('kakao-button');
 const xButton = document.getElementById('x-button');
 
 document.getElementById('language').addEventListener('change', async function(event) {
@@ -116,6 +115,7 @@ document.getElementById('language').addEventListener('change', async function(ev
     }
 });
 
+// 시 작성 버튼 함수
 document.getElementById('poem-form').addEventListener('submit', async function(event) {
     event.preventDefault();
 
@@ -128,12 +128,10 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
     processingVideo.play();
     // TTS 버튼 비활성화
     ttsButton.disabled = true;
-    // Facebook 버튼 비활성화
-    facebookButton.disabled = true;
-    // Kakao 버튼 비활성화
-    kakaoButton.disabled = true;
+    // Facebook 버튼 비활성화https://dash.cloudflare.com/ba72b9828f815dab99916944070399f3/analytics
+    // facebookButton.disabled = true;
     // X 버튼 비활성화
-    ttsButton.disabled = true;
+    // ttsButton.disabled = true;
 
     try {
         const response = await fetch('https://mlvpfnsdxpkw5wwdbcz6sh52xe0aqkpm.lambda-url.ap-northeast-2.on.aws/generate-poem', {
@@ -158,58 +156,47 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
             // TTS 버튼 활성화
             ttsButton.disabled = false;
             // Facebook 버튼 활성화
-            facebookButton.disabled = false;
-            // Kakao 버튼 활성화
-            kakaoButton.disabled = false;
+            // facebookButton.disabled = false;
             // X 버튼 활성화
-            xButton.disabled = false;
+            // xButton.disabled = false;
 
-            // 선택한 언어의 TTS 설정
-            const ttsLang = languageMap[language]?.ttsLang || 'ko-KR';
-
-            // TTS 버튼 클릭 이벤트 추가
-            ttsButton.onclick = () => {
-                const utterance = new SpeechSynthesisUtterance(poem);
-                utterance.lang = ttsLang;
-                window.speechSynthesis.speak(utterance);
-
-            };
-            
             // 비디오 정지
             processingVideo.pause();
         } else {
             const errorData = await response.json();
-            poemDiv.textContent = `${errorMessage[language]} ${errorData.error}`;
+            poemDiv.textContent = `${errorMessage[language]}: ${errorData.error}`;
             
             // 비디오 정지
             processingVideo.pause();
         }
     } catch (error) {
-        poemDiv.textContent = `${errorMessage[language]} ${error.message}`;
+        poemDiv.textContent = `${errorMessage[language]}: ${error.message}`;
         
         // 비디오 정지
         processingVideo.pause();
     }
 });
 
-// Facebook 공유 버튼 함수 
-document.getElementById('facebook-button').addEventListener('click', async function(event) {
+// TTS 버튼 함수
+ttsButton.addEventListener('click', async function(event) {
     const language = languageSelect.value;
-    const messageToShare = `${title[language]}` + `${topicInput.value.trim()}` + '\n' + `${poemDiv.textContent}` + '\n' + 'AI & Poem: https://www.ai-and-poem.art/';
-    const encodedMessage = encodeURIComponent(messageToShare);
-    const pageUrl = encodeURIComponent(window.location.href);
+    const poem = poemDiv.textContent;
+    const ttsLang = languageMap[language]?.ttsLang || 'ko-KR';
 
-    console.log("messageToShare: " + messageToShare);
-    console.log("encodedMessage: " + encodedMessage);
-    console.log("pageUrl: " + pageUrl);
-
-    // Facebook 공유 URL 생성
-    let facebookShareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + pageUrl + '&quote=' + encodedMessage;
-
-    // 새 창으로 열기
-    window.open(facebookShareUrl, '_blank');
+    const utterance = new SpeechSynthesisUtterance(poem);
+    utterance.lang = ttsLang;
+    window.speechSynthesis.speak(utterance);
 });
+
+// Facebook 공유 버튼 함수 
+// document.getElementById('facebook-button').addEventListener('click', async function(event){
+//     const language = languageSelect.value;
+//     const poem = poemDiv.textContent;
+//     const title = title[language];
+//     const url = 'https://www.facebook.com/sharer/sharer.php?u=https://ai-and-poem.art&quote=' + title + poem;
+//     window.open(url, '_blank');
+// });
 
 // X 공유 버튼 함수 
-document.getElementById('x-button').addEventListener('click', async function(event) {
-});
+// document.getElementById('x-button').addEventListener('click', async function(event) {
+// });

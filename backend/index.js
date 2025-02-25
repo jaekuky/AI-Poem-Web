@@ -20,9 +20,6 @@ app.use(bodyParser.json());
 // OpenAI API 키 설정 (환경 변수에서 가져옴)
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
-// Kakao API 키 설정 (환경 변수에서 가져옴)
-const KAKAO_API_KEY = process.env.KAKAO_API_KEY;
-
 app.post('/generate-poem', async (req, res) => {
     const { topic, language } = req.body;
 
