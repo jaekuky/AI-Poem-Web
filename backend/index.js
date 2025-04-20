@@ -9,12 +9,19 @@ const app = express();
 
 // CORS 설정
 let corsOptions = {
+    // Modified: allowed origins, without trailing slashes
     origin: ['https://ai-and-poem-jaekuky.pages.dev',
              'https://www.ai-and-poem.art'],
+    // Modified: 허용 메서드와 헤더를 명시적으로 선언
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type'],
     credentials: true 
 };
 // 미들웨어 설정
 app.use(cors(corsOptions));
+// Modified: 모든 경로에 대해 preflight(OPTIONS) 요청도 처리
+app.options('*', cors(corsOptions));
+
 app.use(bodyParser.json());
 
 // OpenAI API 키 설정 (환경 변수에서 가져옴)

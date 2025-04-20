@@ -62,51 +62,43 @@ document.getElementById('language').addEventListener('change', async function(ev
     event.preventDefault();
 
     const language = languageSelect.value;
+    var link;
     switch(language){
         case 'ko':
-            topicInput.placeholder = '시의 주제를 입력하세요';
-            poetryWritingButton.innerText = '시 작성';
-            ttsButton.innerText = '🔊 시 낭송';
+            link = 'https://www.ai-and-poem.art/ko/index.html'
+            location.href = link;
             break;
         case 'en':
-            topicInput.placeholder = 'Enter the topic of your poem';
-            poetryWritingButton.innerText = 'Write a poem';
-            ttsButton.innerText = '🔊 Recite a poem';
+            link = 'https://www.ai-and-poem.art/en/index.html'
+            location.href = link;
             break;
         case 'ja':
-            topicInput.placeholder = '市のテーマを入力してください';
-            poetryWritingButton.innerText = '詩の作成';
-            ttsButton.innerText = '🔊 詩の朗読';
+            link = 'https://www.ai-and-poem.art/ja/index.html'
+            location.href = link;
             break;
         case 'zh':
-            topicInput.placeholder = '请输入你的诗的主题';
-            poetryWritingButton.innerText = '诗歌写作';
-            ttsButton.innerText = '🔊 朗诵诗歌';
+            link = 'https://www.ai-and-poem.art/zh/index.html'
+            location.href = link;
             break;
         case 'es':
-            topicInput.placeholder = 'Por favor ingresa el tema de tu poema';
-            poetryWritingButton.innerText = 'Escritura de poesía';
-            ttsButton.innerText = '🔊 Recitar poesía';
+            link = 'https://www.ai-and-poem.art/es/index.html'
+            location.href = link;
             break;
         case 'fr':
-            topicInput.placeholder = 'Veuillez indiquer le sujet de votre poème';
-            poetryWritingButton.innerText = 'Écriture de poésie';
-            ttsButton.innerText = '🔊 Réciter de la poésie';
+            link = 'https://www.ai-and-poem.art/fr/index.html'
+            location.href = link;
             break;
         case 'ru':
-            topicInput.placeholder = 'Пожалуйста, укажите тему вашего стихотворения';
-            poetryWritingButton.innerText = 'Написание стихов';
-            ttsButton.innerText = '🔊 Чтение стихов';
+            link = 'https://www.ai-and-poem.art/ru/index.html'
+            location.href = link;
             break;
         case 'it':
-            topicInput.placeholder = 'Inserisci l\'argomento della tua poesia';
-            poetryWritingButton.innerText = 'Scrittura di poesie';
-            ttsButton.innerText = '🔊 Recitare poesie';
+            link = 'https://www.ai-and-poem.art/it/index.html'
+            location.href = link;
             break;
         case 'de':
-            topicInput.placeholder = 'Bitte geben Sie das Thema Ihres Gedichts ein';
-            poetryWritingButton.innerText = 'Gedichte schreiben';
-            ttsButton.innerText = '🔊 Gedichte rezitieren';
+            link = 'https://www.ai-and-poem.art/de/index.html'
+            location.href = link;
             break;
         default:
             break;
@@ -134,8 +126,8 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
                 'Content-Type': 'application/json'
             },
             // 프론트엔드 CORS 추가
-            mode: 'cors',
-            credentials: 'include',
+            // mode: 'cors',
+            // credentials: 'include',
             body: JSON.stringify({
                 topic: topic,
                 language: language

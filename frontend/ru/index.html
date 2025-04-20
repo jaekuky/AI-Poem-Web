@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>AI & Poem – Платформа для генерации стихов на основе искусственного интеллекта</title>
+    <!-- 반응형 웹을 위한 viewport 메타 태그 추가 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 웹페이지 정보 메타 태그 -->
+    <meta name="description" content="AI & Poem — платформа, которая генерирует поэзию с помощью искусственного интеллекта. Создайте свое собственное стихотворение на любую понравившуюся вам тему!">
+    <meta name="keywords" content="ИИ, искусственный интеллект, поэзия, генерация поэзии, генерация поэзии ИИ, генератор поэзии ИИ, платформа генерации поэзии, платформа генерации поэзии ИИ">
+    <meta name="author" content="Ryu Jae-kuk">
+
+    <!-- Canonical URL to avoid duplicate content issues -->
+    <link rel="canonical" href="https://www.ai-and-poem.art/ru/index.html">
+    
+    <!-- Alternate language links for multilingual SEO -->
+    <link rel="alternate" href="https://www.ai-and-poem.art/ru/index.html" hreflang="ru" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/ko/index.html" hreflang="ko" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/ja/index.html" hreflang="ja" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/it/index.html" hreflang="it" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/fr/index.html" hreflang="fr" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/es/index.html" hreflang="es" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/en/index.html" hreflang="en" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/de/index.html" hreflang="de" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/zh/index.html" hreflang="zh" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/" hreflang="x-default" />
+
+    <!-- Open Graph 메타 태그 -->
+    <meta property="og:title" content="AI & Poem – Платформа для генерации стихов на основе искусственного интеллекта">
+    <meta property="og:description" content="AI & Poem — платформа, которая генерирует поэзию с помощью искусственного интеллекта. Создайте свое собственное стихотворение на любую понравившуюся вам тему!">
+    <meta property="og:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
+    <meta property="og:url" content="https://www.ai-and-poem.art/">
+    <meta property="og:type" content="website">
+    
+    <!-- X(전 Twitter) 카드 메타 태그 추가 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI & Poem – Платформа для генерации стихов на основе искусственного интеллекта">
+    <meta name="twitter:description" content="AI & Poem — платформа, которая генерирует поэзию с помощью искусственного интеллекта. Создайте свое собственное стихотворение на любую понравившуюся вам тему!">
+    <meta name="twitter:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
+
+    <!-- JSON-LD Structured Data for enhanced SEO -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "AI & Poem – Платформа для генерации стихов на основе искусственного интеллекта",
+          "url": "https://www.ai-and-poem.art/",
+          "description": "AI & Poem — платформа, которая генерирует поэзию с помощью искусственного интеллекта. Создайте свое собственное стихотворение на любую понравившуюся вам тему!",
+          "author": {
+            "@type": "Person",
+            "name": "Ryu Jae-kuk"
+          }
+        }
+        </script>
+
+    <!-- style.css 불러오기 -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <h1>AI & Poem</h1>
+            <h3>Ваши темы, наши стихотворения ИИ</h3>
+        </div>
+        <div class="header-right">
+            <label for="language" id="language-label">Select Language</label>
+            <select id="language">
+                <option value="de">Deutsch</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="it">Italiano</option>
+                <option value="ja">日本語</option>
+                <option value="ko">한국어</option>
+                <option value="ru" selected>русский</option>
+                <option value="zh">中文</option>
+            </select>
+        </div>
+    </div>
+    <div class="container">
+        <div id="image-box">
+            <video loop id="processing-video" src="../image/robot_poet.mp4" poster="../image/robot_poet.png"></video>
+        </div>
+        <form id="poem-form">
+            <input type="text" id="topic" placeholder="Пожалуйста, укажите тему вашего стихотворения" required>
+            <button id="poetry-writing-button" type="submit">Написание стихов</button>
+        </form>
+        <div id="poem"></div>
+        <div class="buttons">
+            <!-- '시 낭송' 버튼  -->
+            <button id="tts-button" disabled>🔊 Чтение стихов</button>
+        </div>
+    </div>
+    <!-- LangChain.js 라이브러리 추가 -->
+    <script src="https://unpkg.com/langchain@latest/dist/langchain.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -92,8 +92,8 @@ body {
 }
 #poem-form #poetry-writing-button {
     width: 40%;
-    max-width: 400px;
-    min-width: 70px;
+    max-width: 420px;
+    min-width: 90px;
     height: 60px;
     padding: 10px;
     font-size: 20px;
