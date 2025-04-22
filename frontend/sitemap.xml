@@ -9,8 +9,46 @@
 
 <url>
   <loc>https://www.ai-and-poem.art/</loc>
-  <lastmod>2025-04-20T13:40:04+00:00</lastmod>
+  <lastmod>2025-04-22T08:39:29+00:00</lastmod>
 </url>
-
-
+<!-- 다국어 페이지 경로 추가 -->
+<url>
+  <loc>https://www.ai-and-poem.art/en/</loc>
+  <lastmod>2025-04-22T08:39:29+00:00</lastmod>
+</url>
+<url>
+  <loc>https://www.ai-and-poem.art/de/</loc>
+  <lastmod>2025-04-22T08:39:29+00:00</lastmod>
+</url>
+<url>
+  <loc>https://www.ai-and-poem.art/es/</loc>
+  <lastmod>2025-04-22T08:39:29+00:00</lastmod>
+</url>
+<url>
+  <loc>https://www.ai-and-poem.art/fr/</loc>
+  <lastmod>2025-04-22T08:39:29+00:00</lastmod>
+</url>
+<url>
+  <loc>https://www.ai-and-poem.art/it/</loc>
+  <lastmod>2025-04-22T08:39:29+00:00</lastmod>
+</url>
+<url>
+  <loc>https://www.ai-and-poem.art/ja/</loc>
+  <lastmod>2025-04-22T08:39:29+00:00</lastmod>
+</url>
+<url>
+  <loc>https://www.ai-and-poem.art/ko/</loc>
+  <lastmod>2025-04-22T08:39:29+00:00</lastmod>
+</url>
+<url>
+  <loc>https://www.ai-and-poem.art/ru/</loc>
+  <lastmod>2025-04-22T08:39:29+00:00</lastmod>
+</url>
+<url>
+  <loc>https://www.ai-and-poem.art/zh/</loc>
+  <lastmod>2025-04-22T08:39:29+00:00</lastmod>
+</url>
 </urlset>
+
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
