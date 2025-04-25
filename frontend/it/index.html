@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 웹페이지 정보 메타 태그 -->
     <meta name="description" content="AI & Poem è una piattaforma che genera poesie utilizzando l'intelligenza artificiale. Crea la tua poesia su qualsiasi argomento ti piaccia!">
-    <meta name="keywords" content="IA, intelligenza artificiale, poesia, generazione di poesie, generazione di poesie tramite IA, generatore di poesie tramite IA, piattaforma di generazione di poesie tramite IA, piattaforma di generazione di poesie tramite IA">
+    <meta name="keywords" content="IA, intelligenza artificiale, poesia, generazione di poesie, generazione di poesie tramite IA, generatore di poesie tramite IA, piattaforma di generazione di poesie tramite IA">
     <meta name="author" content="Ryu Jae-kuk">
 
     <!-- Canonical URL to avoid duplicate content issues -->
@@ -29,7 +29,7 @@
     <meta property="og:title" content="AI & Poem – Piattaforma di generazione di poesia basata sull'intelligenza artificiale">
     <meta property="og:description" content="AI & Poem è una piattaforma che genera poesie utilizzando l'intelligenza artificiale. Crea la tua poesia su qualsiasi argomento ti piaccia!">
     <meta property="og:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
-    <meta property="og:url" content="https://www.ai-and-poem.art/">
+    <meta property="og:url" content="https://www.ai-and-poem.art/it/index.html">
     <meta property="og:type" content="website">
 
     <!-- X(전 Twitter) 카드 메타 태그 추가 -->
@@ -44,7 +44,7 @@
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "AI & Poem – Piattaforma di generazione di poesia basata sull'intelligenza artificiale",
-          "url": "https://www.ai-and-poem.art/",
+          "url": "https://www.ai-and-poem.art/it/index.html",
           "description": "AI & Poem è una piattaforma che genera poesie utilizzando l'intelligenza artificiale. Crea la tua poesia su qualsiasi argomento ti piaccia!",
           "author": {
             "@type": "Person",
@@ -63,7 +63,7 @@
             <h3>I tuoi argomenti, le nostre poesie AI</h3>
         </div>
         <div class="header-right">
-            <label for="language" id="language-label">Select Language</label>
+            <label for="language" id="language-label">Seleziona Lingua</label>
             <select id="language">
                 <option value="de">Deutsch</option>
                 <option value="en">English</option>
@@ -82,13 +82,13 @@
             <video loop id="processing-video" src="../image/robot_poet.mp4" poster="../image/robot_poet.png"></video>
         </div>
         <form id="poem-form">
-            <input type="text" id="topic" placeholder="Inserisci l\'argomento della tua poesia" required>
-            <button id="poetry-writing-button" type="submit">Scrittura di poesie</button>
+            <input type="text" id="topic" placeholder="Inserisci l'argomento della tua poesia" required>
+            <button id="poetry-writing-button" type="submit">Scrivi una poesia</button>
         </form>
         <div id="poem"></div>
         <div class="buttons">
             <!-- '시 낭송' 버튼  -->
-            <button id="tts-button" disabled>🔊 Recitare poesie</button>
+            <button id="tts-button" disabled>🔊 Leggi la poesia</button>
         </div>
     </div>
     <!-- LangChain.js 라이브러리 추가 -->
