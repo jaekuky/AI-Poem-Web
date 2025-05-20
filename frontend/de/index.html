@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>AI & Poem – Plattform zur Erstellung von Gedichten auf Basis künstlicher Intelligenz</title>
 
+    <!-- [SEO] Robots meta tag 추가 -->
+    <meta name="robots" content="index, follow">
+
     <!-- 반응형 웹을 위한 viewport 메타 태그 추가 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,18 +19,17 @@
     <meta name="author" content="Ryu Jae-kuk">
     
     <!-- Canonical URL to avoid duplicate content issues -->
-    <link rel="canonical" href="https://www.ai-and-poem.art/de/index.html">
+    <link rel="canonical" href="https://www.ai-and-poem.art/de/">
     
     <!-- Alternate language links for multilingual SEO -->
-    <link rel="alternate" href="https://www.ai-and-poem.art/de/index.html" hreflang="de" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/en/index.html" hreflang="en" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/fr/index.html" hreflang="fr" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/es/index.html" hreflang="es" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/it/index.html" hreflang="it" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/ko/index.html" hreflang="ko" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/ru/index.html" hreflang="ru" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/zh/index.html" hreflang="zh" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/ja/index.html" hreflang="ja" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/en/" hreflang="en" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/fr/" hreflang="fr" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/es/" hreflang="es" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/it/" hreflang="it" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/ko/" hreflang="ko" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/ru/" hreflang="ru" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/zh/" hreflang="zh" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/ja/" hreflang="ja" />
     <link rel="alternate" href="https://www.ai-and-poem.art/" hreflang="x-default" />
 
     <!-- Open Graph 메타 태그 -->
@@ -79,7 +81,7 @@
     <div class="header">
         <div class="header-left">
             <h1>AI & Poem</h1>
-            <h3>Ihre Themen, unsere KI-Gedichte</h3>
+            <h2>Ihre Themen, unsere KI-Gedichte</h2>
         </div>
         <div class="header-right">
             <label for="language" id="language-label">Sprache wählen</label>
@@ -98,11 +100,15 @@
     </div>
     <div class="container">
         <div id="image-box">
-            <video loop id="processing-video" src="../image/robot_poet.mp4" poster="../image/robot_poet.png"></video>
+            <video loop id="processing-video" src="../image/robot_poet.mp4" poster="../image/robot_poet.png" aria-label="Video eines AI-Roboters, der Gedichte schreibt"></video>
         </div>
         <form id="poem-form">
-            <input type="text" id="topic" placeholder="Bitte geben Sie das Thema Ihres Gedichts ein" required>
-            <button id="poetry-writing-button" type="submit">Gedichte schreiben</button>
+            <p id="form-description">Gib das Thema deines Gedichts ein und die KI verwandelt es in ein tolles Gedicht!</p> 
+            <div class="input-box">
+                <input type="text" id="topic" placeholder="Bitte geben Sie das Thema Ihres Gedichts ein" required>
+                <button id="poetry-writing-button" type="submit">Gedichte schreiben</button>
+            </div>
+
         </form>
         <div id="poem"></div>
         <div class="buttons">
