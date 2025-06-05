@@ -20,7 +20,7 @@ body {
 
 .header-left{
     padding-left: 20px;
-    flex-basis: 50%;
+    flex-basis: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,7 +35,7 @@ body {
 .header-right{
     padding-left: 20px;
     padding-right: 20px;
-    flex-basis: 50%;
+    flex-basis: 60%;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -147,7 +147,7 @@ body {
         font-size: 1.2rem;
     }
     .header-left h3 {
-        font-size: 0.5rem;
+        font-size: 0.65rem;
     }
     
     #image-box{
@@ -155,7 +155,11 @@ body {
         height: 216px;
     }
 
-    #topic, #language, #language-label {
+    #language-label{
+        font-size: 12px;
+    }
+
+    #topic, #language {
         font-size: 14px;
     }
     #poem-form #poetry-writing-button{

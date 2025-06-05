@@ -126,8 +126,8 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
                 'Content-Type': 'application/json'
             },
             // 프론트엔드 CORS 추가
-            // mode: 'cors',
-            // credentials: 'include',
+            mode: 'cors',
+            credentials: 'include',
             body: JSON.stringify({
                 topic: topic,
                 language: language
