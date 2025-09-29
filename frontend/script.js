@@ -27,15 +27,15 @@ const processingMessage = {
 
 // 오류 메시지 설정
 const errorMessage = {
-    'ko': '오류 발생: ',
-    'en': 'An error occurred: ',
-    'ja': 'エラーが発生しました: ',
-    'zh': '发生错误: ',
-    'es': 'Se produjo un error: ',
-    'fr': 'Une erreur s\'est produite: ',
-    'ru': 'Произошла ошибка: ',
-    'it': 'Si è verificato un errore: ',
-    'de': 'Es ist ein Fehler aufgetreten: '
+    'ko': '오류 발생',
+    'en': 'An error occurred',
+    'ja': 'エラーが発生しました',
+    'zh': '发生错误',
+    'es': 'Se produjo un error',
+    'fr': 'Une erreur s\'est produite',
+    'ru': 'Произошла ошибка',
+    'it': 'Si è verificato un errore',
+    'de': 'Es ist ein Fehler aufgetreten'
 };
 
 // 제목 표시
