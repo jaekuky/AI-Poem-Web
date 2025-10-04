@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 // OpenAI API 키 설정 (환경 변수에서 가져옴)
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
-// 언어별 프롬프트 매핑을 라우트 밖으로 이동해 반복 생성을 방지
+//  언어별 프롬프트 매핑을 라우트 밖으로 이동해 반복 생성을 방지
 const languagePromptMap = {
     'ko': '한국어로',
     'en': 'in English',
@@ -40,18 +40,18 @@ const languagePromptMap = {
     'de': 'auf Deutsch',
 };
 
-// 필수 환경 변수 검증을 선행하여 배포 오류를 조기에 파악
+//  필수 환경 변수 검증을 선행하여 배포 오류를 조기에 파악
 if (!OPENAI_API_KEY) {
-    console.error('환경 변수 OPENAI_API_KEY가 설정되지 않았습니다.'); // 한글 주석: 누락된 키를 명확히 기록
+    console.error('환경 변수 OPENAI_API_KEY가 설정되지 않았습니다.'); //  한글 주석: 누락된 키를 명확히 기록
 }
 
-const MAX_TOPIC_LENGTH = 200; // 한글 주석: 과도한 프롬프트 길이를 제한하여 OpenAI 에러를 예방
+const MAX_TOPIC_LENGTH = 200; //  한글 주석: 과도한 프롬프트 길이를 제한하여 OpenAI 에러를 예방
 
 app.post('/generate-poem', async (req, res) => {
     const rawTopic = typeof req.body.topic === 'string' ? req.body.topic.trim() : '';
     const language = typeof req.body.language === 'string' ? req.body.language : 'ko';
 
-    // 한글 주석: 필수 입력값이 없으면 OpenAI 호출 전에 400을 반환
+    //  한글 주석: 필수 입력값이 없으면 OpenAI 호출 전에 400을 반환
     if (!rawTopic) {
         return res.status(400).json({ error: '시의 주제를 입력해 주세요.' });
     }
@@ -63,14 +63,14 @@ app.post('/generate-poem', async (req, res) => {
     const langPrompt = languagePromptMap[language];
 
     if (!langPrompt) {
-        return res.status(400).json({ error: '지원하지 않는 언어입니다.' }); // 한글 주석: 미지원 언어 요청 차단
+        return res.status(400).json({ error: '지원하지 않는 언어입니다.' }); //  한글 주석: 미지원 언어 요청 차단
     }
 
     if (!OPENAI_API_KEY) {
-        return res.status(500).json({ error: '서버 설정 오류가 발생했습니다.' }); // 한글 주석: 키 누락 시 호출 중단
+        return res.status(500).json({ error: '서버 설정 오류가 발생했습니다.' }); //  한글 주석: 키 누락 시 호출 중단
     }
 
-    const prompt = `Please write a poem about ${rawTopic} ${langPrompt}.`; // 한글 주석: 입력을 정제한 뒤 프롬프트 구성
+    const prompt = `Please write a poem about ${rawTopic} ${langPrompt}.`; //  한글 주석: 입력을 정제한 뒤 프롬프트 구성
 
     try {
         const response = await axios.post('https://api.openai.com/v1/chat/completions', {
@@ -93,7 +93,7 @@ app.post('/generate-poem', async (req, res) => {
         const statusCode = error.response?.status || 500;
         const errorPayload = error.response?.data;
 
-        // 한글 주석: 외부 응답을 그대로 노출하지 않고 서버 로그에만 상세 기록
+        //  한글 주석: 외부 응답을 그대로 노출하지 않고 서버 로그에만 상세 기록
         console.error('OpenAI 호출 실패', {
             statusCode,
             message: error.message,
