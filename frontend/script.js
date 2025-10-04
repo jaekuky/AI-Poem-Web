@@ -27,6 +27,7 @@ const processingMessage = {
 
 // 오류 메시지 설정
 const errorMessage = {
+    // 한글 주석: 콜론을 제거해 오류 메시지가 "::"로 표시되지 않도록 조정
     'ko': '오류 발생',
     'en': 'An error occurred',
     'ja': 'エラーが発生しました',
@@ -46,9 +47,9 @@ const title ={
     'zh': '标题: ',
     'es': 'Título: ',
     'fr': 'Titre: ',
-    'ru': 'Заголовок',
-    'it': 'Titolo',
-    'de': 'Titel'
+    'ru': 'Заголовок: ',
+    'it': 'Titolo: ',
+    'de': 'Titel: '
 }
 
 const languageSelect = document.getElementById('language');
@@ -169,4 +170,3 @@ ttsButton.addEventListener('click', async function(event) {
     utterance.lang = ttsLang;
     window.speechSynthesis.speak(utterance);
 });
-
