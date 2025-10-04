@@ -39,6 +39,19 @@ const errorMessage = {
     'de': 'Es ist ein Fehler aufgetreten'
 };
 
+// 필수 입력 안내 문구를 언어별로 정의
+const topicRequiredMessage = {
+    'ko': '시의 주제를 입력해 주세요.',
+    'en': 'Please enter the topic of your poem.',
+    'ja': '詩のテーマを入力してください。',
+    'zh': '请输入诗歌的主题。',
+    'es': 'Por favor ingresa el tema de tu poema.',
+    'fr': 'Veuillez saisir le sujet de votre poème.',
+    'ru': 'Пожалуйста, укажите тему стихотворения.',
+    'it': 'Inserisci l\'argomento della tua poesia.',
+    'de': 'Bitte geben Sie das Thema Ihres Gedichts ein.'
+};
+
 // 제목 표시
 const title ={
     'ko': '제목: ',
@@ -58,6 +71,17 @@ const topicInput = document.getElementById('topic');
 const poemDiv = document.getElementById('poem');
 const poetryWritingButton = document.getElementById('poetry-writing-button');
 const ttsButton = document.getElementById('tts-button');
+
+// 필수 입력 메시지 다국어 대응
+topicInput.addEventListener('invalid', () => {
+    const language = languageSelect.value;
+    const message = topicRequiredMessage[language] || topicRequiredMessage['ko'];
+    topicInput.setCustomValidity(message);
+});
+
+topicInput.addEventListener('input', () => {
+    topicInput.setCustomValidity('');
+});
 
 document.getElementById('language').addEventListener('change', async function(event) {
     event.preventDefault();
