@@ -141,6 +141,38 @@ body {
     cursor: not-allowed;
 }
 
+/* 개인정보처리방침 및 이용약관 주 제목 아래 간격을 폰트 크기 1배로 설정 */
+.privacy_container h1,
+.terms_container h1 {
+    margin-bottom: 1em;
+}
+/* 개인정보처리방침 및 이용약관 제목 간격을 폰트 크기 1.3배로 설정 */
+.privacy_container h2,
+.terms_container h2 {
+    margin-top: 1.3em;
+}
+/* 개인정보처리방침 및 이용약관 문단 간격을 폰트 크기 1.1배로 설정 */
+.privacy_container p,
+.terms_container p {
+    margin-bottom: 1.1em;
+}
+
+/* 푸터 스타일을 정의해 모든 페이지에서 일관된 링크 표시 */
+.site-footer {
+    margin: 40px 0 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-decoration: underline;
+    margin: 0 8px;
+}
+
+.site-footer a:hover {
+    text-decoration: none;
+}
 
 @media screen and (max-width: 480px) {
     .header-left h1 {
