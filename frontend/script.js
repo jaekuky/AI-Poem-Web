@@ -10,6 +10,9 @@ const languageMap = {
     'ru': { name: 'Русский', ttsLang: 'ru-RU' },
     'it': { name: 'Italiano', ttsLang: 'it-IT' },
     'de': { name: 'Deutsch', ttsLang: 'de-DE' },
+    'ms': { name: 'Bahasa Melayu', ttsLang: 'ms-MY' }, // 한글 주석: 말레이어 지원 추가
+    'bn': { name: 'বাংলা', ttsLang: 'bn-IN' }, // 한글 주석: 벵골어 지원 추가
+    'vi': { name: 'Tiếng Việt', ttsLang: 'vi-VN' }, // 한글 주석: 베트남어 지원 추가
 };
 
 // 시 작성 중 메시지 설정
@@ -23,6 +26,9 @@ const processingMessage = {
     'ru': 'Я пишу стихотворение. Пожалуйста, подождите немного.',
     'it': 'Sto scrivendo una poesia. Per favore aspetta un attimo.',
     'de': 'Ich schreibe ein Gedicht. Bitte warten Sie einen Moment.',
+    'ms': 'Sedang menulis puisi. Sila tunggu sebentar.', // 한글 주석: 말레이어 안내 문구
+    'bn': 'আমি একটি কবিতা লিখছি। অনুগ্রহ করে একটু অপেক্ষা করুন।', // 한글 주석: 벵골어 안내 문구
+    'vi': 'Tôi đang viết bài thơ. Vui lòng đợi trong giây lát.', // 한글 주석: 베트남어 안내 문구
 };
 
 // 오류 메시지 설정
@@ -36,7 +42,10 @@ const errorMessage = {
     'fr': 'Une erreur s\'est produite',
     'ru': 'Произошла ошибка',
     'it': 'Si è verificato un errore',
-    'de': 'Es ist ein Fehler aufgetreten'
+    'de': 'Es ist ein Fehler aufgetreten',
+    'ms': 'Ralat berlaku', // 한글 주석: 말레이어 오류 메시지
+    'bn': 'একটি ত্রুটি ঘটেছে', // 한글 주석: 벵골어 오류 메시지
+    'vi': 'Đã xảy ra lỗi' // 한글 주석: 베트남어 오류 메시지
 };
 
 // 필수 입력 안내 문구를 언어별로 정의
@@ -49,7 +58,10 @@ const topicRequiredMessage = {
     'fr': 'Veuillez saisir le sujet de votre poème.',
     'ru': 'Пожалуйста, укажите тему стихотворения.',
     'it': 'Inserisci l\'argomento della tua poesia.',
-    'de': 'Bitte geben Sie das Thema Ihres Gedichts ein.'
+    'de': 'Bitte geben Sie das Thema Ihres Gedichts ein.',
+    'ms': 'Sila masukkan topik puisi anda.', // 한글 주석: 말레이어 필수 입력 메시지
+    'bn': 'অনুগ্রহ করে আপনার কবিতার বিষয় লিখুন।', // 한글 주석: 벵골어 필수 입력 메시지
+    'vi': 'Vui lòng nhập chủ đề cho bài thơ của bạn.' // 한글 주석: 베트남어 필수 입력 메시지
 };
 
 // 제목 표시
@@ -62,7 +74,10 @@ const title ={
     'fr': 'Titre: ',
     'ru': 'Заголовок: ',
     'it': 'Titolo: ',
-    'de': 'Titel: '
+    'de': 'Titel: ',
+    'ms': 'Tajuk: ', // 한글 주석: 말레이어 제목 접두사
+    'bn': 'শিরোনাম: ', // 한글 주석: 벵골어 제목 접두사
+    'vi': 'Tiêu đề: ' // 한글 주석: 베트남어 제목 접두사
 }
 
 const languageSelect = document.getElementById('language');
@@ -123,6 +138,18 @@ document.getElementById('language').addEventListener('change', async function(ev
             break;
         case 'de':
             link = 'https://www.ai-and-poem.art/de/index.html'
+            location.href = link;
+            break;
+        case 'ms':
+            link = 'https://www.ai-and-poem.art/ms/index.html' // 한글 주석: 말레이어 페이지 이동 처리
+            location.href = link;
+            break;
+        case 'bn':
+            link = 'https://www.ai-and-poem.art/bn/index.html' // 한글 주석: 벵골어 페이지 이동 처리
+            location.href = link;
+            break;
+        case 'vi':
+            link = 'https://www.ai-and-poem.art/vi/index.html' // 한글 주석: 베트남어 페이지 이동 처리
             location.href = link;
             break;
         default:

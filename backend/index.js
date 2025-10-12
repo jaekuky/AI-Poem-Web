@@ -38,6 +38,9 @@ const languagePromptMap = {
     'ru': 'на русском языке',
     'it': 'in italiano',
     'de': 'auf Deutsch',
+    'ms': 'dalam Bahasa Melayu', // 한글 주석: 말레이어 프롬프트 추가
+    'bn': 'বাংলায়', // 한글 주석: 벵골어 프롬프트 추가
+    'vi': 'bằng tiếng Việt', // 한글 주석: 베트남어 프롬프트 추가
 };
 
 //  필수 환경 변수 검증을 선행하여 배포 오류를 조기에 파악
