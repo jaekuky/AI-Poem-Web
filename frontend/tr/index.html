@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI &amp; Poem – Ücretsiz yapay zekâ şiir üretme platformu</title>
-    <meta name="description" content="AI &amp; Poem, yapay zekâ kullanarak şiir üreten ücretsiz bir platformdur. İstediğiniz herhangi bir konu hakkında kendi şiirinizi oluşturun!">
+    <!-- 수정: 터키어 타이틀에 'şiir oluşturucu' 키워드를 반영 -->
+    <title>AI &amp; Poem – Sesli yapay zekâ şiir oluşturucu</title>
+    <!-- 수정: 속도와 낭독 혜택을 강조 -->
+    <meta name="description" content="Bir konu girin; 10 saniyeden kısa sürede paylaşmaya hazır şiir ve sesli okuma alın. Ücretsiz yapay zekâ aracı.">
     <meta name="keywords" content="AI, yapay zekâ, şiir, şiir üretimi, yapay zekâ şiir üreteci, şiir platformu">
     <meta name="author" content="Ryu Jae-kuk">
     <meta name="robots" content="index, follow">
     <link rel="icon" href="../image/favicon.ico" type="image/x-icon">
     <link rel="canonical" href="https://www.ai-and-poem.art/tr/">
     <!-- 한글 주석: 모든 언어 페이지를 hreflang으로 연결 -->
+    <!-- 수정: hreflang 링크를 정규화 -->
     <link rel="alternate" href="https://www.ai-and-poem.art/en/" hreflang="en" />
     <link rel="alternate" href="https://www.ai-and-poem.art/de/" hreflang="de" />
     <link rel="alternate" href="https://www.ai-and-poem.art/fr/" hreflang="fr" />
@@ -26,12 +29,13 @@
     <link rel="alternate" href="https://www.ai-and-poem.art/el/" hreflang="el" />
     <link rel="alternate" href="https://www.ai-and-poem.art/pt/" hreflang="pt" />
     <link rel="alternate" href="https://www.ai-and-poem.art/pl/" hreflang="pl" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/ch/" hreflang="ch" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/ch/" hreflang="de-CH" /> <!-- 한글 주석: 스위스 독일어 페이지 hreflang 추가, 스위스 독일어 표준 코드로 변경 -->
     <link rel="alternate" href="https://www.ai-and-poem.art/uk/" hreflang="uk" />
     <link rel="alternate" href="https://www.ai-and-poem.art/tr/" hreflang="tr" />
     <link rel="alternate" href="https://www.ai-and-poem.art/" hreflang="x-default" />
-    <meta property="og:title" content="AI &amp; Poem – Ücretsiz yapay zekâ şiir üretme platformu">
-    <meta property="og:description" content="AI &amp; Poem, yapay zekâ kullanarak şiir üreten ücretsiz bir platformdur. İstediğiniz herhangi bir konu hakkında kendi şiirinizi oluşturun!">
+    <!-- 수정: SNS 미리보기 문구 업데이트 -->
+    <meta property="og:title" content="AI &amp; Poem – Sesli yapay zekâ şiir oluşturucu">
+    <meta property="og:description" content="Bir konu girin; 10 saniyeden kısa sürede paylaşmaya hazır şiir ve sesli okuma alın. Ücretsiz yapay zekâ aracı.">
     <meta property="og:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta property="og:url" content="https://www.ai-and-poem.art/tr/">
     <meta property="og:type" content="website">
@@ -39,17 +43,19 @@
     <meta property="og:locale" content="tr_TR">
     <meta property="og:image:alt" content="Şiir yazan bir yapay zekâ robotunun illüstrasyonu">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI &amp; Poem – Ücretsiz yapay zekâ şiir üretme platformu">
-    <meta name="twitter:description" content="AI &amp; Poem, yapay zekâ kullanarak şiir üreten ücretsiz bir platformdur. İstediğiniz herhangi bir konu hakkında kendi şiirinizi oluşturun!">
+    <!-- 수정: X 카드 문구와 SERP 메시지 일관성 확보 -->
+    <meta name="twitter:title" content="AI &amp; Poem – Sesli yapay zekâ şiir oluşturucu">
+    <meta name="twitter:description" content="Bir konu girin; 10 saniyeden kısa sürede paylaşmaya hazır şiir ve sesli okuma alın. Ücretsiz yapay zekâ aracı.">
     <meta name="twitter:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta name="twitter:image:alt" content="Şiir yazan bir yapay zekâ robotunun illüstrasyonu">
+    <!-- 수정: 구조화 데이터에 새로운 카피 반영 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "AI &amp; Poem – Ücretsiz yapay zekâ şiir üretme platformu",
+        "name": "AI &amp; Poem – Sesli yapay zekâ şiir oluşturucu",
         "url": "https://www.ai-and-poem.art/tr/",
-        "description": "AI &amp; Poem, yapay zekâ kullanarak şiir üreten ücretsiz bir platformdur. İstediğiniz herhangi bir konu hakkında kendi şiirinizi oluşturun!",
+        "description": "Bir konu girin; 10 saniyeden kısa sürede paylaşmaya hazır şiir ve sesli okuma alın. Ücretsiz yapay zekâ aracı.",
         "inLanguage": "tr",
         "author": {
             "@type": "Person",
@@ -73,7 +79,8 @@
     <div class="header">
         <div class="header-left">
             <h1>AI &amp; Poem</h1>
-            <h3>Konularınız, bizim yapay zekâ şiirlerimiz</h3>
+            <!-- 수정: 'yapay zekâ şiir oluşturucu' 키워드를 포함한 태그라인 -->
+            <h3>Sesli yapay zekâ şiir oluşturucu</h3>
         </div>
         <div class="header-right">
             <label for="language" id="language-label">Dil seçin</label>
@@ -105,7 +112,8 @@
             <video loop id="processing-video" src="../image/robot_poet.mp4" poster="../image/robot_poet.png" aria-label="Şiir yazan yapay zekâ robotunun videosu"></video>
         </div>
         <form id="poem-form">
-            <p id="form-description">Şiirinizin konusunu yazın, yapay zekâ onu benzersiz bir şiire dönüştürsün!</p>
+            <!-- 수정: 사용자 검색어를 직접 언급하여 기대치 정렬 -->
+            <p id="form-description">'yapay zekâ şiir oluşturucu' mu arıyordunuz? Konu yazın, saniyeler içinde şiir ve ses alın.</p>
             <div class="input-box">
                 <input type="text" id="topic" placeholder="Şiirinizin konusunu girin" required>
                 <button id="poetry-writing-button" type="submit">Şiir oluştur</button>
@@ -117,6 +125,7 @@
         </div>
     </div>
     <footer class="site-footer">
+        <!-- 한글 주석: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
         <a href="privacy.html">Gizlilik politikası</a>
         <span>|</span>
         <a href="terms.html">Kullanım şartları</a>

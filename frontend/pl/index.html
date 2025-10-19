@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI &amp; Poem – Darmowa platforma generowania poezji z wykorzystaniem AI</title>
-    <meta name="description" content="AI &amp; Poem to darmowa platforma wykorzystująca sztuczną inteligencję do tworzenia poezji. Stwórz własny wiersz na dowolny temat!">
+    <!-- 수정: 폴란드어 타이틀에 'generator wierszy' 키워드를 포함 -->
+    <title>AI &amp; Poem – Generator wierszy AI z natychmiastową narracją</title>
+    <!-- 수정: 속도·낭독 혜택을 강조한 설명 -->
+    <meta name="description" content="Podaj temat i w mniej niż 10 sekund otrzymasz spersonalizowany wiersz z gotowym nagraniem lektora. Darmowy generator AI.">
     <meta name="keywords" content="AI, sztuczna inteligencja, poezja, generowanie poezji, generator poezji AI, platforma poetycka">
     <meta name="author" content="Ryu Jae-kuk">
     <meta name="robots" content="index, follow">
     <link rel="icon" href="../image/favicon.ico" type="image/x-icon">
     <link rel="canonical" href="https://www.ai-and-poem.art/pl/">
     <!-- 한글 주석: 모든 언어 페이지의 hreflang을 연결 -->
+    <!-- 수정: hreflang 링크를 정규화 -->
     <link rel="alternate" href="https://www.ai-and-poem.art/en/" hreflang="en" />
     <link rel="alternate" href="https://www.ai-and-poem.art/de/" hreflang="de" />
     <link rel="alternate" href="https://www.ai-and-poem.art/fr/" hreflang="fr" />
@@ -26,12 +29,13 @@
     <link rel="alternate" href="https://www.ai-and-poem.art/el/" hreflang="el" />
     <link rel="alternate" href="https://www.ai-and-poem.art/pt/" hreflang="pt" />
     <link rel="alternate" href="https://www.ai-and-poem.art/pl/" hreflang="pl" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/ch/" hreflang="ch" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/ch/" hreflang="de-CH" /> <!-- 한글 주석: 스위스 독일어 페이지 hreflang 추가, 스위스 독일어 표준 코드로 변경 -->
     <link rel="alternate" href="https://www.ai-and-poem.art/uk/" hreflang="uk" />
     <link rel="alternate" href="https://www.ai-and-poem.art/tr/" hreflang="tr" />
     <link rel="alternate" href="https://www.ai-and-poem.art/" hreflang="x-default" />
-    <meta property="og:title" content="AI &amp; Poem – Darmowa platforma generowania poezji z wykorzystaniem AI">
-    <meta property="og:description" content="AI &amp; Poem to darmowa platforma wykorzystująca sztuczną inteligencję do tworzenia poezji. Stwórz własny wiersz na dowolny temat!">
+    <!-- 수정: SNS 미리보기 문구 업데이트 -->
+    <meta property="og:title" content="AI &amp; Poem – Generator wierszy AI z natychmiastową narracją">
+    <meta property="og:description" content="Podaj temat i w mniej niż 10 sekund otrzymasz spersonalizowany wiersz z gotowym nagraniem lektora. Darmowy generator AI.">
     <meta property="og:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta property="og:url" content="https://www.ai-and-poem.art/pl/">
     <meta property="og:type" content="website">
@@ -39,17 +43,19 @@
     <meta property="og:locale" content="pl_PL">
     <meta property="og:image:alt" content="Ilustracja robota AI piszącego poezję">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI &amp; Poem – Darmowa platforma generowania poezji z wykorzystaniem AI">
-    <meta name="twitter:description" content="AI &amp; Poem to darmowa platforma wykorzystująca sztuczną inteligencję do tworzenia poezji. Stwórz własny wiersz na dowolny temat!">
+    <!-- 수정: X 카드 문구도 SERP와 일치 -->
+    <meta name="twitter:title" content="AI &amp; Poem – Generator wierszy AI z natychmiastową narracją">
+    <meta name="twitter:description" content="Podaj temat i w mniej niż 10 sekund otrzymasz spersonalizowany wiersz z gotowym nagraniem lektora. Darmowy generator AI.">
     <meta name="twitter:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta name="twitter:image:alt" content="Ilustracja robota AI piszącego poezję">
+    <!-- 수정: 구조화 데이터 타이틀 및 설명 업데이트 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "AI &amp; Poem – Darmowa platforma generowania poezji z wykorzystaniem AI",
+        "name": "AI &amp; Poem – Generator wierszy AI z natychmiastową narracją",
         "url": "https://www.ai-and-poem.art/pl/",
-        "description": "AI &amp; Poem to darmowa platforma wykorzystująca sztuczną inteligencję do tworzenia poezji. Stwórz własny wiersz na dowolny temat!",
+        "description": "Podaj temat i w mniej niż 10 sekund otrzymasz spersonalizowany wiersz z gotowym nagraniem lektora. Darmowy generator AI.",
         "inLanguage": "pl",
         "author": {
             "@type": "Person",
@@ -73,7 +79,8 @@
     <div class="header">
         <div class="header-left">
             <h1>AI &amp; Poem</h1>
-            <h3>Twoje tematy, nasze wiersze AI</h3>
+            <!-- 수정: 'generator wierszy ai' 키워드를 명시 -->
+            <h3>Generator wierszy AI z narracją w kilka sekund</h3>
         </div>
         <div class="header-right">
             <label for="language" id="language-label">Wybierz język</label>
@@ -105,7 +112,8 @@
             <video loop id="processing-video" src="../image/robot_poet.mp4" poster="../image/robot_poet.png" aria-label="Nagranie robota AI piszącego wiersz"></video>
         </div>
         <form id="poem-form">
-            <p id="form-description">Wpisz temat swojego wiersza, a AI zamieni go w wyjątkową poezję!</p>
+            <!-- 수정: 인기 검색어를 포함해 기대치 정렬 -->
+            <p id="form-description">Szukasz 'generator wierszy ai'? Wpisz temat i otrzymaj tekst oraz głos w kilka sekund.</p>
             <div class="input-box">
                 <input type="text" id="topic" placeholder="Wpisz temat wiersza" required>
                 <button id="poetry-writing-button" type="submit">Generuj wiersz</button>
@@ -117,6 +125,7 @@
         </div>
     </div>
     <footer class="site-footer">
+        <!-- 한글 주석: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
         <a href="privacy.html">Polityka prywatności</a>
         <span>|</span>
         <a href="terms.html">Warunki korzystania</a>

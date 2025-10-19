@@ -133,77 +133,78 @@ document.getElementById('language').addEventListener('change', async function(ev
 
     const language = languageSelect.value;
     var link;
+    // 사이트 링크 수정
     switch(language){
         case 'ko':
-            link = 'https://www.ai-and-poem.art/ko/index.html'
+            link = 'https://www.ai-and-poem.art/ko/'
             location.href = link;
             break;
         case 'en':
-            link = 'https://www.ai-and-poem.art/en/index.html'
+            link = 'https://www.ai-and-poem.art/en/'
             location.href = link;
             break;
         case 'ja':
-            link = 'https://www.ai-and-poem.art/ja/index.html'
+            link = 'https://www.ai-and-poem.art/ja/'
             location.href = link;
             break;
         case 'zh':
-            link = 'https://www.ai-and-poem.art/zh/index.html'
+            link = 'https://www.ai-and-poem.art/zh/'
             location.href = link;
             break;
         case 'es':
-            link = 'https://www.ai-and-poem.art/es/index.html'
+            link = 'https://www.ai-and-poem.art/es/'
             location.href = link;
             break;
         case 'fr':
-            link = 'https://www.ai-and-poem.art/fr/index.html'
+            link = 'https://www.ai-and-poem.art/fr/'
             location.href = link;
             break;
         case 'ru':
-            link = 'https://www.ai-and-poem.art/ru/index.html'
+            link = 'https://www.ai-and-poem.art/ru/'
             location.href = link;
             break;
         case 'it':
-            link = 'https://www.ai-and-poem.art/it/index.html'
+            link = 'https://www.ai-and-poem.art/it/'
             location.href = link;
             break;
         case 'de':
-            link = 'https://www.ai-and-poem.art/de/index.html'
+            link = 'https://www.ai-and-poem.art/de/'
             location.href = link;
             break;
         case 'ms':
-            link = 'https://www.ai-and-poem.art/ms/index.html' // 한글 주석: 말레이어 페이지 이동 처리
+            link = 'https://www.ai-and-poem.art/ms/' // 한글 주석: 말레이어 페이지 이동 처리
             location.href = link;
             break;
         case 'bn':
-            link = 'https://www.ai-and-poem.art/bn/index.html' // 한글 주석: 벵골어 페이지 이동 처리
+            link = 'https://www.ai-and-poem.art/bn/' // 한글 주석: 벵골어 페이지 이동 처리
             location.href = link;
             break;
         case 'vi':
-            link = 'https://www.ai-and-poem.art/vi/index.html' // 한글 주석: 베트남어 페이지 이동 처리
+            link = 'https://www.ai-and-poem.art/vi/' // 한글 주석: 베트남어 페이지 이동 처리
             location.href = link;
             break;
         case 'el':
-            link = 'https://www.ai-and-poem.art/el/index.html' // 한글 주석: 그리스어 페이지 이동 처리
+            link = 'https://www.ai-and-poem.art/el/' // 한글 주석: 그리스어 페이지 이동 처리
             location.href = link;
             break;
         case 'pt':
-            link = 'https://www.ai-and-poem.art/pt/index.html' // 한글 주석: 포르투갈어 페이지 이동 처리
+            link = 'https://www.ai-and-poem.art/pt/' // 한글 주석: 포르투갈어 페이지 이동 처리
             location.href = link;
             break;
         case 'pl':
-            link = 'https://www.ai-and-poem.art/pl/index.html' // 한글 주석: 폴란드어 페이지 이동 처리
+            link = 'https://www.ai-and-poem.art/pl/' // 한글 주석: 폴란드어 페이지 이동 처리
             location.href = link;
             break;
         case 'ch':
-            link = 'https://www.ai-and-poem.art/ch/index.html' // 한글 주석: 스위스 독일어 페이지 이동 처리
+            link = 'https://www.ai-and-poem.art/ch/' // 한글 주석: 스위스 독일어 페이지 이동 처리
             location.href = link;
             break;
         case 'uk':
-            link = 'https://www.ai-and-poem.art/uk/index.html' // 한글 주석: 우크라이나어 페이지 이동 처리
+            link = 'https://www.ai-and-poem.art/uk/' // 한글 주석: 우크라이나어 페이지 이동 처리
             location.href = link;
             break;
         case 'tr':
-            link = 'https://www.ai-and-poem.art/tr/index.html' // 한글 주석: 터키어 페이지 이동 처리
+            link = 'https://www.ai-and-poem.art/tr/' // 한글 주석: 터키어 페이지 이동 처리
             location.href = link;
             break;
         default:
