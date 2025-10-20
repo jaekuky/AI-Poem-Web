@@ -19,6 +19,11 @@ const languageMap = {
     'ch': { name: 'Schweizerdeutsch', ttsLang: 'de-CH' }, // 한글 주석: 스위스 독일어 지원 추가
     'uk': { name: 'Українська', ttsLang: 'uk-UA' }, // 한글 주석: 우크라이나어 지원 추가
     'tr': { name: 'Türkçe', ttsLang: 'tr-TR' }, // 한글 주석: 터키어 지원 추가
+    'sv': { name: 'Svenska', ttsLang: 'sv-SE' }, // 수정: 스웨덴어 지원 추가
+    'hi': { name: 'हिन्दी', ttsLang: 'hi-IN' }, // 수정: 힌디어 지원 추가
+    'id': { name: 'Bahasa Indonesia', ttsLang: 'id-ID' }, // 수정: 인도네시아어 지원 추가
+    'th': { name: 'ไทย', ttsLang: 'th-TH' }, // 수정: 태국어 지원 추가
+    'fi': { name: 'Suomi', ttsLang: 'fi-FI' } // 수정: 핀란드어 지원 추가
 };
 
 // 시 작성 중 메시지 설정
@@ -41,6 +46,11 @@ const processingMessage = {
     'ch': 'Ich bi grad am dichte. Bitte wart e chli.', // 한글 주석: 스위스 독일어 안내 문구
     'uk': 'Я пишу вірш. Будь ласка, зачекайте трохи.', // 한글 주석: 우크라이나어 안내 문구
     'tr': 'Bir şiir yazıyorum. Lütfen biraz bekleyin.', // 한글 주석: 터키어 안내 문구
+    'sv': 'Jag skriver en dikt. Vänta ett ögonblick, tack.', // 수정: 스웨덴어 안내 문구 추가
+    'hi': 'मैं एक कविता लिख रहा हूँ। कृपया थोड़ी देर प्रतीक्षा करें।', // 수정: 힌디어 안내 문구 추가
+    'id': 'Saya sedang menulis puisi. Mohon tunggu sebentar.', // 수정: 인도네시아어 안내 문구 추가
+    'th': 'กำลังเขียนบทกวี กรุณารอสักครู่', // 수정: 태국어 안내 문구 추가
+    'fi': 'Kirjoitan runoa. Odota hetki, kiitos.' // 수정: 핀란드어 안내 문구 추가
 };
 
 // 오류 메시지 설정
@@ -63,7 +73,12 @@ const errorMessage = {
     'pl': 'Wystąpił błąd', // 한글 주석: 폴란드어 오류 메시지
     'ch': 'Es isch e Fähler uufträtte', // 한글 주석: 스위스 독일어 오류 메시지
     'uk': 'Сталася помилка', // 한글 주석: 우크라이나어 오류 메시지
-    'tr': 'Bir hata oluştu' // 한글 주석: 터키어 오류 메시지
+    'tr': 'Bir hata oluştu', // 한글 주석: 터키어 오류 메시지
+    'sv': 'Ett fel inträffade', // 수정: 스웨덴어 오류 메시지 추가
+    'hi': 'एक त्रुटि हुई', // 수정: 힌디어 오류 메시지 추가
+    'id': 'Terjadi kesalahan', // 수정: 인도네시아어 오류 메시지 추가
+    'th': 'เกิดข้อผิดพลาด', // 수정: 태국어 오류 메시지 추가
+    'fi': 'Tapahtui virhe' // 수정: 핀란드어 오류 메시지 추가
 };
 
 // 필수 입력 안내 문구를 언어별로 정의
@@ -72,20 +87,25 @@ const topicRequiredMessage = {
     'en': 'Please enter the topic of your poem.',
     'ja': '詩のテーマを入力してください。',
     'zh': '请输入诗歌的主题。',
-    'es': 'Por favor ingresa el tema de tu poema.',
+    'es': 'Por favor, introduce el tema de tu poema.',
     'fr': 'Veuillez saisir le sujet de votre poème.',
-    'ru': 'Пожалуйста, укажите тему стихотворения.',
-    'it': 'Inserisci l\'argomento della tua poesia.',
+    'ru': 'Пожалуйста, введите тему вашего стихотворения.',
+    'it': 'Inserisci il tema della tua poesia.',
     'de': 'Bitte geben Sie das Thema Ihres Gedichts ein.',
-    'ms': 'Sila masukkan topik puisi anda.', // 한글 주석: 말레이어 필수 입력 메시지
-    'bn': 'অনুগ্রহ করে আপনার কবিতার বিষয় লিখুন।', // 한글 주석: 벵골어 필수 입력 메시지
-    'vi': 'Vui lòng nhập chủ đề cho bài thơ của bạn.', // 한글 주석: 베트남어 필수 입력 메시지
-    'el': 'Παρακαλώ εισάγετε το θέμα του ποιήματος.', // 한글 주석: 그리스어 필수 입력 메시지
-    'pt': 'Introduza o tema do seu poema.', // 한글 주석: 포르투갈어 필수 입력 메시지
-    'pl': 'Proszę podać temat wiersza.', // 한글 주석: 폴란드어 필수 입력 메시지
-    'ch': 'Bitte gib s Thema vode Gedicht i.', // 한글 주석: 스위스 독일어 필수 입력 메시지
-    'uk': 'Будь ласка, введіть тему вашого вірша.', // 한글 주석: 우크라이나어 필수 입력 메시지
-    'tr': 'Lütfen şiirinizin konusunu girin.' // 한글 주석: 터키어 필수 입력 메시지
+    'ms': 'Sila masukkan topik puisi anda.',
+    'bn': 'অনুগ্রহ করে আপনার কবিতার বিষয় লিখুন।',
+    'vi': 'Vui lòng nhập chủ đề bài thơ của bạn.',
+    'el': 'Παρακαλώ εισαγάγετε το θέμα του ποιήματός σας.',
+    'pt': 'Por favor, insira o tema do seu poema.',
+    'pl': 'Proszę podać temat swojego wiersza.',
+    'ch': 'Bitte gib das Thema deines Gedichts ein.',
+    'uk': 'Будь ласка, введіть тему вашого вірша.',
+    'tr': 'Lütfen şiirinizin konusunu girin.',
+    'sv': 'Ange ämnet för din dikt.', // 수정: 스웨덴어 검증 메시지 추가
+    'hi': 'कृपया अपनी कविता का विषय दर्ज करें।', // 수정: 힌디어 검증 메시지 추가
+    'id': 'Silakan masukkan topik puisi Anda.', // 수정: 인도네시아어 검증 메시지 추가
+    'th': 'กรุณากรอกหัวข้อของบทกวี', // 수정: 태국어 검증 메시지 추가
+    'fi': 'Anna runosi aihe.' // 수정: 핀란드어 검증 메시지 추가
 };
 
 // 제목 표시
@@ -107,7 +127,12 @@ const title ={
     'pl': 'Tytuł: ', // 한글 주석: 폴란드어 제목 접두사
     'ch': 'Titel: ', // 한글 주석: 스위스 독일어 제목 접두사
     'uk': 'Заголовок: ', // 한글 주석: 우크라이나어 제목 접두사
-    'tr': 'Başlık: ' // 한글 주석: 터키어 제목 접두사
+    'tr': 'Başlık: ', // 한글 주석: 터키어 제목 접두사
+    'sv': 'Titel: ', // 수정: 스웨덴어 제목 접두사 추가
+    'hi': 'शीर्षक: ', // 수정: 힌디어 제목 접두사 추가
+    'id': 'Judul: ', // 수정: 인도네시아어 제목 접두사 추가
+    'th': 'หัวเรื่อง: ', // 수정: 태국어 제목 접두사 추가
+    'fi': 'Otsikko: ' // 수정: 핀란드어 제목 접두사 추가
 }
 
 const languageSelect = document.getElementById('language');
@@ -205,6 +230,26 @@ document.getElementById('language').addEventListener('change', async function(ev
             break;
         case 'tr':
             link = 'https://www.ai-and-poem.art/tr/' // 한글 주석: 터키어 페이지 이동 처리
+            location.href = link;
+            break;
+        case 'sv':
+            link = 'https://www.ai-and-poem.art/sv/' // 한글 주석: 스웨덴어 페이지 이동 처리
+            location.href = link;
+            break;
+        case 'hi':
+            link = 'https://www.ai-and-poem.art/hi/' // 한글 주석: 힌디어 페이지 이동 처리
+            location.href = link;
+            break;
+        case 'id':
+            link = 'https://www.ai-and-poem.art/id/' // 한글 주석: 인도네시아어 페이지 이동 처리
+            location.href = link;
+            break;
+        case 'th':
+            link = 'https://www.ai-and-poem.art/th/' // 한글 주석: 태국어 페이지 이동 처리
+            location.href = link;
+            break;
+        case 'fi':
+            link = 'https://www.ai-and-poem.art/fi/' // 한글 주석: 핀란드어 페이지 이동 처리
             location.href = link;
             break;
         default:

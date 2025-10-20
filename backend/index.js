@@ -47,7 +47,15 @@ const languagePromptMap = {
     'ch': 'auf Schweizerdeutsch', // 한글 주석: 스위스 독일어 프롬프트 추가
     'uk': 'українською мовою', // 한글 주석: 우크라이나어 프롬프트 추가
     'tr': 'Türkçe olarak', // 한글 주석: 튀르키예어(터키어) 프롬프트 추가
+    'sv': 'på svenska', // 수정: 스웨덴어 지원 추가
+    'hi': 'हिन्दी में', // 수정: 힌디어 지원 추가
+    'id': 'dalam Bahasa Indonesia', // 수정: 인도네시아어 지원 추가
+    'th': 'เป็นภาษาไทย', // 수정: 태국어 지원 추가
+    'fi': 'suomeksi', // 수정: 핀란드어 지원 추가
 };
+
+// 수정: 지원 언어 집합을 미리 생성해 유효성 검증에 재사용
+const SUPPORTED_LANGUAGES = new Set(Object.keys(languagePromptMap));
 
 //  필수 환경 변수 검증을 선행하여 배포 오류를 조기에 파악
 if (!OPENAI_API_KEY) {
@@ -69,11 +77,11 @@ app.post('/generate-poem', async (req, res) => {
         return res.status(400).json({ error: `시의 주제는 ${MAX_TOPIC_LENGTH}자 이내로 입력해 주세요.` });
     }
 
-    const langPrompt = languagePromptMap[language];
-
-    if (!langPrompt) {
+    if (!SUPPORTED_LANGUAGES.has(language)) {
         return res.status(400).json({ error: '지원하지 않는 언어입니다.' }); //  한글 주석: 미지원 언어 요청 차단
     }
+
+    const langPrompt = languagePromptMap[language];
 
     if (!OPENAI_API_KEY) {
         return res.status(500).json({ error: '서버 설정 오류가 발생했습니다.' }); //  한글 주석: 키 누락 시 호출 중단

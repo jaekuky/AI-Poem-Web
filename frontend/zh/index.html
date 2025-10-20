@@ -21,17 +21,14 @@
     <!-- 수정: 속도와语音朗读 혜택 강조 -->
     <meta name="description" content="输入主题，10秒内获得专属诗歌和可分享的语音朗读，完全免费。">
     <!-- 한글 주석: 불필요한 공백과 중복을 제거해 키워드 메타 태그를 정리 -->
-    <meta name="keywords" content="人工智能，诗歌，诗歌生成，AI诗歌生成器，诗歌生成平台">
+    <meta name="keywords" content="人工智能诗歌，诗歌，诗歌生成，AI诗歌生成器，诗歌生成平台">
     <meta name="author" content="Ryu Jae-kuk">
 
     <!-- Canonical URL to avoid duplicate content issues -->
     <link rel="canonical" href="https://www.ai-and-poem.art/zh/">
     
     <!-- Alternate language links for multilingual SEO -->
-    <!-- 한글 주석: 중국어 hreflang을 zh-CN으로 정규화 -->
     <!-- 수정: hreflang 링크를 정규화 -->
-    <link rel="alternate" href="https://www.ai-and-poem.art/zh/" hreflang="zh-CN" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/ru/" hreflang="ru" />
     <link rel="alternate" href="https://www.ai-and-poem.art/ko/" hreflang="ko" />
     <link rel="alternate" href="https://www.ai-and-poem.art/ja/" hreflang="ja" />
     <link rel="alternate" href="https://www.ai-and-poem.art/it/" hreflang="it" />
@@ -39,17 +36,23 @@
     <link rel="alternate" href="https://www.ai-and-poem.art/es/" hreflang="es" />
     <link rel="alternate" href="https://www.ai-and-poem.art/en/" hreflang="en" />
     <link rel="alternate" href="https://www.ai-and-poem.art/de/" hreflang="de" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/ms/" hreflang="ms" /> <!-- 한글 주석: 말레이어 hreflang 추가 -->
-    <link rel="alternate" href="https://www.ai-and-poem.art/bn/" hreflang="bn" /> <!-- 한글 주석: 벵골어 hreflang 추가 -->
-    <link rel="alternate" href="https://www.ai-and-poem.art/vi/" hreflang="vi" /> <!-- 한글 주석: 베트남어 hreflang 추가 -->
-    <link rel="alternate" href="https://www.ai-and-poem.art/el/" hreflang="el" /> <!-- 한글 주석: 그리스어 hreflang 추가 -->
-    <link rel="alternate" href="https://www.ai-and-poem.art/pt/" hreflang="pt" /> <!-- 한글 주석: 포르투갈어 hreflang 추가 -->
-    <link rel="alternate" href="https://www.ai-and-poem.art/pl/" hreflang="pl" /> <!-- 한글 주석: 폴란드어 hreflang 추가 -->
-    <link rel="alternate" href="https://www.ai-and-poem.art/ch/" hreflang="de-CH" /> <!-- 한글 주석: 스위스 독일어 페이지 hreflang 추가, 스위스 독일어 표준 코드로 변경 -->
-    <link rel="alternate" href="https://www.ai-and-poem.art/uk/" hreflang="uk" /> <!-- 한글 주석: 우크라이나어 hreflang 추가 -->
-    <link rel="alternate" href="https://www.ai-and-poem.art/tr/" hreflang="tr" /> <!-- 한글 주석: 터키어 hreflang 추가 -->
+    <link rel="alternate" href="https://www.ai-and-poem.art/ru/" hreflang="ru" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/ms/" hreflang="ms" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/bn/" hreflang="bn" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/vi/" hreflang="vi" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/el/" hreflang="el" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/pt/" hreflang="pt" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/pl/" hreflang="pl" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/ch/" hreflang="de-CH" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/uk/" hreflang="uk" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/tr/" hreflang="tr" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/zh/" hreflang="zh-CN" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/sv/" hreflang="sv" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/hi/" hreflang="hi" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/id/" hreflang="id" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/th/" hreflang="th" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/fi/" hreflang="fi" />
     <link rel="alternate" href="https://www.ai-and-poem.art/" hreflang="x-default" />
-
     <!-- Open Graph 메타 태그 -->
     <!-- 수정: SNS 미리보기 문구 업데이트 -->
     <meta property="og:title" content="AI &amp; Poem — 秒出语音的AI诗歌生成器">
@@ -114,8 +117,9 @@
         <div class="header-right">
             <label for="language" id="language-label">选择语言</label>
             <select id="language">
-                <!-- 한글 주석: 언어 옵션을 알파벳 순으로 정렬 -->
+                <!-- 수정: 언어 옵션을 업데이트 -->
                 <option value="ms">Bahasa Melayu</option>
+                <option value="bn">বাংলা</option>
                 <option value="de">Deutsch</option>
                 <option value="en">English</option>
                 <option value="es">Español</option>
@@ -129,10 +133,14 @@
                 <option value="el">Ελληνικά</option>
                 <option value="ru">русский</option>
                 <option value="uk">Українська</option>
-                <option value="bn">বাংলা</option>
-                <option value="zh" selected>中文</option>
-                <option value="ja">日本語</option>
                 <option value="ko">한국어</option>
+                <option value="ja">日本語</option>
+                <option value="zh" selected>中文</option>
+                <option value="sv">Svenska</option>
+                <option value="hi">हिन्दी</option>
+                <option value="id">Bahasa Indonesia</option>
+                <option value="th">ไทย</option>
+                <option value="fi">Suomi</option>
             </select>
         </div>
     </div>
