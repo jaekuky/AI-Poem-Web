@@ -11,19 +11,19 @@
     
     <!-- 반응형 웹을 위한 viewport 메타 태그 추가 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- ✅ Favicon added -->
     <link rel="icon" href="image/favicon.ico" type="image/x-icon">
 
     <!-- 웹페이지 정보 메타 태그 -->
-    <!-- 수정: 클릭률을 높이기 위해 핵심 가치(속도·낭독·무료)를 강조 -->
-    <meta name="description" content="주제를 입력하면 AI가 10초 안에 맞춤 시와 음성 낭독을 제공하는 무료 생성기입니다. 클릭 한 번으로 공유까지 끝내세요.">
-    <!-- 한글 주석: 불필요한 공백과 중복을 제거해 키워드 메타 태그를 정리 -->
-    <meta name="keywords" content="AI, 인공지능, 시, 시 생성, AI 시 생성기, 시 생성 플랫폼">
+    <!-- 수정: 클릭률을 높이기 위해 속도·낭독·무료 혜택을 강조 -->
+    <meta name="description" content="주제를 입력하면 AI가 10초 안에 맞춤 시와 음성 낭독을 제공하는 무료 생성기입니다. 클릭 한 번으로 감상까지 완성하세요.">
+    <!-- 한글 주석: 중복 키워드를 제거해 메타 정보를 간결하게 유지 -->
+    <meta name="keywords" content="인공지능 시, 인공지능, 시, 시 생성, AI 시 생성기, 시 생성 플랫폼">
     <meta name="author" content="Ryu Jae-kuk">
-    
-    <!-- 수정: 루트 페이지 캐노니컬을 실제 URL로 교정 -->
-    <link rel="canonical" href="https://www.ai-and-poem.art/">
+
+    <!-- Canonical URL to avoid duplicate content issues -->
+    <link rel="canonical" href="https://www.ai-and-poem.art/ko/">
     
     <!-- Alternate language links for multilingual SEO -->
     <!-- 수정: hreflang 링크를 정규화 -->
@@ -52,11 +52,10 @@
     <link rel="alternate" href="https://www.ai-and-poem.art/fi/" hreflang="fi" />
     <link rel="alternate" href="https://www.ai-and-poem.art/" hreflang="x-default" />
     <!-- Open Graph 메타 태그 -->
-    <!-- 수정: SNS 미리보기에서도 동일한 제안 문구 유지 -->
+    <!-- 수정: SNS 미리보기에도 동일한 제안 문구 반영 -->
     <meta property="og:title" content="AI &amp; Poem – 10초 만에 완성하는 낭독형 AI 시">
-    <meta property="og:description" content="주제를 입력하면 AI가 10초 안에 맞춤 시와 음성 낭독을 제공하는 무료 생성기입니다. 클릭 한 번으로 공유까지 끝내세요.">
+    <meta property="og:description" content="주제를 입력하면 AI가 10초 안에 맞춤 시와 음성 낭독을 제공하는 무료 생성기입니다. 클릭 한 번으로 감상까지 완성하세요.">
     <meta property="og:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
-    <!-- 한글 주석: Open Graph URL도 ko 페이지로 일치시켜 중복 노출을 방지 -->
     <meta property="og:url" content="https://www.ai-and-poem.art/ko/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="AI &amp; Poem">
@@ -65,31 +64,81 @@
 
     <!-- X(전 Twitter) 카드 메타 태그 추가 -->
     <meta name="twitter:card" content="summary_large_image">
-    <!-- 수정: X 카드 문구도 SERP와 일치시켜 메시지 일관성 확보 -->
+    <!-- 수정: X 카드에서도 동일한 혜택 메시지 유지 -->
     <meta name="twitter:title" content="AI &amp; Poem – 10초 만에 완성하는 낭독형 AI 시">
-    <meta name="twitter:description" content="주제를 입력하면 AI가 10초 안에 맞춤 시와 음성 낭독을 제공하는 무료 생성기입니다. 클릭 한 번으로 공유까지 끝내세요.">
+    <meta name="twitter:description" content="주제를 입력하면 AI가 10초 안에 맞춤 시와 음성 낭독을 제공하는 무료 생성기입니다. 클릭 한 번으로 감상까지 완성하세요.">
     <meta name="twitter:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta name="twitter:image:alt" content="시를 쓰는 인공지능 로봇 일러스트">
 
     <!-- JSON-LD Structured Data for enhanced SEO -->
     <!-- 수정: 구조화 데이터에도 새로운 타이틀/설명을 반영 -->
-    <!-- 한글 주석: 구조화 데이터의 URL도 ko 경로로 통일 -->
     <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "name": "AI &amp; Poem – 10초 만에 완성하는 낭독형 AI 시",
-          "url": "https://www.ai-and-poem.art/ko/",
-          "description": "주제를 입력하면 AI가 10초 안에 맞춤 시와 음성 낭독을 제공하는 무료 생성기입니다. 클릭 한 번으로 공유까지 끝내세요.",
-          "inLanguage": "ko",
-          "author": {
-            "@type": "Person",
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AI &amp; Poem – 10초 만에 완성하는 낭독형 AI 시",
+        "url": "https://www.ai-and-poem.art/ko/",
+        "description": "주제를 입력하면 AI가 10초 안에 맞춤 시와 음성 낭독을 제공하는 무료 생성기입니다. 클릭 한 번으로 감상까지 완성하세요.",
+        "inLanguage": "ko",
+        "author": {
+        "@type": "Person",
             "name": "Ryu Jae-kuk"
           },
           "image": "https://www.ai-and-poem.art/image/robot_poet.png"
         }
         </script>
-        
+    <!-- 수정: 대표 샘플 시를 CreativeWork 구조화 데이터로 추가 -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "한강 위로 번지는 새벽 – 샘플 AI 시",
+          "inLanguage": "ko",
+          "genre": ["AI 시", "창작"],
+          "creator": {
+            "@type": "Organization",
+            "name": "AI & Poem"
+          },
+          "dateModified": "2025-10-20",
+          "isAccessibleForFree": true,
+          "keywords": ["AI 시 생성기", "AI 시", "AI poem"],
+          "text": "보랏빛 네온이 새벽빛에 녹아들고\n커피 수레 떨림이 거리를 깨우네\n속삭이는 바이트 속에서 영감이 피어나\n신선한 운율이 하루를 시작해."
+        }
+        </script>
+    <!-- 수정: FAQPage 구조화 데이터를 추가해 다국어 풍부한 결과를 노림 -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "시가 생성되는 데 얼마나 걸리나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "대부분의 한국어 시는 10초 이내에 생성되며, 음성 낭독 파일 준비까지 포함됩니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "생성된 시를 상업적으로 활용해도 되나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "가능합니다. SNS, 뉴스레터, 행사 등에서 활용하실 수 있으며, 여유가 있다면 AI & Poem 출처 표기를 권장합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "음성 낭독은 자동으로 제공되나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "시가 생성된 뒤 낭독 버튼을 누르면 선택한 언어에 맞춘 음성을 바로 들을 수 있습니다."
+              }
+            }
+          ]
+        }
+        </script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CVHJYZWNC"></script>
     <script>
@@ -99,11 +148,11 @@
 
     gtag('config', 'G-1CVHJYZWNC');
     </script>
-    
+
     <!-- Google Adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799"
     crossorigin="anonymous"></script>
-    
+
     <!-- style.css 불러오기 -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -111,8 +160,8 @@
     <div class="header">
         <div class="header-left">
             <h1>AI &amp; Poem</h1>
-            <!-- 한글 주석: 한국어 페이지에 맞춰 태그라인을 현지화 -->
-            <!-- 수정: 상단 태그라인에 'AI 시 생성기' 키워드를 포함 -->
+            <!-- 한글 주석: 한국어 페이지에 맞춘 슬로건 번역 -->
+            <!-- 수정: 'AI 시 생성기' 키워드를 포함한 태그라인으로 교체 -->
             <h3>즉시 낭독 가능한 AI 시 생성기</h3>
         </div>
         <div class="header-right">
@@ -147,11 +196,11 @@
     </div>
     <div class="container">
         <div id="image-box">
-            <video loop id="processing-video" src="/image/robot_poet.mp4" poster="/image/robot_poet.png" aria-label="시를 작성하는 인공지능 로봇 영상"></video>
+            <video loop id="processing-video" src="image/robot_poet.mp4" poster="image/robot_poet.png" aria-label="시를 작성하는 인공지능 로봇 영상"></video>
         </div>
         <form id="poem-form">
-            <!-- 수정: 검색어와 동일한 표현을 추가해 클릭 후 메시지 일치 강화 -->
-            <p id="form-description">‘AI 시 생성기’를 찾았다면, 주제를 입력해 10초 안에 시와 음성 낭독을 받아보세요.</p> 
+            <!-- 수정: 검색어와 동일한 표현을 추가해 클릭 후 기대치를 맞춤 -->
+            <p id="form-description">‘AI 시 생성기’를 찾으셨다면 주제를 입력해 10초 안에 시와 음성 낭독을 받아보세요.</p> 
             <div class="input-box">
                 <input type="text" id="topic" placeholder="시의 주제를 입력하세요" required>
                 <button id="poetry-writing-button" type="submit">시 작성</button>
@@ -163,11 +212,36 @@
             <button id="tts-button" disabled>🔊 시 낭송</button>
         </div>
     </div>
+    <!-- 수정: 검색 사용자의 의도를 반영한 활용 사례 섹션 추가 -->
+    <section class="seo-section">
+        <h2>‘AI 시 생성기’를 찾는 이유</h2>
+        <ul>
+            <li>SNS와 블로그를 위한 감성 카피를 몇 초 만에 완성하고 싶을 때.</li>
+            <li>결혼식, 기념일, 기업 이벤트에서 맞춤 축사와 메시지를 준비할 때.</li>
+            <li>라이브 방송이나 클래스에서 실시간 시 요청을 받고 즉시 낭독하고 싶을 때.</li>
+        </ul>
+    </section>
+    <!-- 수정: FAQ 콘텐츠를 추가해 클릭 후 만족도를 높임 -->
+    <section class="seo-section">
+        <h2>자주 묻는 질문</h2>
+        <details>
+            <summary>시가 생성되는 데 얼마나 걸리나요?</summary>
+            <p>평균 10초 이내에 시와 음성 낭독이 함께 준비되어 바로 감상하고 활용할 수 있습니다.</p>
+        </details>
+        <details>
+            <summary>생성된 시를 상업적으로 사용해도 되나요?</summary>
+            <p>네. 캠페인, 뉴스레터, 이벤트 등에서 활용하실 수 있으며 가능한 경우 AI &amp; Poem을 출처로 표기해주세요.</p>
+        </details>
+        <details>
+            <summary>음성 낭독은 어떻게 받나요?</summary>
+            <p>시가 완성된 뒤 ‘시 낭송’ 버튼을 누르면 선택한 언어로 바로 들을 수 있습니다.</p>
+        </details>
+    </section>
     <footer class="site-footer">
-        <!-- 한글 주석: 개인정보처리방침과 이용약관 페이지로 이동하는 링크 -->
-        <a href="/privacy.html">개인정보 처리방침</a>
+        <!-- 한글 주석: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
+        <a href="privacy.html">개인정보 처리방침</a>
         <span>|</span>
-        <a href="/terms.html">이용약관</a>
+        <a href="terms.html">이용약관</a>
     </footer>
     <script src="script.js" defer></script>
 </body>

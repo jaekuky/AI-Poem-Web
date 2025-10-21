@@ -17,7 +17,7 @@
     
     <!-- 웹페이지 정보 메타 태그 -->
     <!-- 수정: 속도·낭독·무료 혜택을 담은 메타 설명으로 교체 -->
-    <meta name="description" content="Turn any topic into a bespoke poem plus shareable narration in under 10 seconds. Free AI poetry maker tailored to your search.">
+    <meta name="description" content="Turn any topic into a bespoke poem with optional narration in under 10 seconds. Free AI poetry maker tailored to your search.">
     <!-- 한글 주석: 불필요한 공백과 중복을 제거해 키워드 메타 태그를 정리 -->
     <meta name="keywords" content="AI poetry, artificial intelligence, poetry, poetry generation, AI poetry generator, poetry generation platform">
     <meta name="author" content="Ryu Jae-kuk">
@@ -54,7 +54,7 @@
     <!-- Open Graph 메타 태그 -->
     <!-- 수정: SNS 미리보기 문구도 동일한 USP를 유지 -->
     <meta property="og:title" content="AI &amp; Poem - Instant Voice-Ready AI Poem Generator">
-    <meta property="og:description" content="Turn any topic into a bespoke poem plus shareable narration in under 10 seconds. Free AI poetry maker tailored to your search.">
+    <meta property="og:description" content="Turn any topic into a bespoke poem with optional narration in under 10 seconds. Free AI poetry maker tailored to your search.">
     <meta property="og:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta property="og:url" content="https://www.ai-and-poem.art/en/">
     <meta property="og:type" content="website">
@@ -66,7 +66,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <!-- 수정: X 카드 문구도 SERP와 일치 -->
     <meta name="twitter:title" content="AI &amp; Poem - Instant Voice-Ready AI Poem Generator">
-    <meta name="twitter:description" content="Turn any topic into a bespoke poem plus shareable narration in under 10 seconds. Free AI poetry maker tailored to your search.">
+    <meta name="twitter:description" content="Turn any topic into a bespoke poem with optional narration in under 10 seconds. Free AI poetry maker tailored to your search.">
     <meta name="twitter:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta name="twitter:image:alt" content="Illustration of an AI robot writing poetry">
 
@@ -78,13 +78,64 @@
         "@type": "WebSite",
         "name": "AI &amp; Poem - Instant Voice-Ready AI Poem Generator",
         "url": "https://www.ai-and-poem.art/en/",
-        "description": "Turn any topic into a bespoke poem plus shareable narration in under 10 seconds. Free AI poetry maker tailored to your search.",
+        "description": "Turn any topic into a bespoke poem with optional narration in under 10 seconds. Free AI poetry maker tailored to your search.",
         "inLanguage": "en",
         "author": {
         "@type": "Person",
         "name": "Ryu Jae-kuk"
         },
         "image": "https://www.ai-and-poem.art/image/robot_poet.png"
+    }
+    </script>
+    <!-- 수정: 대표 샘플 시를 CreativeWork 구조화 데이터로 추가 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Dawn Over the River – Sample AI Poem",
+        "inLanguage": "en",
+        "genre": ["AI poetry", "creative writing"],
+        "creator": {
+            "@type": "Organization",
+            "name": "AI & Poem"
+        },
+        "dateModified": "2025-10-20",
+        "isAccessibleForFree": true,
+        "keywords": ["poem ai", "ai poem generator", "ai poetry"],
+        "text": "Neon clouds dissolve in amber light.\nCoffee carts hum awake the street.\nIdeas bloom in whispered bytes.\nFresh verses make mornings complete."
+    }
+    </script>
+    <!-- 수정: FAQPage 구조화 데이터를 추가해 풍부한 검색 노출 유도 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How quickly does AI & Poem create a poem?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                "text": "Most English poems are delivered in 8-10 seconds, including narration preparation, so you can start using them instantly."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use the generated poem commercially?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                "text": "Yes. You can reuse the generated text in campaigns, newsletters, and events; please credit AI & Poem when possible."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the tool create narration automatically?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Select the narration toggle after generation to hear the poem read aloud in your selected language."
+                }
+            }
+        ]
     }
     </script>
 
@@ -160,6 +211,31 @@
             <button id="tts-button" disabled>🔊 Recite a poem</button>
         </div>
     </div>
+    <!-- 수정: 상위 검색어와 일치하는 사용 사례 섹션 추가 -->
+    <section class="seo-section">
+        <h2>Why creators search for "poem ai"</h2>
+        <ul>
+            <li>Launch rapid-fire social posts with bespoke verses tuned to your brand voice.</li>
+            <li>Generate unforgettable vows, speeches, and greeting cards in minutes.</li>
+            <li>Offer audience engagement at events with live-request poems and instant narration.</li>
+        </ul>
+    </section>
+    <!-- 수정: FAQ 본문을 추가해 체류 시간을 늘리고 풍부한 결과를 유도 -->
+    <section class="seo-section">
+        <h2>AI &amp; Poem FAQ</h2>
+        <details>
+            <summary>How quickly does AI &amp; Poem create a poem?</summary>
+            <p>Most poems arrive in under 10 seconds and include optional narration so you can present them immediately.</p>
+        </details>
+        <details>
+            <summary>Can I use the generated poem commercially?</summary>
+            <p>You can reuse poems across campaigns, newsletters, and events; attribution to AI &amp; Poem is encouraged when space allows.</p>
+        </details>
+        <details>
+            <summary>Does the tool create narration automatically?</summary>
+            <p>Enable the narration button after generation to hear the poem read aloud in your selected language.</p>
+        </details>
+    </section>
     <footer class="site-footer">
         <!-- 한글 주석: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
         <a href="privacy.html">Privacy Policy</a>

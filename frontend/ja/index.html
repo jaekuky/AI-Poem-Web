@@ -17,7 +17,7 @@
     
     <!-- 웹페이지 정보 메타 태그 -->
     <!-- 수정: 속도와音声朗読 혜택을 강조한 설명 -->
-    <meta name="description" content="トピックを入力するだけで、10秒以内にカスタム詩とシェア可能な音声朗読を無料で受け取れます。">
+    <meta name="description" content="トピックを入力するだけで、10秒以内にカスタム詩とすぐ聞ける音声朗読を無料で受け取れます。">
     <!-- 한글 주석: 불필요한 공백과 중복을 제거해 키워드 메타 태그를 정리 -->
     <meta name="keywords" content="AI詩、人工知能、詩、詩生成、AI詩生成器、詩生成プラットフォーム">
     <meta name="author" content="Ryu Jae-kuk">
@@ -54,7 +54,7 @@
     <!-- Open Graph 메타 태그 -->
     <!-- 수정: SNS 미리보기 문구 업데이트 -->
     <meta property="og:title" content="AI &amp; Poem – 10秒で仕上がる音声付きAI詩生成">
-    <meta property="og:description" content="トピックを入力するだけで、10秒以内にカスタム詩とシェア可能な音声朗読を無料で受け取れます。">
+    <meta property="og:description" content="トピックを入力するだけで、10秒以内にカスタム詩とすぐ聞ける音声朗読を無料で受け取れます。">
     <meta property="og:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta property="og:url" content="https://www.ai-and-poem.art/ja/">
     <meta property="og:type" content="website">
@@ -66,7 +66,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <!-- 수정: X 카드 문구도 SERP와 일치 -->
     <meta name="twitter:title" content="AI &amp; Poem – 10秒で仕上がる音声付きAI詩生成">
-    <meta name="twitter:description" content="トピックを入力するだけで、10秒以内にカスタム詩とシェア可能な音声朗読を無料で受け取れます。">
+    <meta name="twitter:description" content="トピックを入力するだけで、10秒以内にカスタム詩とすぐ聞ける音声朗読を無料で受け取れます。">
     <meta name="twitter:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta name="twitter:image:alt" content="詩を書くAIロボットのイラスト">
 
@@ -78,13 +78,64 @@
           "@type": "WebSite",
           "name": "AI &amp; Poem – 10秒で仕上がる音声付きAI詩生成",
           "url": "https://www.ai-and-poem.art/ja/",
-          "description": "トピックを入力するだけで、10秒以内にカスタム詩とシェア可能な音声朗読を無料で受け取れます。",
+          "description": "トピックを入力するだけで、10秒以内にカスタム詩とすぐ聞ける音声朗読を無料で受け取れます。",
           "inLanguage": "ja",
           "author": {
             "@type": "Person",
             "name": "Ryu Jae-kuk"
           },
           "image": "https://www.ai-and-poem.art/image/robot_poet.png"
+        }
+        </script>
+    <!-- 수정: 샘플 시를 CreativeWork 구조화 데이터로 정의 -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "川辺の夜明け – サンプルAI詩",
+          "inLanguage": "ja",
+          "genre": ["AI詩", "クリエイティブライティング"],
+          "creator": {
+            "@type": "Organization",
+            "name": "AI & Poem"
+          },
+          "dateModified": "2025-10-20",
+          "isAccessibleForFree": true,
+          "keywords": ["AI 詩", "AI 詩生成", "poem ai"],
+          "text": "ネオンの雲が朝焼けに溶けて\n屋台の珈琲が街を呼び覚ます\n囁くバイトの粒でひらめきが芽生え\n新鮮な詩行が一日を照らす。"
+        }
+        </script>
+    <!-- 수정: FAQPage 구조화 데이터 추가 -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "どれくらいで詩が完成しますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ほとんどの日本語詩は10秒以内に完成し、すぐに聞ける音声朗読も同時に準備されます。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "生成した詩を商用利用できますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "はい。SNS投稿、イベント、ニュースレターなど商用利用が可能で、余裕があればAI & Poemへのクレジットを推奨します。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "音声朗読は自動で生成されますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "詩が生成された後に朗読ボタンを押すと、選択した言語の朗読をすぐに聞くことができます。"
+              }
+            }
+          ]
         }
         </script>
 
@@ -160,6 +211,31 @@
             <button id="tts-button" disabled>🔊 詩の朗読</button>
         </div>
     </div>
+    <!-- 수정: 일본어 주요 검색 의도를 반영한 활용 섹션 추가 -->
+    <section class="seo-section">
+        <h2>「AI 詩 生成」を探すシーン</h2>
+        <ul>
+            <li>SNS投稿やニュースレターに感情豊かな詩を素早く添えたいとき。</li>
+            <li>結婚式や送別会で心に残るスピーチやメッセージを準備したいとき。</li>
+            <li>ライブ配信や授業でリクエストに合わせた詩と朗読を即座に披露したいとき。</li>
+        </ul>
+    </section>
+    <!-- 수정: FAQ 본문을 추가해 검색 후 이탈률을 낮춤 -->
+    <section class="seo-section">
+        <h2>よくある質問</h2>
+        <details>
+            <summary>どれくらいで詩が完成しますか？</summary>
+            <p>多くの場合10秒以内に詩と朗読用の音声ファイルが届き、そのまま聞いて活用できます。</p>
+        </details>
+        <details>
+            <summary>生成した詩を商用利用できますか？</summary>
+            <p>はい。イベント、マーケティング、コンテンツ制作に使えます。可能であればAI &amp; Poemへのクレジットをお願いします。</p>
+        </details>
+        <details>
+            <summary>音声朗読は自動で生成されますか？</summary>
+            <p>生成後に朗読ボタンを押すと、選択した言語の朗読をすぐに聞くことができます。</p>
+        </details>
+    </section>
     <footer class="site-footer">
         <!-- 한글 주석: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
         <a href="privacy.html">プライバシーポリシー</a>

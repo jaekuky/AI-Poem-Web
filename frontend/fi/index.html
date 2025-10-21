@@ -87,6 +87,57 @@
         "image": "https://www.ai-and-poem.art/image/robot_poet.png"
     }
     </script>
+    <!-- 수정: 핀란드어 샘플 시 CreativeWork 구조화 데이터 추가 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Aamunkajo joen yllä – Esimerkkiruno tekoälyltä",
+        "inLanguage": "fi",
+        "genre": ["AI-runous", "luova kirjoittaminen"],
+        "creator": {
+            "@type": "Organization",
+            "name": "AI & Poem"
+        },
+        "dateModified": "2025-10-20",
+        "isAccessibleForFree": true,
+        "keywords": ["ai runogeneraattori", "ai runo", "tekoälyrunous"],
+        "text": "Neonpilvet liukenevat meripihkan hohteeseen.\nKahvivaunut herättävät kadun hiljaisella surinalla.\nIdeat puhkeavat kukkaan kuiskatuissa tavuissa.\nJaettavat säkeet täydentävät aamun."
+    }
+    </script>
+    <!-- 수정: 핀란드어 FAQPage 구조화 데이터 추가 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Kuinka nopeasti AI & Poem luo runon?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Useimmat suomenkieliset runot valmistuvat 8–10 sekunnissa, ääneenluvun kanssa, joten voit jakaa tuloksen heti."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Voinko käyttää luotua runoa kaupallisesti?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Kyllä. Voit hyödyntää runoa kampanjoissa, uutiskirjeissä ja tapahtumissa; mainitse AI & Poem, kun se on mahdollista."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Tuottaako työkalu ääneenluvun automaattisesti?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ota käyttöön ääneenluku-painike generoinnin jälkeen kuunnellaksesi ääneenluvun valitsemallasi kielellä."
+                }
+            }
+        ]
+    }
+    </script>
 
      <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CVHJYZWNC"></script>
@@ -160,6 +211,31 @@
             <button id="tts-button" disabled>🔊 Lue runo ääneen</button>
         </div>
     </div>
+    <!-- 수정: 핀란드어 주요 검색 의도를 반영한 활용 사례 섹션 추가 -->
+    <section class="seo-section">
+        <h2>Miksi käyttäjät etsivät “AI-runogeneraattoria”</h2>
+        <ul>
+            <li>Julkaise salamannopeita somepäivityksiä brändisi äänelle sopivilla säkeillä.</li>
+            <li>Luo unohtumattomat valat, puheet ja kortit muutamassa minuutissa.</li>
+            <li>Virkistä tapahtumia live-toiveisiin perustuvilla runoilla ja välittömällä ääneenluvulla.</li>
+        </ul>
+    </section>
+    <!-- 수정: 핀란드어 FAQ 콘텐츠 추가 -->
+    <section class="seo-section">
+        <h2>Usein kysytyt kysymykset</h2>
+        <details>
+            <summary>Kuinka nopeasti AI &amp; Poem luo runon?</summary>
+            <p>Useimmat runot syntyvät alle 10 sekunnissa ja sisältävät valmiin ääneenluvun.</p>
+        </details>
+        <details>
+            <summary>Voinko käyttää luotua runoa kaupallisesti?</summary>
+            <p>Kyllä, voit hyödyntää runoa kampanjoissa, uutiskirjeissä ja tapahtumissa; mainitse AI &amp; Poem, kun se sopii.</p>
+        </details>
+        <details>
+            <summary>Tuottaako työkalu ääneenluvun automaattisesti?</summary>
+            <p>Generoinnin jälkeen paina ääneenluku-painiketta ja kuuntele ääneenluku haluamallasi kielellä.</p>
+        </details>
+    </section>
     <footer class="site-footer">
         <!-- 한글 주석: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
         <a href="privacy.html">Tietosuojaseloste</a>

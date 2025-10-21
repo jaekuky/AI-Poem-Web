@@ -17,7 +17,7 @@
     
     <!-- 웹페이지 정보 메타 태그 -->
     <!-- 수정: 속도와 낭독 혜택을 강조한 메타 설명으로 교체 -->
-    <meta name="description" content="Saisissez un thème et recevez en moins de 10 secondes un poème sur mesure avec narration prête à partager. Service IA 100 % gratuit.">
+    <meta name="description" content="Saisissez un thème et recevez en moins de 10 secondes un poème sur mesure avec narration prête à être écoutée. Service IA 100 % gratuit.">
     <!-- 한글 주석: 불필요한 공백과 중복을 제거해 키워드 메타 태그를 정리 -->
     <meta name="keywords" content="Poésie de l'IA, intelligence artificielle, poésie, génération de poésie, générateur de poésie IA, plateforme de génération de poésie">
     <meta name="author" content="Ryu Jae-kuk">
@@ -54,7 +54,7 @@
     <!-- Open Graph 메타 태그 -->
     <!-- 수정: SNS 미리보기에도 동일한 메시지를 반영 -->
     <meta property="og:title" content="AI &amp; Poem – Générateur de poèmes IA avec audio instantané">
-    <meta property="og:description" content="Saisissez un thème et recevez en moins de 10 secondes un poème sur mesure avec narration prête à partager. Service IA 100 % gratuit.">
+    <meta property="og:description" content="Saisissez un thème et recevez en moins de 10 secondes un poème sur mesure avec narration prête à être écoutée. Service IA 100 % gratuit.">
     <meta property="og:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta property="og:url" content="https://www.ai-and-poem.art/fr/">
     <meta property="og:type" content="website">
@@ -66,7 +66,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <!-- 수정: X 카드 문구도 SERP와 연동 -->
     <meta name="twitter:title" content="AI &amp; Poem – Générateur de poèmes IA avec audio instantané">
-    <meta name="twitter:description" content="Saisissez un thème et recevez en moins de 10 secondes un poème sur mesure avec narration prête à partager. Service IA 100 % gratuit.">
+    <meta name="twitter:description" content="Saisissez un thème et recevez en moins de 10 secondes un poème sur mesure avec narration prête à être écoutée. Service IA 100 % gratuit.">
     <meta name="twitter:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta name="twitter:image:alt" content="Illustration d'un robot IA écrivant de la poésie">
 
@@ -78,13 +78,64 @@
           "@type": "WebSite",
           "name": "AI &amp; Poem – Générateur de poèmes IA avec audio instantané",
           "url": "https://www.ai-and-poem.art/fr/",
-          "description": "Saisissez un thème et recevez en moins de 10 secondes un poème sur mesure avec narration prête à partager. Service IA 100 % gratuit.",
+          "description": "Saisissez un thème et recevez en moins de 10 secondes un poème sur mesure avec narration prête à être écoutée. Service IA 100 % gratuit.",
           "inLanguage": "fr",
           "author": {
             "@type": "Person",
             "name": "Ryu Jae-kuk"
           },
           "image": "https://www.ai-and-poem.art/image/robot_poet.png"
+        }
+        </script>
+    <!-- 수정: 샘플 시를 CreativeWork 구조화 데이터로 정의 -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": "Aube sur la Seine – Poème IA d'exemple",
+          "inLanguage": "fr",
+          "genre": ["poésie IA", "écriture créative"],
+          "creator": {
+            "@type": "Organization",
+            "name": "AI & Poem"
+          },
+          "dateModified": "2025-10-20",
+          "isAccessibleForFree": true,
+          "keywords": ["générateur de poème ia", "poème ia", "poésie ia"],
+          "text": "Les nuages néon se fondent dans l'aurore.\nLes stands de café réveillent la rue.\nLes idées fleurissent dans des octets murmurés.\nDes vers lumineux illuminent votre journée."
+        }
+        </script>
+    <!-- 수정: FAQPage 구조화 데이터로 풍부한 노출을 노림 -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Combien de temps l'outil met-il pour créer un poème ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La majorité des poèmes en français sont livrés en 8 à 10 secondes, narration comprise, pour une publication immédiate."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Puis-je utiliser le poème à des fins commerciales ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, vous pouvez l'utiliser pour des campagnes marketing, des newsletters ou des événements. Mentionner AI & Poem reste apprécié."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "La narration audio est-elle générée automatiquement ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Activez le bouton de narration après la génération pour écouter la narration dans la langue choisie."
+              }
+            }
+          ]
         }
         </script>
 
@@ -160,6 +211,31 @@
             <button id="tts-button" disabled>🔊 Réciter le poème</button>
         </div>
     </div>
+    <!-- 수정: 프랑스어 주요 검색 의도를 반영한 사용 사례 섹션 추가 -->
+    <section class="seo-section">
+        <h2>Pourquoi les créateurs recherchent « générateur de poème ia »</h2>
+        <ul>
+            <li>Lancer des campagnes sociales avec des vers personnalisés et prêts à publier.</li>
+            <li>Préparer des discours mémorables pour mariages, événements d'entreprise ou remises de prix.</li>
+            <li>Animer des ateliers ou lives en générant des poèmes instantanés avec narration.</li>
+        </ul>
+    </section>
+    <!-- 수정: FAQ 본문을 추가해 검색 스니펫과 체류 시간을 확장 -->
+    <section class="seo-section">
+        <h2>FAQ AI &amp; Poem</h2>
+        <details>
+            <summary>Combien de temps l'outil met-il pour créer un poème ?</summary>
+            <p>La majorité des poèmes sont livrés en moins de 10 secondes, narration incluse, pour publier immédiatement.</p>
+        </details>
+        <details>
+            <summary>Puis-je utiliser le poème à des fins commerciales ?</summary>
+            <p>Oui, pour vos campagnes, newsletters ou événements. Mentionner AI &amp; Poem reste apprécié lorsque c'est possible.</p>
+        </details>
+        <details>
+            <summary>La narration audio est-elle générée automatiquement ?</summary>
+            <p>Activez le bouton de narration après la génération pour écouter l'enregistrement dans la langue sélectionnée.</p>
+        </details>
+    </section>
     <footer class="site-footer">
         <!-- 한글 주석: 정책 페이지로 이동하는 푸터 링크 -->
         <a href="privacy.html">Politique de confidentialité</a>
