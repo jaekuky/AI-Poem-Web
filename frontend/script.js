@@ -135,6 +135,33 @@ const title ={
     'fi': 'Otsikko: ' // 수정: 핀란드어 제목 접두사 추가
 }
 
+// 수정: 애드센스 쿠키 동의를 위한 메시지 구성
+const consentMessageMap = {
+    'ko': { message: 'AI & Poem은 서비스 제공과 광고 최적화를 위해 쿠키를 사용합니다.', button: '동의합니다' },
+    'en': { message: 'AI & Poem uses cookies for service delivery and ad optimization.', button: 'Accept' },
+    'ja': { message: 'AI & Poemはサービス提供と広告最適化のためにクッキーを使用します。', button: '同意する' },
+    'zh': { message: 'AI & Poem 使用 Cookie 来提供服务并优化广告。', button: '同意' },
+    'es': { message: 'AI & Poem usa cookies para ofrecer el servicio y optimizar la publicidad.', button: 'Aceptar' },
+    'fr': { message: 'AI & Poem utilise des cookies pour fournir le service et optimiser la publicité.', button: 'Accepter' },
+    'de': { message: 'AI & Poem verwendet Cookies für den Dienst und zur Optimierung von Werbung.', button: 'Akzeptieren' },
+    'it': { message: 'AI & Poem utilizza cookie per offrire il servizio e ottimizzare la pubblicità.', button: 'Accetto' },
+    'pt': { message: 'AI & Poem utiliza cookies para fornecer o serviço e otimizar anúncios.', button: 'Aceitar' },
+    'pl': { message: 'AI & Poem używa plików cookie do świadczenia usług i optymalizacji reklam.', button: 'Akceptuję' },
+    'ru': { message: 'AI & Poem использует cookie для работы сервиса и оптимизации рекламы.', button: 'Принять' },
+    'uk': { message: 'AI & Poem використовує файли cookie для надання послуги та оптимізації реклами.', button: 'Погоджуюсь' },
+    'tr': { message: 'AI & Poem hizmet sunumu ve reklam optimizasyonu için çerezler kullanır.', button: 'Kabul ediyorum' },
+    'sv': { message: 'AI & Poem använder cookies för tjänsten och annonsoptimering.', button: 'Acceptera' },
+    'hi': { message: 'AI & Poem सेवा प्रदान और विज्ञापन अनुकूलन के लिए कुकीज़ का उपयोग करता है।', button: 'स्वीकार करें' },
+    'id': { message: 'AI & Poem menggunakan cookie untuk layanan dan optimasi iklan.', button: 'Setuju' },
+    'th': { message: 'AI & Poem ใช้คุกกี้เพื่อให้บริการและปรับโฆษณาให้เหมาะสม.', button: 'ยอมรับ' },
+    'fi': { message: 'AI & Poem käyttää evästeitä palvelun ja mainosten optimointiin.', button: 'Hyväksy' },
+    'bn': { message: 'AI & Poem পরিষেবা ও বিজ্ঞাপন উন্নত করতে কুকি ব্যবহার করে।', button: 'সম্মতি দিচ্ছি' },
+    'ms': { message: 'AI & Poem menggunakan kuki untuk perkhidmatan dan pengoptimuman iklan.', button: 'Setuju' },
+    'el': { message: 'Το AI & Poem χρησιμοποιεί cookies για την υπηρεσία και τη βελτιστοποίηση διαφημίσεων.', button: 'Αποδοχή' },
+    'vi': { message: 'AI & Poem sử dụng cookie để cung cấp dịch vụ và tối ưu hoá quảng cáo.', button: 'Đồng ý' },
+    'ch': { message: 'AI & Poem bruuchet Cookies für d Dienstleistig und d Werbig.', button: 'I versteh' }
+};
+
 const languageSelect = document.getElementById('language');
 const processingVideo = document.getElementById('processing-video');
 const topicInput = document.getElementById('topic');
@@ -321,3 +348,55 @@ ttsButton.addEventListener('click', async function(event) {
     utterance.lang = ttsLang;
     window.speechSynthesis.speak(utterance);
 });
+
+// 수정: 간단한 쿠키 동의 배너를 추가해 사용자 동의를 수집
+const cookieConsentKey = 'aiAndPoemCookieConsent';
+if (!localStorage.getItem(cookieConsentKey)) {
+    const banner = document.createElement('div');
+    banner.id = 'cookie-consent-banner';
+    banner.style.position = 'fixed';
+    banner.style.bottom = '0';
+    banner.style.left = '0';
+    banner.style.right = '0';
+    banner.style.zIndex = '9999';
+    banner.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    banner.style.color = '#fff';
+    banner.style.display = 'flex';
+    banner.style.flexWrap = 'wrap';
+    banner.style.justifyContent = 'space-between';
+    banner.style.alignItems = 'center';
+    banner.style.padding = '12px 18px';
+
+    const consentLanguage = consentMessageMap[languageSelect.value] || consentMessageMap['en'];
+    const messageSpan = document.createElement('span');
+    messageSpan.textContent = consentLanguage.message;
+    messageSpan.style.flex = '1 1 auto';
+    messageSpan.style.marginRight = '12px';
+
+    const acceptButton = document.createElement('button');
+    acceptButton.type = 'button';
+    acceptButton.textContent = consentLanguage.button;
+    acceptButton.style.backgroundColor = '#7c4dff';
+    acceptButton.style.color = '#fff';
+    acceptButton.style.border = 'none';
+    acceptButton.style.padding = '10px 16px';
+    acceptButton.style.cursor = 'pointer';
+    acceptButton.onclick = () => {
+        localStorage.setItem(cookieConsentKey, 'accepted');
+        banner.remove();
+        document.body.classList.remove('has-cookie-banner');
+    };
+
+    banner.appendChild(messageSpan);
+    banner.appendChild(acceptButton);
+    document.body.appendChild(banner);
+    document.body.classList.add('has-cookie-banner');
+
+    languageSelect.addEventListener('change', () => {
+        const updatedConsentLanguage = consentMessageMap[languageSelect.value] || consentMessageMap['en'];
+        messageSpan.textContent = updatedConsentLanguage.message;
+        acceptButton.textContent = updatedConsentLanguage.button;
+    });
+} else {
+    document.body.classList.remove('has-cookie-banner');
+}

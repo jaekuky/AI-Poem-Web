@@ -63,6 +63,19 @@ if (!OPENAI_API_KEY) {
 }
 
 const MAX_TOPIC_LENGTH = 200; //  한글 주석: 과도한 프롬프트 길이를 제한하여 OpenAI 에러를 예방
+// 수정: 구글 애드센스 정책 준수를 위해 금칙어 목록을 추가
+const DISALLOWED_KEYWORDS = [
+    // 수정: 애드센스 정책 준수를 위해 다국어 금칙어를 확장
+    'porn', 'porno', '포르노', 'ポルノ', '色情', 'pornografia', 'pornografía',
+    'sex', 'sexual', '섹스', '性行為', 'sexo', 'seks', 'seksual', 'seksualitas', 'sexualidad',
+    'adult', '성인', '成人', 'adulto',
+    'violence', '폭력', '暴力', 'violencia', 'violência', 'gewalt',
+    'kill', 'murder', '죽이다', '살인', '살해', '殺す', '殺人', 'asesinar', 'matar', 'assassinato',
+    'terror', 'terrorist', '테러', '테러리스트', 'テロ', 'terrorista', 'террор', 'террорист',
+    'weapon', 'gun', '총', '무기', '銃', 'arma', 'arma de fuego', 'arma branca', 'pistola',
+    'drugs', 'drug', '마약', '약물', '薬物', 'drogas', 'narcóticos', 'наркотики', 'narkotika',
+    'nazi', '나치', 'неонаци'
+];
 
 app.post('/generate-poem', async (req, res) => {
     const rawTopic = typeof req.body.topic === 'string' ? req.body.topic.trim() : '';
@@ -75,6 +88,13 @@ app.post('/generate-poem', async (req, res) => {
 
     if (rawTopic.length > MAX_TOPIC_LENGTH) {
         return res.status(400).json({ error: `시의 주제는 ${MAX_TOPIC_LENGTH}자 이내로 입력해 주세요.` });
+    }
+
+    // 수정: 애드센스 정책과 사용자 안전을 위해 금칙어 검사 추가
+    const loweredTopic = rawTopic.toLowerCase();
+    const matchedKeyword = DISALLOWED_KEYWORDS.find((keyword) => loweredTopic.includes(keyword));
+    if (matchedKeyword) {
+        return res.status(400).json({ error: '해당 주제로는 시를 생성할 수 없습니다.' });
     }
 
     if (!SUPPORTED_LANGUAGES.has(language)) {

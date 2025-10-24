@@ -163,6 +163,17 @@ body {
     margin-bottom: 0;
 }
 
+/* 수정: 샘플 시 텍스트가 모바일에서 넘치지 않도록 줄바꿈과 스타일 지정 */
+.seo-section pre {
+    white-space: pre-wrap;
+    word-break: keep-all;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 12px;
+    line-height: 1.6;
+    margin: 12px 0;
+}
+
 .buttons {
     margin-top: 5px;
     display: flex;
@@ -255,4 +266,14 @@ body {
         font-size: 14px;
         padding: 8px 16px;
     }
+
+    /* 수정: 모바일에서 SEO 섹션 패딩을 줄여 가독성 향상 */
+    .seo-section {
+        padding: 16px;
+    }
+}
+
+/* 수정: 쿠키 동의 배너가 페이지 하단에서 겹치지 않도록 바디 여백 추가 */
+body.has-cookie-banner {
+    padding-bottom: 72px;
 }
