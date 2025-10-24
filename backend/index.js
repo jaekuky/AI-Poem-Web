@@ -9,9 +9,10 @@ const app = express();
 
 // CORS 설정
 let corsOptions = {
-    // Modified: allowed origins, without trailing slashes
+    // Modified: CORS 허용 도메인에 'https://aipoem.art' 추가
     origin: ['https://ai-and-poem-jaekuky.pages.dev',
-             'https://www.ai-and-poem.art'],
+             'https://www.ai-and-poem.art',
+             'https://aipoem.art'],
     // Modified: 허용 메서드와 헤더를 명시적으로 선언
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type'],
