@@ -9,10 +9,10 @@ const app = express();
 
 // CORS 설정
 let corsOptions = {
-    // Modified: CORS 허용 도메인에 'https://aipoem.art' 추가
-    origin: ['https://ai-and-poem-jaekuky.pages.dev',
+    origin: [
+             'https://ai-and-poem-jaekuky.pages.dev',
              'https://www.ai-and-poem.art',
-             'https://aipoem.art'],
+            ],
     // Modified: 허용 메서드와 헤더를 명시적으로 선언
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type'],
@@ -39,15 +39,15 @@ const languagePromptMap = {
     'ru': 'на русском языке',
     'it': 'in italiano',
     'de': 'auf Deutsch',
-    'ms': 'dalam Bahasa Melayu', // 한글 주석: 말레이어 프롬프트 추가
-    'bn': 'বাংলায়', // 한글 주석: 벵골어 프롬프트 추가
-    'vi': 'bằng tiếng Việt', // 한글 주석: 베트남어 프롬프트 추가
-    'el': 'στα ελληνικά', // 한글 주석: 그리스어 프롬프트 추가
-    'pt': 'em português', // 한글 주석: 포르투갈어 프롬프트 추가
-    'pl': 'po polsku', // 한글 주석: 폴란드어 프롬프트 추가
-    'ch': 'auf Schweizerdeutsch', // 한글 주석: 스위스 독일어 프롬프트 추가
-    'uk': 'українською мовою', // 한글 주석: 우크라이나어 프롬프트 추가
-    'tr': 'Türkçe olarak', // 한글 주석: 튀르키예어(터키어) 프롬프트 추가
+    'ms': 'dalam Bahasa Melayu', // 수정: 말레이어 프롬프트 추가
+    'bn': 'বাংলায়', // 수정: 벵골어 프롬프트 추가
+    'vi': 'bằng tiếng Việt', // 수정: 베트남어 프롬프트 추가
+    'el': 'στα ελληνικά', // 수정: 그리스어 프롬프트 추가
+    'pt': 'em português', // 수정: 포르투갈어 프롬프트 추가
+    'pl': 'po polsku', // 수정: 폴란드어 프롬프트 추가
+    'ch': 'auf Schweizerdeutsch', // 수정: 스위스 독일어 프롬프트 추가
+    'uk': 'українською мовою', // 수정: 우크라이나어 프롬프트 추가
+    'tr': 'Türkçe olarak', // 수정: 튀르키예어(터키어) 프롬프트 추가
     'sv': 'på svenska', // 수정: 스웨덴어 지원 추가
     'hi': 'हिन्दी में', // 수정: 힌디어 지원 추가
     'id': 'dalam Bahasa Indonesia', // 수정: 인도네시아어 지원 추가
@@ -60,10 +60,10 @@ const SUPPORTED_LANGUAGES = new Set(Object.keys(languagePromptMap));
 
 //  필수 환경 변수 검증을 선행하여 배포 오류를 조기에 파악
 if (!OPENAI_API_KEY) {
-    console.error('환경 변수 OPENAI_API_KEY가 설정되지 않았습니다.'); //  한글 주석: 누락된 키를 명확히 기록
+    console.error('환경 변수 OPENAI_API_KEY가 설정되지 않았습니다.'); //  수정: 누락된 키를 명확히 기록
 }
 
-const MAX_TOPIC_LENGTH = 200; //  한글 주석: 과도한 프롬프트 길이를 제한하여 OpenAI 에러를 예방
+const MAX_TOPIC_LENGTH = 200; //  수정: 과도한 프롬프트 길이를 제한하여 OpenAI 에러를 예방
 // 수정: 구글 애드센스 정책 준수를 위해 금칙어 목록을 추가
 const DISALLOWED_KEYWORDS = [
     // 수정: 애드센스 정책 준수를 위해 다국어 금칙어를 확장
@@ -82,7 +82,7 @@ app.post('/generate-poem', async (req, res) => {
     const rawTopic = typeof req.body.topic === 'string' ? req.body.topic.trim() : '';
     const language = typeof req.body.language === 'string' ? req.body.language : 'ko';
 
-    //  한글 주석: 필수 입력값이 없으면 OpenAI 호출 전에 400을 반환
+    //  수정: 필수 입력값이 없으면 OpenAI 호출 전에 400을 반환
     if (!rawTopic) {
         return res.status(400).json({ error: '시의 주제를 입력해 주세요.' });
     }
@@ -99,16 +99,16 @@ app.post('/generate-poem', async (req, res) => {
     }
 
     if (!SUPPORTED_LANGUAGES.has(language)) {
-        return res.status(400).json({ error: '지원하지 않는 언어입니다.' }); //  한글 주석: 미지원 언어 요청 차단
+        return res.status(400).json({ error: '지원하지 않는 언어입니다.' }); //  수정: 미지원 언어 요청 차단
     }
 
     const langPrompt = languagePromptMap[language];
 
     if (!OPENAI_API_KEY) {
-        return res.status(500).json({ error: '서버 설정 오류가 발생했습니다.' }); //  한글 주석: 키 누락 시 호출 중단
+        return res.status(500).json({ error: '서버 설정 오류가 발생했습니다.' }); //  수정: 키 누락 시 호출 중단
     }
 
-    const prompt = `Please write a poem about ${rawTopic} ${langPrompt}.`; //  한글 주석: 입력을 정제한 뒤 프롬프트 구성
+    const prompt = `Please write a poem about ${rawTopic} ${langPrompt}.`; //  수정: 입력을 정제한 뒤 프롬프트 구성
 
     try {
         const response = await axios.post('https://api.openai.com/v1/chat/completions', {
@@ -131,7 +131,7 @@ app.post('/generate-poem', async (req, res) => {
         const statusCode = error.response?.status || 500;
         const errorPayload = error.response?.data;
 
-        //  한글 주석: 외부 응답을 그대로 노출하지 않고 서버 로그에만 상세 기록
+        //  수정: 외부 응답을 그대로 노출하지 않고 서버 로그에만 상세 기록
         console.error('OpenAI 호출 실패', {
             statusCode,
             message: error.message,
