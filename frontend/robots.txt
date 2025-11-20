@@ -1,3 +1,15 @@
+# 모두 허용 (명시)
 User-agent: *
-Disallow:
+Allow: /
+
+# 애드센스/광고 크롤러 명시 허용
+User-agent: Mediapartners-Google
+Allow: /
+User-agent: AdsBot-Google
+Allow: /
+
+# 두 호스트 중 하나만 운영해도 무방하나,
+# 실수 방지를 위해 두 sitemap 모두 노출하거나,
+# 루트→www 한쪽으로 301 정규화
 Sitemap: https://www.ai-and-poem.art/sitemap.xml
+Sitemap: https://ai-and-poem.art/sitemap.xml
