@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: rgb(40, 18, 12);
+    font-size: 20px;
+}
+
+/* header */
+.header {
+    border: 1px solid black;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-left {
+    padding-left: 20px;
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-left h1 {
+    font-size: 1.7em;
+}
+
+.header-left h3 {
+    font-size: 1em;
+}
+
+.header-right {
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-basis: 60%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.header-right #language-label {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.header-right #language {
+    width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* container */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#image-box {
+    width: 356px;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image-box #processing-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#poem-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ✅ poem-form 설명 문구 스타일 추가 */
+#form-description {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+#poem-form .input-box {
+    display: flex;
+    flex-direction: row;
+}
+
+#topic {
+    width: 100%;
+    height: 60px;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+#poem-form #poetry-writing-button {
+    width: 40%;
+    max-width: 420px;
+    min-width: 90px;
+    height: 60px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    text-align: center;
+}
+
+#poem {
+    margin-top: 20px;
+    white-space: pre-wrap;
+    text-align: center;
+    width: 100%;
+}
+
+/* 수정: 신규 SEO 섹션을 위해 공통 레이아웃 스타일 추가 */
+.seo-section {
+    max-width: 720px;
+    margin: 30px auto;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 24px;
+    border-radius: 12px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+/* 수정: 섹션 제목 가독성 향상 */
+.seo-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+/* 수정: 목록과 FAQ 가독성 향상 */
+.seo-section ul,
+.seo-section details {
+    margin-top: 12px;
+}
+
+/* 수정: 목록 불릿 스타일 조정 */
+.seo-section li {
+    margin-left: 20px;
+    margin-bottom: 6px;
+}
+
+/* 수정: FAQ 접기/펼치기 스타일 추가 */
+.seo-section details summary {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+/* 수정: FAQ 본문 패딩 추가 */
+.seo-section details p {
+    margin-left: 16px;
+    margin-bottom: 0;
+}
+
+/* 수정: 샘플 시 텍스트가 모바일에서 넘치지 않도록 줄바꿈과 스타일 지정 */
+.seo-section pre {
+    white-space: pre-wrap;
+    word-break: keep-all;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 12px;
+    line-height: 1.6;
+    margin: 12px 0;
+}
+
+.buttons {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.buttons #tts-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    max-width: 200px;
+}
+
+#tts-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* 개인정보처리방침 및 이용약관 주 제목 아래 간격을 폰트 크기 1배로 설정 */
+.privacy_container h1,
+.terms_container h1 {
+    margin-bottom: 1em;
+}
+
+/* 개인정보처리방침 및 이용약관 제목 간격을 폰트 크기 1.3배로 설정 */
+.privacy_container h2,
+.terms_container h2 {
+    margin-top: 1.3em;
+}
+
+/* 개인정보처리방침 및 이용약관 문단 간격을 폰트 크기 1.1배로 설정 */
+.privacy_container p,
+.terms_container p {
+    margin-bottom: 1.1em;
+}
+
+/* 개인정보처리방침 및 이용악관 링크 색상 변경 */
+.privacy_container a,
+.terms_container a {
+    color: aqua
+}
+
+/* 푸터 스타일을 정의해 모든 페이지에서 일관된 링크 표시 */
+.site-footer {
+    margin: 40px 0 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-decoration: underline;
+    margin: 0 8px;
+}
+
+.site-footer a:hover {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+    .header-left h1 {
+        font-size: 1.2rem;
+    }
+
+    .header-left h3 {
+        font-size: 0.65rem;
+    }
+
+    #image-box {
+        width: 214px;
+        height: 216px;
+    }
+
+    #language-label {
+        font-size: 12px;
+    }
+
+    #topic,
+    #language {
+        font-size: 14px;
+    }
+
+    #poem-form #poetry-writing-button {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .header-right #language {
+        width: 100px;
+    }
+
+    .buttons button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    /* 수정: 모바일에서 SEO 섹션 패딩을 줄여 가독성 향상 */
+    .seo-section {
+        padding: 16px;
+    }
+}
+
+/* 수정: 쿠키 동의 배너가 페이지 하단에서 겹치지 않도록 바디 여백 추가 */
+body.has-cookie-banner {
+    padding-bottom: 72px;
+}
+
+/* =========================================
+   Blog & Article Styles (Added)
+   ========================================= */
+
+/* Blog Index Styles */
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.blog-list {
+    list-style: none;
+    padding: 0;
+}
+
+.blog-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    transition: transform 0.2s;
+}
+
+.blog-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.blog-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.blog-title a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.blog-excerpt {
+    font-size: 1em;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.blog-container .back-link {
+    display: block;
+    margin-top: 40px;
+    text-align: center;
+    color: #aaa;
+    text-decoration: none;
+}
+
+.blog-container .back-link:hover {
+    color: #fff;
+}
+
+/* Article Styles */
+.article-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.article-header {
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+}
+
+.article-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.article-meta {
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+.article-content h2 {
+    font-size: 1.5em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+
+.article-content p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #ddd;
+}
+
+.article-content ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    color: #ddd;
+}
+
+.article-content li {
+    margin-bottom: 10px;
+}
+
+.article-container .back-link {
+    display: block;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #aaa;
+    text-decoration: none;
+}
+
+.article-container .back-link:hover {
+    color: #fff;
+}

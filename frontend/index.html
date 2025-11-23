@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <!-- 수정: CTR 향상을 위해 혜택 중심의 타이틀과 타깃 키워드를 반영 -->
@@ -8,7 +9,7 @@
 
     <!-- [SEO] Robots meta tag 추가 -->
     <meta name="robots" content="index, follow">
-    
+
     <!-- 반응형 웹을 위한 viewport 메타 태그 추가 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 수정: 구글 애드센스 계정 메타 태그 추가 -->
@@ -26,7 +27,7 @@
 
     <!-- Canonical URL to avoid duplicate content issues -->
     <link rel="canonical" href="https://www.ai-and-poem.art/ko/">
-    
+
     <!-- Alternate language links for multilingual SEO -->
     <!-- 수정: hreflang 링크를 정규화 -->
     <link rel="alternate" href="https://www.ai-and-poem.art/ko/" hreflang="ko" />
@@ -144,20 +145,21 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CVHJYZWNC"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-1CVHJYZWNC');
+        gtag('config', 'G-1CVHJYZWNC');
     </script>
 
     <!-- Google Adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 
     <!-- style.css 불러오기 -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="header">
         <div class="header-left">
@@ -167,6 +169,9 @@
             <h3>즉시 낭독 가능한 AI 시 생성기</h3>
         </div>
         <div class="header-right">
+            <!-- 수정: 블로그 링크 추가 -->
+            <a href="blog/ko/index.html"
+                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">블로그</a>
             <label for="language" id="language-label">언어 선택</label>
             <select id="language">
                 <!-- 수정: 언어 옵션을 업데이트 -->
@@ -198,11 +203,12 @@
     </div>
     <div class="container">
         <div id="image-box">
-            <video loop id="processing-video" src="image/robot_poet.mp4" poster="image/robot_poet.png" aria-label="시를 작성하는 인공지능 로봇 영상"></video>
+            <video loop id="processing-video" src="image/robot_poet.mp4" poster="image/robot_poet.png"
+                aria-label="시를 작성하는 인공지능 로봇 영상"></video>
         </div>
         <form id="poem-form">
             <!-- 수정: 검색어와 동일한 표현을 추가해 클릭 후 기대치를 맞춤 -->
-            <p id="form-description">‘AI 시 생성기’를 찾으셨다면 주제를 입력해 10초 안에 시와 음성 낭독을 받아보세요.</p> 
+            <p id="form-description">‘AI 시 생성기’를 찾으셨다면 주제를 입력해 10초 안에 시와 음성 낭독을 받아보세요.</p>
             <div class="input-box">
                 <input type="text" id="topic" placeholder="시의 주제를 입력하세요" required>
                 <button id="poetry-writing-button" type="submit">시 작성</button>
@@ -235,6 +241,16 @@
             <li>생성된 시는 ‘시 낭송’ 버튼으로 즉시 음성으로 감상할 수 있습니다.</li>
         </ul>
     </section>
+
+    <!-- 수정: 기술적 설명 섹션 추가 (콘텐츠 보강) -->
+    <section class="seo-section">
+        <h2>AI는 어떻게 시를 쓸까요?</h2>
+        <p>AI & Poem은 최신 거대 언어 모델(LLM) 기술을 활용하여 작동합니다. 수백만 편의 문학 작품과 시를 학습한 인공지능이 사용자가 입력한 주제의 맥락을 파악하고, 그에 어울리는 은유와 운율을
+            찾아냅니다.</p>
+        <p>단순히 단어를 나열하는 것이 아니라, 감정의 흐름과 시적 구조를 고려하여 매번 새롭고 독창적인 시를 창작합니다. 더 자세한 내용은 <a href="blog/article-1.html"
+                style="color: #fff; text-decoration: underline;">블로그</a>에서 확인하실 수 있습니다.</p>
+    </section>
+
     <!-- 수정: 검색 사용자의 의도를 반영한 활용 사례 섹션 추가 -->
     <section class="seo-section">
         <h2>‘AI 시 생성기’를 찾는 이유</h2>
@@ -268,4 +284,5 @@
     </footer>
     <script src="script.js" defer></script>
 </body>
+
 </html>
