@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,10 @@
     <!-- 수정: 터키어 타이틀에 'şiir oluşturucu' 키워드를 반영 -->
     <title>AI &amp; Poem – Sesli yapay zekâ şiir oluşturucu</title>
     <!-- 수정: 속도와 낭독 혜택을 강조 -->
-    <meta name="description" content="Bir konu girin; 10 saniyeden kısa sürede paylaşmaya hazır şiir ve sesli okuma alın. Ücretsiz yapay zekâ aracı.">
-    <meta name="keywords" content="Yapay zeka şiiri, yapay zekâ, şiir, şiir üretimi, yapay zekâ şiir üreteci, şiir platformu">
+    <meta name="description"
+        content="Bir konu girin; 10 saniyeden kısa sürede paylaşmaya hazır şiir ve sesli okuma alın. Ücretsiz yapay zekâ aracı.">
+    <meta name="keywords"
+        content="Yapay zeka şiiri, yapay zekâ, şiir, şiir üretimi, yapay zekâ şiir üreteci, şiir platformu">
     <meta name="author" content="Ryu Jae-kuk">
     <meta name="robots" content="index, follow">
     <link rel="icon" href="../image/favicon.ico" type="image/x-icon">
@@ -44,7 +47,8 @@
     <link rel="alternate" href="https://www.ai-and-poem.art/" hreflang="x-default" />
     <!-- 수정: SNS 미리보기 문구 업데이트 -->
     <meta property="og:title" content="AI &amp; Poem – Sesli yapay zekâ şiir oluşturucu">
-    <meta property="og:description" content="Bir konu girin; 10 saniyeden kısa sürede paylaşmaya hazır şiir ve sesli okuma alın. Ücretsiz yapay zekâ aracı.">
+    <meta property="og:description"
+        content="Bir konu girin; 10 saniyeden kısa sürede paylaşmaya hazır şiir ve sesli okuma alın. Ücretsiz yapay zekâ aracı.">
     <meta property="og:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta property="og:url" content="https://www.ai-and-poem.art/tr/">
     <meta property="og:type" content="website">
@@ -54,7 +58,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <!-- 수정: X 카드 문구와 SERP 메시지 일관성 확보 -->
     <meta name="twitter:title" content="AI &amp; Poem – Sesli yapay zekâ şiir oluşturucu">
-    <meta name="twitter:description" content="Bir konu girin; 10 saniyeden kısa sürede paylaşmaya hazır şiir ve sesli okuma alın. Ücretsiz yapay zekâ aracı.">
+    <meta name="twitter:description"
+        content="Bir konu girin; 10 saniyeden kısa sürede paylaşmaya hazır şiir ve sesli okuma alın. Ücretsiz yapay zekâ aracı.">
     <meta name="twitter:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta name="twitter:image:alt" content="Şiir yazan bir yapay zekâ robotunun illüstrasyonu">
     <!-- 수정: 구조화 데이터에 새로운 카피 반영 -->
@@ -126,18 +131,19 @@
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CVHJYZWNC"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-1CVHJYZWNC');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-1CVHJYZWNC');
     </script>
 
     <!-- Google Adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <div class="header">
         <div class="header-left">
@@ -146,7 +152,8 @@
             <h3>Sesli yapay zekâ şiir oluşturucu</h3>
         </div>
         <div class="header-right">
-            <a href="../blog/tr/index.html" style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">Blog</a>
+            <a href="../blog/tr/index.html"
+                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">Blog</a>
             <label for="language" id="language-label">Dil seçin</label>
             <select id="language">
                 <!-- 수정: 언어 옵션을 업데이트 -->
@@ -178,11 +185,13 @@
     </div>
     <div class="container">
         <div id="image-box">
-            <video loop id="processing-video" src="../image/robot_poet.mp4" poster="../image/robot_poet.png" aria-label="Şiir yazan yapay zekâ robotunun videosu"></video>
+            <video loop id="processing-video" src="../image/robot_poet.mp4" poster="../image/robot_poet.png"
+                aria-label="Şiir yazan yapay zekâ robotunun videosu"></video>
         </div>
         <form id="poem-form">
             <!-- 수정: 사용자 검색어를 직접 언급하여 기대치 정렬 -->
-            <p id="form-description">'yapay zekâ şiir oluşturucu' mu arıyordunuz? Konu yazın, saniyeler içinde şiir ve ses alın.</p>
+            <p id="form-description">'yapay zekâ şiir oluşturucu' mu arıyordunuz? Konu yazın, saniyeler içinde şiir ve
+                ses alın.</p>
             <div class="input-box">
                 <input type="text" id="topic" placeholder="Şiirinizin konusunu girin" required>
                 <button id="poetry-writing-button" type="submit">Şiir oluştur</button>
@@ -211,14 +220,16 @@
         </details>
         <details>
             <summary>Oluşturulan şiiri ticari amaçla kullanabilir miyim?</summary>
-            <p>Evet, kampanyalarda, bültenlerde ve etkinliklerde kullanabilirsiniz; mümkünse AI &amp; Poem adını belirtin.</p>
+            <p>Evet, kampanyalarda, bültenlerde ve etkinliklerde kullanabilirsiniz; mümkünse AI &amp; Poem adını
+                belirtin.</p>
         </details>
         <details>
             <summary>Araç seslendirmeyi otomatik mi üretir?</summary>
-            <p>Oluşturma işlemi bittikten sonra seslendirme düğmesini etkinleştirip şiiri seçtiğiniz dilde dinleyebilirsiniz.</p>
+            <p>Oluşturma işlemi bittikten sonra seslendirme düğmesini etkinleştirip şiiri seçtiğiniz dilde
+                dinleyebilirsiniz.</p>
         </details>
     </section>
-            <!-- 수정: 애드센스 품질 강화를 위해 샘플 콘텐츠와 사용 방법 섹션 추가 -->
+    <!-- 수정: 애드센스 품질 강화를 위해 샘플 콘텐츠와 사용 방법 섹션 추가 -->
     <section class="seo-section">
         <h2>AI & Poem Hızlı Başlangıç</h2>
         <p>Aşağıdaki örnek, üretilen şiirlerin tipik tonunu ve uzunluğunu gösterir.</p>
@@ -236,7 +247,7 @@ ve her hikâye tomurcuk gibi açar.</pre>
             <li>“Dinle” düğmesiyle şiiri hemen duyabilirsiniz.</li>
         </ul>
     </section>
-<footer class="site-footer">
+    <footer class="site-footer">
         <!-- 수정: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
         <a href="privacy.html">Gizlilik politikası</a>
         <span>|</span>
@@ -244,4 +255,5 @@ ve her hikâye tomurcuk gibi açar.</pre>
     </footer>
     <script src="../script.js" defer></script>
 </body>
+
 </html>

@@ -1,5 +1,3 @@
 backend/.env
 backend/node_modules
 AGENTS.md
-generate_multilingual_blogs.js
-generate_sitemap.js

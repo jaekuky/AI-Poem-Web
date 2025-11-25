@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <!-- 수정: CTR 향상을 위해 'poem ai' 검색어와 혜택을 강조 -->
     <title>AI &amp; Poem - Instant Voice-Ready AI Poem Generator</title>
     <meta name="title" content="AI &amp; Poem - Instant Voice-Ready AI Poem Generator">
-    
+
     <!-- [SEO] Robots meta tag 추가 -->
     <meta name="robots" content="index, follow">
 
@@ -13,20 +14,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 수정: 구글 애드센스 계정 메타 태그 추가 -->
     <meta name="google-adsense-account" content="ca-pub-7349192768683799">
-    
+
     <!-- ✅ Favicon added -->
     <link rel="icon" href="../image/favicon.ico" type="image/x-icon">
-    
+
     <!-- 웹페이지 정보 메타 태그 -->
     <!-- 수정: 속도·낭독·무료 혜택을 담은 메타 설명으로 교체 -->
-    <meta name="description" content="Turn any topic into a bespoke poem with optional narration in under 10 seconds. Free AI poetry maker tailored to your search.">
+    <meta name="description"
+        content="Turn any topic into a bespoke poem with optional narration in under 10 seconds. Free AI poetry maker tailored to your search.">
     <!-- 수정: 불필요한 공백과 중복을 제거해 키워드 메타 태그를 정리 -->
-    <meta name="keywords" content="AI poetry, artificial intelligence, poetry, poetry generation, AI poetry generator, poetry generation platform">
+    <meta name="keywords"
+        content="AI poetry, artificial intelligence, poetry, poetry generation, AI poetry generator, poetry generation platform">
     <meta name="author" content="Ryu Jae-kuk">
 
     <!-- Canonical URL to avoid duplicate content issues -->
     <link rel="canonical" href="https://www.ai-and-poem.art/en/">
-    
+
     <!-- Alternate language links for multilingual SEO -->
     <!-- 수정: hreflang 링크를 정규화 -->
     <link rel="alternate" href="https://www.ai-and-poem.art/ko/" hreflang="ko" />
@@ -56,19 +59,21 @@
     <!-- Open Graph 메타 태그 -->
     <!-- 수정: SNS 미리보기 문구도 동일한 USP를 유지 -->
     <meta property="og:title" content="AI &amp; Poem - Instant Voice-Ready AI Poem Generator">
-    <meta property="og:description" content="Turn any topic into a bespoke poem with optional narration in under 10 seconds. Free AI poetry maker tailored to your search.">
+    <meta property="og:description"
+        content="Turn any topic into a bespoke poem with optional narration in under 10 seconds. Free AI poetry maker tailored to your search.">
     <meta property="og:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta property="og:url" content="https://www.ai-and-poem.art/en/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="AI &amp; Poem">
     <meta property="og:locale" content="en_US">
     <meta property="og:image:alt" content="Illustration of an AI robot writing poetry">
-    
+
     <!-- X(전 Twitter) 카드 메타 태그 추가 -->
     <meta name="twitter:card" content="summary_large_image">
     <!-- 수정: X 카드 문구도 SERP와 일치 -->
     <meta name="twitter:title" content="AI &amp; Poem - Instant Voice-Ready AI Poem Generator">
-    <meta name="twitter:description" content="Turn any topic into a bespoke poem with optional narration in under 10 seconds. Free AI poetry maker tailored to your search.">
+    <meta name="twitter:description"
+        content="Turn any topic into a bespoke poem with optional narration in under 10 seconds. Free AI poetry maker tailored to your search.">
     <meta name="twitter:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta name="twitter:image:alt" content="Illustration of an AI robot writing poetry">
 
@@ -141,23 +146,24 @@
     }
     </script>
 
-     <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CVHJYZWNC"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-1CVHJYZWNC');
+        gtag('config', 'G-1CVHJYZWNC');
     </script>
 
     <!-- Google Adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 
     <!-- style.css 불러오기 -->
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <div class="header">
         <div class="header-left">
@@ -166,7 +172,8 @@
             <h3>Instant voice-ready AI poem generator</h3>
         </div>
         <div class="header-right">
-            <a href="../blog/en/index.html" style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">Blog</a>
+            <a href="../blog/en/index.html"
+                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">Blog</a>
             <label for="language" id="language-label">Select Language</label>
             <select id="language">
                 <!-- 수정: 언어 옵션을 업데이트 -->
@@ -198,11 +205,12 @@
     </div>
     <div class="container">
         <div id="image-box">
-            <video loop id="processing-video" src="../image/robot_poet.mp4" poster="../image/robot_poet.png" aria-label="Video of an AI robot writing poetry"></video>
+            <video loop id="processing-video" src="../image/robot_poet.mp4" poster="../image/robot_poet.png"
+                aria-label="Video of an AI robot writing poetry"></video>
         </div>
         <form id="poem-form">
             <!-- 수정: 주요 검색어를 언급해 기대치 정렬 -->
-            <p id="form-description">Searching for 'poem ai'? Enter a topic to get a narrated poem in seconds.</p> 
+            <p id="form-description">Searching for 'poem ai'? Enter a topic to get a narrated poem in seconds.</p>
             <div class="input-box">
                 <input type="text" id="topic" placeholder="Enter the topic of your poem" required>
                 <button id="poetry-writing-button" type="submit">Write a poem</button>
@@ -228,18 +236,20 @@
         <h2>AI &amp; Poem FAQ</h2>
         <details>
             <summary>How quickly does AI &amp; Poem create a poem?</summary>
-            <p>Most poems arrive in under 10 seconds and include optional narration so you can present them immediately.</p>
+            <p>Most poems arrive in under 10 seconds and include optional narration so you can present them immediately.
+            </p>
         </details>
         <details>
             <summary>Can I use the generated poem commercially?</summary>
-            <p>You can reuse poems across campaigns, newsletters, and events; attribution to AI &amp; Poem is encouraged when space allows.</p>
+            <p>You can reuse poems across campaigns, newsletters, and events; attribution to AI &amp; Poem is encouraged
+                when space allows.</p>
         </details>
         <details>
             <summary>Does the tool create narration automatically?</summary>
             <p>Enable the narration button after generation to hear the poem read aloud in your selected language.</p>
         </details>
     </section>
-            <!-- 수정: 애드센스 품질 강화를 위해 샘플 콘텐츠와 사용 방법 섹션 추가 -->
+    <!-- 수정: 애드센스 품질 강화를 위해 샘플 콘텐츠와 사용 방법 섹션 추가 -->
     <section class="seo-section">
         <h2>AI & Poem Quick Start</h2>
         <p>Use the sample below to understand the tone and length you can expect from the generator.</p>
@@ -257,7 +267,7 @@ and every story blooms like a bud.</pre>
             <li>Use the “Recite” button to hear the poem aloud instantly.</li>
         </ul>
     </section>
-<footer class="site-footer">
+    <footer class="site-footer">
         <!-- 수정: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
         <a href="privacy.html">Privacy Policy</a>
         <span>|</span>
@@ -265,4 +275,5 @@ and every story blooms like a bud.</pre>
     </footer>
     <script src="../script.js" defer></script>
 </body>
+
 </html>

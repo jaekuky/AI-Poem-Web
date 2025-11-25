@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de-CH">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <meta name="google-adsense-account" content="ca-pub-7349192768683799">
     <!-- 수정: 스위스 독일어 타이틀에 'Gedichtgenerator' 키워드를 포함 -->
     <title>AI &amp; Poem – Schwiizerdütsche KI-Gedichtgenerator mit Vorlesig</title>
-    <meta name="description" content="Gib es Thema ii und bechunnsch in unter 10 Sekunde es persönlechs Gedicht mit fertiger Audio-Vorlesig. Gratis Tool.">
-    <meta name="keywords" content="KI-Poesie, künstlichi Intelligenz, Gedicht, Gedichtgenerierig, AI Gedichtgenerator, Plattform">
+    <meta name="description"
+        content="Gib es Thema ii und bechunnsch in unter 10 Sekunde es persönlechs Gedicht mit fertiger Audio-Vorlesig. Gratis Tool.">
+    <meta name="keywords"
+        content="KI-Poesie, künstlichi Intelligenz, Gedicht, Gedichtgenerierig, AI Gedichtgenerator, Plattform">
     <meta name="author" content="Ryu Jae-kuk">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.ai-and-poem.art/ch/">
@@ -38,9 +41,10 @@
     <link rel="alternate" href="https://www.ai-and-poem.art/th/" hreflang="th" />
     <link rel="alternate" href="https://www.ai-and-poem.art/fi/" hreflang="fi" />
     <link rel="alternate" href="https://www.ai-and-poem.art/" hreflang="x-default" />
-<!-- 수정: SNS 미리보기 문구 업데이트 -->
+    <!-- 수정: SNS 미리보기 문구 업데이트 -->
     <meta property="og:title" content="AI &amp; Poem – Schwiizerdütsche KI-Gedichtgenerator mit Vorlesig">
-    <meta property="og:description" content="Gib es Thema ii und bechunnsch in unter 10 Sekunde es persönlechs Gedicht mit fertiger Audio-Vorlesig. Gratis Tool.">
+    <meta property="og:description"
+        content="Gib es Thema ii und bechunnsch in unter 10 Sekunde es persönlechs Gedicht mit fertiger Audio-Vorlesig. Gratis Tool.">
     <meta property="og:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta property="og:url" content="https://www.ai-and-poem.art/ch/">
     <meta property="og:type" content="website">
@@ -50,7 +54,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <!-- 수정: X 카드 문구도 SERP와 일치 -->
     <meta name="twitter:title" content="AI &amp; Poem – Schwiizerdütsche KI-Gedichtgenerator mit Vorlesig">
-    <meta name="twitter:description" content="Gib es Thema ii und bechunnsch in unter 10 Sekunde es persönlechs Gedicht mit fertiger Audio-Vorlesig. Gratis Tool.">
+    <meta name="twitter:description"
+        content="Gib es Thema ii und bechunnsch in unter 10 Sekunde es persönlechs Gedicht mit fertiger Audio-Vorlesig. Gratis Tool.">
     <meta name="twitter:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta name="twitter:image:alt" content="Illustration vo enem KI-Robot wo es Gedicht schribt">
     <!-- 수정: 구조화 데이터 타이틀/설명 업데이트 -->
@@ -122,18 +127,19 @@
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CVHJYZWNC"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-1CVHJYZWNC');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-1CVHJYZWNC');
     </script>
 
     <!-- Google Adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799"
-     crossorigin="anonymous"></script>
-    
+        crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <div class="header">
         <div class="header-left">
@@ -142,7 +148,8 @@
             <h3>Schwiizerdütsche KI-Gedichtgenerator mit Vorlesig</h3>
         </div>
         <div class="header-right">
-            <a href="../blog/ch/index.html" style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">Blog</a>
+            <a href="../blog/ch/index.html"
+                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">Blog</a>
             <label for="language" id="language-label">Sproch wähle</label>
             <select id="language">
                 <!-- 수정: 언어 옵션을 업데이트 -->
@@ -174,11 +181,13 @@
     </div>
     <div class="container">
         <div id="image-box">
-            <video loop id="processing-video" src="../image/robot_poet.mp4" poster="../image/robot_poet.png" aria-label="Video vo enem KI-Robot wo es Gedicht schribt"></video>
+            <video loop id="processing-video" src="../image/robot_poet.mp4" poster="../image/robot_poet.png"
+                aria-label="Video vo enem KI-Robot wo es Gedicht schribt"></video>
         </div>
         <form id="poem-form">
             <!-- 수정: 검색어를 언급해 기대치 정렬 -->
-            <p id="form-description">Nach 'Gedichtgenerator AI' gsuächt? Tipf dis Thema ii und bechunn Gedicht + Vorlesig im Nu.</p>
+            <p id="form-description">Nach 'Gedichtgenerator AI' gsuächt? Tipf dis Thema ii und bechunn Gedicht +
+                Vorlesig im Nu.</p>
             <div class="input-box">
                 <input type="text" id="topic" placeholder="Gib da Thema vom Gedicht ii" required>
                 <button id="poetry-writing-button" type="submit">Gedicht generiere</button>
@@ -214,7 +223,7 @@
             <p>Ja, nach em Generiere drucksch uf «Vorlesig» und losisch d Vorlesig i diner Sproch.</p>
         </details>
     </section>
-            <!-- 수정: 애드센스 품질 강화를 위해 샘플 콘텐츠와 사용 방법 섹션 추가 -->
+    <!-- 수정: 애드센스 품질 강화를 위해 샘플 콘텐츠와 사용 방법 섹션 추가 -->
     <section class="seo-section">
         <h2>AI & Poem Schnellstart</h2>
         <p>D Beispiel do zeigt Ton und Längi vo de Gedicht, wo d Plattform normal generiert.</p>
@@ -232,7 +241,7 @@ und jede Gschicht springt uuf wie e Chnospe.</pre>
             <li>Mit em «Lose» Knopf losisch s Resultat grad.</li>
         </ul>
     </section>
-<footer class="site-footer">
+    <footer class="site-footer">
         <!-- 수정: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
         <a href="privacy.html">Datenschutz</a>
         <span>|</span>
@@ -240,4 +249,5 @@ und jede Gschicht springt uuf wie e Chnospe.</pre>
     </footer>
     <script src="../script.js" defer></script>
 </body>
+
 </html>

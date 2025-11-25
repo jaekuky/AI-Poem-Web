@@ -1,80 +1,85 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <!-- 수정: 러시아어 타겟 키워드와 혜택을 포함 -->
-    <title>AI &amp; Poem – Генератор стихов ИИ с мгновенной озвучкой</title>
-    <meta name="title" content="AI &amp; Poem – Генератор стихов ИИ с мгновенной озвучкой">
+  <meta charset="UTF-8">
+  <!-- 수정: 러시아어 타겟 키워드와 혜택을 포함 -->
+  <title>AI &amp; Poem – Генератор стихов ИИ с мгновенной озвучкой</title>
+  <meta name="title" content="AI &amp; Poem – Генератор стихов ИИ с мгновенной озвучкой">
 
-    <!-- [SEO] Robots meta tag 추가 -->
-    <meta name="robots" content="index, follow">
+  <!-- [SEO] Robots meta tag 추가 -->
+  <meta name="robots" content="index, follow">
 
-    <!-- 반응형 웹을 위한 viewport 메타 태그 추가 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 수정: 구글 애드센스 계정 메타 태그 추가 -->
-    <meta name="google-adsense-account" content="ca-pub-7349192768683799">
+  <!-- 반응형 웹을 위한 viewport 메타 태그 추가 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 수정: 구글 애드센스 계정 메타 태그 추가 -->
+  <meta name="google-adsense-account" content="ca-pub-7349192768683799">
 
-    <!-- ✅ Favicon added -->
-    <link rel="icon" href="../image/favicon.ico" type="image/x-icon">
+  <!-- ✅ Favicon added -->
+  <link rel="icon" href="../image/favicon.ico" type="image/x-icon">
 
-    <!-- 웹페이지 정보 메타 태그 -->
-    <!-- 수정: 속도와 음성 혜택을 강조 -->
-    <meta name="description" content="Введите тему и получите меньше чем за 10 секунд персональный стих с готовым озвученным аудио. Бесплатный сервис ИИ.">
-    <!-- 수정: 불필요한 공백과 중복을 제거해 키워드 메타 태그를 정리 -->
-    <meta name="keywords" content="Поэзия ИИ, искусственный интеллект, поэзия, генерация поэзии, генератор поэзии на базе ИИ, платформа для генерации поэзии">
-    <meta name="author" content="Ryu Jae-kuk">
+  <!-- 웹페이지 정보 메타 태그 -->
+  <!-- 수정: 속도와 음성 혜택을 강조 -->
+  <meta name="description"
+    content="Введите тему и получите меньше чем за 10 секунд персональный стих с готовым озвученным аудио. Бесплатный сервис ИИ.">
+  <!-- 수정: 불필요한 공백과 중복을 제거해 키워드 메타 태그를 정리 -->
+  <meta name="keywords"
+    content="Поэзия ИИ, искусственный интеллект, поэзия, генерация поэзии, генератор поэзии на базе ИИ, платформа для генерации поэзии">
+  <meta name="author" content="Ryu Jae-kuk">
 
-    <!-- Canonical URL to avoid duplicate content issues -->
-    <link rel="canonical" href="https://www.ai-and-poem.art/ru/">
-    
-    <!-- Alternate language links for multilingual SEO -->
-    <!-- 수정: hreflang 링크를 정규화 -->
-    <link rel="alternate" href="https://www.ai-and-poem.art/ko/" hreflang="ko" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/ja/" hreflang="ja" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/it/" hreflang="it" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/fr/" hreflang="fr" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/es/" hreflang="es" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/en/" hreflang="en" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/de/" hreflang="de" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/ru/" hreflang="ru" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/ms/" hreflang="ms" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/bn/" hreflang="bn" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/vi/" hreflang="vi" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/el/" hreflang="el" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/pt/" hreflang="pt" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/pl/" hreflang="pl" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/ch/" hreflang="de-CH" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/uk/" hreflang="uk" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/tr/" hreflang="tr" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/zh/" hreflang="zh-CN" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/sv/" hreflang="sv" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/hi/" hreflang="hi" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/id/" hreflang="id" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/th/" hreflang="th" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/fi/" hreflang="fi" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/" hreflang="x-default" />
-    <!-- Open Graph 메타 태그 -->
-    <!-- 수정: SNS 미리보기 텍스트 업데이트 -->
-    <meta property="og:title" content="AI &amp; Poem – Генератор стихов ИИ с мгновенной озвучкой">
-    <meta property="og:description" content="Введите тему и получите меньше чем за 10 секунд персональный стих с готовым озвученным аудио. Бесплатный сервис ИИ.">
-    <meta property="og:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
-    <meta property="og:url" content="https://www.ai-and-poem.art/ru/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="AI &amp; Poem">
-    <meta property="og:locale" content="ru_RU">
-    <meta property="og:image:alt" content="Иллюстрация робота с ИИ, пишущего стихи">
-    
-    <!-- X(전 Twitter) 카드 메타 태그 추가 -->
-    <meta name="twitter:card" content="summary_large_image">
-    <!-- 수정: X 카드 문구도 일치 -->
-    <meta name="twitter:title" content="AI &amp; Poem – Генератор стихов ИИ с мгновенной озвучкой">
-    <meta name="twitter:description" content="Введите тему и получите меньше чем за 10 секунд персональный стих с готовым озвученным аудио. Бесплатный сервис ИИ.">
-    <meta name="twitter:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
-    <meta name="twitter:image:alt" content="Иллюстрация робота с ИИ, пишущего стихи">
+  <!-- Canonical URL to avoid duplicate content issues -->
+  <link rel="canonical" href="https://www.ai-and-poem.art/ru/">
 
-    <!-- JSON-LD Structured Data for enhanced SEO -->
-    <!-- 수정: 구조화 데이터 타이틀/설명 업데이트 -->
-    <script type="application/ld+json">
+  <!-- Alternate language links for multilingual SEO -->
+  <!-- 수정: hreflang 링크를 정규화 -->
+  <link rel="alternate" href="https://www.ai-and-poem.art/ko/" hreflang="ko" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/ja/" hreflang="ja" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/it/" hreflang="it" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/fr/" hreflang="fr" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/es/" hreflang="es" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/en/" hreflang="en" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/de/" hreflang="de" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/ru/" hreflang="ru" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/ms/" hreflang="ms" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/bn/" hreflang="bn" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/vi/" hreflang="vi" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/el/" hreflang="el" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/pt/" hreflang="pt" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/pl/" hreflang="pl" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/ch/" hreflang="de-CH" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/uk/" hreflang="uk" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/tr/" hreflang="tr" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/zh/" hreflang="zh-CN" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/sv/" hreflang="sv" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/hi/" hreflang="hi" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/id/" hreflang="id" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/th/" hreflang="th" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/fi/" hreflang="fi" />
+  <link rel="alternate" href="https://www.ai-and-poem.art/" hreflang="x-default" />
+  <!-- Open Graph 메타 태그 -->
+  <!-- 수정: SNS 미리보기 텍스트 업데이트 -->
+  <meta property="og:title" content="AI &amp; Poem – Генератор стихов ИИ с мгновенной озвучкой">
+  <meta property="og:description"
+    content="Введите тему и получите меньше чем за 10 секунд персональный стих с готовым озвученным аудио. Бесплатный сервис ИИ.">
+  <meta property="og:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
+  <meta property="og:url" content="https://www.ai-and-poem.art/ru/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AI &amp; Poem">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:image:alt" content="Иллюстрация робота с ИИ, пишущего стихи">
+
+  <!-- X(전 Twitter) 카드 메타 태그 추가 -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- 수정: X 카드 문구도 일치 -->
+  <meta name="twitter:title" content="AI &amp; Poem – Генератор стихов ИИ с мгновенной озвучкой">
+  <meta name="twitter:description"
+    content="Введите тему и получите меньше чем за 10 секунд персональный стих с готовым озвученным аудио. Бесплатный сервис ИИ.">
+  <meta name="twitter:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
+  <meta name="twitter:image:alt" content="Иллюстрация робота с ИИ, пишущего стихи">
+
+  <!-- JSON-LD Structured Data for enhanced SEO -->
+  <!-- 수정: 구조화 데이터 타이틀/설명 업데이트 -->
+  <script type="application/ld+json">
     {
           "@context": "https://schema.org",
           "@type": "WebSite",
@@ -89,8 +94,8 @@
           "image": "https://www.ai-and-poem.art/image/robot_poet.png"
         }
     </script>
-    <!-- 수정: 러시아어 샘플 시 CreativeWork 구조화 데이터 추가 -->
-    <script type="application/ld+json">
+  <!-- 수정: 러시아어 샘플 시 CreativeWork 구조화 데이터 추가 -->
+  <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "CreativeWork",
@@ -107,8 +112,8 @@
           "text": "Неоновые облака растворяются в янтарном свете.\nКофейные тележки пробуждают улицу мягким гулом.\nИдеи расцветают в шепчущихся байтах.\nНовые строки завершают утро."
         }
         </script>
-    <!-- 수정: 러시아어 FAQPage 구조화 데이터 추가 -->
-    <script type="application/ld+json">
+  <!-- 수정: 러시아어 FAQPage 구조화 데이터 추가 -->
+  <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "FAQPage",
@@ -140,129 +145,133 @@
           ]
         }
         </script>
-        
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CVHJYZWNC"></script>
-    <script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CVHJYZWNC"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-1CVHJYZWNC');
-    </script>
+  </script>
 
-    <!-- Google Adsense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799"
-     crossorigin="anonymous"></script>
+  <!-- Google Adsense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799"
+    crossorigin="anonymous"></script>
 
-    <!-- style.css 불러오기 -->
-    <link rel="stylesheet" href="../style.css">
+  <!-- style.css 불러오기 -->
+  <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
-    <div class="header">
-        <div class="header-left">
-            <h1>AI &amp; Poem</h1>
-            <!-- 수정: 'генератор стихов' 키워드를 포함 -->
-            <h3>Генератор стихов ИИ с мгновенной озвучкой</h3>
-        </div>
-        <div class="header-right">
-            <a href="../blog/ru/index.html" style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">Блог</a>
-            <label for="language" id="language-label">Выберите язык</label>
-            <select id="language">
-                <!-- 수정: 언어 옵션을 업데이트 -->
-                <option value="ms">Bahasa Melayu</option>
-                <option value="bn">বাংলা</option>
-                <option value="de">Deutsch</option>
-                <option value="en">English</option>
-                <option value="es">Español</option>
-                <option value="fr">Français</option>
-                <option value="it">Italiano</option>
-                <option value="pl">Polski</option>
-                <option value="pt">Português</option>
-                <option value="ch">Schweizerdeutsch</option>
-                <option value="vi">Tiếng Việt</option>
-                <option value="tr">Türkçe</option>
-                <option value="el">Ελληνικά</option>
-                <option value="ru" selected>русский</option>
-                <option value="uk">Українська</option>
-                <option value="ko">한국어</option>
-                <option value="ja">日本語</option>
-                <option value="zh">中文</option>
-                <option value="sv">Svenska</option>
-                <option value="hi">हिन्दी</option>
-                <option value="id">Bahasa Indonesia</option>
-                <option value="th">ไทย</option>
-                <option value="fi">Suomi</option>
-            </select>
-        </div>
+  <div class="header">
+    <div class="header-left">
+      <h1>AI &amp; Poem</h1>
+      <!-- 수정: 'генератор стихов' 키워드를 포함 -->
+      <h3>Генератор стихов ИИ с мгновенной озвучкой</h3>
     </div>
-    <div class="container">
-        <div id="image-box">
-            <video loop id="processing-video" src="../image/robot_poet.mp4" poster="../image/robot_poet.png" aria-label="Видео о том, как робот с искусственным интеллектом пишет стихи"></video>
-        </div>
-        <form id="poem-form">
-            <!-- 수정: 인기 검색어를 포함하여 클릭 후 기대치 정렬 -->
-            <p id="form-description">Искали 'генератор стихов ии'? Введите тему и получите текст и озвучку за секунды.</p> 
-            <div class="input-box">
-                <input type="text" id="topic" placeholder="Пожалуйста, укажите тему вашего стихотворения" required>
-                <button id="poetry-writing-button" type="submit">Написать стихотворение</button>
-            </div>
-        </form>
-        <div id="poem"></div>
-        <div class="buttons">
-            <!-- '시 낭송' 버튼  -->
-            <button id="tts-button" disabled>🔊 Озвучить стихотворение</button>
-        </div>
+    <div class="header-right">
+      <a href="../blog/ru/index.html"
+        style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">Блог</a>
+      <label for="language" id="language-label">Выберите язык</label>
+      <select id="language">
+        <!-- 수정: 언어 옵션을 업데이트 -->
+        <option value="ms">Bahasa Melayu</option>
+        <option value="bn">বাংলা</option>
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="it">Italiano</option>
+        <option value="pl">Polski</option>
+        <option value="pt">Português</option>
+        <option value="ch">Schweizerdeutsch</option>
+        <option value="vi">Tiếng Việt</option>
+        <option value="tr">Türkçe</option>
+        <option value="el">Ελληνικά</option>
+        <option value="ru" selected>русский</option>
+        <option value="uk">Українська</option>
+        <option value="ko">한국어</option>
+        <option value="ja">日本語</option>
+        <option value="zh">中文</option>
+        <option value="sv">Svenska</option>
+        <option value="hi">हिन्दी</option>
+        <option value="id">Bahasa Indonesia</option>
+        <option value="th">ไทย</option>
+        <option value="fi">Suomi</option>
+      </select>
     </div>
-    <!-- 수정: 러시아어 주요 검색 의도를 반영한 활용 사례 섹션 추가 -->
-    <section class="seo-section">
-        <h2>Почему пользователи ищут «генератор стихов ии»</h2>
-        <ul>
-            <li>Запускайте молниеносные посты в соцсетях с стихами в тоне вашего бренда.</li>
-            <li>Создавайте незабываемые клятвы, речи и открытки за считанные минуты.</li>
-            <li>Оживляйте мероприятия стихами по запросу и мгновенной озвучкой.</li>
-        </ul>
-    </section>
-    <!-- 수정: 러시아어 FAQ 콘텐츠 추가 -->
-    <section class="seo-section">
-        <h2>Частые вопросы</h2>
-        <details>
-            <summary>Как быстро AI &amp; Poem создает стихотворение?</summary>
-            <p>В среднем стих появляется менее чем за 10 секунд и сразу включает аудио-озвучку.</p>
-        </details>
-        <details>
-            <summary>Можно ли использовать созданный стих коммерчески?</summary>
-            <p>Да, публикуйте его в рассылках, кампаниях и на мероприятиях; когда возможно, упомяните AI &amp; Poem.</p>
-        </details>
-        <details>
-            <summary>Инструмент автоматически создает озвучку?</summary>
-            <p>Нажмите кнопку озвучки после генерации, чтобы прослушать стихотворение на выбранном языке.</p>
-        </details>
-    </section>
-            <!-- 수정: 애드센스 품질 강화를 위해 샘플 콘텐츠와 사용 방법 섹션 추가 -->
-    <section class="seo-section">
-        <h2>Краткое руководство AI & Poem</h2>
-        <p>Пример ниже показывает типичный тон и объём создаваемых стихов.</p>
-        <article>
-            <h3>Пример темы: весенний пикник</h3>
-            <pre>Лепестки мягко ложатся на ладони,
+  </div>
+  <div class="container">
+    <div id="image-box">
+      <video loop id="processing-video" src="../image/robot_poet.mp4" poster="../image/robot_poet.png"
+        aria-label="Видео о том, как робот с искусственным интеллектом пишет стихи"></video>
+    </div>
+    <form id="poem-form">
+      <!-- 수정: 인기 검색어를 포함하여 클릭 후 기대치 정렬 -->
+      <p id="form-description">Искали 'генератор стихов ии'? Введите тему и получите текст и озвучку за секунды.</p>
+      <div class="input-box">
+        <input type="text" id="topic" placeholder="Пожалуйста, укажите тему вашего стихотворения" required>
+        <button id="poetry-writing-button" type="submit">Написать стихотворение</button>
+      </div>
+    </form>
+    <div id="poem"></div>
+    <div class="buttons">
+      <!-- '시 낭송' 버튼  -->
+      <button id="tts-button" disabled>🔊 Озвучить стихотворение</button>
+    </div>
+  </div>
+  <!-- 수정: 러시아어 주요 검색 의도를 반영한 활용 사례 섹션 추가 -->
+  <section class="seo-section">
+    <h2>Почему пользователи ищут «генератор стихов ии»</h2>
+    <ul>
+      <li>Запускайте молниеносные посты в соцсетях с стихами в тоне вашего бренда.</li>
+      <li>Создавайте незабываемые клятвы, речи и открытки за считанные минуты.</li>
+      <li>Оживляйте мероприятия стихами по запросу и мгновенной озвучкой.</li>
+    </ul>
+  </section>
+  <!-- 수정: 러시아어 FAQ 콘텐츠 추가 -->
+  <section class="seo-section">
+    <h2>Частые вопросы</h2>
+    <details>
+      <summary>Как быстро AI &amp; Poem создает стихотворение?</summary>
+      <p>В среднем стих появляется менее чем за 10 секунд и сразу включает аудио-озвучку.</p>
+    </details>
+    <details>
+      <summary>Можно ли использовать созданный стих коммерчески?</summary>
+      <p>Да, публикуйте его в рассылках, кампаниях и на мероприятиях; когда возможно, упомяните AI &amp; Poem.</p>
+    </details>
+    <details>
+      <summary>Инструмент автоматически создает озвучку?</summary>
+      <p>Нажмите кнопку озвучки после генерации, чтобы прослушать стихотворение на выбранном языке.</p>
+    </details>
+  </section>
+  <!-- 수정: 애드센스 품질 강화를 위해 샘플 콘텐츠와 사용 방법 섹션 추가 -->
+  <section class="seo-section">
+    <h2>Краткое руководство AI & Poem</h2>
+    <p>Пример ниже показывает типичный тон и объём создаваемых стихов.</p>
+    <article>
+      <h3>Пример темы: весенний пикник</h3>
+      <pre>Лепестки мягко ложатся на ладони,
 Ветер укрывает луг лёгким покрывалом.
 На пледе — улыбки и горячий чай,
 Весенний пикник делает сердце легче
 и каждая история распускается, как бутон.</pre>
-        </article>
-        <ul>
-            <li>Введите тему и получите озвученный стих примерно за 10 секунд.</li>
-            <li>Меняйте длину, тип и язык, чтобы найти новую подачу.</li>
-            <li>Кнопка «Прослушать» позволяет услышать его сразу.</li>
-        </ul>
-    </section>
-<footer class="site-footer">
-        <!-- 수정: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
-        <a href="privacy.html">Политика конфиденциальности</a>
-        <span>|</span>
-        <a href="terms.html">Условия предоставления услуг</a>
-    </footer>
-    <script src="../script.js" defer></script>
+    </article>
+    <ul>
+      <li>Введите тему и получите озвученный стих примерно за 10 секунд.</li>
+      <li>Меняйте длину, тип и язык, чтобы найти новую подачу.</li>
+      <li>Кнопка «Прослушать» позволяет услышать его сразу.</li>
+    </ul>
+  </section>
+  <footer class="site-footer">
+    <!-- 수정: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
+    <a href="privacy.html">Политика конфиденциальности</a>
+    <span>|</span>
+    <a href="terms.html">Условия предоставления услуг</a>
+  </footer>
+  <script src="../script.js" defer></script>
 </body>
+
 </html>

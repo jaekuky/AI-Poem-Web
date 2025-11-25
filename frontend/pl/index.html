@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,10 @@
     <!-- 수정: 폴란드어 타이틀에 'generator wierszy' 키워드를 포함 -->
     <title>AI &amp; Poem – Generator wierszy AI z natychmiastową narracją</title>
     <!-- 수정: 속도·낭독 혜택을 강조한 설명 -->
-    <meta name="description" content="Podaj temat i w mniej niż 10 sekund otrzymasz spersonalizowany wiersz z gotowym nagraniem lektora. Darmowy generator AI.">
-    <meta name="keywords" content="Poezja AI, sztuczna inteligencja, poezja, generowanie poezji, generator poezji AI, platforma poetycka">
+    <meta name="description"
+        content="Podaj temat i w mniej niż 10 sekund otrzymasz spersonalizowany wiersz z gotowym nagraniem lektora. Darmowy generator AI.">
+    <meta name="keywords"
+        content="Poezja AI, sztuczna inteligencja, poezja, generowanie poezji, generator poezji AI, platforma poetycka">
     <meta name="author" content="Ryu Jae-kuk">
     <meta name="robots" content="index, follow">
     <link rel="icon" href="../image/favicon.ico" type="image/x-icon">
@@ -44,7 +47,8 @@
     <link rel="alternate" href="https://www.ai-and-poem.art/" hreflang="x-default" />
     <!-- 수정: SNS 미리보기 문구 업데이트 -->
     <meta property="og:title" content="AI &amp; Poem – Generator wierszy AI z natychmiastową narracją">
-    <meta property="og:description" content="Podaj temat i w mniej niż 10 sekund otrzymasz spersonalizowany wiersz z gotowym nagraniem lektora. Darmowy generator AI.">
+    <meta property="og:description"
+        content="Podaj temat i w mniej niż 10 sekund otrzymasz spersonalizowany wiersz z gotowym nagraniem lektora. Darmowy generator AI.">
     <meta property="og:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta property="og:url" content="https://www.ai-and-poem.art/pl/">
     <meta property="og:type" content="website">
@@ -54,7 +58,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <!-- 수정: X 카드 문구도 SERP와 일치 -->
     <meta name="twitter:title" content="AI &amp; Poem – Generator wierszy AI z natychmiastową narracją">
-    <meta name="twitter:description" content="Podaj temat i w mniej niż 10 sekund otrzymasz spersonalizowany wiersz z gotowym nagraniem lektora. Darmowy generator AI.">
+    <meta name="twitter:description"
+        content="Podaj temat i w mniej niż 10 sekund otrzymasz spersonalizowany wiersz z gotowym nagraniem lektora. Darmowy generator AI.">
     <meta name="twitter:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
     <meta name="twitter:image:alt" content="Ilustracja robota AI piszącego poezję">
     <!-- 수정: 구조화 데이터 타이틀 및 설명 업데이트 -->
@@ -126,18 +131,19 @@
         </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CVHJYZWNC"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-1CVHJYZWNC');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-1CVHJYZWNC');
     </script>
 
     <!-- Google Adsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <div class="header">
         <div class="header-left">
@@ -146,7 +152,8 @@
             <h3>Generator wierszy AI z narracją w kilka sekund</h3>
         </div>
         <div class="header-right">
-            <a href="../blog/pl/index.html" style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">Blog</a>
+            <a href="../blog/pl/index.html"
+                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">Blog</a>
             <label for="language" id="language-label">Wybierz język</label>
             <select id="language">
                 <!-- 수정: 언어 옵션을 업데이트 -->
@@ -178,11 +185,13 @@
     </div>
     <div class="container">
         <div id="image-box">
-            <video loop id="processing-video" src="../image/robot_poet.mp4" poster="../image/robot_poet.png" aria-label="Nagranie robota AI piszącego wiersz"></video>
+            <video loop id="processing-video" src="../image/robot_poet.mp4" poster="../image/robot_poet.png"
+                aria-label="Nagranie robota AI piszącego wiersz"></video>
         </div>
         <form id="poem-form">
             <!-- 수정: 인기 검색어를 포함해 기대치 정렬 -->
-            <p id="form-description">Szukasz 'generator wierszy ai'? Wpisz temat i otrzymaj tekst oraz głos w kilka sekund.</p>
+            <p id="form-description">Szukasz 'generator wierszy ai'? Wpisz temat i otrzymaj tekst oraz głos w kilka
+                sekund.</p>
             <div class="input-box">
                 <input type="text" id="topic" placeholder="Wpisz temat wiersza" required>
                 <button id="poetry-writing-button" type="submit">Generuj wiersz</button>
@@ -207,18 +216,20 @@
         <h2>Najczęstsze pytania</h2>
         <details>
             <summary>Jak szybko AI &amp; Poem tworzy wiersz?</summary>
-            <p>Większość wierszy dostarczamy w mniej niż 10 sekund, wraz z gotową narracją do natychmiastowej publikacji.</p>
+            <p>Większość wierszy dostarczamy w mniej niż 10 sekund, wraz z gotową narracją do natychmiastowej
+                publikacji.</p>
         </details>
         <details>
             <summary>Czy mogę komercyjnie używać wygenerowanego wiersza?</summary>
-            <p>Tak, wykorzystuj go w kampaniach, newsletterach i podczas wydarzeń; jeśli możesz, wspomnij o AI &amp; Poem.</p>
+            <p>Tak, wykorzystuj go w kampaniach, newsletterach i podczas wydarzeń; jeśli możesz, wspomnij o AI &amp;
+                Poem.</p>
         </details>
         <details>
             <summary>Czy narzędzie automatycznie tworzy narrację?</summary>
             <p>Po wygenerowaniu wiersza kliknij przycisk narracji, aby odsłuchać narrację w wybranym języku.</p>
         </details>
     </section>
-            <!-- 수정: 애드센스 품질 강화를 위해 샘플 콘텐츠와 사용 방법 섹션 추가 -->
+    <!-- 수정: 애드센스 품질 강화를 위해 샘플 콘텐츠와 사용 방법 섹션 추가 -->
     <section class="seo-section">
         <h2>Szybki przewodnik AI & Poem</h2>
         <p>Poniższy przykład pokazuje typowy ton i długość generowanych wierszy.</p>
@@ -236,7 +247,7 @@ i każda historia rozkwita jak pąk.</pre>
             <li>Przycisk „Odtwórz” pozwala natychmiast usłyszeć rezultat.</li>
         </ul>
     </section>
-<footer class="site-footer">
+    <footer class="site-footer">
         <!-- 수정: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
         <a href="privacy.html">Polityka prywatności</a>
         <span>|</span>
@@ -244,4 +255,5 @@ i każda historia rozkwita jak pąk.</pre>
     </footer>
     <script src="../script.js" defer></script>
 </body>
+
 </html>
