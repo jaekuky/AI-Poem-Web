@@ -23,7 +23,10 @@ const languageMap = {
     'hi': { name: 'हिन्दी', ttsLang: 'hi-IN' }, // 수정: 힌디어 지원 추가
     'id': { name: 'Bahasa Indonesia', ttsLang: 'id-ID' }, // 수정: 인도네시아어 지원 추가
     'th': { name: 'ไทย', ttsLang: 'th-TH' }, // 수정: 태국어 지원 추가
-    'fi': { name: 'Suomi', ttsLang: 'fi-FI' } // 수정: 핀란드어 지원 추가
+    'fi': { name: 'Suomi', ttsLang: 'fi-FI' }, // 수정: 핀란드어 지원 추가
+    'ar': { name: 'العربية', ttsLang: 'ar-SA' }, // 수정: 아랍어 지원 추가
+    'mn': { name: 'Монгол', ttsLang: 'mn-MN' }, // 수정: 몽골어 지원 추가
+    'sw': { name: 'Kiswahili', ttsLang: 'sw-KE' } // 수정: 스와힐리어 지원 추가
 };
 
 // 시 작성 중 메시지 설정
@@ -50,7 +53,10 @@ const processingMessage = {
     'hi': 'मैं एक कविता लिख रहा हूँ। कृपया थोड़ी देर प्रतीक्षा करें।', // 수정: 힌디어 안내 문구 추가
     'id': 'Saya sedang menulis puisi. Mohon tunggu sebentar.', // 수정: 인도네시아어 안내 문구 추가
     'th': 'กำลังเขียนบทกวี กรุณารอสักครู่', // 수정: 태국어 안내 문구 추가
-    'fi': 'Kirjoitan runoa. Odota hetki, kiitos.' // 수정: 핀란드어 안내 문구 추가
+    'fi': 'Kirjoitan runoa. Odota hetki, kiitos.', // 수정: 핀란드어 안내 문구 추가
+    'ar': 'أنا أكتب قصيدة. يرجى الانتظار لحظة.', // 수정: 아랍어 안내 문구 추가
+    'mn': 'Би шүлэг бичиж байна. Түр хүлээнэ үү.', // 수정: 몽골어 안내 문구 추가
+    'sw': 'Ninaandika shairi. Tafadhali subiri kidogo.' // 수정: 스와힐리어 안내 문구 추가
 };
 
 // 오류 메시지 설정
@@ -78,7 +84,10 @@ const errorMessage = {
     'hi': 'एक त्रुटि हुई', // 수정: 힌디어 오류 메시지 추가
     'id': 'Terjadi kesalahan', // 수정: 인도네시아어 오류 메시지 추가
     'th': 'เกิดข้อผิดพลาด', // 수정: 태국어 오류 메시지 추가
-    'fi': 'Tapahtui virhe' // 수정: 핀란드어 오류 메시지 추가
+    'fi': 'Tapahtui virhe', // 수정: 핀란드어 오류 메시지 추가
+    'ar': 'حدث خطأ', // 수정: 아랍어 오류 메시지 추가
+    'mn': 'Алдаа гарлаа', // 수정: 몽골어 오류 메시지 추가
+    'sw': 'Hitilafu imetokea' // 수정: 스와힐리어 오류 메시지 추가
 };
 
 // 필수 입력 안내 문구를 언어별로 정의
@@ -105,7 +114,10 @@ const topicRequiredMessage = {
     'hi': 'कृपया अपनी कविता का विषय दर्ज करें।', // 수정: 힌디어 검증 메시지 추가
     'id': 'Silakan masukkan topik puisi Anda.', // 수정: 인도네시아어 검증 메시지 추가
     'th': 'กรุณากรอกหัวข้อของบทกวี', // 수정: 태국어 검증 메시지 추가
-    'fi': 'Anna runosi aihe.' // 수정: 핀란드어 검증 메시지 추가
+    'fi': 'Anna runosi aihe.', // 수정: 핀란드어 검증 메시지 추가
+    'ar': 'الرجاء إدخال موضوع قصيدتك.', // 수정: 아랍어 검증 메시지 추가
+    'mn': 'Шүлгийнхээ сэдвийг оруулна уу.', // 수정: 몽골어 검증 메시지 추가
+    'sw': 'Tafadhali ingiza mada ya shairi lako.' // 수정: 스와힐리어 검증 메시지 추가
 };
 
 // 수정: 애드센스 쿠키 동의를 위한 메시지 구성
@@ -132,7 +144,10 @@ const consentMessageMap = {
     'ms': { message: 'AI & Poem menggunakan kuki untuk perkhidmatan dan pengoptimuman iklan.', button: 'Setuju' },
     'el': { message: 'Το AI & Poem χρησιμοποιεί cookies για την υπηρεσία και τη βελτιστοποίηση διαφημίσεων.', button: 'Αποδοχή' },
     'vi': { message: 'AI & Poem sử dụng cookie để cung cấp dịch vụ và tối ưu hoá quảng cáo.', button: 'Đồng ý' },
-    'ch': { message: 'AI & Poem bruuchet Cookies für d Dienstleistig und d Werbig.', button: 'I versteh' }
+    'ch': { message: 'AI & Poem bruuchet Cookies für d Dienstleistig und d Werbig.', button: 'I versteh' },
+    'ar': { message: 'يستخدم AI & Poem ملفات تعريف الارتباط لتقديم الخدمة وتحسين الإعلانات.', button: 'أوافق' },
+    'mn': { message: 'AI & Poem нь үйлчилгээ үзүүлэх болон сурталчилгааг оновчтой болгохын тулд күүки ашигладаг.', button: 'Зөвшөөрөх' },
+    'sw': { message: 'AI & Poem hutumia vidakuzi kwa utoaji wa huduma na uboreshaji wa matangazo.', button: 'Kubali' }
 };
 
 const languageSelect = document.getElementById('language');
@@ -249,6 +264,18 @@ document.getElementById('language').addEventListener('change', async function(ev
             break;
         case 'fi':
             link = 'https://www.ai-and-poem.art/fi/' // 수정: 핀란드어 페이지 이동 처리
+            location.href = link;
+            break;
+        case 'ar':
+            link = 'https://www.ai-and-poem.art/ar/' // 수정: 아랍어 페이지 이동 처리
+            location.href = link;
+            break;
+        case 'mn':
+            link = 'https://www.ai-and-poem.art/mn/' // 수정: 몽골어 페이지 이동 처리
+            location.href = link;
+            break;
+        case 'sw':
+            link = 'https://www.ai-and-poem.art/sw/' // 수정: 스와힐리어 페이지 이동 처리
             location.href = link;
             break;
         default:

@@ -54,6 +54,9 @@ const languagePromptMap = {
     'id': 'dalam Bahasa Indonesia', // 수정: 인도네시아어 지원 추가
     'th': 'เป็นภาษาไทย', // 수정: 태국어 지원 추가
     'fi': 'suomeksi', // 수정: 핀란드어 지원 추가
+    'ar': 'بالعربية', // 수정: 아랍어 지원 추가
+    'mn': 'Монгол хэлээр', // 수정: 몽골어 지원 추가
+    'sw': 'kwa Kiswahili', // 수정: 스와힐리어 지원 추가
 };
 
 // 수정: 지원 언어 집합을 미리 생성해 유효성 검증에 재사용
@@ -67,16 +70,17 @@ if (!OPENAI_API_KEY) {
 const MAX_TOPIC_LENGTH = 200; //  수정: 과도한 프롬프트 길이를 제한하여 OpenAI 에러를 예방
 // 수정: 구글 애드센스 정책 준수를 위해 금칙어 목록을 추가
 const DISALLOWED_KEYWORDS = [
-    // 수정: 애드센스 정책 준수를 위해 다국어 금칙어를 확장
-    'porn', 'porno', '포르노', 'ポルノ', '色情', 'pornografia', 'pornografía',
-    'sex', 'sexual', '섹스', '性行為', 'sexo', 'seks', 'seksual', 'seksualitas', 'sexualidad',
-    'adult', '성인', '成人', 'adulto',
-    'violence', '폭력', '暴力', 'violencia', 'violência', 'gewalt',
-    'kill', 'murder', '죽이다', '살인', '살해', '殺す', '殺人', 'asesinar', 'matar', 'assassinato',
-    'terror', 'terrorist', '테러', '테러리스트', 'テロ', 'terrorista', 'террор', 'террорист',
-    'weapon', 'gun', '총', '무기', '銃', 'arma', 'arma de fuego', 'arma branca', 'pistola',
-    'drugs', 'drug', '마약', '약물', '薬物', 'drogas', 'narcóticos', 'наркотики', 'narkotika',
-    'nazi', '나치', 'неонаци'
+    // 수정: 애드센스 정책 준수를 위해 다국어 금칙어를 확장 (모든 지원 언어 포함)
+    // 영어, 한국어, 일본어, 중국어, 스페인어, 포르투갈어, 프랑스어, 독일어, 러시아어, 이탈리아어 등
+    'porn', 'porno', '포르노', 'ポルノ', '色情', 'pornografia', 'pornografía', 'ibahi', 'إباحي', 'pornografi', 'পর্ন', 'khiêu dâm', 'πορνό', 'порно', 'porr', 'पॉर्न', 'โป๊',
+    'sex', 'sexual', '섹스', '性行為', 'sexo', 'seks', 'seksual', 'seksualitas', 'sexualidad', 'jins', 'جنس', 'ngono', 'সেক্স', 'tình dục', 'σεξ', 'секс', 'sex', 'सेक्स', 'เซ็กซ์', 'seksi',
+    'adult', '성인', '成人', 'adulto', 'dewasa', 'b بالغ', 'بالغ', 'người lớn', 'ενήλικας', 'dorosły', 'дорослий', 'yetişkin', 'vuxen', 'वयस्क', 'ผู้ใหญ่', 'aikuinen',
+    'violence', '폭력', '暴力', 'violencia', 'violência', 'gewalt', 'unf', 'عنف', 'khuchirkhiilel', 'хүчирхийлэл', 'vurugu', 'keganasan', 'kekerasan', 'सहিংসতা', 'bạo lực', 'βία', 'przemoc', 'насильство', 'şiddet', 'våld', 'हिंसा', 'ความรุนแรง', 'väkivalta',
+    'kill', 'murder', '죽이다', '살인', '살해', '殺す', '殺人', 'asesinar', 'matar', 'assassinato', 'qatl', 'قتل', 'alakh', 'алах', 'ua', 'bunuh', 'হত্যা', 'giết', 'φόνος', 'zabić', 'вбити', 'öldürmek', 'döda', 'मारना', 'ฆ่า', 'tappaa',
+    'terror', 'terrorist', '테러', '테러리스트', 'テロ', 'terrorista', 'террор', 'террорист', 'irhab', 'إرهاب', 'gaidi', 'sontrash', 'sontrasi', 'সন্ত্রাস', 'khủng bố', 'τρομοκρατία', 'terör', 'आतंक', 'การก่อการร้าย', 'terrori',
+    'weapon', 'gun', '총', '무기', '銃', 'arma', 'arma de fuego', 'arma branca', 'pistola', 'silah', 'سلاح', 'zevseg', 'зэвсэг', 'senjata', 'অস্ত্র', 'vũ khí', 'όπλο', 'broń', 'зброя', 'vapen', 'हथियार', 'อาวุธ', 'ase',
+    'drugs', 'drug', '마약', '약물', '薬物', 'drogas', 'narcóticos', 'наркотики', 'narkotika', 'mukhaddirat', 'مخدرات', 'mansuuruulakh', 'мансууруулах', 'dawa za kulevya', 'dadah', 'narkoba', 'mado', 'মাদক', 'ma túy', 'ναρκωτικά', 'narkotyki', 'uyuşturucu', 'droger', 'ड्रग्स', 'ยาเสพติด', 'huumeet',
+    'nazi', '나치', 'неонаци', 'nazist', 'naziści', 'nazis'
 ];
 
 app.post('/generate-poem', async (req, res) => {
