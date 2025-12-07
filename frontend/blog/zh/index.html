@@ -1,64 +1,137 @@
 <!DOCTYPE html>
 <html lang="zh">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI & Poem 博客 - 诗与人工智能的故事</title>
-    <meta name="description" content="探索有关AI诗歌生成、文学和技术的有趣故事。">
-    <!-- 수정: 스타일을 'frontend/blog/style.css'로 통합 -->
-    <link rel="stylesheet" href="../style.css">
-    <!-- 수정: SEO를 위한 Canonical 태그 추가 -->
-    <link rel="canonical" href="https://www.ai-and-poem.art/blog/zh/">
-</head>
-
-<body>
-    <div class="header">
-        <div class="header-left">
-            <h1><a href="../../zh/index.html" style="text-decoration:none; color:white;">AI & Poem</a></h1>
-            <h3>即时朗读的AI诗歌生成器</h3>
-        </div>
-    </div>
-
-    <div class="blog-container">
-        <div class="blog-header">
-            <h2>AI & Poem 博客</h2>
-            <p>诗与技术交汇之处，带来各种故事。</p>
-        </div>
-
-        <ul class="blog-list">
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-1.html">AI写诗的原理：技术与情感的结合</a></h3>
-                <p class="blog-excerpt">人工智能是如何模仿人类情感来写诗的？深入探讨大型语言模型（LLM）的运作方式和创造力的秘密。</p>
-            </li>
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-2.html">写好诗的五个技巧：与AI一起创作</a></h3>
-                <p class="blog-excerpt">无论是利用AI工具还是亲自创作，介绍五个写出更好诗歌的核心原则。从观察到隐喻，给你的诗增光添彩的技巧。</p>
-            </li>
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-3.html">从著名诗人的创作中汲取灵感</a></h3>
-                <p class="blog-excerpt">像尹东柱、金素月等韩国人喜爱的诗人是如何写诗的？通过他们的创作笔记和习惯，我们也能获得灵感。</p>
-            </li>
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-4.html">AI诗歌生成器的未来：会取代作家吗？</a></h3>
-                <p class="blog-excerpt">AI技术的发展对文学界的影响是什么？讨论作为工具的AI与未来作家的合作形象。</p>
-            </li>
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-5.html">感人的祝词和信件，AI10秒完成</a></h3>
-                <p class="blog-excerpt">婚礼祝词、恋爱信件、感谢信……当需要传达心意时，公开利用AI & Poem的200%实用指南。</p>
-            </li>
-        </ul>
-
-        <a href="../../zh/index.html" class="back-link">← 返回主页</a>
-    </div>
-
-    <footer class="site-footer">
-        <!-- 수정: 경로 수정 (../privacy.html -> ../../privacy.html) -->
-        <a href="../../privacy.html">隐私政策</a>
-        <span>|</span>
-        <!-- 수정: 경로 수정 (../terms.html -> ../../terms.html) -->
-        <a href="../../terms.html">使用条款</a>
-    </footer>
-</body>
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   AI &amp; Poem 博客 - 诗与人工智能的故事
+  </title>
+  <meta content="探索有关AI诗歌生成、文学和技术的有趣故事。" name="description"/>
+  <!-- 수정: 스타일을 'frontend/blog/style.css'로 통합 -->
+  <link href="../style.css" rel="stylesheet"/>
+  <!-- 수정: SEO를 위한 Canonical 태그 추가 -->
+  <link href="https://www.ai-and-poem.art/blog/zh/" rel="canonical"/>
+  <meta content="ca-pub-7349192768683799" name="google-adsense-account"/>
+  <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799">
+  </script>
+  <link href="https://www.ai-and-poem.art/blog/ar/" hreflang="ar" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/bn/" hreflang="bn" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ch/" hreflang="de-CH" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/de/" hreflang="de" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/el/" hreflang="el" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/en/" hreflang="en" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/es/" hreflang="es" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/fi/" hreflang="fi" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/fr/" hreflang="fr" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/hi/" hreflang="hi" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/id/" hreflang="id" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/it/" hreflang="it" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ja/" hreflang="ja" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ko/" hreflang="ko" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/mn/" hreflang="mn" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ms/" hreflang="ms" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/pl/" hreflang="pl" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/pt/" hreflang="pt" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ru/" hreflang="ru" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/sv/" hreflang="sv" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/sw/" hreflang="sw" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/th/" hreflang="th" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/tr/" hreflang="tr" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/uk/" hreflang="uk" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/vi/" hreflang="vi" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/zh/" hreflang="zh-CN" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/en/" hreflang="x-default" rel="alternate"/>
+ </head>
+ <body>
+  <div class="header">
+   <div class="header-left">
+    <h1>
+     <a href="../../zh/index.html" style="text-decoration:none; color:white;">
+      AI &amp; Poem
+     </a>
+    </h1>
+    <h3>
+     即时朗读的AI诗歌生成器
+    </h3>
+   </div>
+  </div>
+  <div class="blog-container">
+   <div class="blog-header">
+    <h2>
+     AI &amp; Poem 博客
+    </h2>
+    <p>
+     诗与技术交汇之处，带来各种故事。
+    </p>
+   </div>
+   <ul class="blog-list">
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-1.html">
+       AI写诗的原理：技术与情感的结合
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      人工智能是如何模仿人类情感来写诗的？深入探讨大型语言模型（LLM）的运作方式和创造力的秘密。
+     </p>
+    </li>
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-2.html">
+       写好诗的五个技巧：与AI一起创作
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      无论是利用AI工具还是亲自创作，介绍五个写出更好诗歌的核心原则。从观察到隐喻，给你的诗增光添彩的技巧。
+     </p>
+    </li>
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-3.html">
+       从著名诗人的创作中汲取灵感
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      像尹东柱、金素月等韩国人喜爱的诗人是如何写诗的？通过他们的创作笔记和习惯，我们也能获得灵感。
+     </p>
+    </li>
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-4.html">
+       AI诗歌生成器的未来：会取代作家吗？
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      AI技术的发展对文学界的影响是什么？讨论作为工具的AI与未来作家的合作形象。
+     </p>
+    </li>
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-5.html">
+       感人的祝词和信件，AI10秒完成
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      婚礼祝词、恋爱信件、感谢信……当需要传达心意时，公开利用AI &amp; Poem的200%实用指南。
+     </p>
+    </li>
+   </ul>
+   <a class="back-link" href="../../zh/index.html">
+    ← 返回主页
+   </a>
+  </div>
+  <footer class="site-footer">
+   <!-- 수정: 경로 수정 (../privacy.html -> ../../privacy.html) -->
+   <a href="../../privacy.html">
+    隐私政策
+   </a>
+   <span>
+    |
+   </span>
+   <!-- 수정: 경로 수정 (../terms.html -> ../../terms.html) -->
+   <a href="../../terms.html">
+    使用条款
+   </a>
+  </footer>
+ </body>
 </html>

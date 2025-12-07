@@ -1,3 +1,14 @@
 backend/.env
 backend/node_modules
 AGENTS.md
+analyze_project.py
+clean_sitemap.py
+fix_blog_pages.py
+fix_localization.py
+localization_data.py
+update_sitemap.py
+update_translations.py
+verify_sitemap.py
+__pycache__
+.venv
+ai-and-poem_seo_adsense_guide.md

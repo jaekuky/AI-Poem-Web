@@ -172,34 +172,42 @@
             <h3>Instant voice-ready AI poem generator</h3>
         </div>
         <div class="header-right">
+            <!-- 수정: About/Contact 링크 추가 -->
+            <a href="about.html"
+                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">About</a>
+            <a href="contact.html"
+                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">Contact</a>
             <a href="../blog/en/index.html"
                 style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">Blog</a>
             <label for="language" id="language-label">Select Language</label>
             <select id="language">
-                <!-- 수정: 언어 옵션을 업데이트 -->
-                <option value="ms">Bahasa Melayu</option>
+                <!-- 수정: 언어 목록 업데이트 (누락된 언어 추가 및 정렬) -->
+                <option value="ar">العربية</option>
                 <option value="bn">বাংলা</option>
+                <option value="ch">Schweizerdeutsch</option>
                 <option value="de">Deutsch</option>
+                <option value="el">Ελληνικά</option>
                 <option value="en" selected>English</option>
                 <option value="es">Español</option>
+                <option value="fi">Suomi</option>
                 <option value="fr">Français</option>
-                <option value="it">Italiano</option>
-                <option value="pl">Polski</option>
-                <option value="pt">Português</option>
-                <option value="ch">Schweizerdeutsch</option>
-                <option value="vi">Tiếng Việt</option>
-                <option value="tr">Türkçe</option>
-                <option value="el">Ελληνικά</option>
-                <option value="ru">русский</option>
-                <option value="uk">Українська</option>
-                <option value="ko">한국어</option>
-                <option value="ja">日本語</option>
-                <option value="zh">中文</option>
-                <option value="sv">Svenska</option>
                 <option value="hi">हिन्दी</option>
                 <option value="id">Bahasa Indonesia</option>
+                <option value="it">Italiano</option>
+                <option value="ja">日本語</option>
+                <option value="ko">한국어</option>
+                <option value="mn">Монгол</option>
+                <option value="ms">Bahasa Melayu</option>
+                <option value="pl">Polski</option>
+                <option value="pt">Português</option>
+                <option value="ru">русский</option>
+                <option value="sv">Svenska</option>
+                <option value="sw">Kiswahili</option>
                 <option value="th">ไทย</option>
-                <option value="fi">Suomi</option>
+                <option value="tr">Türkçe</option>
+                <option value="uk">Українська</option>
+                <option value="vi">Tiếng Việt</option>
+                <option value="zh">中文</option>
             </select>
         </div>
     </div>
@@ -215,6 +223,10 @@
                 <input type="text" id="topic" placeholder="Enter the topic of your poem" required>
                 <button id="poetry-writing-button" type="submit">Write a poem</button>
             </div>
+            <!-- 수정: 정책 위반 주의 문구 추가 -->
+            <p style="font-size: 0.8rem; color: #ccc; margin-top: 5px; text-align: center;">
+                ⚠️ Inappropriate topics such as adult content, violence, and hate may be restricted from creation.
+            </p>
         </form>
         <div id="poem"></div>
         <div class="buttons">
@@ -222,7 +234,68 @@
             <button id="tts-button" disabled>🔊 Recite a poem</button>
         </div>
     </div>
-    <!-- 수정: 상위 검색어와 일치하는 사용 사례 섹션 추가 -->
+    <!-- Service Overview Section -->
+    <section class="seo-section">
+        <h2>AI & Poem Service Overview</h2>
+        <p>AI & Poem is a service where an emotion-understanding AI turns your stories into beautiful poems.
+            Beyond simple text generation, it provides natural voice narration comparable to professional voice actors,
+            satisfying both visual and auditory senses.</p>
+        <p>Supporting over 20 languages including Korean, English, and French,
+            you can complete writings for various purposes such as wedding speeches, love letters, and emotional SNS
+            captions in just 10 seconds.</p>
+    </section>
+
+    <!-- Usage Guide Section -->
+    <section class="seo-section">
+        <h2>AI Poem Generator AI &amp; Poem Usage Guide</h2>
+        <p>Use the sample below to understand the tone and length you can expect from the generator.</p>
+        <article>
+            <h3>Sample Topic: Spring Picnic</h3>
+            <pre aria-label="Spring Picnic Sample Poem">
+Petals land softly on clasped hands,
+The breeze lays blankets over open meadows.
+On our picnic cloth sit laughter and warm tea,
+A spring outing lightens the heart,
+and every story blooms like a bud.
+            </pre>
+        </article>
+        <article>
+            <h3>Sample Topic: Autumn Evening</h3>
+            <pre aria-label="Autumn Evening Sample Poem">
+Red sunset lingers by the window,
+Cricket sounds flow quietly.
+As pages turn with a rustle,
+Autumn deepens and thoughts ripen.
+            </pre>
+        </article>
+        <article>
+            <h3>Sample Topic: First Snow</h3>
+            <pre aria-label="First Snow Sample Poem">
+White world descends silently,
+Embracing the whole world warmly.
+Warm breath in the cold air,
+Our footprints remain as memories.
+            </pre>
+        </article>
+        <ul>
+            <li>Type any theme and receive a narrated poem in roughly 10 seconds.</li>
+            <li>Adjust poem length, type, and language to experiment with new voices.</li>
+            <li>Use the “Recite” button to hear the poem aloud instantly.</li>
+        </ul>
+    </section>
+
+    <!-- Technical Explanation Section -->
+    <section class="seo-section">
+        <h2>How does the AI Poem Generator write poems?</h2>
+        <p>AI & Poem operates using the latest Large Language Model (LLM) technology. The AI, trained on millions of
+            literary works and poems, grasps the context of the topic you enter and finds matching metaphors and rhymes.
+        </p>
+        <p>It doesn't just list words; it creates a new and original poem every time, considering the flow of emotions
+            and poetic structure. For more details, check out our <a href="../blog/en/article-1.html"
+                style="color: #fff; text-decoration: underline;">Blog</a>.</p>
+    </section>
+
+    <!-- Use Cases Section -->
     <section class="seo-section">
         <h2>Why creators search for "poem ai"</h2>
         <ul>
@@ -231,9 +304,10 @@
             <li>Offer audience engagement at events with live-request poems and instant narration.</li>
         </ul>
     </section>
-    <!-- 수정: FAQ 본문을 추가해 체류 시간을 늘리고 풍부한 결과를 유도 -->
+
+    <!-- FAQ Section -->
     <section class="seo-section">
-        <h2>AI &amp; Poem FAQ</h2>
+        <h2>Frequently Asked Questions</h2>
         <details>
             <summary>How quickly does AI &amp; Poem create a poem?</summary>
             <p>Most poems arrive in under 10 seconds and include optional narration so you can present them immediately.
@@ -241,34 +315,42 @@
         </details>
         <details>
             <summary>Can I use the generated poem commercially?</summary>
-            <p>You can reuse poems across campaigns, newsletters, and events; attribution to AI &amp; Poem is encouraged
-                when space allows.</p>
+            <p>Yes. You can reuse poems across campaigns, newsletters, and events; attribution to AI &amp; Poem is
+                encouraged when space allows.</p>
         </details>
         <details>
             <summary>Does the tool create narration automatically?</summary>
-            <p>Enable the narration button after generation to hear the poem read aloud in your selected language.</p>
+            <p>Select the narration toggle after generation to hear the poem read aloud in your selected language.</p>
         </details>
     </section>
-    <!-- 수정: 애드센스 품질 강화를 위해 샘플 콘텐츠와 사용 방법 섹션 추가 -->
+
+    <!-- Blog Preview Section -->
     <section class="seo-section">
-        <h2>AI & Poem Quick Start</h2>
-        <p>Use the sample below to understand the tone and length you can expect from the generator.</p>
-        <article>
-            <h3>Sample Topic: Spring Picnic</h3>
-            <pre>Petals land softly on clasped hands,
-The breeze lays blankets over open meadows.
-On our picnic cloth sit laughter and warm tea,
-A spring outing lightens the heart,
-and every story blooms like a bud.</pre>
-        </article>
-        <ul>
-            <li>Type any theme and receive a narrated poem in roughly 10 seconds.</li>
-            <li>Adjust poem length, type, and language to experiment with new voices.</li>
-            <li>Use the “Recite” button to hear the poem aloud instantly.</li>
-        </ul>
+        <h2>Poetry and AI Blog</h2>
+        <div class="blog-preview">
+            <article>
+                <h3><a href="../blog/en/article-1.html">Principles and Future of AI Poem Generators</a></h3>
+                <p>Learn how large language models learn literary expressions and create art.</p>
+            </article>
+            <article>
+                <h3><a href="../blog/en/article-2.html">How to Write Touching Wedding Speeches</a></h3>
+                <p>Revealing know-how to write sincere speeches quickly and easily using AI.</p>
+            </article>
+            <article>
+                <h3><a href="../blog/en/article-3.html">Collection of Emotional Quotes Popular on SNS</a></h3>
+                <p>Short and powerful poetic expressions that call for likes on Instagram and Facebook.</p>
+            </article>
+        </div>
     </section>
     <footer class="site-footer">
         <!-- 수정: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
+        <!-- 수정: 푸터 링크 추가 -->
+        <a href="about.html">About</a>
+        <span>|</span>
+        <a href="../blog/en/index.html">Blog</a>
+        <span>|</span>
+        <a href="contact.html">Contact</a>
+        <span>|</span>
         <a href="privacy.html">Privacy Policy</a>
         <span>|</span>
         <a href="terms.html">Terms of Service</a>

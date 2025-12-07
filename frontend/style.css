@@ -174,6 +174,41 @@ body {
     margin: 12px 0;
 }
 
+/* Blog Preview Section */
+.blog-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.blog-preview article {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.blog-preview article:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.blog-preview h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.blog-preview h3 a {
+    color: #ff9a9e;
+    text-decoration: none;
+}
+
+.blog-preview p {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
 .buttons {
     margin-top: 5px;
     display: flex;
@@ -276,4 +311,50 @@ body {
 /* 수정: 쿠키 동의 배너가 페이지 하단에서 겹치지 않도록 바디 여백 추가 */
 body.has-cookie-banner {
     padding-bottom: 72px;
+}
+
+/* Content Section (About, Contact) */
+.content-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    line-height: 1.6;
+}
+
+.content-section.centered {
+    text-align: center;
+}
+
+.content-section h2 {
+    color: #ff9a9e;
+    margin-top: 30px;
+}
+
+.content-section p {
+    margin-bottom: 15px;
+}
+
+/* Contact Page Specifics */
+.contact-info {
+    margin: 40px 0;
+    font-size: 1.2em;
+}
+
+.contact-email {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 30px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-email:hover {
+    background: rgba(255, 255, 255, 0.3);
 }

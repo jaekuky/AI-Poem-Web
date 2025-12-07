@@ -1,84 +1,78 @@
 <!DOCTYPE html>
+
 <html lang="uk">
 
 <head>
-    <meta charset="UTF-8">
-    <!-- 수정: 우크라이나어 타이틀에 'генератор віршів' 키워드를 포함 -->
+    <meta charset="utf-8" />
+    <!-- 수정: CTR 향상을 위해 'poem ai' 검색어와 혜택을 강조 -->
     <title>AI &amp; Poem - Генератор віршів ШІ з миттєвою озвучкою</title>
-    <meta name="title" content="AI &amp; Poem - Генератор віршів ШІ з миттєвою озвучкою">
-
+    <meta content="AI &amp; Poem - Генератор віршів ШІ з миттєвою озвучкою" name="title" />
     <!-- [SEO] Robots meta tag 추가 -->
-    <meta name="robots" content="index, follow">
-
+    <meta content="index, follow" name="robots" />
     <!-- 반응형 웹을 위한 viewport 메타 태그 추가 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <!-- 수정: 구글 애드센스 계정 메타 태그 추가 -->
-    <meta name="google-adsense-account" content="ca-pub-7349192768683799">
-
+    <meta content="ca-pub-7349192768683799" name="google-adsense-account" />
     <!-- ✅ Favicon added -->
-    <link rel="icon" href="../image/favicon.ico" type="image/x-icon">
-
+    <link href="../image/favicon.ico" rel="icon" type="image/x-icon" />
     <!-- 웹페이지 정보 메타 태그 -->
-    <!-- 수정: 속도와 озвучка 혜택 강조 -->
-    <meta name="description"
-        content="Введіть тему й отримайте за 10 секунд персональний вірш та готове озвучення, абсолютно безкоштовно.">
+    <!-- 수정: 속도·낭독·무료 혜택을 담은 메타 설명으로 교체 -->
+    <meta content="Введіть тему й отримайте за 10 секунд персональний вірш та готове озвучення, абсолютно безкоштовно."
+        name="description" />
     <!-- 수정: 불필요한 공백과 중복을 제거해 키워드 메타 태그를 정리 -->
-    <meta name="keywords"
-        content="Поезія ШІ, штучний інтелект, поезія, генерація віршів, генератор віршів ШІ, платформа для створення віршів">
-    <meta name="author" content="Ryu Jae-kuk">
-
+    <meta
+        content="Поезія ШІ, штучний інтелект, поезія, генерація віршів, генератор віршів ШІ, платформа для створення віршів"
+        name="keywords" />
+    <meta content="Ryu Jae-kuk" name="author" />
     <!-- Canonical URL to avoid duplicate content issues -->
-    <link rel="canonical" href="https://www.ai-and-poem.art/uk/">
-
+    <link href="https://www.ai-and-poem.art/uk/" rel="canonical" />
     <!-- Alternate language links for multilingual SEO -->
     <!-- 수정: hreflang 링크를 정규화 -->
-    <link rel="alternate" href="https://www.ai-and-poem.art/ko/" hreflang="ko" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/ja/" hreflang="ja" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/it/" hreflang="it" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/fr/" hreflang="fr" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/es/" hreflang="es" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/en/" hreflang="en" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/de/" hreflang="de" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/ru/" hreflang="ru" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/ms/" hreflang="ms" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/bn/" hreflang="bn" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/vi/" hreflang="vi" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/el/" hreflang="el" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/pt/" hreflang="pt" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/pl/" hreflang="pl" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/ch/" hreflang="de-CH" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/uk/" hreflang="uk" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/tr/" hreflang="tr" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/zh/" hreflang="zh-CN" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/sv/" hreflang="sv" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/hi/" hreflang="hi" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/id/" hreflang="id" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/th/" hreflang="th" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/fi/" hreflang="fi" />
-    <link rel="alternate" href="https://www.ai-and-poem.art/" hreflang="x-default" />
+    <link href="https://www.ai-and-poem.art/ko/" hreflang="ko" rel="alternate">
+    <link href="https://www.ai-and-poem.art/ja/" hreflang="ja" rel="alternate">
+    <link href="https://www.ai-and-poem.art/it/" hreflang="it" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/fr/" hreflang="fr" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/es/" hreflang="es" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/en/" hreflang="en" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/de/" hreflang="de" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/ru/" hreflang="ru" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/ms/" hreflang="ms" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/bn/" hreflang="bn" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/vi/" hreflang="vi" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/el/" hreflang="el" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/pt/" hreflang="pt" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/pl/" hreflang="pl" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/ch/" hreflang="de-CH" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/uk/" hreflang="uk" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/tr/" hreflang="tr" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/zh/" hreflang="zh-CN" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/sv/" hreflang="sv" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/hi/" hreflang="hi" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/id/" hreflang="id" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/th/" hreflang="th" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/fi/" hreflang="fi" rel="alternate" />
+    <link href="https://www.ai-and-poem.art/" hreflang="x-default" rel="alternate" />
     <!-- Open Graph 메타 태그 -->
-    <!-- 수정: SNS 미리보기 문구 업데이트 -->
-    <meta property="og:title" content="AI &amp; Poem - Генератор віршів ШІ з миттєвою озвучкою">
-    <meta property="og:description"
-        content="Введіть тему й отримайте за 10 секунд персональний вірш та готове озвучення, абсолютно безкоштовно.">
-    <meta property="og:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
-    <meta property="og:url" content="https://www.ai-and-poem.art/uk/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="AI &amp; Poem">
-    <meta property="og:locale" content="uk_UA">
-    <meta property="og:image:alt" content="Ілюстрація штучного інтелекту, що пише вірш">
-
+    <!-- 수정: SNS 미리보기 문구도 동일한 USP를 유지 -->
+    <meta content="AI &amp; Poem - Генератор віршів ШІ з миттєвою озвучкою" property="og:title" />
+    <meta content="Введіть тему й отримайте за 10 секунд персональний вірш та готове озвучення, абсолютно безкоштовно."
+        property="og:description" />
+    <meta content="https://www.ai-and-poem.art/image/robot_poet.png" property="og:image" />
+    <meta content="https://www.ai-and-poem.art/uk/" property="og:url" />
+    <meta content="website" property="og:type" />
+    <meta content="AI &amp; Poem" property="og:site_name" />
+    <meta content="uk_UA" property="og:locale" />
+    <meta content="Illustration of an AI robot writing poetry" property="og:image:alt" />
     <!-- X(전 Twitter) 카드 메타 태그 추가 -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta content="summary_large_image" name="twitter:card" />
     <!-- 수정: X 카드 문구도 SERP와 일치 -->
-    <meta name="twitter:title" content="AI &amp; Poem - Генератор віршів ШІ з миттєвою озвучкою">
-    <meta name="twitter:description"
-        content="Введіть тему й отримайте за 10 секунд персональний вірш та готове озвучення, абсолютно безкоштовно.">
-    <meta name="twitter:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
-    <meta name="twitter:image:alt" content="Ілюстрація штучного інтелекту, що пише вірш">
-
+    <meta content="AI &amp; Poem - Генератор віршів ШІ з миттєвою озвучкою" name="twitter:title" />
+    <meta content="Введіть тему й отримайте за 10 секунд персональний вірш та готове озвучення, абсолютно безкоштовно."
+        name="twitter:description" />
+    <meta content="https://www.ai-and-poem.art/image/robot_poet.png" name="twitter:image" />
+    <meta content="Illustration of an AI robot writing poetry" name="twitter:image:alt" />
     <!-- JSON-LD Structured Data for enhanced SEO -->
-    <!-- 수정: 구조화 데이터 타이틀/설명 업데이트 -->
+    <!-- 수정: 구조화 데이터에 새로운 타이틀과 설명 반영 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -94,7 +88,7 @@
         "image": "https://www.ai-and-poem.art/image/robot_poet.png"
    }
    </script>
-    <!-- 수정: 우크라이나어 샘플 시 CreativeWork 구조화 데이터 추가 -->
+    <!-- 수정: 대표 샘플 시를 CreativeWork 구조화 데이터로 추가 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -112,7 +106,7 @@
         "text": "Неонові хмари розчиняються в бурштиновому світлі.\nКавові візки пробуджують вулицю тихим гудінням.\nІдеї розквітають у шепітних байтах.\nНатхненні рядки завершують ранок."
     }
     </script>
-    <!-- 수정: 우크라이나어 FAQPage 구조화 데이터 추가 -->
+    <!-- 수정: FAQPage 구조화 데이터를 추가해 풍부한 검색 노출 유도 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -145,9 +139,8 @@
         ]
     }
     </script>
-
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CVHJYZWNC"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1CVHJYZWNC"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -155,102 +148,101 @@
 
         gtag('config', 'G-1CVHJYZWNC');
     </script>
-
     <!-- Google Adsense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799"
-        crossorigin="anonymous"></script>
-
+    <script async="" crossorigin="anonymous"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799"></script>
     <!-- style.css 불러오기 -->
-    <link rel="stylesheet" href="../style.css">
+    <link href="../style.css" rel="stylesheet" />
+    </link>
+    </link>
 </head>
 
 <body>
     <div class="header">
         <div class="header-left">
             <h1>AI &amp; Poem</h1>
-            <!-- 수정: 'генератор віршів' 키워드를 포함 -->
+            <!-- 수정: SERP 키워드를 포함한 태그라인으로 조정 -->
             <h3>Генератор віршів ШІ з миттєвою озвучкою</h3>
         </div>
         <div class="header-right">
-            <a href="../blog/uk/index.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">Блог</a>
-            <label for="language" id="language-label">Оберіть мову</label>
+            <!-- 수정: About/Contact 링크 추가 -->
+            <a href="about.html"
+                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->Про
+                нас</a>
+            <a href="contact.html"
+                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->Контакти</a>
+            <a href="../blog/en/index.html"
+                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->Блог</a>
+            <label for="language" id="language-label"><!-- 수정: 메뉴 번역 -->Виберіть мову</label>
             <select id="language">
-                <!-- 수정: 언어 옵션을 업데이트 -->
-                <option value="ms">Bahasa Melayu</option>
+                <!-- 수정: 언어 목록 업데이트 (누락된 언어 추가 및 정렬) -->
+                <option value="ar">العربية</option>
                 <option value="bn">বাংলা</option>
+                <option value="ch">Schweizerdeutsch</option>
                 <option value="de">Deutsch</option>
+                <option value="el">Ελληνικά</option>
                 <option value="en">English</option>
                 <option value="es">Español</option>
+                <option value="fi">Suomi</option>
                 <option value="fr">Français</option>
-                <option value="it">Italiano</option>
-                <option value="pl">Polski</option>
-                <option value="pt">Português</option>
-                <option value="ch">Schweizerdeutsch</option>
-                <option value="vi">Tiếng Việt</option>
-                <option value="tr">Türkçe</option>
-                <option value="el">Ελληνικά</option>
-                <option value="ru">русский</option>
-                <option value="uk" selected>Українська</option>
-                <option value="ko">한국어</option>
-                <option value="ja">日本語</option>
-                <option value="zh">中文</option>
-                <option value="sv">Svenska</option>
                 <option value="hi">हिन्दी</option>
                 <option value="id">Bahasa Indonesia</option>
+                <option value="it">Italiano</option>
+                <option value="ja">日本語</option>
+                <option value="ko">한국어</option>
+                <option value="mn">Монгол</option>
+                <option value="ms">Bahasa Melayu</option>
+                <option value="pl">Polski</option>
+                <option value="pt">Português</option>
+                <option value="ru">русский</option>
+                <option value="sv">Svenska</option>
+                <option value="sw">Kiswahili</option>
                 <option value="th">ไทย</option>
-                <option value="fi">Suomi</option>
+                <option value="tr">Türkçe</option>
+                <option value="uk" selected>Українська</option>
+                <option value="vi">Tiếng Việt</option>
+                <option value="zh">中文</option>
             </select>
         </div>
     </div>
     <div class="container">
         <div id="image-box">
-            <video loop id="processing-video" src="../image/robot_poet.mp4" poster="../image/robot_poet.png"
-                aria-label="Відео зі штучним інтелектом, що пише вірш"></video>
+            <video aria-label="Video of an AI robot writing poetry" id="processing-video" loop=""
+                poster="../image/robot_poet.png" src="../image/robot_poet.mp4"></video>
         </div>
         <form id="poem-form">
-            <!-- 수정: 인기 검색어를 언급하여 기대치 정렬 -->
+            <!-- 수정: 주요 검색어를 언급해 기대치 정렬 -->
             <p id="form-description">Шукали 'генератор віршів ші'? Введіть тему й отримайте текст та озвучку за кілька
                 секунд.</p>
             <div class="input-box">
-                <input type="text" id="topic" placeholder="Введіть тему вашого вірша" required>
+                <input id="topic" placeholder="Введіть тему вашого вірша" required="" type="text" />
                 <button id="poetry-writing-button" type="submit">Написати вірш</button>
             </div>
+            <!-- 수정: 정책 위반 주의 문구 추가 -->
+            <p style="font-size: 0.8rem; color: #ccc; margin-top: 5px; text-align: center;">
+                ⚠️ Створення неприйнятних тем, таких як контент для дорослих, насильство та ненависть, може бути
+                обмежено.
+            </p>
         </form>
         <div id="poem"></div>
         <div class="buttons">
             <!-- '시 낭송' 버튼  -->
-            <button id="tts-button" disabled>🔊 Прослухати вірш</button>
+            <button disabled="" id="tts-button">🔊 Прослухати вірш</button>
         </div>
     </div>
-    <!-- 수정: 우크라이나어 주요 검색 의도를 반영한 활용 사례 섹션 추가 -->
+    <!-- Service Overview Section -->
     <section class="seo-section">
-        <h2>Чому шукають «генератор віршів ші»</h2>
-        <ul>
-            <li>Миттєво публікуйте дописи в соцмережах із рядками, що відображають голос бренду.</li>
-            <li>Створюйте незабутні обітниці, промови та листівки за лічені хвилини.</li>
-            <li>Пожвавлюйте заходи віршами на запит та миттєвою озвучкою.</li>
-        </ul>
+        <h2>Огляд послуги AI &amp; Poem</h2>
+        <p><!-- 수정: 서비스 설명 번역 -->AI & Poem — це сервіс, де ШІ, що розуміє емоції, перетворює ваші історії на красиві
+            вірші. Окрім простого створення тексту, він забезпечує природне голосове озвучення, яке можна порівняти з
+            професійними акторами дубляжу, задовольняючи як візуальні, так і слухові відчуття.</p>
+        <p><!-- 수정: 번역 적용 -->Підтримуючи понад 20 мов, включаючи корейську, англійську та французьку, ви можете
+            створювати тексти для різних цілей, таких як весільні промови, любовні листи та емоційні підписи в
+            соціальних мережах, всього за 10 секунд.</p>
     </section>
-    <!-- 수정: 우크라이나어 FAQ 콘텐츠 추가 -->
+    <!-- Usage Guide Section -->
     <section class="seo-section">
-        <h2>Поширені запитання</h2>
-        <details>
-            <summary>Як швидко AI &amp; Poem створює вірш?</summary>
-            <p>У середньому вірш з озвученням готується менш ніж за 10 секунд і готовий до публікації.</p>
-        </details>
-        <details>
-            <summary>Чи можу я комерційно використовувати згенерований вірш?</summary>
-            <p>Так, він підійде для кампаній, розсилок та подій; якщо маєте змогу, згадайте AI &amp; Poem.</p>
-        </details>
-        <details>
-            <summary>Чи генерує інструмент озвучення автоматично?</summary>
-            <p>Після генерації натисніть кнопку озвучення, щоб прослухати озвучення обраною мовою.</p>
-        </details>
-    </section>
-    <!-- 수정: 애드센스 품질 강화를 위해 샘플 콘텐츠와 사용 방법 섹션 추가 -->
-    <section class="seo-section">
-        <h2>Швидкий старт з AI & Poem</h2>
+        <h2>Швидкий старт з AI &amp; Poem</h2>
         <p>Наведений приклад демонструє типовий тон і довжину створених віршів.</p>
         <article>
             <h3>Приклад теми: весняний пікнік</h3>
@@ -266,13 +258,80 @@
             <li>Натисніть кнопку «Прослухати», щоб почути його одразу.</li>
         </ul>
     </section>
+    <!-- Technical Explanation Section -->
+    <section class="seo-section">
+        <h2><!-- 수정: 번역 적용 -->Як генератор віршів ШІ пише вірші?</h2>
+        <p><!-- 수정: 기술 설명 번역 -->AI & Poem працює з використанням новітньої технології великих мовних моделей (LLM). ШІ,
+            навчений на мільйонах літературних творів і віршів, розуміє контекст введеної вами теми та знаходить
+            відповідні метафори та рими.
+        </p>
+        <p><!-- 수정: 번역 적용 -->Він не просто перераховує слова; він щоразу створює новий і оригінальний вірш, враховуючи
+            потік емоцій і поетичну структуру. Для отримання додаткової інформації перегляньте наш блог. <a
+                href="../blog/en/article-1.html"
+                style="color: #fff; text-decoration: underline;"><!-- 수정: 메뉴 번역 -->Блог</a>.</p>
+    </section>
+    <!-- Use Cases Section -->
+    <section class="seo-section">
+        <h2>Чому шукають «генератор віршів ші»</h2>
+        <ul>
+            <li>Миттєво публікуйте дописи в соцмережах із рядками, що відображають голос бренду.</li>
+            <li>Створюйте незабутні обітниці, промови та листівки за лічені хвилини.</li>
+            <li>Пожвавлюйте заходи віршами на запит та миттєвою озвучкою.</li>
+        </ul>
+    </section>
+    <!-- FAQ Section -->
+    <section class="seo-section">
+        <h2>Поширені запитання</h2>
+        <details>
+            <summary>Як швидко AI &amp; Poem створює вірш?</summary>
+            <p>У середньому вірш з озвученням готується менш ніж за 10 секунд і готовий до публікації.</p>
+        </details>
+        <details>
+            <summary>Чи можу я комерційно використовувати згенерований вірш?</summary>
+            <p>Так, він підійде для кампаній, розсилок та подій; якщо маєте змогу, згадайте AI &amp; Poem.</p>
+        </details>
+        <details>
+            <summary>Чи генерує інструмент озвучення автоматично?</summary>
+            <p>Після генерації натисніть кнопку озвучення, щоб прослухати озвучення обраною мовою.</p>
+        </details>
+    </section>
+    <!-- Blog Preview Section -->
+    <section class="seo-section">
+        <h2><!-- 수정: 번역 적용 -->Блог про поезію та ШІ</h2>
+        <div class="blog-preview">
+            <article>
+                <h3><a href="../blog/uk/article-1.html"><!-- 수정: 번역 적용 -->Принципи та майбутнє генераторів віршів ШІ</a>
+                </h3>
+                <p><!-- 수정: 번역 적용 -->Дізнайтеся, як великі мовні моделі вивчають літературні вирази та створюють
+                    мистецтво.</p>
+            </article>
+            <article>
+                <h3><a href="../blog/uk/article-2.html"><!-- 수정: 번역 적용 -->Як написати зворушливу весільну промову</a>
+                </h3>
+                <p><!-- 수정: 번역 적용 -->Розкриваємо ноу-хау, як швидко та легко писати щирі промови за допомогою ШІ.</p>
+            </article>
+            <article>
+                <h3><a href="../blog/uk/article-3.html"><!-- 수정: 번역 적용 -->Колекція емоційних цитат, популярних у
+                        соціальних мережах</a></h3>
+                <p><!-- 수정: 번역 적용 -->Короткі та сильні поетичні вирази, які закликають до лайків в Instagram та
+                    Facebook.</p>
+            </article>
+        </div>
+    </section>
     <footer class="site-footer">
         <!-- 수정: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
+        <!-- 수정: 푸터 링크 추가 -->
+        <a href="about.html"><!-- 수정: 메뉴 번역 -->Про нас</a>
+        <span>|</span>
+        <a href="../blog/uk/index.html"><!-- 수정: 메뉴 번역 -->Блог</a>
+        <span>|</span>
+        <a href="contact.html"><!-- 수정: 메뉴 번역 -->Контакти</a>
+        <span>|</span>
         <a href="privacy.html">Політика конфіденційності</a>
         <span>|</span>
         <a href="terms.html">Умови користування</a>
     </footer>
-    <script src="../script.js" defer></script>
+    <script defer="" src="../script.js"></script>
 </body>
 
 </html>

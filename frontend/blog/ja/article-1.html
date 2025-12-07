@@ -1,67 +1,136 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIが詩を書く仕組み：技術と感性の出会い - AI & Poem</title>
-    <meta name="description" content="人工知能(AI)がどのように詩を創作するのか、大規模言語モデル(LLM)の原理と創造性の秘密を探ります。">
-    <!-- 수정: 스타일을 'frontend/blog/style.css'로 통합 -->
-    <link rel="stylesheet" href="../style.css">
-    <!-- 수정: SEO를 위한 Canonical 태그 추가 -->
-    <link rel="canonical" href="https://www.ai-and-poem.art/blog/ja/article-1.html">
-</head>
-
-<body>
-    <div class="header">
-        <div class="header-left">
-            <h1><a href="../../ja/index.html" style="text-decoration:none; color:white;">AI & Poem</a></h1>
-            <h3>10秒で仕上がる音声付きAI詩生成</h3>
-        </div>
-    </div>
-
-    <div class="article-container">
-        <header class="article-header">
-            <h1 class="article-title">AIが詩を書く仕組み：技術と感性の出会い</h1>
-            <p class="article-meta">2025年3月24日 | AI & Poem 編集チーム</p>
-        </header>
-
-        <article class="article-content">
-            <p>最近、人工知能(AI)技術の発展により、絵画、音楽、そして文学まで創作の領域が広がっています。特に「AI &
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   AIが詩を書く仕組み：技術と感性の出会い - AI &amp; Poem
+  </title>
+  <meta content="人工知能(AI)がどのように詩を創作するのか、大規模言語モデル(LLM)の原理と創造性の秘密を探ります。" name="description"/>
+  <!-- 수정: 스타일을 'frontend/blog/style.css'로 통합 -->
+  <link href="../style.css" rel="stylesheet"/>
+  <!-- 수정: SEO를 위한 Canonical 태그 추가 -->
+  <link href="https://www.ai-and-poem.art/blog/ja/article-1.html" rel="canonical"/>
+  <meta content="ca-pub-7349192768683799" name="google-adsense-account"/>
+  <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799">
+  </script>
+  <link href="https://www.ai-and-poem.art/blog/ar/article-1.html" hreflang="ar" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/bn/article-1.html" hreflang="bn" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ch/article-1.html" hreflang="de-CH" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/de/article-1.html" hreflang="de" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/el/article-1.html" hreflang="el" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/en/article-1.html" hreflang="en" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/es/article-1.html" hreflang="es" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/fi/article-1.html" hreflang="fi" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/fr/article-1.html" hreflang="fr" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/hi/article-1.html" hreflang="hi" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/id/article-1.html" hreflang="id" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/it/article-1.html" hreflang="it" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ja/article-1.html" hreflang="ja" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ko/article-1.html" hreflang="ko" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/mn/article-1.html" hreflang="mn" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ms/article-1.html" hreflang="ms" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/pl/article-1.html" hreflang="pl" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/pt/article-1.html" hreflang="pt" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ru/article-1.html" hreflang="ru" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/sv/article-1.html" hreflang="sv" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/sw/article-1.html" hreflang="sw" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/th/article-1.html" hreflang="th" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/tr/article-1.html" hreflang="tr" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/uk/article-1.html" hreflang="uk" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/vi/article-1.html" hreflang="vi" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/zh/article-1.html" hreflang="zh-CN" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/en/article-1.html" hreflang="x-default" rel="alternate"/>
+ </head>
+ <body>
+  <div class="header">
+   <div class="header-left">
+    <h1>
+     <a href="../../ja/index.html" style="text-decoration:none; color:white;">
+      AI &amp; Poem
+     </a>
+    </h1>
+    <h3>
+     10秒で仕上がる音声付きAI詩生成
+    </h3>
+   </div>
+  </div>
+  <div class="article-container">
+   <header class="article-header">
+    <h1 class="article-title">
+     AIが詩を書く仕組み：技術と感性の出会い
+    </h1>
+    <p class="article-meta">
+     2025年3月24日 | AI &amp; Poem 編集チーム
+    </p>
+   </header>
+   <article class="article-content">
+    <p>
+     最近、人工知能(AI)技術の発展により、絵画、音楽、そして文学まで創作の領域が広がっています。特に「AI &amp;
                 Poem」のようなサービスは、わずか数秒でユーザーが望むテーマで詩を書き上げます。では、冷たい機械であるAIは、どのようにして人間の専有物と思われていた「感性」を真似て詩を書くことができるのでしょうか？
-            </p>
-
-            <h2>大規模言語モデル(LLM)の魔法</h2>
-            <p>AIが詩を書く能力の核心には**大規模言語モデル(Large Language Model,
+    </p>
+    <h2>
+     大規模言語モデル(LLM)の魔法
+    </h2>
+    <p>
+     AIが詩を書く能力の核心には**大規模言語モデル(Large Language Model,
                 LLM)**があります。GPTのようなモデルは、数十億以上の文章とテキストデータを学習しました。この過程でAIは単に単語を暗記するのではなく、単語と単語の間の確率的関係、文脈、そしてニュアンスを学びます。
-            </p>
-            <p>例えば、「春」という単語の後に「花」、「暖かさ」、「芽」のような単語が来る確率が高いことを統計的に理解するのです。しかし、詩は単純な確率ゲームではありません。隠喩と象徴が必要です。</p>
-
-            <h2>パターン認識と創造性</h2>
-            <p>AIは学習されたデータの中から詩的なパターンを見つけ出します。数万編の詩を分析し、韻律、リズム、そして詩的許容のような構造を身につけます。ユーザーが「別れの悲しみ」というテーマを投げかけると、AIはそのテーマに関連する感情的な語彙を結びつけ、学習した詩的構造に合わせて文章を再配列します。
-            </p>
-            <ul>
-                <li><strong>連想作用：</strong>「涙」という単語から「雨」、「海」、「曇り」などを連想します。</li>
-                <li><strong>構造化：</strong>起承転結や4行詩のような形式を整えます。</li>
-                <li><strong>スタイル模倣：</strong>特定の詩人のスタイルを要求すれば、その特徴（例：古語の使用、短い呼吸）を真似ます。</li>
-            </ul>
-
-            <h2>AI詩の限界と可能性</h2>
-            <p>もちろん、AIが実際に「悲しみ」や「喜び」を感じているわけではありません。それは徹底的な計算の結果です。しかし、その結果が読者に感動を与えるなら、それを芸術と呼べないでしょうか？AIは人間作家が思いつかなかったユニークな単語の組み合わせを提示したり、創作の行き詰まりを突破する素晴らしいツールになり得ます。
-            </p>
-            <p>AI & Poemはこのような技術を活用し、誰もが詩人になれる体験を提供します。あなたの小さなアイデア一つがAIに出会い、どのような美しい詩として誕生するか、今すぐ体験してみてください。</p>
-        </article>
-
-        <a href="index.html" class="back-link">← 一覧に戻る</a>
-    </div>
-
-    <footer class="site-footer">
-        <!-- 수정: 경로 수정 (../privacy.html -> ../../privacy.html) -->
-        <a href="../../ja/privacy.html">プライバシーポリシー</a>
-        <span>|</span>
-        <!-- 수정: 경로 수정 (../terms.html -> ../../terms.html) -->
-        <a href="../../ja/terms.html">利用規約</a>
-    </footer>
-</body>
-
+    </p>
+    <p>
+     例えば、「春」という単語の後に「花」、「暖かさ」、「芽」のような単語が来る確率が高いことを統計的に理解するのです。しかし、詩は単純な確率ゲームではありません。隠喩と象徴が必要です。
+    </p>
+    <h2>
+     パターン認識と創造性
+    </h2>
+    <p>
+     AIは学習されたデータの中から詩的なパターンを見つけ出します。数万編の詩を分析し、韻律、リズム、そして詩的許容のような構造を身につけます。ユーザーが「別れの悲しみ」というテーマを投げかけると、AIはそのテーマに関連する感情的な語彙を結びつけ、学習した詩的構造に合わせて文章を再配列します。
+    </p>
+    <ul>
+     <li>
+      <strong>
+       連想作用：
+      </strong>
+      「涙」という単語から「雨」、「海」、「曇り」などを連想します。
+     </li>
+     <li>
+      <strong>
+       構造化：
+      </strong>
+      起承転結や4行詩のような形式を整えます。
+     </li>
+     <li>
+      <strong>
+       スタイル模倣：
+      </strong>
+      特定の詩人のスタイルを要求すれば、その特徴（例：古語の使用、短い呼吸）を真似ます。
+     </li>
+    </ul>
+    <h2>
+     AI詩の限界と可能性
+    </h2>
+    <p>
+     もちろん、AIが実際に「悲しみ」や「喜び」を感じているわけではありません。それは徹底的な計算の結果です。しかし、その結果が読者に感動を与えるなら、それを芸術と呼べないでしょうか？AIは人間作家が思いつかなかったユニークな単語の組み合わせを提示したり、創作の行き詰まりを突破する素晴らしいツールになり得ます。
+    </p>
+    <p>
+     AI &amp; Poemはこのような技術を活用し、誰もが詩人になれる体験を提供します。あなたの小さなアイデア一つがAIに出会い、どのような美しい詩として誕生するか、今すぐ体験してみてください。
+    </p>
+   </article>
+   <a class="back-link" href="index.html">
+    ← 一覧に戻る
+   </a>
+  </div>
+  <footer class="site-footer">
+   <!-- 수정: 경로 수정 (../privacy.html -> ../../privacy.html) -->
+   <a href="../../ja/privacy.html">
+    プライバシーポリシー
+   </a>
+   <span>
+    |
+   </span>
+   <!-- 수정: 경로 수정 (../terms.html -> ../../terms.html) -->
+   <a href="../../ja/terms.html">
+    利用規約
+   </a>
+  </footer>
+ </body>
 </html>

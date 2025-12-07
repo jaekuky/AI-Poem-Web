@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- 수정: CTR 향상을 위해 혜택 중심의 타이틀과 타깃 키워드를 반영 -->
-    <title>AI &amp; Poem – 10초 만에 완성하는 낭독형 AI 시</title>
+    <title>AI &amp; Poem – AI 시 생성기, 10초 만에 시와 낭독까지</title>
     <meta name="title" content="AI &amp; Poem – 10초 만에 완성하는 낭독형 AI 시">
 
     <!-- [SEO] Robots meta tag 추가 -->
@@ -173,37 +173,41 @@
         </div>
         <div class="header-right">
             <!-- 수정: 블로그 링크 추가 -->
+            <a href="about.html" style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">서비스
+                소개</a>
             <a href="blog/ko/index.html"
                 style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">블로그</a>
+            <a href="contact.html"
+                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">문의하기</a>
             <label for="language" id="language-label">언어 선택</label>
             <select id="language">
-                <!-- 수정: 언어 옵션을 업데이트 -->
-                <option value="ms">Bahasa Melayu</option>
+                <!-- 수정: 언어 목록 업데이트 (누락된 언어 추가 및 정렬) -->
+                <option value="ar">العربية</option>
                 <option value="bn">বাংলা</option>
+                <option value="ch">Schweizerdeutsch</option>
                 <option value="de">Deutsch</option>
+                <option value="el">Ελληνικά</option>
                 <option value="en">English</option>
                 <option value="es">Español</option>
+                <option value="fi">Suomi</option>
                 <option value="fr">Français</option>
-                <option value="it">Italiano</option>
-                <option value="pl">Polski</option>
-                <option value="pt">Português</option>
-                <option value="ch">Schweizerdeutsch</option>
-                <option value="vi">Tiếng Việt</option>
-                <option value="tr">Türkçe</option>
-                <option value="el">Ελληνικά</option>
-                <option value="ru">русский</option>
-                <option value="uk">Українська</option>
-                <option value="ko" selected>한국어</option>
-                <option value="ja">日本語</option>
-                <option value="zh">中文</option>
-                <option value="sv">Svenska</option>
                 <option value="hi">हिन्दी</option>
                 <option value="id">Bahasa Indonesia</option>
-                <option value="th">ไทย</option>
-                <option value="fi">Suomi</option>
-                <option value="ar">العربية</option>
+                <option value="it">Italiano</option>
+                <option value="ja">日本語</option>
+                <option value="ko" selected>한국어</option>
                 <option value="mn">Монгол</option>
+                <option value="ms">Bahasa Melayu</option>
+                <option value="pl">Polski</option>
+                <option value="pt">Português</option>
+                <option value="ru">русский</option>
+                <option value="sv">Svenska</option>
                 <option value="sw">Kiswahili</option>
+                <option value="th">ไทย</option>
+                <option value="tr">Türkçe</option>
+                <option value="uk">Українська</option>
+                <option value="vi">Tiếng Việt</option>
+                <option value="zh">中文</option>
             </select>
         </div>
     </div>
@@ -219,6 +223,10 @@
                 <input type="text" id="topic" placeholder="시의 주제를 입력하세요" required>
                 <button id="poetry-writing-button" type="submit">시 작성</button>
             </div>
+            <!-- 수정: 정책 위반 주의 문구 추가 -->
+            <p style="font-size: 0.8rem; color: #ccc; margin-top: 5px; text-align: center;">
+                ⚠️ 성인물, 폭력, 혐오 등 부적절한 주제는 생성이 제한될 수 있습니다.
+            </p>
         </form>
         <div id="poem"></div>
         <div class="buttons">
@@ -226,9 +234,18 @@
             <button id="tts-button" disabled>🔊 시 낭송</button>
         </div>
     </div>
+    <!-- 수정: 서비스 소개 섹션 추가 (신뢰도 및 정보성 강화) -->
+    <section class="seo-section">
+        <h2>AI & Poem 서비스 한눈에 보기</h2>
+        <p>AI & Poem은 감정을 이해하는 인공지능이 여러분의 이야기를 아름다운 시로 만들어 드리는 서비스입니다.
+            단순한 텍스트 생성을 넘어, 전문 성우 수준의 자연스러운 음성 낭독까지 제공하여 시각과 청각을 모두 만족시키는 감동을 선사합니다.</p>
+        <p>한국어, 영어, 프랑스어 등 전 세계 20개 이상의 언어를 지원하며,
+            결혼식 축사, 연애 편지, SNS 감성 문구 등 다양한 목적에 맞는 글을 10초 만에 완성할 수 있습니다.</p>
+    </section>
+
     <!-- 수정: 애드센스 품질 강화를 위해 샘플 콘텐츠와 사용 방법 섹션 추가 -->
     <section class="seo-section">
-        <h2>AI &amp; Poem 활용 가이드</h2>
+        <h2>AI 시 생성기 AI &amp; Poem 활용 가이드</h2>
         <p>아래 예시는 실제 생성 결과의 톤과 분량을 보여 주기 위한 간단한 샘플입니다.</p>
         <article>
             <h3>샘플 주제: 봄 소풍</h3>
@@ -241,6 +258,24 @@
 서로의 이야기를 꽃망울처럼 피웁니다.
             </pre>
         </article>
+        <article>
+            <h3>샘플 주제: 가을 저녁</h3>
+            <pre aria-label="가을 저녁 주제 샘플 시">
+붉은 노을이 창가에 머물고
+귀뚜라미 소리 고요히 흐르네.
+책장 넘기는 소리 사각거릴 때
+가을은 깊어가고 생각은 익어가네.
+            </pre>
+        </article>
+        <article>
+            <h3>샘플 주제: 첫눈</h3>
+            <pre aria-label="첫눈 주제 샘플 시">
+하얀 세상이 조용히 내려와
+온 세상을 포근히 감싸 안네.
+차가운 공기 속에 따스한 입김
+우리의 발자국이 추억으로 남네.
+            </pre>
+        </article>
         <ul>
             <li>원하는 주제를 입력하면 10초 이내로 맞춤형 시가 제공됩니다.</li>
             <li>언어·길이·시 유형을 변경하면서 다양한 스타일을 테스트할 수 있습니다.</li>
@@ -250,10 +285,10 @@
 
     <!-- 수정: 기술적 설명 섹션 추가 (콘텐츠 보강) -->
     <section class="seo-section">
-        <h2>AI는 어떻게 시를 쓸까요?</h2>
+        <h2>AI 시 생성기는 어떻게 시를 쓸까요?</h2>
         <p>AI & Poem은 최신 거대 언어 모델(LLM) 기술을 활용하여 작동합니다. 수백만 편의 문학 작품과 시를 학습한 인공지능이 사용자가 입력한 주제의 맥락을 파악하고, 그에 어울리는 은유와 운율을
             찾아냅니다.</p>
-        <p>단순히 단어를 나열하는 것이 아니라, 감정의 흐름과 시적 구조를 고려하여 매번 새롭고 독창적인 시를 창작합니다. 더 자세한 내용은 <a href="blog/article-1.html"
+        <p>단순히 단어를 나열하는 것이 아니라, 감정의 흐름과 시적 구조를 고려하여 매번 새롭고 독창적인 시를 창작합니다. 더 자세한 내용은 <a href="blog/ko/article-1.html"
                 style="color: #fff; text-decoration: underline;">블로그</a>에서 확인하실 수 있습니다.</p>
     </section>
 
@@ -278,12 +313,38 @@
             <p>네. 캠페인, 뉴스레터, 이벤트 등에서 활용하실 수 있으며 가능한 경우 AI &amp; Poem을 출처로 표기해주세요.</p>
         </details>
         <details>
-            <summary>음성 낭독은 어떻게 받나요?</summary>
+            <summary>음성 낭독 기능은 어떻게 사용하나요?</summary>
             <p>시가 완성된 뒤 ‘시 낭송’ 버튼을 누르면 선택한 언어로 바로 들을 수 있습니다.</p>
         </details>
     </section>
+
+
+    <!-- 수정: 블로그 최신 글 섹션 추가 (내부 링크 강화) -->
+    <section class="seo-section">
+        <h2>시와 인공지능 블로그</h2>
+        <div class="blog-preview">
+            <article>
+                <h3><a href="blog/ko/article-1.html">AI 시 생성기의 원리와 미래</a></h3>
+                <p>거대 언어 모델이 어떻게 문학적 표현을 학습하고 창작하는지 알아봅니다.</p>
+            </article>
+            <article>
+                <h3><a href="blog/ko/article-2.html">감동적인 결혼식 축사 쓰는 법</a></h3>
+                <p>AI를 활용해 진심이 담긴 축사를 쉽고 빠르게 작성하는 노하우를 공개합니다.</p>
+            </article>
+            <article>
+                <h3><a href="blog/ko/article-3.html">SNS에서 인기 있는 감성 글귀 모음</a></h3>
+                <p>인스타그램과 페이스북에서 좋아요를 부르는 짧고 강렬한 시적 표현들.</p>
+            </article>
+        </div>
+    </section>
     <footer class="site-footer">
         <!-- 수정: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
+        <a href="about.html">서비스 소개</a>
+        <span>|</span>
+        <a href="blog/ko/index.html">블로그</a>
+        <span>|</span>
+        <a href="contact.html">문의하기</a>
+        <span>|</span>
         <a href="privacy.html">개인정보 처리방침</a>
         <span>|</span>
         <a href="terms.html">이용약관</a>

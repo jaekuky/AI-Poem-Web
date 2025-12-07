@@ -1,74 +1,146 @@
 <!DOCTYPE html>
 <html lang="th">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI & Poem บล็อก - เรื่องราวของบทกวีและปัญญาประดิษฐ์</title>
-    <meta name="description" content="พบกับเรื่องราวที่น่าสนใจเกี่ยวกับการสร้างบทกวีด้วย AI วรรณกรรม และเทคโนโลยี.">
-    <!-- 수정: 스타일을 'frontend/blog/style.css'로 통합 -->
-    <link rel="stylesheet" href="../style.css">
-    <!-- 수정: SEO를 위한 Canonical 태그 추가 -->
-    <link rel="canonical" href="https://www.ai-and-poem.art/blog/th/">
-</head>
-
-<body>
-    <div class="header">
-        <div class="header-left">
-            <h1><a href="../../th/index.html" style="text-decoration:none; color:white;">AI & Poem</a></h1>
-            <h3>เครื่องสร้างบทกวี AI ที่อ่านได้ทันที</h3>
-        </div>
-    </div>
-
-    <div class="blog-container">
-        <div class="blog-header">
-            <h2>บล็อก AI & Poem</h2>
-            <p>สถานที่ที่บทกวีและเทคโนโลยีมาบรรจบกัน เรานำเสนอเรื่องราวที่หลากหลาย.</p>
-        </div>
-
-        <ul class="blog-list">
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-1.html">หลักการที่ AI เขียนบทกวี:
-                        การพบกันของเทคโนโลยีและอารมณ์</a></h3>
-                <p class="blog-excerpt">ปัญญาประดิษฐ์เลียนแบบอารมณ์ของมนุษย์ในการเขียนบทกวีได้อย่างไร?
-                    มาสำรวจวิธีการทำงานของโมเดลภาษาใหญ่ (LLM) และความลับของความคิดสร้างสรรค์กันเถอะ.</p>
-            </li>
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-2.html">5 เคล็ดลับในการเขียนบทกวีที่ดี: การสร้างสรรค์ร่วมกับ
-                        AI</a></h3>
-                <p class="blog-excerpt">ไม่ว่าคุณจะใช้เครื่องมือ AI หรือเขียนด้วยตัวเอง เราจะแนะนำ 5
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   AI &amp; Poem บล็อก - เรื่องราวของบทกวีและปัญญาประดิษฐ์
+  </title>
+  <meta content="พบกับเรื่องราวที่น่าสนใจเกี่ยวกับการสร้างบทกวีด้วย AI วรรณกรรม และเทคโนโลยี." name="description"/>
+  <!-- 수정: 스타일을 'frontend/blog/style.css'로 통합 -->
+  <link href="../style.css" rel="stylesheet"/>
+  <!-- 수정: SEO를 위한 Canonical 태그 추가 -->
+  <link href="https://www.ai-and-poem.art/blog/th/" rel="canonical"/>
+  <meta content="ca-pub-7349192768683799" name="google-adsense-account"/>
+  <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799">
+  </script>
+  <link href="https://www.ai-and-poem.art/blog/ar/" hreflang="ar" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/bn/" hreflang="bn" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ch/" hreflang="de-CH" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/de/" hreflang="de" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/el/" hreflang="el" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/en/" hreflang="en" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/es/" hreflang="es" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/fi/" hreflang="fi" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/fr/" hreflang="fr" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/hi/" hreflang="hi" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/id/" hreflang="id" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/it/" hreflang="it" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ja/" hreflang="ja" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ko/" hreflang="ko" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/mn/" hreflang="mn" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ms/" hreflang="ms" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/pl/" hreflang="pl" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/pt/" hreflang="pt" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ru/" hreflang="ru" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/sv/" hreflang="sv" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/sw/" hreflang="sw" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/th/" hreflang="th" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/tr/" hreflang="tr" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/uk/" hreflang="uk" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/vi/" hreflang="vi" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/zh/" hreflang="zh-CN" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/en/" hreflang="x-default" rel="alternate"/>
+ </head>
+ <body>
+  <div class="header">
+   <div class="header-left">
+    <h1>
+     <a href="../../th/index.html" style="text-decoration:none; color:white;">
+      AI &amp; Poem
+     </a>
+    </h1>
+    <h3>
+     เครื่องสร้างบทกวี AI ที่อ่านได้ทันที
+    </h3>
+   </div>
+  </div>
+  <div class="blog-container">
+   <div class="blog-header">
+    <h2>
+     บล็อก AI &amp; Poem
+    </h2>
+    <p>
+     สถานที่ที่บทกวีและเทคโนโลยีมาบรรจบกัน เรานำเสนอเรื่องราวที่หลากหลาย.
+    </p>
+   </div>
+   <ul class="blog-list">
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-1.html">
+       หลักการที่ AI เขียนบทกวี:
+                        การพบกันของเทคโนโลยีและอารมณ์
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      ปัญญาประดิษฐ์เลียนแบบอารมณ์ของมนุษย์ในการเขียนบทกวีได้อย่างไร?
+                    มาสำรวจวิธีการทำงานของโมเดลภาษาใหญ่ (LLM) และความลับของความคิดสร้างสรรค์กันเถอะ.
+     </p>
+    </li>
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-2.html">
+       5 เคล็ดลับในการเขียนบทกวีที่ดี: การสร้างสรรค์ร่วมกับ
+                        AI
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      ไม่ว่าคุณจะใช้เครื่องมือ AI หรือเขียนด้วยตัวเอง เราจะแนะนำ 5
                     หลักการสำคัญในการเขียนบทกวีที่ดียิ่งขึ้น ตั้งแต่การสังเกตไปจนถึงอุปมาอุปไมย
-                    เคล็ดลับที่จะทำให้บทกวีของคุณโดดเด่น.</p>
-            </li>
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-3.html">แรงบันดาลใจจากวิธีการเขียนของกวีชื่อดัง</a></h3>
-                <p class="blog-excerpt">กวีที่คนเกาหลีรักเช่น ยุนดงจู และ คิมโซวอล เขียนบทกวีอย่างไร?
-                    มาหาแรงบันดาลใจจากบันทึกการเริ่มต้นและนิสัยของพวกเขากันเถอะ.</p>
-            </li>
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-4.html">อนาคตของเครื่องสร้างบทกวี AI:
-                        จะทดแทนผู้เขียนหรือไม่?</a></h3>
-                <p class="blog-excerpt">การพัฒนาของเทคโนโลยี AI มีผลกระทบต่อวงการวรรณกรรมอย่างไร?
-                    มาพูดคุยเกี่ยวกับภาพลักษณ์ของผู้เขียนในอนาคตที่ร่วมมือกับ AI ในฐานะเครื่องมือกันเถอะ.</p>
-            </li>
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-5.html">สร้างคำพูดและจดหมายที่ประทับใจด้วย AI ใน 10 วินาที</a>
-                </h3>
-                <p class="blog-excerpt">คำพูดในงานแต่งงาน, จดหมายรัก, ขอบคุณ... เมื่อถึงเวลาที่ต้องการส่งต่อความรู้สึก
-                    มาค้นพบคู่มือการใช้งาน AI & Poem อย่างเต็มที่ 200% กันเถอะ.</p>
-            </li>
-        </ul>
-
-        <a href="../../th/index.html" class="back-link">← กลับสู่หน้าหลัก</a>
-    </div>
-
-    <footer class="site-footer">
-        <!-- 수정: 경로 수정 (../privacy.html -> ../../privacy.html) -->
-        <a href="../../privacy.html">นโยบายความเป็นส่วนตัว</a>
-        <span>|</span>
-        <!-- 수정: 경로 수정 (../terms.html -> ../../terms.html) -->
-        <a href="../../terms.html">ข้อกำหนดการใช้งาน</a>
-    </footer>
-</body>
-
+                    เคล็ดลับที่จะทำให้บทกวีของคุณโดดเด่น.
+     </p>
+    </li>
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-3.html">
+       แรงบันดาลใจจากวิธีการเขียนของกวีชื่อดัง
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      กวีที่คนเกาหลีรักเช่น ยุนดงจู และ คิมโซวอล เขียนบทกวีอย่างไร?
+                    มาหาแรงบันดาลใจจากบันทึกการเริ่มต้นและนิสัยของพวกเขากันเถอะ.
+     </p>
+    </li>
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-4.html">
+       อนาคตของเครื่องสร้างบทกวี AI:
+                        จะทดแทนผู้เขียนหรือไม่?
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      การพัฒนาของเทคโนโลยี AI มีผลกระทบต่อวงการวรรณกรรมอย่างไร?
+                    มาพูดคุยเกี่ยวกับภาพลักษณ์ของผู้เขียนในอนาคตที่ร่วมมือกับ AI ในฐานะเครื่องมือกันเถอะ.
+     </p>
+    </li>
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-5.html">
+       สร้างคำพูดและจดหมายที่ประทับใจด้วย AI ใน 10 วินาที
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      คำพูดในงานแต่งงาน, จดหมายรัก, ขอบคุณ... เมื่อถึงเวลาที่ต้องการส่งต่อความรู้สึก
+                    มาค้นพบคู่มือการใช้งาน AI &amp; Poem อย่างเต็มที่ 200% กันเถอะ.
+     </p>
+    </li>
+   </ul>
+   <a class="back-link" href="../../th/index.html">
+    ← กลับสู่หน้าหลัก
+   </a>
+  </div>
+  <footer class="site-footer">
+   <!-- 수정: 경로 수정 (../privacy.html -> ../../privacy.html) -->
+   <a href="../../privacy.html">
+    นโยบายความเป็นส่วนตัว
+   </a>
+   <span>
+    |
+   </span>
+   <!-- 수정: 경로 수정 (../terms.html -> ../../terms.html) -->
+   <a href="../../terms.html">
+    ข้อกำหนดการใช้งาน
+   </a>
+  </footer>
+ </body>
 </html>

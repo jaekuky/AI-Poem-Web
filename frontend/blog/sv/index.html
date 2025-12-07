@@ -1,75 +1,145 @@
 <!DOCTYPE html>
 <html lang="sv">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI & Poem Blogg - Berättelser om poesi och artificiell intelligens</title>
-    <meta name="description" content="Upptäck intressanta berättelser om AI-poesiskapande, litteratur och teknik.">
-    <!-- 수정: 스타일을 'frontend/blog/style.css'로 통합 -->
-    <link rel="stylesheet" href="../style.css">
-    <!-- 수정: SEO를 위한 Canonical 태그 추가 -->
-    <link rel="canonical" href="https://www.ai-and-poem.art/blog/sv/">
-</head>
-
-<body>
-    <div class="header">
-        <div class="header-left">
-            <h1><a href="../../sv/index.html" style="text-decoration:none; color:white;">AI & Poem</a></h1>
-            <h3>En AI-poesiskapare som kan läsas direkt</h3>
-        </div>
-    </div>
-
-    <div class="blog-container">
-        <div class="blog-header">
-            <h2>AI & Poem Blogg</h2>
-            <p>Här möts poesi och teknik, och vi delar med oss av olika berättelser.</p>
-        </div>
-
-        <ul class="blog-list">
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-1.html">Principerna bakom AI:s skrivande av poesi: Mötet mellan
-                        teknik och känsla</a></h3>
-                <p class="blog-excerpt">Hur efterliknar artificiell intelligens människans känslor för att skriva poesi?
-                    Vi dyker ner i hur stora språkmodeller (LLM) fungerar och hemligheterna bakom kreativitet.</p>
-            </li>
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-2.html">5 tips för att skriva bra poesi: Skapande med AI</a>
-                </h3>
-                <p class="blog-excerpt">Oavsett om du använder AI-verktyg eller skriver själv, här är 5 grundläggande
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   AI &amp; Poem Blogg - Berättelser om poesi och artificiell intelligens
+  </title>
+  <meta content="Upptäck intressanta berättelser om AI-poesiskapande, litteratur och teknik." name="description"/>
+  <!-- 수정: 스타일을 'frontend/blog/style.css'로 통합 -->
+  <link href="../style.css" rel="stylesheet"/>
+  <!-- 수정: SEO를 위한 Canonical 태그 추가 -->
+  <link href="https://www.ai-and-poem.art/blog/sv/" rel="canonical"/>
+  <meta content="ca-pub-7349192768683799" name="google-adsense-account"/>
+  <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799">
+  </script>
+  <link href="https://www.ai-and-poem.art/blog/ar/" hreflang="ar" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/bn/" hreflang="bn" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ch/" hreflang="de-CH" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/de/" hreflang="de" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/el/" hreflang="el" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/en/" hreflang="en" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/es/" hreflang="es" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/fi/" hreflang="fi" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/fr/" hreflang="fr" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/hi/" hreflang="hi" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/id/" hreflang="id" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/it/" hreflang="it" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ja/" hreflang="ja" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ko/" hreflang="ko" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/mn/" hreflang="mn" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ms/" hreflang="ms" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/pl/" hreflang="pl" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/pt/" hreflang="pt" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ru/" hreflang="ru" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/sv/" hreflang="sv" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/sw/" hreflang="sw" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/th/" hreflang="th" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/tr/" hreflang="tr" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/uk/" hreflang="uk" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/vi/" hreflang="vi" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/zh/" hreflang="zh-CN" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/en/" hreflang="x-default" rel="alternate"/>
+ </head>
+ <body>
+  <div class="header">
+   <div class="header-left">
+    <h1>
+     <a href="../../sv/index.html" style="text-decoration:none; color:white;">
+      AI &amp; Poem
+     </a>
+    </h1>
+    <h3>
+     En AI-poesiskapare som kan läsas direkt
+    </h3>
+   </div>
+  </div>
+  <div class="blog-container">
+   <div class="blog-header">
+    <h2>
+     AI &amp; Poem Blogg
+    </h2>
+    <p>
+     Här möts poesi och teknik, och vi delar med oss av olika berättelser.
+    </p>
+   </div>
+   <ul class="blog-list">
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-1.html">
+       Principerna bakom AI:s skrivande av poesi: Mötet mellan
+                        teknik och känsla
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      Hur efterliknar artificiell intelligens människans känslor för att skriva poesi?
+                    Vi dyker ner i hur stora språkmodeller (LLM) fungerar och hemligheterna bakom kreativitet.
+     </p>
+    </li>
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-2.html">
+       5 tips för att skriva bra poesi: Skapande med AI
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      Oavsett om du använder AI-verktyg eller skriver själv, här är 5 grundläggande
                     principer för att skriva bättre poesi. Från observation till metafor, tips som kommer att lysa upp
-                    din poesi.</p>
-            </li>
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-3.html">Inspiration från kända poeters skrivmetoder</a></h3>
-                <p class="blog-excerpt">Hur skrev älskade koreanska poeter som Yun Dong-ju och Kim So-wol sin poesi? Låt
-                    oss hämta inspiration från deras anteckningar och vanor.</p>
-            </li>
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-4.html">Framtiden för AI-poesiskapare: Kommer de att ersätta
-                        författare?</a></h3>
-                <p class="blog-excerpt">Vilken inverkan har utvecklingen av AI-teknik på litteraturvärlden? Vi
-                    diskuterar framtidens författarideal i samarbete med AI som ett verktyg.</p>
-            </li>
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-5.html">Skapa rörande tal och brev på 10 sekunder med AI</a>
-                </h3>
-                <p class="blog-excerpt">Bröllopstal, kärleksbrev, tacksamhetsmeddelanden... När du behöver förmedla
-                    känslor, här är en praktisk guide för att maximera användningen av AI & Poem med 200% effektivitet.
-                </p>
-            </li>
-        </ul>
-
-        <a href="../../sv/index.html" class="back-link">← Återgå till huvudsidan</a>
-    </div>
-
-    <footer class="site-footer">
-        <!-- 수정: 경로 수정 (../privacy.html -> ../../privacy.html) -->
-        <a href="../../privacy.html">Integritetspolicy</a>
-        <span>|</span>
-        <!-- 수정: 경로 수정 (../terms.html -> ../../terms.html) -->
-        <a href="../../terms.html">Användarvillkor</a>
-    </footer>
-</body>
-
+                    din poesi.
+     </p>
+    </li>
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-3.html">
+       Inspiration från kända poeters skrivmetoder
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      Hur skrev älskade koreanska poeter som Yun Dong-ju och Kim So-wol sin poesi? Låt
+                    oss hämta inspiration från deras anteckningar och vanor.
+     </p>
+    </li>
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-4.html">
+       Framtiden för AI-poesiskapare: Kommer de att ersätta
+                        författare?
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      Vilken inverkan har utvecklingen av AI-teknik på litteraturvärlden? Vi
+                    diskuterar framtidens författarideal i samarbete med AI som ett verktyg.
+     </p>
+    </li>
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-5.html">
+       Skapa rörande tal och brev på 10 sekunder med AI
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      Bröllopstal, kärleksbrev, tacksamhetsmeddelanden... När du behöver förmedla
+                    känslor, här är en praktisk guide för att maximera användningen av AI &amp; Poem med 200% effektivitet.
+     </p>
+    </li>
+   </ul>
+   <a class="back-link" href="../../sv/index.html">
+    ← Återgå till huvudsidan
+   </a>
+  </div>
+  <footer class="site-footer">
+   <!-- 수정: 경로 수정 (../privacy.html -> ../../privacy.html) -->
+   <a href="../../privacy.html">
+    Integritetspolicy
+   </a>
+   <span>
+    |
+   </span>
+   <!-- 수정: 경로 수정 (../terms.html -> ../../terms.html) -->
+   <a href="../../terms.html">
+    Användarvillkor
+   </a>
+  </footer>
+ </body>
 </html>

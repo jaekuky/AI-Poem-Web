@@ -1,64 +1,137 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI & Poem ブログ - 詩と人工知能の物語</title>
-    <meta name="description" content="AI詩生成、文学、そして技術に関する興味深い物語をご覧ください。">
-    <!-- 수정: 스타일을 'frontend/blog/style.css'로 통합 -->
-    <link rel="stylesheet" href="../style.css">
-    <!-- 수정: SEO를 위한 Canonical 태그 추가 -->
-    <link rel="canonical" href="https://www.ai-and-poem.art/blog/ja/">
-</head>
-
-<body>
-    <div class="header">
-        <div class="header-left">
-            <h1><a href="../../ja/index.html" style="text-decoration:none; color:white;">AI & Poem</a></h1>
-            <h3>10秒で仕上がる音声付きAI詩生成</h3>
-        </div>
-    </div>
-
-    <div class="blog-container">
-        <div class="blog-header">
-            <h2>AI & Poem ブログ</h2>
-            <p>詩と技術が出会う場所、様々な物語をお届けします。</p>
-        </div>
-
-        <ul class="blog-list">
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-1.html">AIが詩を書く仕組み：技術と感性の出会い</a></h3>
-                <p class="blog-excerpt">人工知能はどのようにして人間の感性を真似て詩を書くのでしょうか？大規模言語モデル(LLM)の仕組みと創造性の秘密を解き明かします。</p>
-            </li>
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-2.html">詩を上手に書く5つのヒント：AIと共に創る</a></h3>
-                <p class="blog-excerpt">AIツールを使う場合でも、自分で書く場合でも、より良い詩を書くための5つの核心的な原則を紹介します。観察から隠喩まで、あなたの詩を輝かせるヒント。</p>
-            </li>
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-3.html">有名詩人たちの作法から学ぶインスピレーション</a></h3>
-                <p class="blog-excerpt">歴史に名を残す詩人たちはどのように詩を書いたのでしょうか？彼らの創作ノートと習慣を通じて、私たちもインスピレーションを得ましょう。</p>
-            </li>
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-4.html">AI詩生成器の未来：作家に取って代わるのか？</a></h3>
-                <p class="blog-excerpt">AI技術の発展が文学界に及ぼす影響とは？ツールとしてのAIと協業する未来の作家像について語ります。</p>
-            </li>
-            <li class="blog-item">
-                <h3 class="blog-title"><a href="article-5.html">感動的なスピーチと手紙、AIで10秒で完成させる</a></h3>
-                <p class="blog-excerpt">結婚式のスピーチ、ラブレター、感謝の挨拶... 心を伝えたい時、AI & Poemを200%活用する実践ガイドを公開します。</p>
-            </li>
-        </ul>
-
-        <a href="../../ja/index.html" class="back-link">← トップページに戻る</a>
-    </div>
-
-    <footer class="site-footer">
-        <!-- 수정: 경로 수정 (../privacy.html -> ../../privacy.html) -->
-        <a href="../../ja/privacy.html">プライバシーポリシー</a>
-        <span>|</span>
-        <!-- 수정: 경로 수정 (../terms.html -> ../../terms.html) -->
-        <a href="../../ja/terms.html">利用規約</a>
-    </footer>
-</body>
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   AI &amp; Poem ブログ - 詩と人工知能の物語
+  </title>
+  <meta content="AI詩生成、文学、そして技術に関する興味深い物語をご覧ください。" name="description"/>
+  <!-- 수정: 스타일을 'frontend/blog/style.css'로 통합 -->
+  <link href="../style.css" rel="stylesheet"/>
+  <!-- 수정: SEO를 위한 Canonical 태그 추가 -->
+  <link href="https://www.ai-and-poem.art/blog/ja/" rel="canonical"/>
+  <meta content="ca-pub-7349192768683799" name="google-adsense-account"/>
+  <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799">
+  </script>
+  <link href="https://www.ai-and-poem.art/blog/ar/" hreflang="ar" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/bn/" hreflang="bn" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ch/" hreflang="de-CH" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/de/" hreflang="de" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/el/" hreflang="el" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/en/" hreflang="en" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/es/" hreflang="es" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/fi/" hreflang="fi" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/fr/" hreflang="fr" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/hi/" hreflang="hi" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/id/" hreflang="id" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/it/" hreflang="it" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ja/" hreflang="ja" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ko/" hreflang="ko" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/mn/" hreflang="mn" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ms/" hreflang="ms" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/pl/" hreflang="pl" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/pt/" hreflang="pt" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/ru/" hreflang="ru" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/sv/" hreflang="sv" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/sw/" hreflang="sw" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/th/" hreflang="th" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/tr/" hreflang="tr" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/uk/" hreflang="uk" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/vi/" hreflang="vi" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/zh/" hreflang="zh-CN" rel="alternate"/>
+  <link href="https://www.ai-and-poem.art/blog/en/" hreflang="x-default" rel="alternate"/>
+ </head>
+ <body>
+  <div class="header">
+   <div class="header-left">
+    <h1>
+     <a href="../../ja/index.html" style="text-decoration:none; color:white;">
+      AI &amp; Poem
+     </a>
+    </h1>
+    <h3>
+     10秒で仕上がる音声付きAI詩生成
+    </h3>
+   </div>
+  </div>
+  <div class="blog-container">
+   <div class="blog-header">
+    <h2>
+     AI &amp; Poem ブログ
+    </h2>
+    <p>
+     詩と技術が出会う場所、様々な物語をお届けします。
+    </p>
+   </div>
+   <ul class="blog-list">
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-1.html">
+       AIが詩を書く仕組み：技術と感性の出会い
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      人工知能はどのようにして人間の感性を真似て詩を書くのでしょうか？大規模言語モデル(LLM)の仕組みと創造性の秘密を解き明かします。
+     </p>
+    </li>
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-2.html">
+       詩を上手に書く5つのヒント：AIと共に創る
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      AIツールを使う場合でも、自分で書く場合でも、より良い詩を書くための5つの核心的な原則を紹介します。観察から隠喩まで、あなたの詩を輝かせるヒント。
+     </p>
+    </li>
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-3.html">
+       有名詩人たちの作法から学ぶインスピレーション
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      歴史に名を残す詩人たちはどのように詩を書いたのでしょうか？彼らの創作ノートと習慣を通じて、私たちもインスピレーションを得ましょう。
+     </p>
+    </li>
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-4.html">
+       AI詩生成器の未来：作家に取って代わるのか？
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      AI技術の発展が文学界に及ぼす影響とは？ツールとしてのAIと協業する未来の作家像について語ります。
+     </p>
+    </li>
+    <li class="blog-item">
+     <h3 class="blog-title">
+      <a href="article-5.html">
+       感動的なスピーチと手紙、AIで10秒で完成させる
+      </a>
+     </h3>
+     <p class="blog-excerpt">
+      結婚式のスピーチ、ラブレター、感謝の挨拶... 心を伝えたい時、AI &amp; Poemを200%活用する実践ガイドを公開します。
+     </p>
+    </li>
+   </ul>
+   <a class="back-link" href="../../ja/index.html">
+    ← トップページに戻る
+   </a>
+  </div>
+  <footer class="site-footer">
+   <!-- 수정: 경로 수정 (../privacy.html -> ../../privacy.html) -->
+   <a href="../../ja/privacy.html">
+    プライバシーポリシー
+   </a>
+   <span>
+    |
+   </span>
+   <!-- 수정: 경로 수정 (../terms.html -> ../../terms.html) -->
+   <a href="../../ja/terms.html">
+    利用規約
+   </a>
+  </footer>
+ </body>
 </html>
