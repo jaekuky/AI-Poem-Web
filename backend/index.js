@@ -146,37 +146,264 @@ const DISALLOWED_KEYWORDS = [
     'picha', 'ngono', 'kujamiiana', 'uchi', 'vurugu', 'ua', 'mauaji', 'ugaidi', 'bomu', 'silaha', 'bunduki', 'dawa', 'bangi', 'kokeini', 'nazi', 'kujiua', 'kujidhuru', 'kamari', 'kasino', 'kuweka', 'chuki', 'ubaguzi'
 ];
 
+// 수정: 다국어 에러 메시지 정의
+const ERROR_MESSAGES = {
+    'ko': {
+        missingTopic: '시의 주제를 입력해 주세요.',
+        topicTooLong: (max) => `시의 주제는 ${max}자 이내로 입력해 주세요.`,
+        disallowedTopic: '해당 주제로는 시를 생성할 수 없습니다.',
+        unsupportedLang: '지원하지 않는 언어입니다.',
+        serverConfigError: '서버 설정 오류가 발생했습니다.',
+        generationError: '시 생성 중 오류가 발생했습니다.'
+    },
+    'en': {
+        missingTopic: 'Please enter a poem topic.',
+        topicTooLong: (max) => `Please enter a topic within ${max} characters.`,
+        disallowedTopic: 'Cannot generate a poem with this topic.',
+        unsupportedLang: 'Unsupported language.',
+        serverConfigError: 'Server configuration error.',
+        generationError: 'An error occurred while generating the poem.'
+    },
+    'ja': {
+        missingTopic: '詩のテーマを入力してください。',
+        topicTooLong: (max) => `詩のテーマは${max}文字以内で入力してください。`,
+        disallowedTopic: 'そのテーマでは詩を作成できません。',
+        unsupportedLang: 'サポートされていない言語です。',
+        serverConfigError: 'サーバー設定エラーが発生しました。',
+        generationError: '詩の生成中にエラーが発生しました。'
+    },
+    'zh': {
+        missingTopic: '请输入诗的主题。',
+        topicTooLong: (max) => `请输入${max}字以内的主题。`,
+        disallowedTopic: '无法以此主题生成诗歌。',
+        unsupportedLang: '不支持的语言。',
+        serverConfigError: '服务器配置错误。',
+        generationError: '生成诗歌时发生错误。'
+    },
+    'es': {
+        missingTopic: 'Por favor, introduce un tema para el poema.',
+        topicTooLong: (max) => `Por favor, introduce un tema de menos de ${max} caracteres.`,
+        disallowedTopic: 'No se puede generar un poema con este tema.',
+        unsupportedLang: 'Idioma no soportado.',
+        serverConfigError: 'Error de configuración del servidor.',
+        generationError: 'Ocurrió un error al generar el poema.'
+    },
+    'fr': {
+        missingTopic: 'Veuillez entrer un sujet pour le poème.',
+        topicTooLong: (max) => `Veuillez entrer un sujet de moins de ${max} caractères.`,
+        disallowedTopic: 'Impossible de générer un poème avec ce sujet.',
+        unsupportedLang: 'Langue non prise en charge.',
+        serverConfigError: 'Erreur de configuration du serveur.',
+        generationError: 'Une erreur est survenue lors de la génération du poème.'
+    },
+    'de': {
+        missingTopic: 'Bitte geben Sie ein Gedichtsthema ein.',
+        topicTooLong: (max) => `Bitte geben Sie ein Thema innerhalb von ${max} Zeichen ein.`,
+        disallowedTopic: 'Mit diesem Thema kann kein Gedicht erstellt werden.',
+        unsupportedLang: 'Nicht unterstützte Sprache.',
+        serverConfigError: 'Serverkonfigurationsfehler.',
+        generationError: 'Beim Erstellen des Gedichts ist ein Fehler aufgetreten.'
+    },
+    'ch': { // Swiss German (using German as fallback mostly, slightly tweaks if needed, mapped to 'de' usually but defining explicit if needed. Sticking to standard German for simplicity or slight variation)
+        missingTopic: 'Bitte geben Sie ein Gedichtsthema ein.',
+        topicTooLong: (max) => `Bitte geben Sie ein Thema innerhalb von ${max} Zeichen ein.`,
+        disallowedTopic: 'Mit diesem Thema kann kein Gedicht erstellt werden.',
+        unsupportedLang: 'Nicht unterstützte Sprache.',
+        serverConfigError: 'Serverkonfigurationsfehler.',
+        generationError: 'Beim Erstellen des Gedichts ist ein Fehler aufgetreten.'
+    },
+    'it': {
+        missingTopic: 'Inserisci un argomento per la poesia.',
+        topicTooLong: (max) => `Inserisci un argomento entro ${max} caratteri.`,
+        disallowedTopic: 'Impossibile generare una poesia con questo argomento.',
+        unsupportedLang: 'Lingua non supportata.',
+        serverConfigError: 'Errore di configurazione del server.',
+        generationError: 'Si è verificato un errore durante la generazione della poesia.'
+    },
+    'ru': {
+        missingTopic: 'Пожалуйста, введите тему стихотворения.',
+        topicTooLong: (max) => `Пожалуйста, введите тему до ${max} символов.`,
+        disallowedTopic: 'Невозможно создать стихотворение с этой темой.',
+        unsupportedLang: 'Неподдерживаемый язык.',
+        serverConfigError: 'Ошибка конфигурации сервера.',
+        generationError: 'Произошла ошибка при создании стихотворения.'
+    },
+    'ar': {
+        missingTopic: 'الرجاء إدخال موضوع القصيدة.',
+        topicTooLong: (max) => `الرجاء إدخال موضوع في غضون ${max} حرفًا.`,
+        disallowedTopic: 'لا يمكن إنشاء قصيدة بهذا الموضوع.',
+        unsupportedLang: 'لغة غير مدعومة.',
+        serverConfigError: 'خطأ في تكوين الخادم.',
+        generationError: 'حدث خطأ أثناء إنشاء القصيدة.'
+    },
+    'bn': {
+        missingTopic: 'অনুগ্রহ করে কবিতার বিষয় লিখুন।',
+        topicTooLong: (max) => `অনুগ্রহ করে ${max} অক্ষরের মধ্যে একটি বিষয় লিখুন।`,
+        disallowedTopic: 'এই বিষয়ে কবিতা তৈরি করা সম্ভব নয়।',
+        unsupportedLang: 'অসমর্থিত ভাষা।',
+        serverConfigError: 'সার্ভার কনফিগারেশন ত্রুটি।',
+        generationError: 'কবিতা তৈরির সময় একটি ত্রুটি ঘটেছে।'
+    },
+    'vi': {
+        missingTopic: 'Vui lòng nhập chủ đề bài thơ.',
+        topicTooLong: (max) => `Vui lòng nhập chủ đề trong vòng ${max} ký tự.`,
+        disallowedTopic: 'Không thể tạo bài thơ với chủ đề này.',
+        unsupportedLang: 'Ngôn ngữ không được hỗ trợ.',
+        serverConfigError: 'Lỗi cấu hình máy chủ.',
+        generationError: 'Đã xảy ra lỗi khi tạo bài thơ.'
+    },
+    'th': {
+        missingTopic: 'กรุณาใส่หัวข้อบทกวี',
+        topicTooLong: (max) => `กรุณาใส่หัวข้อภายใน ${max} ตัวอักษร`,
+        disallowedTopic: 'ไม่สามารถสร้างบทกวีด้วยหัวข้อนี้ได้',
+        unsupportedLang: 'ภาษาที่ไม่รองรับ',
+        serverConfigError: 'ข้อผิดพลาดการกำหนดค่าเซิร์ฟเวอร์',
+        generationError: 'เกิดข้อผิดพลาดขณะสร้างบทกวี'
+    },
+    'hi': {
+        missingTopic: 'कृपया कविता का विषय दर्ज करें।',
+        topicTooLong: (max) => `कृपया ${max} वर्णों के भीतर एक विषय दर्ज करें।`,
+        disallowedTopic: 'इस विषय के साथ कविता नहीं बनाई जा सकती।',
+        unsupportedLang: 'असमर्थित भाषा।',
+        serverConfigError: 'सर्वर कॉन्फ़िगरेशन त्रुटि।',
+        generationError: 'कविता बनाते समय एक त्रुटि हुई।'
+    },
+    'id': {
+        missingTopic: 'Silakan masukkan topik puisi.',
+        topicTooLong: (max) => `Silakan masukkan topik dalam ${max} karakter.`,
+        disallowedTopic: 'Tidak dapat membuat puisi dengan topik ini.',
+        unsupportedLang: 'Bahasa tidak didukung.',
+        serverConfigError: 'Kesalahan konfigurasi server.',
+        generationError: 'Terjadi kesalahan saat membuat puisi.'
+    },
+    'ms': {
+        missingTopic: 'Sila masukkan topik puisi.',
+        topicTooLong: (max) => `Sila masukkan topik dalam ${max} perkataan.`,
+        disallowedTopic: 'Tidak dapat menghasilkan puisi dengan topik ini.',
+        unsupportedLang: 'Bahasa tidak disokong.',
+        serverConfigError: 'Ralat konfigurasi pelayan.',
+        generationError: 'Ralat berlaku semasa menghasilkan puisi.'
+    },
+    'tr': {
+        missingTopic: 'Lütfen şiir konusunu girin.',
+        topicTooLong: (max) => `Lütfen ${max} karakter içinde bir konu girin.`,
+        disallowedTopic: 'Bu konuyla şiir oluşturulamaz.',
+        unsupportedLang: 'Desteklenmeyen dil.',
+        serverConfigError: 'Sunucu yapılandırma hatası.',
+        generationError: 'Şiir oluşturulurken bir hata oluştu.'
+    },
+    'uk': {
+        missingTopic: 'Будь ласка, введіть тему вірша.',
+        topicTooLong: (max) => `Будь ласка, введіть тему до ${max} символів.`,
+        disallowedTopic: 'Нееможливо створити вірш з цією темою.',
+        unsupportedLang: 'Непідтримувана мова.',
+        serverConfigError: 'Помилка конфігурації сервера.',
+        generationError: 'Виникла помилка при створенні вірша.'
+    },
+    'pl': {
+        missingTopic: 'Proszę podać temat wiersza.',
+        topicTooLong: (max) => `Proszę podać temat do ${max} znaków.`,
+        disallowedTopic: 'Nie można wygenerować wiersza na ten temat.',
+        unsupportedLang: 'Nieobsługiwany język.',
+        serverConfigError: 'Błąd konfiguracji serwera.',
+        generationError: 'Wystąpił błąd podczas generowania wiersza.'
+    },
+    'pt': {
+        missingTopic: 'Por favor, insira um tema para o poema.',
+        topicTooLong: (max) => `Por favor, insira um tema com menos de ${max} caracteres.`,
+        disallowedTopic: 'Não é possível gerar um poema com este tema.',
+        unsupportedLang: 'Idioma não suportado.',
+        serverConfigError: 'Erro de configuração do servidor.',
+        generationError: 'Ocorreu um erro ao gerar o poema.'
+    },
+    'el': {
+        missingTopic: 'Παρακαλώ εισάγετε το θέμα του ποιήματος.',
+        topicTooLong: (max) => `Παρακαλώ εισάγετε ένα θέμα εντός ${max} χαρακτήρων.`,
+        disallowedTopic: 'Δεν είναι δυνατή η δημιουργία ποιήματος με αυτό το θέμα.',
+        unsupportedLang: 'Μη υποστηριζόμενη γλώσσα.',
+        serverConfigError: 'Σφάλμα διαμόρφωσης διακομιστή.',
+        generationError: 'Παρουσιάστηκε σφάλμα κατά τη δημιουργία του ποιήματος.'
+    },
+    'sv': {
+        missingTopic: 'Vänligen ange ett dikttema.',
+        topicTooLong: (max) => `Vänligen ange ett tema inom ${max} tecken.`,
+        disallowedTopic: 'Kan inte skapa en dikt med detta tema.',
+        unsupportedLang: 'Språket stöds inte.',
+        serverConfigError: 'Serverkonfigurationsfel.',
+        generationError: 'Ett fel uppstod när dikten genererades.'
+    },
+    'fi': {
+        missingTopic: 'Anna runon aihe.',
+        topicTooLong: (max) => `Anna aihe, joka on enintään ${max} merkkiä pitkä.`,
+        disallowedTopic: 'Tällä aiheella ei voi luoda runoa.',
+        unsupportedLang: 'Kieltä ei tueta.',
+        serverConfigError: 'Palvelimen konfigurointivirhe.',
+        generationError: 'Virhe runon luomisessa.'
+    },
+    'mn': {
+        missingTopic: 'Шүлгийн сэдвийг оруулна уу.',
+        topicTooLong: (max) => `Сэдвийг ${max} тэмдэгтэд багтаан оруулна уу.`,
+        disallowedTopic: 'Энэ сэдвээр шүлэг зохиох боломжгүй.',
+        unsupportedLang: 'Дэмжигдээгүй хэл.',
+        serverConfigError: 'Серверийн тохиргооны алдаа.',
+        generationError: 'Шүлэг зохиох явцад алдаа гарлаа.'
+    },
+    'sw': {
+        missingTopic: 'Tafadhali ingiza mada ya shairi.',
+        topicTooLong: (max) => `Tafadhali ingiza mada ndani ya vibambo ${max}.`,
+        disallowedTopic: 'Haiwezi kutoa shairi na mada hii.',
+        unsupportedLang: 'Lugha haitumiki.',
+        serverConfigError: 'Hitilafu ya usanidi wa seva.',
+        generationError: 'Hitilafu imetokea wakati wa kutoa shairi.'
+    }
+};
+
+// 수정: 에러 메시지를 언어별로 가져오는 헬퍼 함수
+// ko(한국어)를 기본값으로 사용
+const getErrorMessage = (lang, key, arg) => {
+    const langMessages = ERROR_MESSAGES[lang] || ERROR_MESSAGES['ko'];
+    const message = langMessages[key];
+    if (typeof message === 'function') {
+        return message(arg);
+    }
+    return message || ERROR_MESSAGES['ko'][key];
+};
+
 app.post('/generate-poem', async (req, res) => {
     const rawTopic = typeof req.body.topic === 'string' ? req.body.topic.trim() : '';
+    // 수정: 언어 설정이 없으면 기본값 'ko' 사용
     const language = typeof req.body.language === 'string' ? req.body.language : 'ko';
 
-    //  수정: 필수 입력값이 없으면 OpenAI 호출 전에 400을 반환
+    // 수정: 필수 입력값 검증 실패 시 다국어 에러 메시지 반환
     if (!rawTopic) {
-        return res.status(400).json({ error: '시의 주제를 입력해 주세요.' });
+        return res.status(400).json({ error: getErrorMessage(language, 'missingTopic') });
     }
 
+    // 수정: 길이 제한 초과 시 다국어 에러 메시지 반환
     if (rawTopic.length > MAX_TOPIC_LENGTH) {
-        return res.status(400).json({ error: `시의 주제는 ${MAX_TOPIC_LENGTH}자 이내로 입력해 주세요.` });
+        return res.status(400).json({ error: getErrorMessage(language, 'topicTooLong', MAX_TOPIC_LENGTH) });
     }
 
-    // 수정: 애드센스 정책과 사용자 안전을 위해 금칙어 검사 추가
+    // 수정: 금칙어 포함 시 다국어 에러 메시지 반환
     const loweredTopic = rawTopic.toLowerCase();
     const matchedKeyword = DISALLOWED_KEYWORDS.find((keyword) => loweredTopic.includes(keyword));
     if (matchedKeyword) {
-        return res.status(400).json({ error: '해당 주제로는 시를 생성할 수 없습니다.' });
+        return res.status(400).json({ error: getErrorMessage(language, 'disallowedTopic') });
     }
 
+    // 수정: 미지원 언어 요청 시 다국어 에러 메시지 반환
     if (!SUPPORTED_LANGUAGES.has(language)) {
-        return res.status(400).json({ error: '지원하지 않는 언어입니다.' }); //  수정: 미지원 언어 요청 차단
+        return res.status(400).json({ error: getErrorMessage(language, 'unsupportedLang') });
     }
 
     const langPrompt = languagePromptMap[language];
 
+    // 수정: 서버 키 설정 오류 시 다국어 에러 메시지 반환
     if (!OPENAI_API_KEY) {
-        return res.status(500).json({ error: '서버 설정 오류가 발생했습니다.' }); //  수정: 키 누락 시 호출 중단
+        return res.status(500).json({ error: getErrorMessage(language, 'serverConfigError') });
     }
 
-    const prompt = `Please write a poem about ${rawTopic} ${langPrompt}.`; //  수정: 입력을 정제한 뒤 프롬프트 구성
+    const prompt = `Please write a poem about ${rawTopic} ${langPrompt}.`;
 
     try {
         const response = await axios.post('https://api.openai.com/v1/chat/completions', {
@@ -199,7 +426,6 @@ app.post('/generate-poem', async (req, res) => {
         const statusCode = error.response?.status || 500;
         const errorPayload = error.response?.data;
 
-        //  수정: 외부 응답을 그대로 노출하지 않고 서버 로그에만 상세 기록
         console.error('OpenAI 호출 실패', {
             statusCode,
             message: error.message,
@@ -207,7 +433,8 @@ app.post('/generate-poem', async (req, res) => {
         });
 
         const clientStatus = statusCode >= 400 && statusCode < 500 ? statusCode : 500;
-        res.status(clientStatus).json({ error: '시 생성 중 오류가 발생했습니다.' });
+        // 수정: 생성 중 오류 발생 시 다국어 에러 메시지 반환
+        res.status(clientStatus).json({ error: getErrorMessage(language, 'generationError') });
     }
 });
 
