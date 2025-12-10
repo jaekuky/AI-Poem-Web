@@ -299,7 +299,7 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
     ttsButton.disabled = true;
 
     try {
-        const response = await fetch('https://mlvpfnsdxpkw5wwdbcz6sh52xe0aqkpm.lambda-url.ap-northeast-2.on.aws/generate-poem', {
+        const response = await fetch('https://oy3rkh5hgszlzgiibdxxmbpxte0mknfg.lambda-url.ap-northeast-2.on.aws/generate-poem', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
