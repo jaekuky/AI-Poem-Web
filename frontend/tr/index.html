@@ -168,13 +168,11 @@
         </div>
         <div class="header-right">
             <!-- 수정: About/Contact 링크 추가 -->
-            <a href="about.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->Hakkında</a>
-            <a href="contact.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->İletişim</a>
-            <a href="../blog/en/index.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 --><!-- 수정: 메뉴 번역 --><!-- 수정: 메뉴 번역 --><!-- 수정: 메뉴 번역 -->Blog</a>
-            <label for="language" id="language-label"><!-- 수정: 메뉴 번역 -->Dil Seçin</label>
+            <a class="header-link" href="about.html">Hakkında</a>
+            <a class="header-link" href="contact.html">İletişim</a>
+            <a class="header-link" href="../blog/en/index.html">Blog</a>
+            <!-- 수정: 메뉴 번역 -->
+            <label for="language" id="language-label">Dil Seçin</label>
             <select id="language">
                 <!-- 수정: 언어 목록 업데이트 (누락된 언어 추가 및 정렬) -->
                 <option value="ar">العربية</option>
@@ -220,7 +218,7 @@
                 <button id="poetry-writing-button" type="submit">Şiir oluştur</button>
             </div>
             <!-- 수정: 정책 위반 주의 문구 추가 -->
-            <p style="font-size: 0.8rem; color: #ccc; margin-top: 5px; text-align: center;">
+            <p id="policy-warning">
                 ⚠️ Yetişkinlere yönelik içerik, şiddet ve nefret gibi uygunsuz konuların oluşturulması kısıtlanabilir.
             </p>
         </form>

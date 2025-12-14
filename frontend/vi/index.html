@@ -167,15 +167,11 @@
         </div>
         <div class="header-right">
             <!-- 수정: About/Contact 링크 추가 -->
-            <a href="about.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->Giới
-                thiệu</a>
-            <a href="contact.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->Liên
-                hệ</a>
-            <a href="../blog/en/index.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 --><!-- 수정: 메뉴 번역 --><!-- 수정: 메뉴 번역 --><!-- 수정: 메뉴 번역 -->Blog</a>
-            <label for="language" id="language-label"><!-- 수정: 메뉴 번역 -->Chọn ngôn ngữ</label>
+            <a class="header-link" href="about.html">Giới thiệu</a>
+            <a class="header-link" href="contact.html">Liên hệ</a>
+            <a class="header-link" href="../blog/en/index.html">Blog</a>
+            <!-- 수정: 메뉴 번역 -->
+            <label for="language" id="language-label">Chọn ngôn ngữ</label>
             <select id="language">
                 <!-- 수정: 언어 목록 업데이트 (누락된 언어 추가 및 정렬) -->
                 <option value="ar">العربية</option>
@@ -220,7 +216,7 @@
                 <button id="poetry-writing-button" type="submit">Tạo bài thơ</button>
             </div>
             <!-- 수정: 정책 위반 주의 문구 추가 -->
-            <p style="font-size: 0.8rem; color: #ccc; margin-top: 5px; text-align: center;">
+            <p id="policy-warning">
                 ⚠️ Các chủ đề không phù hợp như nội dung dành cho người lớn, bạo lực và thù hận có thể bị hạn chế sáng
                 tạo.
             </p>

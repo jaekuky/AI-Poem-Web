@@ -168,14 +168,9 @@
         </div>
         <div class="header-right">
             <!-- 수정: About/Contact 링크 추가 -->
-            <a href="about.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->के
-                बारे में</a>
-            <a href="contact.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->संपर्क
-                करें</a>
-            <a href="../blog/en/index.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->ब्लॉग</a>
+            <a class="header-link" href="about.html"><!-- 수정: 메뉴 번역 -->के बारे में</a>
+            <a class="header-link" href="contact.html"><!-- 수정: 메뉴 번역 -->संपर्क करें</a>
+            <a class="header-link" href="../blog/en/index.html"><!-- 수정: 메뉴 번역 -->ब्लॉग</a>
             <label for="language" id="language-label"><!-- 수정: 메뉴 번역 -->भाषा चुनें</label>
             <select id="language">
                 <!-- 수정: 언어 목록 업데이트 (누락된 언어 추가 및 정렬) -->
@@ -222,7 +217,7 @@
                 <button id="poetry-writing-button" type="submit">कविता लिखें</button>
             </div>
             <!-- 수정: 정책 위반 주의 문구 추가 -->
-            <p style="font-size: 0.8rem; color: #ccc; margin-top: 5px; text-align: center;">
+            <p id="policy-warning" style="font-size: 0.8rem; color: #ccc; margin-top: 5px; text-align: center;">
                 ⚠️ एडल्ट कंटेंट, हिंसा और नफ़रत जैसे गलत टॉपिक बनाने पर रोक लगाई जा सकती है।
             </p>
         </form>

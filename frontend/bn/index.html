@@ -168,13 +168,11 @@
         </div>
         <div class="header-right">
             <!-- 수정: About/Contact 링크 추가 -->
-            <a href="about.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->সম্পর্কে</a>
-            <a href="contact.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->যোগাযোগ</a>
-            <a href="../blog/en/index.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->ব্লগ</a>
-            <label for="language" id="language-label"><!-- 수정: 메뉴 번역 -->भाषा নির্বাচন করুন</label>
+            <a class="header-link" href="about.html"><!-- 수정: 메뉴 번역 -->সম্পর্কে</a>
+            <a class="header-link" href="contact.html"><!-- 수정: 메뉴 번역 -->যোগাযোগ</a>
+            <a class="header-link" href="../blog/en/index.html"><!-- 수정: 메뉴 번역 -->ব্লগ</a>
+            <!-- 수정: 메뉴 번역 -->
+            <label for="language" id="language-label">ভাষা নির্বাচন করুন</label>
             <select id="language">
                 <!-- 수정: 언어 목록 업데이트 (누락된 언어 추가 및 정렬) -->
                 <option value="ar">العربية</option>
@@ -219,7 +217,7 @@
                 <button id="poetry-writing-button" type="submit">কবিতা তৈরি করুন</button>
             </div>
             <!-- 수정: 정책 위반 주의 문구 추가 -->
-            <p style="font-size: 0.8rem; color: #ccc; margin-top: 5px; text-align: center;">
+            <p id="policy-warning">
                 ⚠️ প্রাপ্তবয়স্কদের জন্য উপযুক্ত বিষয়বস্তু, হিংস্রতা এবং ঘৃণার মতো অনুপযুক্ত বিষয়গুলি তৈরি থেকে
                 সীমাবদ্ধ করা যেতে পারে।
             </p>

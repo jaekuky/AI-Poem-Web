@@ -161,42 +161,40 @@
     </div>
     <div class="header-right">
       <!-- 수정: About/Contact 링크 추가 -->
-      <a href="about.html"
-        style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->私たちについて</a>
-      <a href="contact.html"
-        style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->お問い合わせ</a>
-      <a href="../blog/en/index.html"
-        style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->ブログ</a>
-      <label for="language" id="language-label"><!-- 수정: 메뉴 번역 -->言語を選択</label>
+      <a class="header-link" href="about.html">私たちについて</a>
+      <a class="header-link" href="contact.html">お問い合わせ</a>
+      <a class="header-link" href="../blog/en/index.html">ブログ</a>
+      <!-- 수정: 메뉴 번역 -->
+      <label for="language" id="language-label">言語を選択</label>
       <select id="language">
-                <!-- 수정: 언어 목록 업데이트 (누락된 언어 추가 및 정렬) -->
-                <option value="ar">العربية</option>
-                <option value="bn">বাংলা</option>
-                <option value="ch">Schweizerdeutsch</option>
-                <option value="de">Deutsch</option>
-                <option value="el">Ελληνικά</option>
-                <option value="en">English</option>
-                <option value="es">Español</option>
-                <option value="fi">Suomi</option>
-                <option value="fr">Français</option>
-                <option value="hi">हिन्दी</option>
-                <option value="id">Bahasa Indonesia</option>
-                <option value="it">Italiano</option>
-                <option value="ja" selected>日本語</option>
-                <option value="ko">한국어</option>
-                <option value="mn">Монгол</option>
-                <option value="ms">Bahasa Melayu</option>
-                <option value="pl">Polski</option>
-                <option value="pt">Português</option>
-                <option value="ru">русский</option>
-                <option value="sv">Svenska</option>
-                <option value="sw">Kiswahili</option>
-                <option value="th">ไทย</option>
-                <option value="tr">Türkçe</option>
-                <option value="uk">Українська</option>
-                <option value="vi">Tiếng Việt</option>
-                <option value="zh">中文</option>
-            </select>
+        <!-- 수정: 언어 목록 업데이트 (누락된 언어 추가 및 정렬) -->
+        <option value="ar">العربية</option>
+        <option value="bn">বাংলা</option>
+        <option value="ch">Schweizerdeutsch</option>
+        <option value="de">Deutsch</option>
+        <option value="el">Ελληνικά</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fi">Suomi</option>
+        <option value="fr">Français</option>
+        <option value="hi">हिन्दी</option>
+        <option value="id">Bahasa Indonesia</option>
+        <option value="it">Italiano</option>
+        <option value="ja" selected>日本語</option>
+        <option value="ko">한국어</option>
+        <option value="mn">Монгол</option>
+        <option value="ms">Bahasa Melayu</option>
+        <option value="pl">Polski</option>
+        <option value="pt">Português</option>
+        <option value="ru">русский</option>
+        <option value="sv">Svenska</option>
+        <option value="sw">Kiswahili</option>
+        <option value="th">ไทย</option>
+        <option value="tr">Türkçe</option>
+        <option value="uk">Українська</option>
+        <option value="vi">Tiếng Việt</option>
+        <option value="zh">中文</option>
+      </select>
     </div>
   </div>
   <div class="container">
@@ -212,7 +210,7 @@
         <button id="poetry-writing-button" type="submit">詩の作成</button>
       </div>
       <!-- 수정: 정책 위반 주의 문구 추가 -->
-      <p style="font-size: 0.8rem; color: #ccc; margin-top: 5px; text-align: center;">
+      <p id="policy-warning">
         ⚠️ 成人、暴力、嫌悪などの不適切なトピックは、生成を制限する可能性があります。
       </p>
     </form>

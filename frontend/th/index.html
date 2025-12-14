@@ -165,13 +165,11 @@
         </div>
         <div class="header-right">
             <!-- 수정: About/Contact 링크 추가 -->
-            <a href="about.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->เกี่ยวกับ</a>
-            <a href="contact.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->ติดต่อ</a>
-            <a href="../blog/en/index.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->บล็อก</a>
-            <label for="language" id="language-label"><!-- 수정: 메뉴 번역 -->เลือกภาษา</label>
+            <a class="header-link" href="about.html">เกี่ยวกับ</a>
+            <a class="header-link" href="contact.html">ติดต่อ</a>
+            <a class="header-link" href="../blog/en/index.html">บล็อก</a>
+            <!-- 수정: 메뉴 번역 -->
+            <label for="language" id="language-label">เลือกภาษา</label>
             <select id="language">
                 <!-- 수정: 언어 목록 업데이트 (누락된 언어 추가 및 정렬) -->
                 <option value="ar">العربية</option>
@@ -216,7 +214,7 @@
                 <button id="poetry-writing-button" type="submit">เขียนบทกวี</button>
             </div>
             <!-- 수정: 정책 위반 주의 문구 추가 -->
-            <p style="font-size: 0.8rem; color: #ccc; margin-top: 5px; text-align: center;">
+            <p id="policy-warning">
                 ⚠️ หัวข้อที่ไม่เหมาะสม เช่น เนื้อหาสำหรับผู้ใหญ่ ความรุนแรง และความเกลียดชัง อาจถูกจำกัดการสร้าง
             </p>
         </form>

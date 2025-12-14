@@ -166,14 +166,11 @@
         </div>
         <div class="header-right">
             <!-- 수정: About/Contact 링크 추가 -->
-            <a href="about.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->Om
-                oss</a>
-            <a href="contact.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->Kontakt</a>
-            <a href="../blog/en/index.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->Blogg</a>
-            <label for="language" id="language-label"><!-- 수정: 메뉴 번역 -->Välj språk</label>
+            <a class="header-link" href="about.html">Om oss</a>
+            <a class="header-link" href="contact.html">Kontakt</a>
+            <a class="header-link" href="../blog/en/index.html">Blogg</a>
+            <!-- 수정: 메뉴 번역 -->
+            <label for="language" id="language-label">Välj språk</label>
             <select id="language">
                 <!-- 수정: 언어 목록 업데이트 (누락된 언어 추가 및 정렬) -->
                 <option value="ar">العربية</option>
@@ -218,7 +215,7 @@
                 <button id="poetry-writing-button" type="submit">Skriv en dikt</button>
             </div>
             <!-- 수정: 정책 위반 주의 문구 추가 -->
-            <p style="font-size: 0.8rem; color: #ccc; margin-top: 5px; text-align: center;">
+            <p id="policy-warning">
                 ⚠️ Olämpliga ämnen som vuxeninnehåll, våld och hat kan komma att förbjudas från att skapas.
             </p>
         </form>

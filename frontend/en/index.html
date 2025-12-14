@@ -173,12 +173,9 @@
         </div>
         <div class="header-right">
             <!-- 수정: About/Contact 링크 추가 -->
-            <a href="about.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">About</a>
-            <a href="contact.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">Contact</a>
-            <a href="../blog/en/index.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;">Blog</a>
+            <a class="header-link" href="about.html">About</a>
+            <a class="header-link" href="contact.html">Contact</a>
+            <a class="header-link" href="../blog/en/index.html">Blog</a>
             <label for="language" id="language-label">Select Language</label>
             <select id="language">
                 <!-- 수정: 언어 목록 업데이트 (누락된 언어 추가 및 정렬) -->
@@ -224,7 +221,7 @@
                 <button id="poetry-writing-button" type="submit">Write a poem</button>
             </div>
             <!-- 수정: 정책 위반 주의 문구 추가 -->
-            <p style="font-size: 0.8rem; color: #ccc; margin-top: 5px; text-align: center;">
+            <p id="policy-warning">
                 ⚠️ Inappropriate topics such as adult content, violence, and hate may be restricted from creation.
             </p>
         </form>

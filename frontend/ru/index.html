@@ -169,42 +169,40 @@
     </div>
     <div class="header-right">
       <!-- 수정: About/Contact 링크 추가 -->
-      <a href="about.html"
-        style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->О нас</a>
-      <a href="contact.html"
-        style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->Контакты</a>
-      <a href="../blog/en/index.html"
-        style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->Блог</a>
-      <label for="language" id="language-label"><!-- 수정: 메뉴 번역 -->Выберите язык</label>
+      <a class="header-link" href="about.html">О нас</a>
+      <a class="header-link" href="contact.html">Контакты</a>
+      <a class="header-link" href="../blog/en/index.html">Блог</a>
+      <!-- 수정: 메뉴 번역 -->
+      <label for="language" id="language-label">Выберите язык</label>
       <select id="language">
-                <!-- 수정: 언어 목록 업데이트 (누락된 언어 추가 및 정렬) -->
-                <option value="ar">العربية</option>
-                <option value="bn">বাংলা</option>
-                <option value="ch">Schweizerdeutsch</option>
-                <option value="de">Deutsch</option>
-                <option value="el">Ελληνικά</option>
-                <option value="en">English</option>
-                <option value="es">Español</option>
-                <option value="fi">Suomi</option>
-                <option value="fr">Français</option>
-                <option value="hi">हिन्दी</option>
-                <option value="id">Bahasa Indonesia</option>
-                <option value="it">Italiano</option>
-                <option value="ja">日本語</option>
-                <option value="ko">한국어</option>
-                <option value="mn">Монгол</option>
-                <option value="ms">Bahasa Melayu</option>
-                <option value="pl">Polski</option>
-                <option value="pt">Português</option>
-                <option value="ru" selected>русский</option>
-                <option value="sv">Svenska</option>
-                <option value="sw">Kiswahili</option>
-                <option value="th">ไทย</option>
-                <option value="tr">Türkçe</option>
-                <option value="uk">Українська</option>
-                <option value="vi">Tiếng Việt</option>
-                <option value="zh">中文</option>
-            </select>
+        <!-- 수정: 언어 목록 업데이트 (누락된 언어 추가 및 정렬) -->
+        <option value="ar">العربية</option>
+        <option value="bn">বাংলা</option>
+        <option value="ch">Schweizerdeutsch</option>
+        <option value="de">Deutsch</option>
+        <option value="el">Ελληνικά</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fi">Suomi</option>
+        <option value="fr">Français</option>
+        <option value="hi">हिन्दी</option>
+        <option value="id">Bahasa Indonesia</option>
+        <option value="it">Italiano</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+        <option value="mn">Монгол</option>
+        <option value="ms">Bahasa Melayu</option>
+        <option value="pl">Polski</option>
+        <option value="pt">Português</option>
+        <option value="ru" selected>русский</option>
+        <option value="sv">Svenska</option>
+        <option value="sw">Kiswahili</option>
+        <option value="th">ไทย</option>
+        <option value="tr">Türkçe</option>
+        <option value="uk">Українська</option>
+        <option value="vi">Tiếng Việt</option>
+        <option value="zh">中文</option>
+      </select>
     </div>
   </div>
   <div class="container">
@@ -220,7 +218,7 @@
         <button id="poetry-writing-button" type="submit">Написать стихотворение</button>
       </div>
       <!-- 수정: 정책 위반 주의 문구 추가 -->
-      <p style="font-size: 0.8rem; color: #ccc; margin-top: 5px; text-align: center;">
+      <p id="policy-warning">
         ⚠️ Создание материалов на неподходящие темы, такие как контент для взрослых, насилие и ненависть, может быть
         запрещено.
       </p>

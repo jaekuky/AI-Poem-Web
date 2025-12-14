@@ -161,42 +161,40 @@
     </div>
     <div class="header-right">
       <!-- 수정: About/Contact 링크 추가 -->
-      <a href="about.html"
-        style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->关于我们</a>
-      <a href="contact.html"
-        style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->联系我们</a>
-      <a href="../blog/en/index.html"
-        style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->博客</a>
-      <label for="language" id="language-label"><!-- 수정: 메뉴 번역 -->选择语言</label>
+      <a class="header-link" href="about.html">关于我们</a>
+      <a class="header-link" href="contact.html">联系我们</a>
+      <a class="header-link" href="../blog/en/index.html">博客</a>
+      <!-- 수정: 메뉴 번역 -->
+      <label for="language" id="language-label">选择语言</label>
       <select id="language">
-                <!-- 수정: 언어 목록 업데이트 (누락된 언어 추가 및 정렬) -->
-                <option value="ar">العربية</option>
-                <option value="bn">বাংলা</option>
-                <option value="ch">Schweizerdeutsch</option>
-                <option value="de">Deutsch</option>
-                <option value="el">Ελληνικά</option>
-                <option value="en">English</option>
-                <option value="es">Español</option>
-                <option value="fi">Suomi</option>
-                <option value="fr">Français</option>
-                <option value="hi">हिन्दी</option>
-                <option value="id">Bahasa Indonesia</option>
-                <option value="it">Italiano</option>
-                <option value="ja">日本語</option>
-                <option value="ko">한국어</option>
-                <option value="mn">Монгол</option>
-                <option value="ms">Bahasa Melayu</option>
-                <option value="pl">Polski</option>
-                <option value="pt">Português</option>
-                <option value="ru">русский</option>
-                <option value="sv">Svenska</option>
-                <option value="sw">Kiswahili</option>
-                <option value="th">ไทย</option>
-                <option value="tr">Türkçe</option>
-                <option value="uk">Українська</option>
-                <option value="vi">Tiếng Việt</option>
-                <option value="zh" selected>中文</option>
-            </select>
+        <!-- 수정: 언어 목록 업데이트 (누락된 언어 추가 및 정렬) -->
+        <option value="ar">العربية</option>
+        <option value="bn">বাংলা</option>
+        <option value="ch">Schweizerdeutsch</option>
+        <option value="de">Deutsch</option>
+        <option value="el">Ελληνικά</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fi">Suomi</option>
+        <option value="fr">Français</option>
+        <option value="hi">हिन्दी</option>
+        <option value="id">Bahasa Indonesia</option>
+        <option value="it">Italiano</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+        <option value="mn">Монгол</option>
+        <option value="ms">Bahasa Melayu</option>
+        <option value="pl">Polski</option>
+        <option value="pt">Português</option>
+        <option value="ru">русский</option>
+        <option value="sv">Svenska</option>
+        <option value="sw">Kiswahili</option>
+        <option value="th">ไทย</option>
+        <option value="tr">Türkçe</option>
+        <option value="uk">Українська</option>
+        <option value="vi">Tiếng Việt</option>
+        <option value="zh" selected>中文</option>
+      </select>
     </div>
   </div>
   <div class="container">
@@ -212,7 +210,7 @@
         <button id="poetry-writing-button" type="submit">生成诗歌</button>
       </div>
       <!-- 수정: 정책 위반 주의 문구 추가 -->
-      <p style="font-size: 0.8rem; color: #ccc; margin-top: 5px; text-align: center;">
+      <p id="policy-warning">
         ⚠️ 禁止发布成人内容、暴力和仇恨等不适宜主题的内容。
       </p>
     </form>
@@ -252,7 +250,8 @@
     <p><!-- 수정: 기술 설명 번역 -->AI & Poem 使用最新的大型语言模型 (LLM) 技术运行。AI 在数百万部文学作品和诗歌上接受过训练，能够掌握您输入的主题的上下文，并找到匹配的隐喻和押韵。
     </p>
     <p><!-- 수정: 기술 설명 번역 -->它不仅仅是列出单词；它每次都会创作一首新的原创诗歌，考虑到情感的流动和诗歌结构。有关更多详细信息，请查看我们的博客。. For more details, check out our
-      <a href="../blog/en/article-1.html" style="color: #fff; text-decoration: underline;"><!-- 수정: 메뉴 번역 -->博客</a>.</p>
+      <a href="../blog/en/article-1.html" style="color: #fff; text-decoration: underline;"><!-- 수정: 메뉴 번역 -->博客</a>.
+    </p>
   </section>
   <!-- Use Cases Section -->
   <section class="seo-section">

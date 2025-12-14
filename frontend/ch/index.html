@@ -168,13 +168,11 @@
         </div>
         <div class="header-right">
             <!-- 수정: About/Contact 링크 추가 -->
-            <a href="about.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->Über uns</a>
-            <a href="contact.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 -->Kontakt</a>
-            <a href="../blog/en/index.html"
-                style="color: white; margin-right: 20px; text-decoration: none; font-weight: bold;"><!-- 수정: 메뉴 번역 --><!-- 수정: 메뉴 번역 --><!-- 수정: 메뉴 번역 --><!-- 수정: 메뉴 번역 -->Blog</a>
-            <label for="language" id="language-label"><!-- 수정: 메뉴 번역 -->Sprache auswählen</label>
+            <a class="header-link" href="about.html"><!-- 수정: 메뉴 번역 -->Über uns</a>
+            <a class="header-link" href="contact.html"><!-- 수정: 메뉴 번역 -->Kontakt</a>
+            <a class="header-link" href="../blog/en/index.html"><!-- 수정: 메뉴 번역 -->Blog</a>
+            <!-- 수정: 메뉴 번역 -->
+            <label for="language" id="language-label">Sprache auswählen</label>
             <select id="language">
                 <!-- 수정: 언어 목록 업데이트 (누락된 언어 추가 및 정렬) -->
                 <option value="ar">العربية</option>
@@ -220,7 +218,7 @@
                 <button id="poetry-writing-button" type="submit">Gedicht generiere</button>
             </div>
             <!-- 수정: 정책 위반 주의 문구 추가 -->
-            <p style="font-size: 0.8rem; color: #ccc; margin-top: 5px; text-align: center;">
+            <p id="policy-warning">
                 ⚠️ Die Generierung von Inhalten zu unangemessenen Themen wie Inhalten für Erwachsene, Gewalt oder Hass
                 kann eingeschränkt werden.
             </p>
@@ -234,8 +232,13 @@
     <!-- Service Overview Section -->
     <section class="seo-section">
         <h2>AI &amp; Poem Service Overview</h2>
-        <p><!-- 수정: 서비스 설명 번역 -->AI & Poem ist ein Dienst, bei dem eine emotionsverständige KI Ihre Geschichten in wunderschöne Gedichte verwandelt. Über die einfache Texterstellung hinaus bietet es eine natürliche Sprachausgabe, die mit professionellen Synchronsprechern vergleichbar ist und sowohl visuelle als auch auditive Sinne befriedigt.</p>
-        <p><!-- 수정: 번역 적용 -->Mit Unterstützung von über 20 Sprachen, darunter Koreanisch, Englisch und Französisch, können Sie Texte für verschiedene Zwecke wie Hochzeitsreden, Liebesbriefe und emotionale SNS-Bildunterschriften in nur 10 Sekunden fertigstellen.</p>
+        <p><!-- 수정: 서비스 설명 번역 -->AI & Poem ist ein Dienst, bei dem eine emotionsverständige KI Ihre Geschichten in
+            wunderschöne Gedichte verwandelt. Über die einfache Texterstellung hinaus bietet es eine natürliche
+            Sprachausgabe, die mit professionellen Synchronsprechern vergleichbar ist und sowohl visuelle als auch
+            auditive Sinne befriedigt.</p>
+        <p><!-- 수정: 번역 적용 -->Mit Unterstützung von über 20 Sprachen, darunter Koreanisch, Englisch und Französisch,
+            können Sie Texte für verschiedene Zwecke wie Hochzeitsreden, Liebesbriefe und emotionale
+            SNS-Bildunterschriften in nur 10 Sekunden fertigstellen.</p>
     </section>
     <!-- Usage Guide Section -->
     <section class="seo-section">
@@ -258,10 +261,15 @@ und jede Gschicht springt uuf wie e Chnospe.</pre>
     <!-- Technical Explanation Section -->
     <section class="seo-section">
         <h2><!-- 수정: 번역 적용 -->Wie schreibt der KI-Gedichtgenerator Gedichte?</h2>
-        <p><!-- 수정: 기술 설명 번역 -->AI & Poem arbeitet mit der neuesten Large Language Model (LLM)-Technologie. Die KI, die an Millionen von literarischen Werken und Gedichten trainiert wurde, erfasst den Kontext des von Ihnen eingegebenen Themas und findet passende Metaphern und Reime.
+        <p><!-- 수정: 기술 설명 번역 -->AI & Poem arbeitet mit der neuesten Large Language Model (LLM)-Technologie. Die KI, die
+            an Millionen von literarischen Werken und Gedichten trainiert wurde, erfasst den Kontext des von Ihnen
+            eingegebenen Themas und findet passende Metaphern und Reime.
         </p>
-        <p><!-- 수정: 번역 적용 -->Sie listet nicht nur Wörter auf; sie erstellt jedes Mal ein neues und originelles Gedicht unter Berücksichtigung des Gefühlsflusses und der poetischen Struktur. Weitere Details finden Sie in unserem Blog. <a href="../blog/en/article-1.html"
-                style="color: #fff; text-decoration: underline;"><!-- 수정: 메뉴 번역 --><!-- 수정: 메뉴 번역 --><!-- 수정: 메뉴 번역 --><!-- 수정: 메뉴 번역 -->Blog</a>.</p>
+        <p><!-- 수정: 번역 적용 -->Sie listet nicht nur Wörter auf; sie erstellt jedes Mal ein neues und originelles Gedicht
+            unter Berücksichtigung des Gefühlsflusses und der poetischen Struktur. Weitere Details finden Sie in unserem
+            Blog. <a href="../blog/en/article-1.html"
+                style="color: #fff; text-decoration: underline;"><!-- 수정: 메뉴 번역 --><!-- 수정: 메뉴 번역 --><!-- 수정: 메뉴 번역 --><!-- 수정: 메뉴 번역 -->Blog</a>.
+        </p>
     </section>
     <!-- Use Cases Section -->
     <section class="seo-section">
@@ -293,16 +301,22 @@ und jede Gschicht springt uuf wie e Chnospe.</pre>
         <h2><!-- 수정: 번역 적용 -->Poesie und KI-Blog</h2>
         <div class="blog-preview">
             <article>
-                <h3><a href="../blog/ch/article-1.html"><!-- 수정: 번역 적용 -->Prinzipien und Zukunft von KI-Gedichtgeneratoren</a></h3>
-                <p><!-- 수정: 번역 적용 -->Erfahren Sie, wie große Sprachmodelle literarische Ausdrücke lernen und Kunst schaffen.</p>
+                <h3><a href="../blog/ch/article-1.html"><!-- 수정: 번역 적용 -->Prinzipien und Zukunft von
+                        KI-Gedichtgeneratoren</a></h3>
+                <p><!-- 수정: 번역 적용 -->Erfahren Sie, wie große Sprachmodelle literarische Ausdrücke lernen und Kunst
+                    schaffen.</p>
             </article>
             <article>
-                <h3><a href="../blog/ch/article-2.html"><!-- 수정: 번역 적용 -->Wie man berührende Hochzeitsreden schreibt</a></h3>
-                <p><!-- 수정: 번역 적용 -->Enthüllung von Know-how, um mit KI schnell und einfach aufrichtige Reden zu schreiben.</p>
+                <h3><a href="../blog/ch/article-2.html"><!-- 수정: 번역 적용 -->Wie man berührende Hochzeitsreden schreibt</a>
+                </h3>
+                <p><!-- 수정: 번역 적용 -->Enthüllung von Know-how, um mit KI schnell und einfach aufrichtige Reden zu
+                    schreiben.</p>
             </article>
             <article>
-                <h3><a href="../blog/ch/article-3.html"><!-- 수정: 번역 적용 -->Sammlung emotionaler Zitate, die in sozialen Netzwerken beliebt sind</a></h3>
-                <p><!-- 수정: 번역 적용 -->Kurze und kraftvolle poetische Ausdrücke, die auf Instagram und Facebook für Likes sorgen.</p>
+                <h3><a href="../blog/ch/article-3.html"><!-- 수정: 번역 적용 -->Sammlung emotionaler Zitate, die in sozialen
+                        Netzwerken beliebt sind</a></h3>
+                <p><!-- 수정: 번역 적용 -->Kurze und kraftvolle poetische Ausdrücke, die auf Instagram und Facebook für Likes
+                    sorgen.</p>
             </article>
         </div>
     </section>
