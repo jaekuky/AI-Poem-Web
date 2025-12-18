@@ -57,6 +57,11 @@ const languagePromptMap = {
     'ar': 'بالعربية', // 수정: 아랍어 지원 추가
     'mn': 'Монгол хэлээр', // 수정: 몽골어 지원 추가
     'sw': 'kwa Kiswahili', // 수정: 스와힐리어 지원 추가
+    'nl': 'in het Nederlands', // 수정: 네덜란드어 추가
+    'no': 'på norsk', // 수정: 노르웨이어 추가
+    'da': 'på dansk', // 수정: 덴마크어 추가
+    'fil': 'sa Filipino', // 수정: 필리핀어 추가
+    'hu': 'magyarul', // 수정: 헝가리어 추가
 };
 
 // 수정: 지원 언어 집합을 미리 생성해 유효성 검증에 재사용
@@ -143,7 +148,22 @@ const DISALLOWED_KEYWORDS = [
     'порно', 'секс', 'бэлгийн', 'нүцгэн', 'хүчирхийлэл', 'алах', 'аллага', 'терроризм', 'бөмбөг', 'зэвсэг', 'буу', 'мансууруулах', 'хар тамхи', 'кокаин', 'нацист', 'амиа', 'өөрийгөө', 'мөрийтэй', 'казино', 'бооцоо', 'үзэн', 'арьс', 'хүчин', 'бэлгийн хүчирхийлэл', 'эрүү шүүлт', 'бэлгийн дарамт', 'педофили', 'хүн идэх', 'бүлэглэн хүчирхийлэх', 'толгой авах', 'цаазаар авах', 'шатаах', 'малын гаж дон', 'цогцос сонирхох', 'амьтан сонирхох',
 
     // --- Swahili (sw) ---
-    'picha', 'ngono', 'kujamiiana', 'uchi', 'vurugu', 'ua', 'mauaji', 'ugaidi', 'bomu', 'silaha', 'bunduki', 'dawa', 'bangi', 'kokeini', 'nazi', 'kujiua', 'kujidhuru', 'kamari', 'kasino', 'kuweka', 'chuki', 'ubaguzi', 'ubakaji', 'shambulio la kingono', 'utesaji', 'unyanyasaji wa kijinsia', 'ulawiti wa watoto', 'ulaji watu', 'ubakaji wa genge', 'kukata kichwa', 'kunyongwa', 'kuchoma', 'ngono na wanyama', 'necrophilia', 'zoophilia'
+    'picha', 'ngono', 'kujamiiana', 'uchi', 'vurugu', 'ua', 'mauaji', 'ugaidi', 'bomu', 'silaha', 'bunduki', 'dawa', 'bangi', 'kokeini', 'nazi', 'kujiua', 'kujidhuru', 'kamari', 'kasino', 'kuweka', 'chuki', 'ubaguzi', 'ubakaji', 'shambulio la kingono', 'utesaji', 'unyanyasaji wa kijinsia', 'ulawiti wa watoto', 'ulaji watu', 'ubakaji wa genge', 'kukata kichwa', 'kunyongwa', 'kuchoma', 'ngono na wanyama', 'necrophilia', 'zoophilia',
+
+    // --- Dutch (nl) ---
+    'pornografie', 'seks', 'naakt', 'geweld', 'moord', 'terreur', 'bom', 'wapen', 'drugs', 'marihuana', 'cocaïne', 'nazi', 'zelfmoord', 'gokken', 'casino', 'haat', 'racisme', 'verkrachting', 'mishandeling', 'pedofilie', 'kannibalisme', 'onthoofding', 'executie', 'bestialiteit', 'necrofilie',
+
+    // --- Norwegian (no) ---
+    'pornografi', 'seks', 'naken', 'vold', 'drap', 'mord', 'terror', 'bombe', 'våpen', 'narkotika', 'marihuana', 'kokain', 'nazi', 'selvmord', 'gambling', 'casino', 'hat', 'rasisme', 'voldtekt', 'overgrep', 'pedofili', 'kannibalisme', 'halshugging', 'henrettelse', 'dyresex',
+
+    // --- Danish (da) ---
+    'pornografi', 'sex', 'nøgen', 'vold', 'drab', 'mord', 'terror', 'bombe', 'våben', 'stoffer', 'hash', 'kokain', 'nazi', 'selvmord', 'spil', 'kasino', 'had', 'racisme', 'voldtægt', 'overgreb', 'pædofili', 'kannibalisme', 'halshugning', 'henrettelse', 'dyresex',
+
+    // --- Filipino (fil) ---
+    'pornograpiya', 'sex', 'hubad', 'karahasan', 'patayin', 'pagpatay', 'terorismo', 'bomba', 'armas', 'baril', 'droga', 'marijuana', 'cocaine', 'nazi', 'pagpapakamatay', 'sugal', 'casino', 'poot', 'rasismo', 'panggagahasa', 'pang-aabuso', 'pedophilia', 'kanibalismo', 'pagpugot', 'pagbitay',
+
+    // --- Hungarian (hu) ---
+    'pornográfia', 'szex', 'meztelen', 'erőszak', 'ölés', 'gyilkosság', 'terrorizmus', 'bomba', 'fegyver', 'kábítószer', 'marihuána', 'kokain', 'náci', 'öngyilkosság', 'szerencsejáték', 'kaszinó', 'gyűlölet', 'rasszizmus', 'nemi erőszak', 'bántalmazás', 'pedofília', 'kannibalizmus', 'lefejezés', 'kivégzés'
 ];
 
 // 수정: 다국어 에러 메시지 정의
@@ -355,6 +375,47 @@ const ERROR_MESSAGES = {
         unsupportedLang: 'Lugha haitumiki.',
         serverConfigError: 'Hitilafu ya usanidi wa seva.',
         generationError: 'Hitilafu imetokea wakati wa kutoa shairi.'
+    },
+    'nl': {
+        missingTopic: 'Voer een gedichtonderwerp in.',
+        topicTooLong: (max) => `Voer een onderwerp in van maximaal ${max} tekens.`,
+        disallowedTopic: 'Kan geen gedicht genereren met dit onderwerp.',
+        unsupportedLang: 'Niet-ondersteunde taal.',
+        serverConfigError: 'Serverconfiguratiefout.',
+        generationError: 'Er is een fout opgetreden bij het genereren van het gedicht.'
+    },
+    'no': {
+        missingTopic: 'Vennligst skriv inn et dikttema.',
+        topicTooLong: (max) => `Vennligst skriv inn et tema innenfor ${max} tegn.`,
+        disallowedTopic: 'Kan ikke generere dikt med dette temaet.',
+        unsupportedLang: 'Ikke-støttet språk.',
+        serverConfigError: 'Serverkonfigurasjonsfeil.',
+        generationError: 'En feil oppstod under generering av diktet.'
+    },
+    'da': {
+        missingTopic: 'Indtast venligst et digtemne.',
+        topicTooLong: (max) => `Indtast venligst et emne inden for ${max} tegn.`,
+        disallowedTopic: 'Kan ikke generere digt med dette emne.',
+        unsupportedLang: 'Ikke-understøttet sprog.',
+        serverConfigError: 'Serverkonfigurationsfejl.',
+        generationError: 'Der opstod en fejl under generering af digtet.'
+    },
+
+    'fil': {
+        missingTopic: 'Mangyaring maglagay ng paksa ng tula.',
+        topicTooLong: (max) => `Mangyaring maglagay ng paksa sa loob ng ${max} na karakter.`,
+        disallowedTopic: 'Hindi makabuo ng tula gamit ang paksang ito.',
+        unsupportedLang: 'Hindi suportadong wika.',
+        serverConfigError: 'Error sa pagsasaayos ng server.',
+        generationError: 'May naganap na error habang binubuo ang tula.'
+    },
+    'hu': {
+        missingTopic: 'Kérjük, adjon meg egy vers témát.',
+        topicTooLong: (max) => `Kérjük, adjon meg egy témát ${max} karakteren belül.`,
+        disallowedTopic: 'Ezzel a témával nem lehet verset generálni.',
+        unsupportedLang: 'Nem támogatott nyelv.',
+        serverConfigError: 'Szerverkonfigurációs hiba.',
+        generationError: 'Hiba történt a vers generálása közben.'
     }
 };
 

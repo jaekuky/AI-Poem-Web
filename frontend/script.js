@@ -26,7 +26,12 @@ const languageMap = {
     'fi': { name: 'Suomi', ttsLang: 'fi-FI' }, // 수정: 핀란드어 지원 추가
     'ar': { name: 'العربية', ttsLang: 'ar-SA' }, // 수정: 아랍어 지원 추가
     'mn': { name: 'Монгол', ttsLang: 'mn-MN' }, // 수정: 몽골어 지원 추가
-    'sw': { name: 'Kiswahili', ttsLang: 'sw-KE' } // 수정: 스와힐리어 지원 추가
+    'sw': { name: 'Kiswahili', ttsLang: 'sw-KE' }, // 수정: 스와힐리어 지원 추가
+    'nl': { name: 'Nederlands', ttsLang: 'nl-NL' }, // 수정: 네덜란드어 지원 추가
+    'no': { name: 'Norsk', ttsLang: 'nb-NO' }, // 수정: 노르웨이어 지원 추가
+    'da': { name: 'Dansk', ttsLang: 'da-DK' }, // 수정: 덴마크어 지원 추가
+    'fil': { name: 'Filipino', ttsLang: 'fil-PH' }, // 수정: 필리핀어 지원 추가
+    'hu': { name: 'Magyar', ttsLang: 'hu-HU' } // 수정: 헝가리어 지원 추가
 };
 
 // 시 작성 중 메시지 설정
@@ -56,7 +61,12 @@ const processingMessage = {
     'fi': 'Kirjoitan runoa. Odota hetki, kiitos.', // 수정: 핀란드어 안내 문구 추가
     'ar': 'أنا أكتب قصيدة. يرجى الانتظار لحظة.', // 수정: 아랍어 안내 문구 추가
     'mn': 'Би шүлэг бичиж байна. Түр хүлээнэ үү.', // 수정: 몽골어 안내 문구 추가
-    'sw': 'Ninaandika shairi. Tafadhali subiri kidogo.' // 수정: 스와힐리어 안내 문구 추가
+    'sw': 'Ninaandika shairi. Tafadhali subiri kidogo.', // 수정: 스와힐리어 안내 문구 추가
+    'nl': 'Ik schrijf een gedicht. Een ogenblik geduld alstublieft.', // 수정: 네덜란드어 안내 문구 추가
+    'no': 'Jeg skriver et dikt. Vennligst vent et øyeblikk.', // 수정: 노르웨이어 안내 문구 추가
+    'da': 'Jeg skriver et digt. Vent venligst et øjeblik.', // 수정: 덴마크어 안내 문구 추가
+    'fil': 'Sumusulat ako ng tula. Mangyaring maghintay sandali.', // 수정: 필리핀어 안내 문구 추가
+    'hu': 'Verset írok. Kérem, várjon egy pillanatot.' // 수정: 헝가리어 안내 문구 추가
 };
 
 // 오류 메시지 설정
@@ -87,7 +97,12 @@ const errorMessage = {
     'fi': 'Tapahtui virhe', // 수정: 핀란드어 오류 메시지 추가
     'ar': 'حدث خطأ', // 수정: 아랍어 오류 메시지 추가
     'mn': 'Алдаа гарлаа', // 수정: 몽골어 오류 메시지 추가
-    'sw': 'Hitilafu imetokea' // 수정: 스와힐리어 오류 메시지 추가
+    'sw': 'Hitilafu imetokea', // 수정: 스와힐리어 오류 메시지 추가
+    'nl': 'Er is een fout opgetreden', // 수정: 네덜란드어 오류 메시지 추가
+    'no': 'En feil oppstod', // 수정: 노르웨이어 오류 메시지 추가
+    'da': 'Der opstod en fejl', // 수정: 덴마크어 오류 메시지 추가
+    'fil': 'May naganap na error', // 수정: 필리핀어 오류 메시지 추가
+    'hu': 'Hiba történt' // 수정: 헝가리어 오류 메시지 추가
 };
 
 // 필수 입력 안내 문구를 언어별로 정의
@@ -117,7 +132,12 @@ const topicRequiredMessage = {
     'fi': 'Anna runosi aihe.', // 수정: 핀란드어 검증 메시지 추가
     'ar': 'الرجاء إدخال موضوع قصيدتك.', // 수정: 아랍어 검증 메시지 추가
     'mn': 'Шүлгийнхээ сэдвийг оруулна уу.', // 수정: 몽골어 검증 메시지 추가
-    'sw': 'Tafadhali ingiza mada ya shairi lako.' // 수정: 스와힐리어 검증 메시지 추가
+    'sw': 'Tafadhali ingiza mada ya shairi lako.', // 수정: 스와힐리어 검증 메시지 추가
+    'nl': 'Voer het onderwerp van uw gedicht in.', // 수정: 네덜란드어 검증 메시지 추가
+    'no': 'Vennligst skriv inn temaet for diktet ditt.', // 수정: 노르웨이어 검증 메시지 추가
+    'da': 'Indtast venligst emnet for dit digt.', // 수정: 덴마크어 검증 메시지 추가
+    'fil': 'Mangyaring ilagay ang paksa ng iyong tula.', // 수정: 필리핀어 검증 메시지 추가
+    'hu': 'Kérjük, adja meg a vers témáját.' // 수정: 헝가리어 검증 메시지 추가
 };
 
 // 수정: 애드센스 쿠키 동의를 위한 메시지 구성
@@ -147,7 +167,12 @@ const consentMessageMap = {
     'ch': { message: 'AI & Poem bruuchet Cookies für d Dienstleistig und d Werbig.', button: 'I versteh' },
     'ar': { message: 'يستخدم AI & Poem ملفات تعريف الارتباط لتقديم الخدمة وتحسين الإعلانات.', button: 'أوافق' },
     'mn': { message: 'AI & Poem нь үйлчилгээ үзүүлэх болон сурталчилгааг оновчтой болгохын тулд күүки ашигладаг.', button: 'Зөвшөөрөх' },
-    'sw': { message: 'AI & Poem hutumia vidakuzi kwa utoaji wa huduma na uboreshaji wa matangazo.', button: 'Kubali' }
+    'sw': { message: 'AI & Poem hutumia vidakuzi kwa utoaji wa huduma na uboreshaji wa matangazo.', button: 'Kubali' },
+    'nl': { message: 'AI & Poem gebruikt cookies voor dienstverlening en advertentieoptimalisatie.', button: 'Accepteren' }, // 수정: 네덜란드어 쿠키 동의
+    'no': { message: 'AI & Poem bruker informasjonskapsler for tjenestelevering og annonseoptimalisering.', button: 'Aksepter' }, // 수정: 노르웨이어 쿠키 동의
+    'da': { message: 'AI & Poem bruger cookies til levering af tjenester og annonceoptimering.', button: 'Accepter' }, // 수정: 덴마크어 쿠키 동의
+    'fil': { message: 'Gumagamit ang AI & Poem ng cookies para sa paghahatid ng serbisyo at pag-optimize ng ad.', button: 'Tanggapin' }, // 수정: 필리핀어 쿠키 동의
+    'hu': { message: 'Az AI & Poem sütiket használ a szolgáltatás nyújtásához és a hirdetések optimalizálásához.', button: 'Elfogad' } // 수정: 헝가리어 쿠키 동의
 };
 
 const languageSelect = document.getElementById('language');
@@ -276,6 +301,26 @@ document.getElementById('language').addEventListener('change', async function(ev
             break;
         case 'sw':
             link = 'https://www.ai-and-poem.art/sw/' // 수정: 스와힐리어 페이지 이동 처리
+            location.href = link;
+            break;
+        case 'nl':
+            link = 'https://www.ai-and-poem.art/nl/' // 수정: 네덜란드어 페이지 이동 처리
+            location.href = link;
+            break;
+        case 'no':
+            link = 'https://www.ai-and-poem.art/no/' // 수정: 노르웨이어 페이지 이동 처리
+            location.href = link;
+            break;
+        case 'da':
+            link = 'https://www.ai-and-poem.art/da/' // 수정: 덴마크어 페이지 이동 처리
+            location.href = link;
+            break;
+        case 'fil':
+            link = 'https://www.ai-and-poem.art/fil/' // 수정: 필리핀어 페이지 이동 처리
+            location.href = link;
+            break;
+        case 'hu':
+            link = 'https://www.ai-and-poem.art/hu/' // 수정: 헝가리어 페이지 이동 처리
             location.href = link;
             break;
         default:

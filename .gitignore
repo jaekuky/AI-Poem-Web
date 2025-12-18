@@ -1,3 +1,7 @@
 backend/.env
 backend/node_modules
 backend.zip
+scripts/add_languages.py
+scripts/fix_blog_links.py
+scripts/fix_header_blog_links.py
+audit_project.py

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 수정: CTR 향상을 위해 'poem ai' 검색어와 혜택을 강조 -->
+    <title>AI & Poem - Azonnali Hangos AI Versgenerátor</title>
+    <meta name="title" content="AI & Poem - Azonnali Hangos AI Versgenerátor">
+
+    <!-- [SEO] Robots meta tag 추가 -->
+    <meta name="robots" content="index, follow">
+
+    <!-- 반응형 웹을 위한 viewport 메타 태그 추가 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 수정: 구글 애드센스 계정 메타 태그 추가 -->
+    <meta name="google-adsense-account" content="ca-pub-7349192768683799">
+
+    <!-- ✅ Favicon added -->
+    <link rel="icon" href="../image/favicon.ico" type="image/x-icon">
+
+    <!-- 웹페이지 정보 메타 태그 -->
+    <!-- 수정: 속도·낭독·무료 혜택을 담은 메타 설명으로 교체 -->
+    <meta name="description"
+        content="Változtasson bármilyen témát egyedi verssé opcionális narrációval 10 másodperc alatt. Ingyenes AI költészetkészítő, a kereséshez igazítva.">
+    <!-- 수정: 불필요한 공백과 중복을 제거해 키워드 메타 태그를 정리 -->
+    <meta name="keywords"
+        content="AI poetry, artificial intelligence, poetry, poetry generation, AI poetry generator, poetry generation platform">
+    <meta name="author" content="Ryu Jae-kuk">
+
+    <!-- Canonical URL to avoid duplicate content issues -->
+    <link rel="canonical" href="https://www.ai-and-poem.art/hu/">
+
+    <!-- Alternate language links for multilingual SEO -->
+    <!-- 수정: hreflang 링크를 정규화 -->
+    <link rel="alternate" href="https://www.ai-and-poem.art/" hreflang="x-default" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/ar/" hreflang="ar" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/bn/" hreflang="bn" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/ch/" hreflang="de-CH" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/da/" hreflang="da" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/de/" hreflang="de" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/el/" hreflang="el" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/en/" hreflang="en" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/es/" hreflang="es" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/fi/" hreflang="fi" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/fil/" hreflang="fil" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/fr/" hreflang="fr" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/hi/" hreflang="hi" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/hu/" hreflang="hu" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/id/" hreflang="id" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/it/" hreflang="it" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/ja/" hreflang="ja" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/ko/" hreflang="ko" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/mn/" hreflang="mn" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/ms/" hreflang="ms" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/nl/" hreflang="nl" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/no/" hreflang="no" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/pl/" hreflang="pl" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/pt/" hreflang="pt" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/ru/" hreflang="ru" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/sv/" hreflang="sv" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/sw/" hreflang="sw" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/th/" hreflang="th" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/tr/" hreflang="tr" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/uk/" hreflang="uk" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/vi/" hreflang="vi" />
+    <link rel="alternate" href="https://www.ai-and-poem.art/zh/" hreflang="zh-CN" />
+    <!-- Open Graph 메타 태그 -->
+    <!-- 수정: SNS 미리보기 문구도 동일한 USP를 유지 -->
+    <meta property="og:title" content="AI & Poem - Azonnali Hangos AI Versgenerátor">
+    <meta property="og:description"
+        content="Változtasson bármilyen témát egyedi verssé opcionális narrációval 10 másodperc alatt. Ingyenes AI költészetkészítő, a kereséshez igazítva.">
+    <meta property="og:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
+    <meta property="og:url" content="https://www.ai-and-poem.art/hu/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AI &amp; Poem">
+    <meta property="og:locale" content="hu_XX">
+    <meta property="og:image:alt" content="Illustration of an AI robot writing poetry">
+
+    <!-- X(전 Twitter) 카드 메타 태그 추가 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- 수정: X 카드 문구도 SERP와 일치 -->
+    <meta name="twitter:title" content="AI & Poem - Azonnali Hangos AI Versgenerátor">
+    <meta name="twitter:description"
+        content="Változtasson bármilyen témát egyedi verssé opcionális narrációval 10 másodperc alatt. Ingyenes AI költészetkészítő, a kereséshez igazítva.">
+    <meta name="twitter:image" content="https://www.ai-and-poem.art/image/robot_poet.png">
+    <meta name="twitter:image:alt" content="Illustration of an AI robot writing poetry">
+
+    <!-- JSON-LD Structured Data for enhanced SEO -->
+    <!-- 수정: 구조화 데이터에 새로운 타이틀과 설명 반영 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AI &amp; Poem - Instant Voice-Ready AI Poem Generator",
+        "url": "https://www.ai-and-poem.art/hu/",
+        "description": "Turn any topic into a bespoke poem with optional narration in under 10 seconds. Free AI poetry maker tailored to your search.",
+        "inLanguage": "hu",
+        "author": {
+        "@type": "Person",
+        "name": "Ryu Jae-kuk"
+        },
+        "image": "https://www.ai-and-poem.art/image/robot_poet.png"
+    }
+    </script>
+    <!-- 수정: 대표 샘플 시를 CreativeWork 구조화 데이터로 추가 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Dawn Over the River – Sample AI Poem",
+        "inLanguage": "hu",
+        "genre": ["AI poetry", "creative writing"],
+        "creator": {
+            "@type": "Organization",
+            "name": "AI & Poem"
+        },
+        "dateModified": "2025-10-20",
+        "isAccessibleForFree": true,
+        "keywords": ["poem ai", "ai poem generator", "ai poetry"],
+        "text": "Neon clouds dissolve in amber light.\nCoffee carts hum awake the street.\nIdeas bloom in whispered bytes.\nFresh verses make mornings complete."
+    }
+    </script>
+    <!-- 수정: FAQPage 구조화 데이터를 추가해 풍부한 검색 노출 유도 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How quickly does AI & Poem create a poem?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                "text": "Most English poems are delivered in 8-10 seconds, including narration preparation, so you can start using them instantly."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use the generated poem commercially?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                "text": "Yes. You can reuse the generated text in campaigns, newsletters, and events; please credit AI & Poem when possible."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the tool create narration automatically?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Select the narration toggle after generation to hear the poem read aloud in your selected language."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CVHJYZWNC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1CVHJYZWNC');
+    </script>
+
+    <!-- Google Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799"
+        crossorigin="anonymous"></script>
+
+    <!-- style.css 불러오기 -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-left">
+            <h1>AI &amp; Poem</h1>
+            <!-- 수정: SERP 키워드를 포함한 태그라인으로 조정 -->
+            <h3>Azonnali Hangos AI Versgenerátor</h3>
+        </div>
+        <div class="header-right">
+            <!-- 수정: About/Contact 링크 추가 -->
+            <a class="header-link" href="about.html">Rólunk</a>
+            <a class="header-link" href="contact.html">Kapcsolat</a>
+            <a class="header-link" href="../blog/hu/index.html">Blog</a>
+            <label for="language" id="language-label">Válasszon nyelvet</label>
+            <select id="language">
+                <!-- 수정: 네덜란드어, 노르웨이어, 덴마크어, 필리핀어, 헝가리어 추가 및 전체 정렬 -->
+                <option value="ar">العربية</option>
+                <option value="bn">বাংলা</option>
+                <option value="ch">Schweizerdeutsch</option>
+                <option value="da">Dansk</option>
+                <option value="de">Deutsch</option>
+                <option value="el">Ελληνικά</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fi">Suomi</option>
+                <option value="fil">Filipino</option>
+                <option value="fr">Français</option>
+                <option value="hi">हिन्दी</option>
+                <option value="hu" selected>Magyar</option>
+                <option value="id">Bahasa Indonesia</option>
+                <option value="it">Italiano</option>
+                <option value="ja">日本語</option>
+                <option value="ko">한국어</option>
+                <option value="mn">Монгол</option>
+                <option value="ms">Bahasa Melayu</option>
+                <option value="nl">Nederlands</option>
+                <option value="no">Norsk</option>
+                <option value="pl">Polski</option>
+                <option value="pt">Português</option>
+                <option value="ru">русский</option>
+                <option value="sv">Svenska</option>
+                <option value="sw">Kiswahili</option>
+                <option value="th">ไทย</option>
+                <option value="tr">Türkçe</option>
+                <option value="uk">Українська</option>
+                <option value="vi">Tiếng Việt</option>
+                <option value="zh">中文</option>
+            </select>
+        </div>
+    </div>
+    <div class="container">
+        <div id="image-box">
+            <video loop id="processing-video" src="../image/robot_poet.mp4" poster="../image/robot_poet.png"
+                aria-label="Video of an AI robot writing poetry"></video>
+        </div>
+        <form id="poem-form">
+            <!-- 수정: 주요 검색어를 언급해 기대치 정렬 -->
+            <p id="form-description">'Vers ai'-t keres? Adjon meg egy témát, hogy másodpercek alatt narrált verset
+                kapjon.</p>
+            <div class="input-box">
+                <input type="text" id="topic" placeholder="Írja be a vers témáját" required>
+                <button id="poetry-writing-button" type="submit">Írj egy verset</button>
+            </div>
+            <!-- 수정: 정책 위반 주의 문구 추가 -->
+            <p id="policy-warning">
+                ⚠️ A nem megfelelő témák, mint például felnőtt tartalom, erőszak és gyűlölet korlátozva lehetnek.
+            </p>
+        </form>
+        <div id="poem"></div>
+        <div class="buttons">
+            <!-- '시 낭송' 버튼  -->
+            <button id="tts-button" disabled>🔊 Szavaljon el egy verset</button>
+        </div>
+    </div>
+    <!-- Service Overview Section -->
+    <section class="seo-section">
+        <!-- 수정: 서비스 개요 섹션을 헝가리어로 번역 -->
+        <h2>AI & Poem Szolgáltatás Áttekintés</h2>
+        <p>Az AI & Poem egy olyan szolgáltatás, ahol egy érzelemfelismerő AI gyönyörű versekké alakítja történeteit.
+            Az egyszerű szöveggeneráláson túl természetes hangalámondást biztosít, amely vetekszik a profi
+            szinkronszínészekével,
+            kielégítve mind a vizuális, mind a hallási érzékeket.</p>
+        <p>Több mint 20 nyelvet támogat, beleértve a koreait, az angolt és a franciát,
+            így különféle célokra, például esküvői beszédekre, szerelmes levelekre és érzelmes SNS feliratokra
+            készíthet írásokat mindössze 10 másodperc alatt.</p>
+    </section>
+
+    <!-- Usage Guide Section -->
+    <section class="seo-section">
+        <!-- 수정: 사용 가이드 섹션을 헝가리어로 번역 -->
+        <h2>AI Versgeneráló AI &amp; Poem Használati Útmutató</h2>
+        <p>Használja az alábbi mintát, hogy megértse a generátortól várható hangnemet és hosszt.</p>
+        <article>
+            <h3>Minta Téma: Tavaszi Piknik</h3>
+            <pre aria-label="Spring Picnic Sample Poem">
+Szirmok hullanak lágyan összekulcsolt kezekre,
+A szellő takarókat terít a nyílt mezőkre.
+Piknik terítőnkön nevetés és meleg tea ül,
+Egy tavaszi kirándulás megkönnyíti a szívet,
+és minden történet virágzik, mint egy bimbó.
+            </pre>
+        </article>
+        <article>
+            <h3>Minta Téma: Őszi Este</h3>
+            <pre aria-label="Autumn Evening Sample Poem">
+Vörös naplemente időzik az ablaknál,
+Tücsök hangok áradnak halkan.
+Ahogy a lapok zörögve fordulnak,
+Az ősz mélyül és a gondolatok érnek.
+            </pre>
+        </article>
+        <article>
+            <h3>Minta Téma: Első Hó</h3>
+            <pre aria-label="First Snow Sample Poem">
+Fehér világ ereszkedik alá némán,
+Melegen átölelve az egész világot.
+Meleg lehelet a hideg levegőben,
+Lábnyomaink emlékként maradnak meg.
+            </pre>
+        </article>
+        <ul>
+            <li>Írjon be bármilyen témát, és kapjon egy narrált verset nagyjából 10 másodperc alatt.</li>
+            <li>Állítsa be a vers hosszát, típusát és nyelvét, hogy új hangokkal kísérletezzen.</li>
+            <li>Használja a „Szavalás” gombot, hogy azonnal hangosan hallja a verset.</li>
+        </ul>
+    </section>
+
+    <!-- Technical Explanation Section -->
+    <section class="seo-section">
+        <!-- 수정: 기술 설명 섹션을 헝가리어로 번訳 -->
+        <h2>Hogyan ír verseket az AI Versgeneráló?</h2>
+        <p>Az AI & Poem a legújabb Nagy Nyelvi Modell (LLM) technológiát használja. Az AI, amelyet több millió
+            irodalmi művön és versen képeztek ki, megérti a megadott téma kontextusát, és megtalálja a megfelelő
+            metaforákat és rímeket.
+        </p>
+        <p>Nem csak felsorolja a szavakat; minden alkalommal új és eredeti verset hoz létre, figyelembe véve az érzelmek
+            áramlását
+            és a költői szerkezetet. További részletekért tekintse meg <a href="../blog/hu/article-1.html"
+                style="color: #fff; text-decoration: underline;">Blogunkat</a>.</p>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="seo-section">
+        <!-- 수정: használati esetek szekciót 헝가리어로 번역 -->
+        <h2>Miért keresnek az alkotók a "vers ai"-re</h2>
+        <ul>
+            <li>Indítson gyors közösségi posztokat egyedi versekkel, amelyek illeszkednek márkája hangjához.</li>
+            <li>Hozzon létre felejthetetlen fogadalmakat, beszédeket és üdvözlőkártyákat percek alatt.</li>
+            <li>Kínáljon közönségelköteleződést rendezvényeken élő kérésre írt versekkel és azonnali narrációval.</li>
+        </ul>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="seo-section">
+        <!-- 수정: FAQ szekciót 헝가리어로 번역 -->
+        <h2>Gyakran Ismételt Kérdések</h2>
+        <details>
+            <summary>Milyen gyorsan készít verset az AI &amp; Poem?</summary>
+            <p>A legtöbb vers 10 másodpercen belül megérkezik, és opcionális narrációt is tartalmaz, így azonnal
+                bemutathatja őket.
+            </p>
+        </details>
+        <details>
+            <summary>Használhatom a generált verset kereskedelmi célokra?</summary>
+            <p>Igen. Újra felhasználhatja a verseket kampányokban, hírlevelekben és eseményeken; az AI &amp; Poem
+                megjelölése
+                ajánlott, ha a hely engedi.</p>
+        </details>
+        <details>
+            <summary>Az eszköz automatikusan létrehoz narrációt?</summary>
+            <p>A generálás után válassza a narráció kapcsolót, hogy hallja a verset hangosan felolvasva a kiválasztott
+                nyelven.</p>
+        </details>
+    </section>
+
+    <!-- Blog Preview Section -->
+    <section class="seo-section">
+        <!-- 수정: blog szekciót 헝가리어로 번역 -->
+        <h2>Költészet és AI Blog</h2>
+        <div class="blog-preview">
+            <article>
+                <h3><a href="../blog/hu/article-1.html">Az AI Versgenerátorok Alapelvei és Jövője</a></h3>
+                <p>Tudja meg, hogyan tanulnak meg a nagy nyelvi modellek irodalmi kifejezéseket és alkotnak művészetet.
+                </p>
+            </article>
+            <article>
+                <h3><a href="../blog/hu/article-2.html">Hogyan írjunk megható esküvői beszédeket</a></h3>
+                <p>Ismerje meg, hogyan írhat őszinte beszédeket gyorsan és egyszerűen az AI segítségével.</p>
+            </article>
+            <article>
+                <h3><a href="../blog/hu/article-3.html">Érzelmes Idézetek Gyűjteménye, Amelyek Népszerűek az SNS-en</a>
+                </h3>
+                <p>Rövid és erőteljes költői kifejezések, amelyek lájkokat vonzanak az Instagramon és a Facebookon.</p>
+            </article>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <!-- 수정: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
+        <!-- 수정: 푸터 링크 추가 -->
+        <a href="about.html">Rólunk</a>
+        <span>|</span>
+        <a href="../blog/hu/index.html">Blog</a>
+        <span>|</span>
+        <a href="contact.html">Kapcsolat</a>
+        <span>|</span>
+        <a href="privacy.html">Adatvédelmi irányelvek</a>
+        <span>|</span>
+        <a href="terms.html">Szolgáltatási feltételek</a>
+    </footer>
+    <script src="../script.js" defer></script>
+</body>
+
+</html>
