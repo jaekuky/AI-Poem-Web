@@ -192,11 +192,9 @@ topicInput.addEventListener('input', () => {
     topicInput.setCustomValidity('');
 });
 
-document.getElementById('language').addEventListener('change', async function(event) {
-    event.preventDefault();
-
+document.getElementById('language').addEventListener('change', function(event) {
     const language = languageSelect.value;
-    var link;
+    let link;
     // 사이트 링크 수정
     switch(language){
         case 'ko':
@@ -330,11 +328,12 @@ document.getElementById('language').addEventListener('change', async function(ev
 
 // 시 작성 버튼 함수
 document.getElementById('poem-form').addEventListener('submit', async function(event) {
-// poetryWritingButton.addEventListener('submit', async function(event) {
     event.preventDefault();
 
     const topic = topicInput.value.trim();
     const language = languageSelect.value;
+    const submitButton = document.getElementById('poetry-writing-button');
+    const errMsg = errorMessage[language] || errorMessage['ko'];
 
     poemDiv.textContent = processingMessage[language] || processingMessage['ko'];
 
@@ -342,6 +341,12 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
     processingVideo.play();
     // TTS 버튼 비활성화
     ttsButton.disabled = true;
+    // 중복 제출 방지
+    submitButton.disabled = true;
+
+    // 요청 타임아웃 설정 (30초)
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 30000);
 
     try {
         const response = await fetch('https://oy3rkh5hgszlzgiibdxxmbpxte0mknfg.lambda-url.ap-northeast-2.on.aws/generate-poem', {
@@ -352,39 +357,50 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
             // 프론트엔드 CORS 추가
             mode: 'cors',
             credentials: 'include',
+            signal: controller.signal,
             body: JSON.stringify({
                 topic: topic,
                 language: language
             })
         });
 
+        clearTimeout(timeoutId);
+
         if (response.ok) {
             const data = await response.json();
             const poem = data.poem;
             poemDiv.textContent = poem;
-            
+
             // TTS 버튼 활성화
             ttsButton.disabled = false;
 
             // 비디오 정지
             processingVideo.pause();
         } else {
-            const errorData = await response.json();
-            poemDiv.textContent = `${errorMessage[language]}: ${errorData.error}`;
-            
+            try {
+                const errorData = await response.json();
+                poemDiv.textContent = `${errMsg}: ${errorData.error}`;
+            } catch (parseError) {
+                poemDiv.textContent = `${errMsg}: ${response.statusText}`;
+            }
+
             // 비디오 정지
             processingVideo.pause();
         }
     } catch (error) {
-        poemDiv.textContent = `${errorMessage[language]}: ${error.message}`;
-        
+        clearTimeout(timeoutId);
+        poemDiv.textContent = `${errMsg}: ${error.message}`;
+
         // 비디오 정지
         processingVideo.pause();
+    } finally {
+        // 제출 버튼 복구
+        submitButton.disabled = false;
     }
 });
 
 // TTS 버튼 함수
-ttsButton.addEventListener('click', async function(event) {
+ttsButton.addEventListener('click', function(event) {
     const language = languageSelect.value;
     const poem = poemDiv.textContent;
     const ttsLang = languageMap[language]?.ttsLang || 'ko-KR';

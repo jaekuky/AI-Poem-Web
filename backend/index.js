@@ -1,4 +1,4 @@
-const serverless =require('serverless-http'); // serverless-http 설정
+const serverless = require('serverless-http'); // serverless-http 설정
 const express = require('express');
 const cors = require('cors'); // CORS 허용을 위해 필요
 const bodyParser = require('body-parser');
@@ -24,7 +24,7 @@ app.use(cors(corsOptions));
 // Modified: 모든 경로에 대해 preflight(OPTIONS) 요청도 처리
 app.options('*', cors(corsOptions));
 
-app.use(bodyParser.json());
+app.use(bodyParser.json({ limit: '1mb' }));
 
 // OpenAI API 키 설정 (환경 변수에서 가져옴)
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
@@ -124,7 +124,7 @@ const DISALLOWED_KEYWORDS = [
     'порно', 'секс', 'сексуальный', 'голый', 'насилие', 'убить', 'убийство', 'террор', 'бомба', 'оружие', 'пистолет', 'наркотики', 'марихуана', 'кокаин', 'нацист', 'самоубийство', 'членовредительство', 'азартные игры', 'казино', 'ставки', 'ненависть', 'расизм', 'изнасилование', 'сексуальное насилие', 'пытки', 'сексуальные домогательства', 'педофилия', 'каннибализм', 'групповое изнасилование', 'обезглавливание', 'казнь', 'сожжение', 'скотоложство', 'некрофилия', 'зоофилия',
 
     // --- Ukrainian (uk) ---
-    'порно', 'секс', 'сексуальний', 'голий', 'насильство', 'вбити', 'вбивство', 'террор', 'бомба', 'зброя', 'пістолет', 'наркотики', 'марихуана', 'кокаїн', 'нацист', 'самогубство', 'самоушкодження', 'азартні ігри', 'казино', 'ставки', 'ненависть', 'расизм', 'згвалтування', 'сексуальне насильство', 'torture', 'сексуальні домагання', 'педофілія', 'канібалізм', 'групове згвалтування', 'обезголовлення', 'страта', 'спалення', 'скотолозтва', 'некрофілія', 'зоофілія',
+    'порно', 'секс', 'сексуальний', 'голий', 'насильство', 'вбити', 'вбивство', 'террор', 'бомба', 'зброя', 'пістолет', 'наркотики', 'марихуана', 'кокаїн', 'нацист', 'самогубство', 'самоушкодження', 'азартні ігри', 'казино', 'ставки', 'ненависть', 'расизм', 'згвалтування', 'сексуальне насильство', 'тортури', 'сексуальні домагання', 'педофілія', 'канібалізм', 'групове згвалтування', 'обезголовлення', 'страта', 'спалення', 'скотолозтва', 'некрофілія', 'зоофілія',
 
     // --- Polish (pl) ---
     'pornografia', 'seks', 'seksualny', 'nagi', 'przemoc', 'zabić', 'morderstwo', 'terroryzm', 'bomba', 'broń', 'pistolet', 'narkotyki', 'marihuana', 'kokaina', 'nazista', 'samobójstwo', 'samookaleczenie', 'hazard', 'kasyno', 'zakłady', 'nienawiść', 'rasizm', 'gwałt', 'napaść seksualna', 'tortury', 'molestowanie seksualne', 'pedofilia', 'kanibalizm', 'gwałt zbiorowy', 'ścięcie', 'egzekucja', 'spalenie', 'bestialstwo', 'nekrofilia', 'zoofilia',
@@ -133,7 +133,7 @@ const DISALLOWED_KEYWORDS = [
     'pornografia', 'sesso', 'sessuale', 'nudo', 'violenza', 'uccidere', 'omicidio', 'terrorismo', 'bomba', 'arma', 'pistola', 'droga', 'marijuana', 'cocaina', 'nazista', 'suicidio', 'autolesionismo', 'gioco d\'azzardo', 'casinò', 'scommesse', 'odio', 'razzismo', 'stupro', 'violenza sessuale', 'tortura', 'molestie sessuali', 'pedofilia', 'cannibalismo', 'stupro di gruppo', 'decapitazione', 'esecuzione', 'rogo', 'bestialità', 'necrofilia', 'zoofilia',
 
     // --- Portuguese (pt) ---
-    'pornografia', 'sexo', 'sexual', 'nu', 'violência', 'olência', 'matar', 'assassinato', 'terrorismo', 'bomba', 'arma', 'pistola', 'drogas', 'maconha', 'cocaína', 'nazista', 'suicídio', 'automutilação', 'jogo', 'cassino', 'apostas', 'ódio', 'racismo', 'estupro', 'abuso sexual', 'tortura', 'assédio sexual', 'pedofilia', 'canibalismo', 'estupro coletivo', 'decapitação', 'execução', 'fogueira', 'bestialidade', 'necrofilia', 'zoofilia',
+    'pornografia', 'sexo', 'sexual', 'nu', 'violência', 'matar', 'assassinato', 'terrorismo', 'bomba', 'arma', 'pistola', 'drogas', 'maconha', 'cocaína', 'nazista', 'suicídio', 'automutilação', 'jogo', 'cassino', 'apostas', 'ódio', 'racismo', 'estupro', 'abuso sexual', 'tortura', 'assédio sexual', 'pedofilia', 'canibalismo', 'estupro coletivo', 'decapitação', 'execução', 'fogueira', 'bestialidade', 'necrofilia', 'zoofilia',
 
     // --- Greek (el) ---
     'πορνό', 'σεξ', 'σεξουαλικός', 'γυμνός', 'βία', 'σκοτώνω', 'φόνος', 'τρομοκρατία', 'βόμβα', 'όπλο', 'πιστόλι', 'ναρκωτικά', 'μαριχουάνα', 'κοκαΐνη', 'ναζί', 'αυτοκτονία', 'αυτοτραυματισμός', 'τζόγος', 'καζίνο', 'στοίχημα', 'μίσος', 'ρατσισμός', 'βιασμός', 'σεξουαλική επίθεση', 'βασανιστήρια', 'σεξουαλική παρενόχληση', 'παιδοφιλία', 'κανιβαλισμός', 'ομαδικός βιασμός', 'αποκεφαλισμός', 'εκτέλεση', 'κάψιμο', 'κτηνοβασία', 'νεκροφιλία', 'ζωοφιλία',
@@ -315,7 +315,7 @@ const ERROR_MESSAGES = {
     'uk': {
         missingTopic: 'Будь ласка, введіть тему вірша.',
         topicTooLong: (max) => `Будь ласка, введіть тему до ${max} символів.`,
-        disallowedTopic: 'Нееможливо створити вірш з цією темою.',
+        disallowedTopic: 'Неможливо створити вірш з цією темою.',
         unsupportedLang: 'Непідтримувана мова.',
         serverConfigError: 'Помилка конфігурації сервера.',
         generationError: 'Виникла помилка при створенні вірша.'
@@ -476,10 +476,14 @@ app.post('/generate-poem', async (req, res) => {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${OPENAI_API_KEY}`
-            }
+            },
+            timeout: 30000
         });
 
         const data = response.data;
+        if (!data.choices || data.choices.length === 0) {
+            return res.status(500).json({ error: getErrorMessage(language, 'generationError') });
+        }
         const poem = data.choices[0].message.content.trim();
 
         res.json({ poem });
@@ -499,8 +503,5 @@ app.post('/generate-poem', async (req, res) => {
     }
 });
 
-// app.listen(port, () => {
-//     console.log(`서버가 포트 ${port}에서 실행 중입니다.`);
-// });
 module.exports.handler = serverless(app); // app을 serverless()함수로 감싸서
                                           // AWSLambda에서 실행할 수 있도록 만듦
