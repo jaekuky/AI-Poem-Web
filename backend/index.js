@@ -11,7 +11,6 @@ const app = express();
 let corsOptions = {
     origin: [
              'https://ai-and-poem-jaekuky.pages.dev',
-             'https://www.ai-and-poem.art',
              'https://ai-and-poem.art',
             ],
     // Modified: 허용 메서드와 헤더를 명시적으로 선언

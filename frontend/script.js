@@ -198,127 +198,127 @@ document.getElementById('language').addEventListener('change', function(event) {
     // 사이트 링크 수정
     switch(language){
         case 'ko':
-            link = 'https://www.ai-and-poem.art/ko/'
+            link = 'https://ai-and-poem.art/ko/'
             location.href = link;
             break;
         case 'en':
-            link = 'https://www.ai-and-poem.art/en/'
+            link = 'https://ai-and-poem.art/en/'
             location.href = link;
             break;
         case 'ja':
-            link = 'https://www.ai-and-poem.art/ja/'
+            link = 'https://ai-and-poem.art/ja/'
             location.href = link;
             break;
         case 'zh':
-            link = 'https://www.ai-and-poem.art/zh/'
+            link = 'https://ai-and-poem.art/zh/'
             location.href = link;
             break;
         case 'es':
-            link = 'https://www.ai-and-poem.art/es/'
+            link = 'https://ai-and-poem.art/es/'
             location.href = link;
             break;
         case 'fr':
-            link = 'https://www.ai-and-poem.art/fr/'
+            link = 'https://ai-and-poem.art/fr/'
             location.href = link;
             break;
         case 'ru':
-            link = 'https://www.ai-and-poem.art/ru/'
+            link = 'https://ai-and-poem.art/ru/'
             location.href = link;
             break;
         case 'it':
-            link = 'https://www.ai-and-poem.art/it/'
+            link = 'https://ai-and-poem.art/it/'
             location.href = link;
             break;
         case 'de':
-            link = 'https://www.ai-and-poem.art/de/'
+            link = 'https://ai-and-poem.art/de/'
             location.href = link;
             break;
         case 'ms':
-            link = 'https://www.ai-and-poem.art/ms/' // 수정: 말레이어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/ms/' // 수정: 말레이어 페이지 이동 처리
             location.href = link;
             break;
         case 'bn':
-            link = 'https://www.ai-and-poem.art/bn/' // 수정: 벵골어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/bn/' // 수정: 벵골어 페이지 이동 처리
             location.href = link;
             break;
         case 'vi':
-            link = 'https://www.ai-and-poem.art/vi/' // 수정: 베트남어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/vi/' // 수정: 베트남어 페이지 이동 처리
             location.href = link;
             break;
         case 'el':
-            link = 'https://www.ai-and-poem.art/el/' // 수정: 그리스어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/el/' // 수정: 그리스어 페이지 이동 처리
             location.href = link;
             break;
         case 'pt':
-            link = 'https://www.ai-and-poem.art/pt/' // 수정: 포르투갈어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/pt/' // 수정: 포르투갈어 페이지 이동 처리
             location.href = link;
             break;
         case 'pl':
-            link = 'https://www.ai-and-poem.art/pl/' // 수정: 폴란드어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/pl/' // 수정: 폴란드어 페이지 이동 처리
             location.href = link;
             break;
         case 'ch':
-            link = 'https://www.ai-and-poem.art/ch/' // 수정: 스위스 독일어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/ch/' // 수정: 스위스 독일어 페이지 이동 처리
             location.href = link;
             break;
         case 'uk':
-            link = 'https://www.ai-and-poem.art/uk/' // 수정: 우크라이나어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/uk/' // 수정: 우크라이나어 페이지 이동 처리
             location.href = link;
             break;
         case 'tr':
-            link = 'https://www.ai-and-poem.art/tr/' // 수정: 터키어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/tr/' // 수정: 터키어 페이지 이동 처리
             location.href = link;
             break;
         case 'sv':
-            link = 'https://www.ai-and-poem.art/sv/' // 수정: 스웨덴어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/sv/' // 수정: 스웨덴어 페이지 이동 처리
             location.href = link;
             break;
         case 'hi':
-            link = 'https://www.ai-and-poem.art/hi/' // 수정: 힌디어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/hi/' // 수정: 힌디어 페이지 이동 처리
             location.href = link;
             break;
         case 'id':
-            link = 'https://www.ai-and-poem.art/id/' // 수정: 인도네시아어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/id/' // 수정: 인도네시아어 페이지 이동 처리
             location.href = link;
             break;
         case 'th':
-            link = 'https://www.ai-and-poem.art/th/' // 수정: 태국어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/th/' // 수정: 태국어 페이지 이동 처리
             location.href = link;
             break;
         case 'fi':
-            link = 'https://www.ai-and-poem.art/fi/' // 수정: 핀란드어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/fi/' // 수정: 핀란드어 페이지 이동 처리
             location.href = link;
             break;
         case 'ar':
-            link = 'https://www.ai-and-poem.art/ar/' // 수정: 아랍어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/ar/' // 수정: 아랍어 페이지 이동 처리
             location.href = link;
             break;
         case 'mn':
-            link = 'https://www.ai-and-poem.art/mn/' // 수정: 몽골어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/mn/' // 수정: 몽골어 페이지 이동 처리
             location.href = link;
             break;
         case 'sw':
-            link = 'https://www.ai-and-poem.art/sw/' // 수정: 스와힐리어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/sw/' // 수정: 스와힐리어 페이지 이동 처리
             location.href = link;
             break;
         case 'nl':
-            link = 'https://www.ai-and-poem.art/nl/' // 수정: 네덜란드어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/nl/' // 수정: 네덜란드어 페이지 이동 처리
             location.href = link;
             break;
         case 'no':
-            link = 'https://www.ai-and-poem.art/no/' // 수정: 노르웨이어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/no/' // 수정: 노르웨이어 페이지 이동 처리
             location.href = link;
             break;
         case 'da':
-            link = 'https://www.ai-and-poem.art/da/' // 수정: 덴마크어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/da/' // 수정: 덴마크어 페이지 이동 처리
             location.href = link;
             break;
         case 'fil':
-            link = 'https://www.ai-and-poem.art/fil/' // 수정: 필리핀어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/fil/' // 수정: 필리핀어 페이지 이동 처리
             location.href = link;
             break;
         case 'hu':
-            link = 'https://www.ai-and-poem.art/hu/' // 수정: 헝가리어 페이지 이동 처리
+            link = 'https://ai-and-poem.art/hu/' // 수정: 헝가리어 페이지 이동 처리
             location.href = link;
             break;
         default:

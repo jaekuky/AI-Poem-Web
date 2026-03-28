@@ -1,708 +1,708 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.ai-and-poem.art/about.html</loc>
+    <loc>https://ai-and-poem.art/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/contact.html</loc>
+    <loc>https://ai-and-poem.art/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/ko/</loc>
+    <loc>https://ai-and-poem.art/ko/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/ja/</loc>
+    <loc>https://ai-and-poem.art/ja/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/en/</loc>
+    <loc>https://ai-and-poem.art/en/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/es/</loc>
+    <loc>https://ai-and-poem.art/es/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/fr/</loc>
+    <loc>https://ai-and-poem.art/fr/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/zh/</loc>
+    <loc>https://ai-and-poem.art/zh/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/privacy.html</loc>
+    <loc>https://ai-and-poem.art/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/ko/privacy.html</loc>
+    <loc>https://ai-and-poem.art/ko/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/ja/privacy.html</loc>
+    <loc>https://ai-and-poem.art/ja/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/en/privacy.html</loc>
+    <loc>https://ai-and-poem.art/en/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/es/privacy.html</loc>
+    <loc>https://ai-and-poem.art/es/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/fr/privacy.html</loc>
+    <loc>https://ai-and-poem.art/fr/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/zh/privacy.html</loc>
+    <loc>https://ai-and-poem.art/zh/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/terms.html</loc>
+    <loc>https://ai-and-poem.art/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/ko/terms.html</loc>
+    <loc>https://ai-and-poem.art/ko/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/ja/terms.html</loc>
+    <loc>https://ai-and-poem.art/ja/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/en/terms.html</loc>
+    <loc>https://ai-and-poem.art/en/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/es/terms.html</loc>
+    <loc>https://ai-and-poem.art/es/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/fr/terms.html</loc>
+    <loc>https://ai-and-poem.art/fr/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/zh/terms.html</loc>
+    <loc>https://ai-and-poem.art/zh/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/ja/index.html</loc>
+    <loc>https://ai-and-poem.art/blog/ja/index.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/en/index.html</loc>
+    <loc>https://ai-and-poem.art/blog/en/index.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/es/index.html</loc>
+    <loc>https://ai-and-poem.art/blog/es/index.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/fr/index.html</loc>
+    <loc>https://ai-and-poem.art/blog/fr/index.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/zh/index.html</loc>
+    <loc>https://ai-and-poem.art/blog/zh/index.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/ja/article-1.html</loc>
+    <loc>https://ai-and-poem.art/blog/ja/article-1.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/en/article-1.html</loc>
+    <loc>https://ai-and-poem.art/blog/en/article-1.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/es/article-1.html</loc>
+    <loc>https://ai-and-poem.art/blog/es/article-1.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/fr/article-1.html</loc>
+    <loc>https://ai-and-poem.art/blog/fr/article-1.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/zh/article-1.html</loc>
+    <loc>https://ai-and-poem.art/blog/zh/article-1.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/ja/article-2.html</loc>
+    <loc>https://ai-and-poem.art/blog/ja/article-2.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/en/article-2.html</loc>
+    <loc>https://ai-and-poem.art/blog/en/article-2.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/es/article-2.html</loc>
+    <loc>https://ai-and-poem.art/blog/es/article-2.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/fr/article-2.html</loc>
+    <loc>https://ai-and-poem.art/blog/fr/article-2.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/zh/article-2.html</loc>
+    <loc>https://ai-and-poem.art/blog/zh/article-2.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/ja/article-3.html</loc>
+    <loc>https://ai-and-poem.art/blog/ja/article-3.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/en/article-3.html</loc>
+    <loc>https://ai-and-poem.art/blog/en/article-3.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/es/article-3.html</loc>
+    <loc>https://ai-and-poem.art/blog/es/article-3.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/fr/article-3.html</loc>
+    <loc>https://ai-and-poem.art/blog/fr/article-3.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/zh/article-3.html</loc>
+    <loc>https://ai-and-poem.art/blog/zh/article-3.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/ja/article-4.html</loc>
+    <loc>https://ai-and-poem.art/blog/ja/article-4.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/en/article-4.html</loc>
+    <loc>https://ai-and-poem.art/blog/en/article-4.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/es/article-4.html</loc>
+    <loc>https://ai-and-poem.art/blog/es/article-4.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/fr/article-4.html</loc>
+    <loc>https://ai-and-poem.art/blog/fr/article-4.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/zh/article-4.html</loc>
+    <loc>https://ai-and-poem.art/blog/zh/article-4.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/ja/article-5.html</loc>
+    <loc>https://ai-and-poem.art/blog/ja/article-5.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/en/article-5.html</loc>
+    <loc>https://ai-and-poem.art/blog/en/article-5.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/es/article-5.html</loc>
+    <loc>https://ai-and-poem.art/blog/es/article-5.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/fr/article-5.html</loc>
+    <loc>https://ai-and-poem.art/blog/fr/article-5.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/zh/article-5.html</loc>
+    <loc>https://ai-and-poem.art/blog/zh/article-5.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://www.ai-and-poem.art/ja/about.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.ai-and-poem.art/ja/contact.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://ai-and-poem.art/ja/about.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://ai-and-poem.art/ja/contact.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/ko/</loc>
+    <loc>https://ai-and-poem.art/blog/ko/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/ko/article-1.html</loc>
+    <loc>https://ai-and-poem.art/blog/ko/article-1.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/ko/article-2.html</loc>
+    <loc>https://ai-and-poem.art/blog/ko/article-2.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/ko/article-3.html</loc>
+    <loc>https://ai-and-poem.art/blog/ko/article-3.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/ko/article-4.html</loc>
+    <loc>https://ai-and-poem.art/blog/ko/article-4.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.ai-and-poem.art/blog/ko/article-5.html</loc>
+    <loc>https://ai-and-poem.art/blog/ko/article-5.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url><loc>https://www.ai-and-poem.art/zh/about.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.ai-and-poem.art/zh/contact.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.ai-and-poem.art/ko/about.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.ai-and-poem.art/ko/contact.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.ai-and-poem.art/fr/about.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.ai-and-poem.art/fr/contact.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.ai-and-poem.art/es/about.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.ai-and-poem.art/es/contact.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.ai-and-poem.art/en/about.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.ai-and-poem.art/en/contact.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://ai-and-poem.art/zh/about.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://ai-and-poem.art/zh/contact.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://ai-and-poem.art/ko/about.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://ai-and-poem.art/ko/contact.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://ai-and-poem.art/fr/about.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://ai-and-poem.art/fr/contact.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://ai-and-poem.art/es/about.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://ai-and-poem.art/es/contact.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://ai-and-poem.art/en/about.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://ai-and-poem.art/en/contact.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url>
-    <loc>https://www.ai-and-poem.art/</loc>
+    <loc>https://ai-and-poem.art/</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.ai-and-poem.art/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.ai-and-poem.art/fr/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://www.ai-and-poem.art/ja/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://www.ai-and-poem.art/ko/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.ai-and-poem.art/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/" />
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
