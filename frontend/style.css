@@ -73,6 +73,24 @@ body {
   text-decoration: underline;
 }
 
+/* 햄버거 메뉴 */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: white;
+  background: none;
+  border: none;
+  padding: 5px 10px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 /* container */
 .container {
   max-width: 600px;
@@ -375,6 +393,22 @@ body {
   .seo-section {
     padding: 16px;
   }
+
+  /* 모바일에서 푸터 링크 줄바꿈 처리 */
+  .site-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 0;
+    line-height: 1.8;
+  }
+  .site-footer a {
+    font-size: 0.8em;
+    margin: 0 4px;
+  }
+  .site-footer span {
+    margin: 0 2px;
+  }
 }
 
 /* 수정: 쿠키 동의 배너가 페이지 하단에서 겹치지 않도록 바디 여백 추가 */
@@ -398,6 +432,34 @@ body.has-cookie-banner {
 
   .header-right {
     margin-top: 10px;
+    position: relative;
+  }
+
+  /* 햄버거 메뉴 표시 */
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(40, 18, 12, 0.95);
+    padding: 10px 0;
+    border-radius: 8px;
+    margin-top: 5px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links .header-link {
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
   }
 
   /* 태블릿에서도 라벨은 숨기거나 작게 표시할 수 있음. 여기서는 500px 이하와 유사하게 유연하게 처리 */

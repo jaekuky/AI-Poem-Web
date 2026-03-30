@@ -1,4 +1,18 @@
 
+// 햄버거 메뉴 토글
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const navLinks = document.getElementById('nav-links');
+if (hamburgerBtn && navLinks) {
+    hamburgerBtn.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+    });
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.header-right')) {
+            navLinks.classList.remove('active');
+        }
+    });
+}
+
 // 언어 코드와 이름 매핑
 const languageMap = {
     'ko': { name: '한국어', ttsLang: 'ko-KR' },

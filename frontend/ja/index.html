@@ -141,11 +141,15 @@
       <h3>10秒で仕上がる音声付きAI詩生成</h3>
     </div>
     <div class="header-right">
-      <!-- 수정: About/Contact 링크 추가 -->
-      <a class="header-link" href="about.html">私たちについて</a>
-      <a class="header-link" href="contact.html">お問い合わせ</a>
-      <a class="header-link" href="../blog/ja/index.html">ブログ</a>
-      <!-- 수정: 메뉴 번역 -->
+            <button class="hamburger" aria-label="メニュー" id="hamburger-btn">&#9776;</button>
+            <div class="nav-links" id="nav-links">
+                <a class="header-link" href="about.html">サービス紹介</a>
+                <a class="header-link" href="../blog/ja/index.html">ブログ</a>
+                <a class="header-link" href="gallery.html">ギャラリー</a>
+                <a class="header-link" href="faq.html">FAQ</a>
+                <a class="header-link" href="contact.html">お問い合わせ</a>
+            </div>
+
       <label for="language" id="language-label">言語を選択</label>
       <select id="language">
         <!-- 수정: 네덜란드어, 노르웨이어, 덴마크어, 필리핀어, 헝가리어 추가 및 전체 정렬 -->
@@ -285,17 +289,24 @@
     </div>
   </section>
   <footer class="site-footer">
-    <!-- 수정: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
-    <!-- 수정: 푸터 링크 추가 -->
-    <a href="about.html"><!-- 수정: 메뉴 번역 -->私たちについて</a>
-    <span>|</span>
-    <a href="../blog/ja/index.html"><!-- 수정: 메뉴 번역 -->ブログ</a>
-    <span>|</span>
-    <a href="contact.html"><!-- 수정: 메뉴 번역 -->お問い合わせ</a>
-    <span>|</span>
-    <a href="privacy.html">プライバシーポリシー</a>
-    <span>|</span>
-    <a href="terms.html">利用規約</a>
+        <a href="about.html">サービス紹介</a>
+        <span>|</span>
+        <a href="../blog/ja/index.html">ブログ</a>
+        <span>|</span>
+        <a href="gallery.html">ギャラリー</a>
+        <span>|</span>
+        <a href="faq.html">FAQ</a>
+        <span>|</span>
+        <a href="contact.html">お問い合わせ</a>
+        <span>|</span>
+        <a href="about-author.html">著者について</a>
+        <span>|</span>
+        <a href="use-cases.html">活用事例</a>
+        <span>|</span>
+        <a href="privacy.html">プライバシーポリシー</a>
+        <span>|</span>
+        <a href="terms.html">利用規約</a>
+
   </footer>
   <script defer="" src="../script.js"></script>
 </body>

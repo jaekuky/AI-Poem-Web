@@ -149,10 +149,15 @@
       <h3>Generador de poemas IA con narración al instante</h3>
     </div>
     <div class="header-right">
-      <!-- 수정: About/Contact 링크 추가 -->
-      <a class="header-link" href="about.html">Acerca de</a>
-      <a class="header-link" href="contact.html">Contacto</a>
-      <a class="header-link" href="../blog/es/index.html">Blog</a>
+            <button class="hamburger" aria-label="Menú" id="hamburger-btn">&#9776;</button>
+            <div class="nav-links" id="nav-links">
+                <a class="header-link" href="about.html">Acerca de</a>
+                <a class="header-link" href="../blog/es/index.html">Blog</a>
+                <a class="header-link" href="gallery.html">Galería</a>
+                <a class="header-link" href="faq.html">FAQ</a>
+                <a class="header-link" href="contact.html">Contacto</a>
+            </div>
+
       <label for="language" id="language-label">Seleccionar idioma</label>
       <select id="language">
         <!-- 수정: 네덜란드어, 노르웨이어, 덴마크어, 필리핀어, 헝가리어 추가 및 전체 정렬 -->
@@ -302,18 +307,24 @@ y cada historia florece como un brote.</pre>
     </div>
   </section>
   <footer class="site-footer">
-    <!-- 수정: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
-    <!-- 수정: 푸터 링크 추가 -->
-    <a href="about.html"><!-- 수정: 메뉴 번역 -->Acerca de</a>
-    <span>|</span>
-    <a href="../blog/es/index.html"><!-- 수정: 메뉴 번역 --><!-- 수정: 메뉴 번역 --><!-- 수정: 메뉴 번역 --><!-- 수정: 메뉴 번역 -->Blog</a>
-    <span>|</span>
-    <a href="contact.html"><!-- 수정: 메뉴 번역 -->Contacto</a>
-    <span>|</span>
-    <a href="privacy.html">Política de privacidad</a>
-    <span>|</span>
-    <!-- 수정: 이용약관 텍스트 번역 오류 수정 (기존: 개인정보처리방침) -->
-    <a href="terms.html">Términos de servicio</a>
+        <a href="about.html">Acerca de</a>
+        <span>|</span>
+        <a href="../blog/es/index.html">Blog</a>
+        <span>|</span>
+        <a href="gallery.html">Galería</a>
+        <span>|</span>
+        <a href="faq.html">FAQ</a>
+        <span>|</span>
+        <a href="contact.html">Contacto</a>
+        <span>|</span>
+        <a href="about-author.html">Sobre el autor</a>
+        <span>|</span>
+        <a href="use-cases.html">Casos de uso</a>
+        <span>|</span>
+        <a href="privacy.html">Política de privacidad</a>
+        <span>|</span>
+        <a href="terms.html">Términos de servicio</a>
+
   </footer>
   <script defer="" src="../script.js"></script>
 </body>

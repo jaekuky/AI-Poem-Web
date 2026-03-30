@@ -155,10 +155,15 @@
             <h3>Instant voice-ready AI poem generator</h3>
         </div>
         <div class="header-right">
-            <!-- 수정: About/Contact 링크 추가 -->
-            <a class="header-link" href="about.html">About</a>
-            <a class="header-link" href="contact.html">Contact</a>
-            <a class="header-link" href="../blog/en/index.html">Blog</a>
+            <button class="hamburger" aria-label="Menu" id="hamburger-btn">&#9776;</button>
+            <div class="nav-links" id="nav-links">
+                <a class="header-link" href="about.html">About</a>
+                <a class="header-link" href="../blog/en/index.html">Blog</a>
+                <a class="header-link" href="gallery.html">Gallery</a>
+                <a class="header-link" href="faq.html">FAQ</a>
+                <a class="header-link" href="contact.html">Contact</a>
+            </div>
+
             <label for="language" id="language-label">Select Language</label>
             <select id="language">
                 <!-- 수정: 네덜란드어, 노르웨이어, 덴마크어, 필리핀어, 헝가리어 추가 및 전체 정렬 -->
@@ -328,17 +333,24 @@ Our footprints remain as memories.
         </div>
     </section>
     <footer class="site-footer">
-        <!-- 수정: Privacy/Terms 페이지로 이동하는 푸터 링크 -->
-        <!-- 수정: 푸터 링크 추가 -->
         <a href="about.html">About</a>
         <span>|</span>
         <a href="../blog/en/index.html">Blog</a>
         <span>|</span>
+        <a href="gallery.html">Gallery</a>
+        <span>|</span>
+        <a href="faq.html">FAQ</a>
+        <span>|</span>
         <a href="contact.html">Contact</a>
+        <span>|</span>
+        <a href="about-author.html">About the Author</a>
+        <span>|</span>
+        <a href="use-cases.html">Use Cases</a>
         <span>|</span>
         <a href="privacy.html">Privacy Policy</a>
         <span>|</span>
         <a href="terms.html">Terms of Service</a>
+
     </footer>
     <script src="../script.js" defer></script>
 </body>

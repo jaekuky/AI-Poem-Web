@@ -20,10 +20,14 @@
             <h3>À propos de l'IA et du poème</h3>
         </div>
         <div class="header-right">
-            <!-- 수정: 네비게이션 링크 번역 오류 수정 (Maison -> Accueil) -->
-            <a href="index.html" class="header-link">Accueil</a>
-            <a href="../blog/fr/index.html" class="header-link">Blogue</a>
-            <a href="contact.html" class="header-link">Contact</a>
+            <button class="hamburger" aria-label="Menu" id="hamburger-btn">&#9776;</button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html" class="header-link">Accueil</a>
+                <a href="../blog/fr/index.html" class="header-link">Blog</a>
+                <a href="gallery.html" class="header-link">Galerie</a>
+                <a href="faq.html" class="header-link">FAQ</a>
+                <a href="contact.html" class="header-link">Contact</a>
+            </div>
         </div>
     </div>
 
@@ -65,14 +69,24 @@
     <footer class="site-footer">
         <a href="about.html">À propos</a>
         <span>|</span>
-        <a href="../blog/fr/index.html">Blogue</a>
+        <a href="../blog/fr/index.html">Blog</a>
+        <span>|</span>
+        <a href="gallery.html">Galerie</a>
+        <span>|</span>
+        <a href="faq.html">FAQ</a>
         <span>|</span>
         <a href="contact.html">Contact</a>
         <span>|</span>
-        <a href="privacy.html">politique de confidentialité</a>
+        <a href="about-author.html">À propos de l'auteur</a>
+        <span>|</span>
+        <a href="use-cases.html">Cas d'utilisation</a>
+        <span>|</span>
+        <a href="privacy.html">Politique de confidentialité</a>
         <span>|</span>
         <a href="terms.html">Conditions d'utilisation</a>
+
     </footer>
+    <script src="../script.js" defer></script>
 </body>
 
 </html>
