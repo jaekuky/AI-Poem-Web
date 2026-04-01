@@ -496,6 +496,15 @@ body.has-cookie-banner {
 
 .content-section p {
   margin-bottom: 15px;
+  text-align: left;
+}
+
+.content-section summary {
+  text-align: left;
+}
+
+.content-section h3 {
+  text-align: left;
 }
 
 /* Contact Page Specifics */
