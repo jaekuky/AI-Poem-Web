@@ -380,6 +380,100 @@ body.has-cookie-banner {
 }
 
 /* =========================================
+   Author Info Block
+   ========================================= */
+.author-info {
+    margin-top: 48px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border-left: 3px solid #ff9a9e;
+}
+
+.author-info-title {
+    font-size: 1.1em;
+    color: #e0e0e0;
+    margin-bottom: 12px;
+}
+
+.author-info-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.author-info-desc {
+    font-size: 0.95em;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.author-info-link {
+    display: inline-block;
+    color: #ff9a9e;
+    text-decoration: none;
+    font-size: 0.95em;
+}
+
+.author-info-link:hover {
+    text-decoration: underline;
+    color: #ffb3b6;
+}
+
+/* =========================================
+   Related Posts Section
+   ========================================= */
+.related-posts {
+    margin-top: 36px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+.related-posts-title {
+    font-size: 1.1em;
+    color: #e0e0e0;
+    margin-bottom: 16px;
+}
+
+.related-posts-list {
+    list-style: none;
+    padding: 0;
+}
+
+.related-posts-list li {
+    margin-bottom: 12px;
+}
+
+.related-posts-list li:last-child {
+    margin-bottom: 0;
+}
+
+.related-posts-list a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 1.5;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    transition: background 0.2s, color 0.2s;
+}
+
+.related-posts-list a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.related-posts-list a::before {
+    content: "→ ";
+    color: #ff9a9e;
+}
+
+/* =========================================
    태블릿 (768px 이하) 반응형
    ========================================= */
 @media screen and (max-width: 768px) {
@@ -455,6 +549,16 @@ body.has-cookie-banner {
         justify-content: center;
         gap: 4px 0;
         line-height: 1.8;
+    }
+
+    .author-info {
+        margin-top: 36px;
+        padding: 20px;
+    }
+
+    .related-posts {
+        margin-top: 28px;
+        padding: 20px;
     }
 
     .site-footer a {
@@ -585,6 +689,29 @@ body.has-cookie-banner {
 
     .article-content ul {
         padding-left: 16px;
+    }
+
+    .author-info {
+        margin-top: 28px;
+        padding: 16px;
+    }
+
+    .author-info-name {
+        font-size: 1.05em;
+    }
+
+    .author-info-desc {
+        font-size: 0.9em;
+    }
+
+    .related-posts {
+        margin-top: 24px;
+        padding: 16px;
+    }
+
+    .related-posts-list a {
+        font-size: 0.95em;
+        padding: 6px 10px;
     }
 
     .article-container .back-link {
