@@ -90,7 +90,6 @@ body {
 
 /* ✅ poem-form 설명 문구 스타일 추가 */
 #form-description {
-    font-size: 1rem;
     margin-bottom: 10px;
     text-align: center;
     font-size: 20px;
@@ -246,48 +245,7 @@ body {
     text-decoration: none;
 }
 
-@media screen and (max-width: 480px) {
-    .header-left h1 {
-        font-size: 1.2rem;
-    }
 
-    .header-left h3 {
-        font-size: 0.65rem;
-    }
-
-    #image-box {
-        width: 214px;
-        height: 216px;
-    }
-
-    #language-label {
-        font-size: 12px;
-    }
-
-    #topic,
-    #language {
-        font-size: 14px;
-    }
-
-    #poem-form #poetry-writing-button {
-        padding: 5px;
-        font-size: 14px;
-    }
-
-    .header-right #language {
-        width: 100px;
-    }
-
-    .buttons button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-
-    /* 수정: 모바일에서 SEO 섹션 패딩을 줄여 가독성 향상 */
-    .seo-section {
-        padding: 16px;
-    }
-}
 
 /* 수정: 쿠키 동의 배너가 페이지 하단에서 겹치지 않도록 바디 여백 추가 */
 body.has-cookie-banner {
@@ -393,6 +351,8 @@ body.has-cookie-banner {
     margin-bottom: 20px;
     font-size: 1.1em;
     color: #ddd;
+    overflow-wrap: break-word;
+    word-break: keep-all;
 }
 
 .article-content ul {
@@ -417,4 +377,234 @@ body.has-cookie-banner {
 
 .article-container .back-link:hover {
     color: #fff;
+}
+
+/* =========================================
+   태블릿 (768px 이하) 반응형
+   ========================================= */
+@media screen and (max-width: 768px) {
+    .header {
+        height: auto;
+        padding: 10px;
+    }
+
+    .header-left {
+        flex-basis: 100%;
+        text-align: center;
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .header-left h1 {
+        font-size: 1.4em;
+    }
+
+    .header-left h3 {
+        font-size: 0.85em;
+    }
+
+    .header-right {
+        flex-basis: 100%;
+        justify-content: center;
+        padding: 5px 10px;
+    }
+
+    .header-right #language {
+        width: auto;
+        min-width: 100px;
+    }
+
+    .blog-container {
+        padding: 30px 16px;
+    }
+
+    .blog-header {
+        margin-bottom: 30px;
+    }
+
+    .blog-title {
+        font-size: 1.3em;
+    }
+
+    .blog-item {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .article-container {
+        padding: 30px 16px;
+    }
+
+    .article-title {
+        font-size: 1.6em;
+    }
+
+    .article-content h2 {
+        font-size: 1.3em;
+        margin-top: 30px;
+        margin-bottom: 16px;
+    }
+
+    .article-content p {
+        font-size: 1em;
+    }
+
+    .site-footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px 0;
+        line-height: 1.8;
+    }
+
+    .site-footer a {
+        font-size: 0.85em;
+        margin: 0 6px;
+    }
+
+    #image-box {
+        width: 280px;
+        height: 284px;
+    }
+
+    .seo-section {
+        padding: 20px;
+    }
+}
+
+/* =========================================
+   모바일 (480px 이하) 반응형
+   ========================================= */
+@media screen and (max-width: 480px) {
+    .header {
+        height: auto;
+        flex-direction: column;
+        padding: 8px;
+    }
+
+    .header-left {
+        flex-basis: auto;
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+        align-items: center;
+    }
+
+    .header-left h1 {
+        font-size: 1.2rem;
+    }
+
+    .header-left h3 {
+        font-size: 0.65rem;
+    }
+
+    .header-right {
+        flex-basis: auto;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 4px 0;
+    }
+
+    .header-right #language {
+        width: 100px;
+    }
+
+    #image-box {
+        width: 214px;
+        height: 216px;
+    }
+
+    #language-label {
+        font-size: 12px;
+    }
+
+    #topic,
+    #language {
+        font-size: 14px;
+    }
+
+    #poem-form #poetry-writing-button {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .buttons button {
+        font-size: 14px;
+        padding: 10px 18px;
+        min-height: 44px;
+    }
+
+    .seo-section {
+        padding: 16px;
+    }
+
+    .blog-container {
+        padding: 20px 12px;
+    }
+
+    .blog-header {
+        margin-bottom: 20px;
+    }
+
+    .blog-title {
+        font-size: 1.1em;
+    }
+
+    .blog-item {
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+
+    .blog-excerpt {
+        font-size: 0.9em;
+    }
+
+    .article-container {
+        padding: 20px 12px;
+    }
+
+    .article-title {
+        font-size: 1.3em;
+    }
+
+    .article-meta {
+        font-size: 0.8em;
+    }
+
+    .article-content h2 {
+        font-size: 1.15em;
+        margin-top: 24px;
+        margin-bottom: 12px;
+    }
+
+    .article-content p {
+        font-size: 0.95em;
+        margin-bottom: 16px;
+    }
+
+    .article-content ul {
+        padding-left: 16px;
+    }
+
+    .article-container .back-link {
+        margin-top: 40px;
+    }
+
+    .site-footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px 0;
+        line-height: 1.8;
+    }
+
+    .site-footer a {
+        font-size: 0.8em;
+        margin: 0 4px;
+    }
+
+    .site-footer span {
+        margin: 0 2px;
+    }
 }
