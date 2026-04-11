@@ -1215,4 +1215,399 @@
     <priority>1.0</priority>
     <lastmod>2026-03-28</lastmod>
   </url>
+  <!-- Gallery Hub Pages -->
+  <url>
+    <loc>https://ai-and-poem.art/ko/gallery.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/en/gallery.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/ja/gallery.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/zh/gallery.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/es/gallery.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/fr/gallery.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <!-- Gallery Category Pages: gallery-1 (Love & Farewell) -->
+  <url>
+    <loc>https://ai-and-poem.art/ko/gallery-1.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-1.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/en/gallery-1.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-1.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/ja/gallery-1.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-1.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/zh/gallery-1.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-1.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/es/gallery-1.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-1.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/fr/gallery-1.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-1.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-1.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <!-- Gallery Category Pages: gallery-2 (Nature & Seasons) -->
+  <url>
+    <loc>https://ai-and-poem.art/ko/gallery-2.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-2.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/en/gallery-2.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-2.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/ja/gallery-2.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-2.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/zh/gallery-2.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-2.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/es/gallery-2.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-2.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/fr/gallery-2.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-2.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-2.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <!-- Gallery Category Pages: gallery-3 (Comfort & Healing) -->
+  <url>
+    <loc>https://ai-and-poem.art/ko/gallery-3.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-3.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/en/gallery-3.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-3.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/ja/gallery-3.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-3.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/zh/gallery-3.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-3.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/es/gallery-3.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-3.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/fr/gallery-3.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-3.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-3.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <!-- Gallery Category Pages: gallery-4 (Daily Life & Reflection) -->
+  <url>
+    <loc>https://ai-and-poem.art/ko/gallery-4.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-4.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/en/gallery-4.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-4.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/ja/gallery-4.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-4.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/zh/gallery-4.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-4.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/es/gallery-4.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-4.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/fr/gallery-4.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://ai-and-poem.art/es/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ai-and-poem.art/fr/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ai-and-poem.art/ja/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-4.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://ai-and-poem.art/zh/gallery-4.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-04-09</lastmod>
+  </url>
 </urlset>
