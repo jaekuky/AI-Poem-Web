@@ -384,12 +384,28 @@ body {
     padding: 20px;
   }
 
+  /* 태블릿에서 content-section 여백 조정 */
+  .content-section {
+    margin: 20px auto;
+    padding: 16px;
+  }
+
   /* 태블릿에서 privacy/terms 컨테이너 여백 조정 */
   .privacy_container,
   .terms_container {
     margin: 20px auto;
     padding: 16px;
     max-width: 95%;
+  }
+
+  /* 태블릿에서 contact 요소 조정 */
+  .contact-info {
+    margin: 30px 0;
+    font-size: 1.1em;
+  }
+
+  .contact-email {
+    padding: 12px 24px;
   }
 
   /* Gallery 태블릿 */
@@ -489,6 +505,23 @@ body.has-cookie-banner {
   .gallery-hub-grid { grid-template-columns: 1fr; gap: 14px; }
   .gallery-cta { padding: 12px 24px; font-size: 1em; }
   .gallery-author-info, .gallery-related-posts { padding: 16px; }
+
+  /* 모바일에서 content-section 여백 조정 */
+  .content-section {
+    margin: 16px auto;
+    padding: 12px;
+  }
+
+  /* 모바일에서 contact 요소 조정 */
+  .contact-info {
+    margin: 20px 0;
+    font-size: 1em;
+  }
+
+  .contact-email {
+    padding: 10px 20px;
+    font-size: 0.95em;
+  }
 
   /* 모바일에서 푸터 링크 줄바꿈 처리 */
   .site-footer {

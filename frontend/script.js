@@ -195,6 +195,9 @@ const topicInput = document.getElementById('topic');
 const poemDiv = document.getElementById('poem');
 const ttsButton = document.getElementById('tts-button');
 
+// index 페이지 전용 기능: 필수 요소가 모두 존재할 때만 실행
+if (languageSelect && topicInput && poemDiv && ttsButton) {
+
 // 필수 입력 메시지 다국어 대응
 topicInput.addEventListener('invalid', () => {
     const language = languageSelect.value;
@@ -424,7 +427,12 @@ ttsButton.addEventListener('click', function(event) {
     window.speechSynthesis.speak(utterance);
 });
 
-// 수정: 간단한 쿠키 동의 배너를 추가해 사용자 동의를 수집
+} // end of index 페이지 전용 기능
+
+// 쿠키 동의 배너 (모든 페이지에서 실행)
+const pageLang = languageSelect
+    ? languageSelect.value
+    : (document.documentElement.lang || 'en');
 const cookieConsentKey = 'aiAndPoemCookieConsent';
 if (!localStorage.getItem(cookieConsentKey)) {
     const banner = document.createElement('div');
@@ -438,15 +446,15 @@ if (!localStorage.getItem(cookieConsentKey)) {
     banner.style.color = '#fff';
     banner.style.display = 'flex';
     banner.style.flexWrap = 'wrap';
-    banner.style.justifyContent = 'space-between';
+    banner.style.justifyContent = 'center';
     banner.style.alignItems = 'center';
+    banner.style.gap = '12px';
     banner.style.padding = '12px 18px';
 
-    const consentLanguage = consentMessageMap[languageSelect.value] || consentMessageMap['en'];
+    const consentLanguage = consentMessageMap[pageLang] || consentMessageMap['en'];
     const messageSpan = document.createElement('span');
     messageSpan.textContent = consentLanguage.message;
-    messageSpan.style.flex = '1 1 auto';
-    messageSpan.style.marginRight = '12px';
+    messageSpan.style.textAlign = 'center';
 
     const acceptButton = document.createElement('button');
     acceptButton.type = 'button';
@@ -467,11 +475,13 @@ if (!localStorage.getItem(cookieConsentKey)) {
     document.body.appendChild(banner);
     document.body.classList.add('has-cookie-banner');
 
-    languageSelect.addEventListener('change', () => {
-        const updatedConsentLanguage = consentMessageMap[languageSelect.value] || consentMessageMap['en'];
-        messageSpan.textContent = updatedConsentLanguage.message;
-        acceptButton.textContent = updatedConsentLanguage.button;
-    });
+    if (languageSelect) {
+        languageSelect.addEventListener('change', () => {
+            const updatedConsentLanguage = consentMessageMap[languageSelect.value] || consentMessageMap['en'];
+            messageSpan.textContent = updatedConsentLanguage.message;
+            acceptButton.textContent = updatedConsentLanguage.button;
+        });
+    }
 } else {
     document.body.classList.remove('has-cookie-banner');
 }
