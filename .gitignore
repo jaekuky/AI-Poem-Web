@@ -1,3 +1,6 @@
 backend/.env
 backend/node_modules
 backend.zip
+.DS_Store
+.claude/
+.playwright-mcp/
