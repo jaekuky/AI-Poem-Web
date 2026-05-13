@@ -167,6 +167,29 @@ body {
   text-align: center;
 }
 
+/* 수정: 시 형식 셀렉터 행 스타일 */
+.form-options {
+  max-width: 520px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+.form-options label {
+  color: #fff;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+.form-options select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
 /* 수정: 신규 SEO 섹션을 위해 공통 레이아웃 스타일 추가 */
 .seo-section {
   max-width: 720px;

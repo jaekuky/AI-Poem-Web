@@ -155,6 +155,10 @@
     <form id="poem-form">
       <!-- 수정: 주요 검색어를 언급해 기대치 정렬 -->
       <p id="form-description">在找“AI诗歌生成器”？输入主题，几秒内就能获得诗歌与朗读。</p>
+      <div class="form-options">
+          <label for="poem-form-select" data-i18n-form-label>Poem form</label>
+          <select id="poem-form-select"></select>
+      </div>
       <div class="input-box">
         <input id="topic" placeholder="请输入您想要的诗歌主题" required="" type="text" />
         <button id="poetry-writing-button" type="submit">生成诗歌</button>

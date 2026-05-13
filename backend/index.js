@@ -72,6 +72,43 @@ if (!OPENAI_API_KEY) {
 }
 
 const MAX_TOPIC_LENGTH = 200; //  수정: 과도한 프롬프트 길이를 제한하여 OpenAI 에러를 예방
+
+// 수정: 시 형식 셀렉터 옵션 화이트리스트 + 형식별 프롬프트 지시
+const ALLOWED_FORMS = new Set([
+    'auto', 'free-verse', 'sijo', 'haiku', 'sonnet', 'acrostic', 'n-haengsi'
+]);
+
+// 수정: 한글 음절(가-힣)만 추출하는 헬퍼 — N행시 행수 결정에 사용
+function extractHangul(text) {
+    return (text.match(/[가-힯]/g) || []).join('');
+}
+
+// 수정: 형식별 프롬프트 구성. n-haengsi는 토픽 길이에 따라 동적 생성.
+//  - 반환 string: 프롬프트 지시문
+//  - 반환 null: 형식 지시 없음 (auto 폴백)
+//  - 반환 { error }: 클라이언트 에러 (400)
+function buildFormInstruction(form, rawTopic) {
+    if (form === 'n-haengsi') {
+        const hangul = extractHangul(rawTopic);
+        const n = hangul.length;
+        if (n === 0) return { error: 'noHangulForNHaengsi' };
+        if (n === 1) return null; // 1행시는 형식 의미가 약하므로 auto 폴백
+        const enumerated = [...hangul]
+            .map((c, i) => `Line ${i + 1} must start with the Korean character '${c}'`)
+            .join('. ');
+        return `Write strictly in Korean ${n}행시 (${n}-line acrostic) about the topic. Output exactly ${n} lines, no more, no less. ${enumerated}. The first character of each line, read top-to-bottom, must spell "${hangul}" precisely. Each line should be a complete, evocative Korean poetic phrase that connects to the topic.`;
+    }
+    return FORM_PROMPTS[form];
+}
+
+const FORM_PROMPTS = {
+    'auto':       null,
+    'free-verse': 'Write in free verse: no fixed meter or rhyme, focus on imagery and natural cadence.',
+    'sijo':       'Write strictly in Korean sijo form: exactly 3 lines, each containing roughly 14-15 syllables divided into four phrases (3·4·3·4 or 3·4·4·4 syllable groups). The third line MUST begin with a 3-syllable phrase that introduces a turn or twist.',
+    'haiku':      'Write strictly in haiku form: exactly 3 lines following 5-7-5 syllable structure (or close approximation in non-Japanese languages), capturing a single concrete moment with a seasonal or natural reference.',
+    'sonnet':     'Write a Shakespearean sonnet: exactly 14 lines in iambic pentameter, with rhyme scheme ABAB CDCD EFEF GG. The final couplet should provide a turn or resolution.',
+    'acrostic':   'Write an acrostic poem: the first letter of each line, read top-to-bottom, spells the topic word. The number of lines equals the number of letters in the topic word.',
+};
 // 수정: 구글 애드센스 정책 준수를 위해 금칙어 목록을 추가
 const DISALLOWED_KEYWORDS = [
     // --- English (en) ---
@@ -173,7 +210,8 @@ const ERROR_MESSAGES = {
         disallowedTopic: '해당 주제로는 시를 생성할 수 없습니다.',
         unsupportedLang: '지원하지 않는 언어입니다.',
         serverConfigError: '서버 설정 오류가 발생했습니다.',
-        generationError: '시 생성 중 오류가 발생했습니다.'
+        generationError: '시 생성 중 오류가 발생했습니다.',
+        noHangulForNHaengsi: 'N행시는 한글이 포함된 주제에서 사용할 수 있습니다.'
     },
     'en': {
         missingTopic: 'Please enter a poem topic.',
@@ -181,7 +219,8 @@ const ERROR_MESSAGES = {
         disallowedTopic: 'Cannot generate a poem with this topic.',
         unsupportedLang: 'Unsupported language.',
         serverConfigError: 'Server configuration error.',
-        generationError: 'An error occurred while generating the poem.'
+        generationError: 'An error occurred while generating the poem.',
+        noHangulForNHaengsi: 'N-line acrostic requires a topic containing Korean (Hangul) characters.'
     },
     'ja': {
         missingTopic: '詩のテーマを入力してください。',
@@ -433,6 +472,9 @@ app.post('/generate-poem', async (req, res) => {
     const rawTopic = typeof req.body.topic === 'string' ? req.body.topic.trim() : '';
     // 수정: 언어 설정이 없으면 기본값 'ko' 사용
     const language = typeof req.body.language === 'string' ? req.body.language : 'ko';
+    // 수정: 시 형식 셀렉터 — 누락/비정상 값은 'auto'로 폴백 (후방 호환)
+    const rawForm = typeof req.body.form === 'string' ? req.body.form : 'auto';
+    const form = ALLOWED_FORMS.has(rawForm) ? rawForm : 'auto';
 
     // 수정: 필수 입력값 검증 실패 시 다국어 에러 메시지 반환
     if (!rawTopic) {
@@ -463,7 +505,15 @@ app.post('/generate-poem', async (req, res) => {
         return res.status(500).json({ error: getErrorMessage(language, 'serverConfigError') });
     }
 
-    const prompt = `Please write a poem about ${rawTopic} ${langPrompt}.`;
+    // 수정: 형식 지시 구성 — n-haengsi는 토픽 한글 글자 수에 따라 동적 생성
+    const formResult = buildFormInstruction(form, rawTopic);
+    if (formResult && typeof formResult === 'object' && formResult.error) {
+        return res.status(400).json({ error: getErrorMessage(language, formResult.error) });
+    }
+    const formInstruction = formResult; // string | null
+    const prompt = formInstruction
+        ? `${formInstruction}\n\nNow, write the poem about "${rawTopic}" ${langPrompt}.`
+        : `Please write a poem about ${rawTopic} ${langPrompt}.`;
 
     try {
         const response = await axios.post('https://api.openai.com/v1/chat/completions', {

@@ -285,6 +285,53 @@ const consentMessageMap = {
     'hu': { message: 'Az AI & Poem sütiket használ a szolgáltatás nyújtásához és a hirdetések optimalizálásához.', button: 'Elfogad' },
 };
 
+// 수정: 시 형식 셀렉터 옵션 (페이지 언어별 차등). ko/en은 5종, 그 외는 보편 3종.
+const formOptionsMap = {
+    'ko':  [{value:'auto',label:'자동'},{value:'free-verse',label:'자유시'},{value:'sijo',label:'시조'},{value:'haiku',label:'하이쿠'},{value:'n-haengsi',label:'N행시'}],
+    'en':  [{value:'auto',label:'Auto'},{value:'free-verse',label:'Free verse'},{value:'haiku',label:'Haiku'},{value:'sonnet',label:'Sonnet'},{value:'acrostic',label:'Acrostic'}],
+    'ja':  [{value:'auto',label:'自動'},{value:'free-verse',label:'自由詩'},{value:'haiku',label:'俳句'}],
+    'zh':  [{value:'auto',label:'自动'},{value:'free-verse',label:'自由诗'},{value:'haiku',label:'俳句'}],
+    'es':  [{value:'auto',label:'Automático'},{value:'free-verse',label:'Verso libre'},{value:'haiku',label:'Haiku'}],
+    'fr':  [{value:'auto',label:'Automatique'},{value:'free-verse',label:'Vers libre'},{value:'haiku',label:'Haïku'}],
+    'ru':  [{value:'auto',label:'Авто'},{value:'free-verse',label:'Верлибр'},{value:'haiku',label:'Хайку'}],
+    'it':  [{value:'auto',label:'Automatico'},{value:'free-verse',label:'Verso libero'},{value:'haiku',label:'Haiku'}],
+    'de':  [{value:'auto',label:'Automatisch'},{value:'free-verse',label:'Freie Verse'},{value:'haiku',label:'Haiku'}],
+    'ms':  [{value:'auto',label:'Auto'},{value:'free-verse',label:'Sajak bebas'},{value:'haiku',label:'Haiku'}],
+    'bn':  [{value:'auto',label:'স্বয়ংক্রিয়'},{value:'free-verse',label:'মুক্ত ছন্দ'},{value:'haiku',label:'হাইকু'}],
+    'vi':  [{value:'auto',label:'Tự động'},{value:'free-verse',label:'Thơ tự do'},{value:'haiku',label:'Haiku'}],
+    'el':  [{value:'auto',label:'Αυτόματο'},{value:'free-verse',label:'Ελεύθερος στίχος'},{value:'haiku',label:'Χαϊκού'}],
+    'pt':  [{value:'auto',label:'Automático'},{value:'free-verse',label:'Verso livre'},{value:'haiku',label:'Haiku'}],
+    'pl':  [{value:'auto',label:'Auto'},{value:'free-verse',label:'Wiersz wolny'},{value:'haiku',label:'Haiku'}],
+    'ch':  [{value:'auto',label:'Automatisch'},{value:'free-verse',label:'Freii Värs'},{value:'haiku',label:'Haiku'}],
+    'uk':  [{value:'auto',label:'Авто'},{value:'free-verse',label:'Верлібр'},{value:'haiku',label:'Хайку'}],
+    'tr':  [{value:'auto',label:'Otomatik'},{value:'free-verse',label:'Serbest şiir'},{value:'haiku',label:'Haiku'}],
+    'sv':  [{value:'auto',label:'Auto'},{value:'free-verse',label:'Fri vers'},{value:'haiku',label:'Haiku'}],
+    'hi':  [{value:'auto',label:'स्वचालित'},{value:'free-verse',label:'मुक्त छंद'},{value:'haiku',label:'हाइकू'}],
+    'id':  [{value:'auto',label:'Otomatis'},{value:'free-verse',label:'Sajak bebas'},{value:'haiku',label:'Haiku'}],
+    'th':  [{value:'auto',label:'อัตโนมัติ'},{value:'free-verse',label:'กลอนเปล่า'},{value:'haiku',label:'ไฮกุ'}],
+    'fi':  [{value:'auto',label:'Automaattinen'},{value:'free-verse',label:'Vapaa runo'},{value:'haiku',label:'Haiku'}],
+    'ar':  [{value:'auto',label:'تلقائي'},{value:'free-verse',label:'شعر حر'},{value:'haiku',label:'هايكو'}],
+    'mn':  [{value:'auto',label:'Автомат'},{value:'free-verse',label:'Чөлөөт шүлэг'},{value:'haiku',label:'Хайку'}],
+    'sw':  [{value:'auto',label:'Otomatiki'},{value:'free-verse',label:'Shairi huru'},{value:'haiku',label:'Haiku'}],
+    'nl':  [{value:'auto',label:'Automatisch'},{value:'free-verse',label:'Vrije vers'},{value:'haiku',label:'Haiku'}],
+    'no':  [{value:'auto',label:'Auto'},{value:'free-verse',label:'Fri vers'},{value:'haiku',label:'Haiku'}],
+    'da':  [{value:'auto',label:'Auto'},{value:'free-verse',label:'Fri vers'},{value:'haiku',label:'Haiku'}],
+    'fil': [{value:'auto',label:'Awtomatiko'},{value:'free-verse',label:'Malayang taludtod'},{value:'haiku',label:'Haiku'}],
+    'hu':  [{value:'auto',label:'Automatikus'},{value:'free-verse',label:'Szabadvers'},{value:'haiku',label:'Haiku'}],
+};
+
+// 수정: 시 형식 셀렉터 라벨 (31개 언어)
+const formLabelMap = {
+    'ko':'시 형식','en':'Poem form','ja':'詩の形式','zh':'诗歌形式','es':'Forma del poema',
+    'fr':'Forme du poème','ru':'Форма стихотворения','it':'Forma poetica','de':'Gedichtform',
+    'ms':'Bentuk puisi','bn':'কবিতার ধরন','vi':'Thể thơ','el':'Μορφή ποιήματος',
+    'pt':'Forma do poema','pl':'Forma wiersza','ch':'Gedichtform','uk':'Форма вірша',
+    'tr':'Şiir biçimi','sv':'Diktform','hi':'कविता का रूप','id':'Bentuk puisi',
+    'th':'รูปแบบบทกวี','fi':'Runomuoto','ar':'شكل القصيدة','mn':'Шүлгийн хэлбэр',
+    'sw':'Aina ya shairi','nl':'Gedichtvorm','no':'Diktform','da':'Digtform',
+    'fil':'Anyo ng tula','hu':'Versforma',
+};
+
 const languageSelect = document.getElementById('language');
 const processingVideo = document.getElementById('processing-video');
 const topicInput = document.getElementById('topic');
@@ -293,6 +340,33 @@ const ttsButton = document.getElementById('tts-button');
 
 // index 페이지 전용 기능: 필수 요소가 모두 존재할 때만 실행
 if (languageSelect && topicInput && poemDiv && ttsButton) {
+
+// 수정: 시 형식 셀렉터 — 페이지 언어에 맞춰 라벨/옵션 채우기
+(function populateFormSelector() {
+    const formSelect = document.getElementById('poem-form-select');
+    const formLabel = document.querySelector('[data-i18n-form-label]');
+    if (!formSelect) return;
+
+    const pageLang = (document.documentElement.lang || 'ko').toLowerCase();
+    const options = formOptionsMap[pageLang] || formOptionsMap['en'];
+    const labelText = formLabelMap[pageLang] || formLabelMap['en'];
+
+    if (formLabel) formLabel.textContent = labelText;
+    formSelect.innerHTML = options
+        .map(o => `<option value="${o.value}">${o.label}</option>`)
+        .join('');
+})();
+
+// 수정: N행시 선택 시 토픽 placeholder를 힌트로 변경, 다른 옵션 선택 시 원복
+(function attachNHaengsiPlaceholder() {
+    const formSelect = document.getElementById('poem-form-select');
+    if (!formSelect || !topicInput) return;
+    const originalPlaceholder = topicInput.placeholder;
+    const hint = '한글 2글자 이상 (예: 사과 → 2행, 강아지 → 3행)';
+    formSelect.addEventListener('change', () => {
+        topicInput.placeholder = (formSelect.value === 'n-haengsi') ? hint : originalPlaceholder;
+    });
+})();
 
 // 필수 입력 메시지 다국어 대응
 topicInput.addEventListener('invalid', () => {
@@ -447,6 +521,9 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
     const language = languageSelect.value;
     const submitButton = document.getElementById('poetry-writing-button');
     const errMsg = errorMessage[language] || errorMessage['ko'];
+    // 수정: 시 형식 셀렉터 값 — 없거나 미설정이면 'auto' 폴백
+    const formSelect = document.getElementById('poem-form-select');
+    const form = formSelect && formSelect.value ? formSelect.value : 'auto';
 
     poemDiv.textContent = processingMessage[language] || processingMessage['ko'];
 
@@ -473,7 +550,8 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
             signal: controller.signal,
             body: JSON.stringify({
                 topic: topic,
-                language: language
+                language: language,
+                form: form
             })
         });
 
