@@ -8,6 +8,7 @@ require('dotenv').config(); // 환경 변수 사용을 위해 dotenv 사용
 const app = express();
 
 // CORS 설정
+// credentials 미사용. 인증/세션 도입 시 재활성 + CSRF 토큰 필수.
 let corsOptions = {
     origin: [
              'https://ai-and-poem-jaekuky.pages.dev',
@@ -15,8 +16,7 @@ let corsOptions = {
             ],
     // Modified: 허용 메서드와 헤더를 명시적으로 선언
     methods: ['GET', 'POST', 'OPTIONS'],
-    allowedHeaders: ['Content-Type'],
-    credentials: true 
+    allowedHeaders: ['Content-Type']
 };
 // 미들웨어 설정
 app.use(cors(corsOptions));
@@ -83,6 +83,16 @@ function extractHangul(text) {
     return (text.match(/[가-힯]/g) || []).join('');
 }
 
+// 수정: 형식별 프롬프트. buildFormInstruction보다 먼저 선언 (TDZ 회피)
+const FORM_PROMPTS = {
+    'auto':       null,
+    'free-verse': 'Write in free verse: no fixed meter or rhyme, focus on imagery and natural cadence.',
+    'sijo':       'Write strictly in Korean sijo form: exactly 3 lines, each containing roughly 14-15 syllables divided into four phrases (3·4·3·4 or 3·4·4·4 syllable groups). The third line MUST begin with a 3-syllable phrase that introduces a turn or twist.',
+    'haiku':      'Write strictly in haiku form: exactly 3 lines following 5-7-5 syllable structure (or close approximation in non-Japanese languages), capturing a single concrete moment with a seasonal or natural reference.',
+    'sonnet':     'Write a Shakespearean sonnet: exactly 14 lines in iambic pentameter, with rhyme scheme ABAB CDCD EFEF GG. The final couplet should provide a turn or resolution.',
+    'acrostic':   'Write an acrostic poem: the first letter of each line, read top-to-bottom, spells the topic word. The number of lines equals the number of letters in the topic word.',
+};
+
 // 수정: 형식별 프롬프트 구성. n-haengsi는 토픽 길이에 따라 동적 생성.
 //  - 반환 string: 프롬프트 지시문
 //  - 반환 null: 형식 지시 없음 (auto 폴백)
@@ -101,106 +111,70 @@ function buildFormInstruction(form, rawTopic) {
     return FORM_PROMPTS[form];
 }
 
-const FORM_PROMPTS = {
-    'auto':       null,
-    'free-verse': 'Write in free verse: no fixed meter or rhyme, focus on imagery and natural cadence.',
-    'sijo':       'Write strictly in Korean sijo form: exactly 3 lines, each containing roughly 14-15 syllables divided into four phrases (3·4·3·4 or 3·4·4·4 syllable groups). The third line MUST begin with a 3-syllable phrase that introduces a turn or twist.',
-    'haiku':      'Write strictly in haiku form: exactly 3 lines following 5-7-5 syllable structure (or close approximation in non-Japanese languages), capturing a single concrete moment with a seasonal or natural reference.',
-    'sonnet':     'Write a Shakespearean sonnet: exactly 14 lines in iambic pentameter, with rhyme scheme ABAB CDCD EFEF GG. The final couplet should provide a turn or resolution.',
-    'acrostic':   'Write an acrostic poem: the first letter of each line, read top-to-bottom, spells the topic word. The number of lines equals the number of letters in the topic word.',
+// 수정: 구글 애드센스 정책 준수를 위해 금칙어 목록을 언어별 객체로 분리
+//  - 라틴/키릴/그리스 알파벳: Unicode 단어경계 정규식으로 substring 오탐 차단
+//  - CJK·Arabic·Devanagari·Bengali·Thai: 단어경계 무의미 → substring 매칭 유지
+//  - 요청 언어와 동일한 언어 키워드만 검사 (Swahili 'nazi'(코코넛) ↔ 독·영 'nazi' 충돌 해소)
+const DISALLOWED_BY_LANG = {
+    en: ['porn', 'porno', 'sex', 'sexual', 'nude', 'fetish', 'xxx', 'violence', 'kill', 'murder', 'terror', 'terrorist', 'bomb', 'weapon', 'gun', 'drug', 'marijuana', 'cocaine', 'heroin', 'nazi', 'hitler', 'suicide', 'self-harm', 'gamble', 'casino', 'betting', 'hate', 'racist', 'rape', 'sexual assault', 'torture', 'sexual harassment', 'pedophilia', 'cannibalism', 'gang rape', 'beheading', 'execution', 'burning to death', 'bestiality', 'necrophilia', 'zoophilia'],
+    ko: ['포르노', '성인', '섹스', '성관계', '나체', '야동', '폭력', '살인', '죽이다', '테러', '폭탄', '무기', '총', '마약', '대마초', '필로폰', '헤로인', '나치', '히틀러', '자살', '자해', '도박', '카지노', '토토', '혐오', '인종차별', '강간', '겁탈', '고문', '성추행', '성폭행', '소아성애', '식인', '윤간', '참수', '처형', '화형', '수간', '시체애', '동물성애'],
+    ja: ['ポルノ', 'アダルト', 'セックス', '性行為', 'ヌード', '暴力', '殺人', '殺す', 'テロ', '爆弾', '武器', '銃', '麻薬', '覚醒剤', '大麻', 'ナチス', 'ヒトラー', '自殺', '自傷', 'ギャンブル', 'カジノ', '賭博', 'ヘイト', '差別', 'レイプ', '強姦', '拷問', 'セクハラ', '性的暴行', '小児性愛', 'カニバリズム', '輪姦', '斬首', '処刑', '火あぶり', '獣姦', '死体愛好', '動物性愛'],
+    zh: ['色情', '成人', '性爱', '裸体', '暴力', '谋杀', '杀人', '恐怖主义', '炸弹', '武器', '枪', '毒品', '大麻', '海洛因', '纳粹', '希特勒', '自杀', '自残', '赌博', '赌场', '仇恨', '种族歧视', '强奸', '性侵', '酷刑', '性骚扰', '恋童癖', '食人', '轮奸', '斩首', '处决', '火刑', '兽交', '恋尸癖', '恋兽癖'],
+    es: ['pornografía', 'porno', 'sexo', 'sexual', 'desnudo', 'violencia', 'matar', 'asesinato', 'terrorismo', 'bomba', 'arma', 'pistola', 'drogas', 'marihuana', 'cocaína', 'nazi', 'suicidio', 'autolesión', 'juego', 'casino', 'apuestas', 'odio', 'racismo', 'violación', 'abuso sexual', 'tortura', 'acoso sexual', 'pedofilia', 'canibalismo', 'violación en grupo', 'decapitación', 'ejecución', 'hoguera', 'bestialismo', 'necrofilia', 'zoofilia'],
+    fr: ['pornographie', 'porno', 'sexe', 'sexuel', 'nu', 'violence', 'tuer', 'meurtre', 'terrorisme', 'bombe', 'arme', 'pistolet', 'drogue', 'cannabis', 'cocaïne', 'nazi', 'suicide', 'automutilation', 'jeu', 'casino', 'pari', 'haine', 'racisme', 'viol', 'agression sexuelle', 'torture', 'harcèlement sexuel', 'pédophilie', 'cannibalisme', 'viol collectif', 'décapitation', 'exécution', 'bûcher', 'bestialité', 'nécrophilie', 'zoophilie'],
+    de: ['pornografie', 'sex', 'sexuell', 'nackt', 'gewalt', 'töten', 'mord', 'terrorismus', 'bombe', 'waffe', 'pistole', 'drogen', 'cannabis', 'kokain', 'nazi', 'hitler', 'selbstmord', 'selbstverletzung', 'glücksspiel', 'casino', 'wette', 'hass', 'rassismus', 'vergewaltigung', 'sexuelle nötigung', 'folter', 'sexuelle belästigung', 'pädophilie', 'kannibalismus', 'gruppenvergewaltigung', 'enthauptung', 'hinrichtung', 'verbrennung', 'sodomie', 'nekrophilie', 'zoophilie'],
+    ch: ['pornografie', 'sex', 'sexuell', 'nackt', 'gewalt', 'töten', 'mord', 'terrorismus', 'bombe', 'waffe', 'pistole', 'drogen', 'cannabis', 'kokain', 'nazi', 'hitler', 'selbstmord', 'selbstverletzung', 'glücksspiel', 'casino', 'wette', 'hass', 'rassismus', 'vergewaltigung', 'sexuelle nötigung', 'folter', 'sexuelle belästigung', 'pädophilie', 'kannibalismus', 'gruppenvergewaltigung', 'enthauptung', 'hinrichtung', 'verbrennung', 'sodomie', 'nekrophilie', 'zoophilie'],
+    ar: ['إباحي', 'جنس', 'جنسي', 'عاري', 'عنف', 'قتل', 'إرهاب', 'قنبلة', 'سلاح', 'مسدس', 'مخدرات', 'حشيش', 'كوكايين', 'نازي', 'انتحار', 'إيذاء النفس', 'قمار', 'كازينو', 'رهان', 'كراهية', 'عنصرية', 'اغتصاب', 'اعتداء جنسي', 'تعذيب', 'تحرش جنسي', 'بيدوفيليا', 'أكل لحوم البشر', 'اغتصاب جماعي', 'قطع الرأس', 'إعدام', 'حرق', 'بهيمية', 'نيكروفيليا', 'زوفيليا'],
+    bn: ['পর্ন', 'যৌন', 'সেক্স', 'নগ্ন', 'সহিংসতা', 'হত্যা', 'খুন', 'সন্ত্রাস', 'বোমা', 'অস্ত্র', 'বন্দুক', 'মাদক', 'গাঁজা', 'কোকেন', 'নাৎসি', 'আত্মহত্যা', 'আত্মক্ষতি', 'জুয়া', 'ক্যাসিনো', 'বাজি', 'ঘৃণা', 'বর্ণবাদ', 'ধর্ষণ', 'যৌন নির্যাতন', 'নির্যাতন', 'যৌন হয়রানি', 'পেডোফিলিয়া', 'নরমাংসভোজী', 'গণধর্ষণ', 'শিরশ্ছেদ', 'মৃত্যুদণ্ড', 'আগুনে পোড়ানো', 'পশুকামিতা', 'নেক্রোফিলিয়া', 'জুফিলিয়া'],
+    vi: ['khiêu dâm', 'tình dục', 'quan hệ tình dục', 'khỏa thân', 'bạo lực', 'giết', 'giết người', 'khủng bố', 'bom', 'vũ khí', 'súng', 'ma túy', 'cần sa', 'cocain', 'phát xít', 'tự tử', 'tự hại', 'cờ bạc', 'sòng bạc', 'cá cược', 'thù hận', 'phân biệt chủng tộc', 'hiếp dâm', 'cưỡng hiếp', 'tra tấn', 'quấy rối tình dục', 'ấu dâm', 'ăn thịt người', 'hiếp dâm tập thể', 'chặt đầu', 'hành quyết', 'thiêu sống', 'thú giao', 'ái tử thi', 'ái thú'],
+    th: ['โป๊', 'เซ็กซ์', 'เพศ', 'เปลือย', 'ความรุนแรง', 'ฆ่า', 'ฆาตกรรม', 'การก่อการร้าย', 'ระเบิด', 'อาวุธ', 'ปืน', 'ยาเสพติด', 'กัญชา', 'โคเคน', 'นาซี', 'ฆ่าตัวตาย', 'ทำร้ายตัวเอง', 'การพนัน', 'คาสิโน', 'เดิมพัน', 'เกลียดชัง', 'เหยียดเชื้อชาติ', 'ข่มขืน', 'ล่วงละเมิดทางเพศ', 'ทรมาน', 'คุกคามทางเพศ', 'ใคร่เด็ก', 'กินเนื้อมนุษย์', 'รุมโทรม', 'ตัดหัว', 'ประหารชีวิต', 'เผาทั้งเป็น', 'สมสู่กับสัตว์', 'เนโครฟีเลีย', 'ซูฟีเลีย'],
+    hi: ['पॉर्न', 'सेक्स', 'यौन', 'नग्न', 'हिंसा', 'मारना', 'हत्या', 'आतंक', 'बम', 'हथियार', 'बंदूक', 'ड्रग्स', 'गांजा', 'कोकीन', 'नाजी', 'आत्महत्या', 'आत्म-हानि', 'जुआ', 'कैसीनो', 'सट्टेबाजी', 'नफरत', 'जातिवाद', 'बलात्कार', 'यौन हमला', 'यातना', 'यौन उत्पीड़न', 'बाल यौन शोषण', 'नरभक्षण', 'सामूहिक बलात्कार', 'सिर कलम', 'फांसी', 'दाह', 'पशुगमन', 'शव संभोग', 'पशु प्रेम'],
+    id: ['pornografi', 'seks', 'seksual', 'telanjang', 'kekerasan', 'membunuh', 'pembunuhan', 'terorisme', 'bom', 'senjata', 'pistol', 'narkoba', 'ganja', 'kokain', 'nazi', 'bunuh diri', 'melukai diri', 'judi', 'kasino', 'taruhan', 'kebencian', 'rasisme', 'pemerkosaan', 'kekerasan seksual', 'penyiksaan', 'pelecehan seksual', 'pedofilia', 'kanibalisme', 'pemerkosaan massal', 'pemenggalan', 'eksekusi', 'bakar hidup-hidup', 'bestialitas', 'nekrofilia', 'zoofilia'],
+    ms: ['pornografi', 'seks', 'seksual', 'keganasan', 'bunuh', 'pembunuhan', 'bom', 'senjata', 'pistol', 'dadah', 'ganja', 'kokain', 'nazi', 'bunuh diri', 'cederakan diri', 'judi', 'kasino', 'pertaruhan', 'kebencian', 'perkauman', 'rogol', 'serangan seksual', 'seksa', 'gangguan seksual', 'pedofilia', 'kanibalisme', 'rogol berkumpulan', 'pancung', 'hukum mati', 'bakar', 'bestialiti', 'nekrofilia', 'zoofilia'],
+    tr: ['pornografi', 'seks', 'cinsel', 'çıplak', 'şiddet', 'öldürmek', 'cinayet', 'terör', 'bomba', 'silah', 'tabanca', 'uyuşturucu', 'esrar', 'kokain', 'nazi', 'intihar', 'kendine zarar', 'kumar', 'kumarhane', 'bahis', 'nefret', 'ırkçılık', 'tecavüz', 'cinsel saldırı', 'işkence', 'cinsel taciz', 'pedofili', 'yamyamlık', 'toplu tecavüz', 'kafa kesme', 'idam', 'yakma', 'zoofili', 'nekrofili', 'hayvanlarla seks'],
+    ru: ['порно', 'секс', 'сексуальный', 'голый', 'насилие', 'убить', 'убийство', 'террор', 'бомба', 'оружие', 'пистолет', 'наркотики', 'марихуана', 'кокаин', 'нацист', 'самоубийство', 'членовредительство', 'азартные игры', 'казино', 'ставки', 'ненависть', 'расизм', 'изнасилование', 'сексуальное насилие', 'пытки', 'сексуальные домогательства', 'педофилия', 'каннибализм', 'групповое изнасилование', 'обезглавливание', 'казнь', 'сожжение', 'скотоложство', 'некрофилия', 'зоофилия'],
+    uk: ['порно', 'секс', 'сексуальний', 'голий', 'насильство', 'вбити', 'вбивство', 'террор', 'бомба', 'зброя', 'пістолет', 'наркотики', 'марихуана', 'кокаїн', 'нацист', 'самогубство', 'самоушкодження', 'азартні ігри', 'казино', 'ставки', 'ненависть', 'расизм', 'згвалтування', 'сексуальне насильство', 'тортури', 'сексуальні домагання', 'педофілія', 'канібалізм', 'групове згвалтування', 'обезголовлення', 'страта', 'спалення', 'скотолозтва', 'некрофілія', 'зоофілія'],
+    pl: ['pornografia', 'seks', 'seksualny', 'nagi', 'przemoc', 'zabić', 'morderstwo', 'terroryzm', 'bomba', 'broń', 'pistolet', 'narkotyki', 'marihuana', 'kokaina', 'nazista', 'samobójstwo', 'samookaleczenie', 'hazard', 'kasyno', 'zakłady', 'nienawiść', 'rasizm', 'gwałt', 'napaść seksualna', 'tortury', 'molestowanie seksualne', 'pedofilia', 'kanibalizm', 'gwałt zbiorowy', 'ścięcie', 'egzekucja', 'spalenie', 'bestialstwo', 'nekrofilia', 'zoofilia'],
+    it: ['pornografia', 'sesso', 'sessuale', 'nudo', 'violenza', 'uccidere', 'omicidio', 'terrorismo', 'bomba', 'arma', 'pistola', 'droga', 'marijuana', 'cocaina', 'nazista', 'suicidio', 'autolesionismo', 'gioco d\'azzardo', 'casinò', 'scommesse', 'odio', 'razzismo', 'stupro', 'violenza sessuale', 'tortura', 'molestie sessuali', 'pedofilia', 'cannibalismo', 'stupro di gruppo', 'decapitazione', 'esecuzione', 'rogo', 'bestialità', 'necrofilia', 'zoofilia'],
+    pt: ['pornografia', 'sexo', 'sexual', 'nu', 'violência', 'matar', 'assassinato', 'terrorismo', 'bomba', 'arma', 'pistola', 'drogas', 'maconha', 'cocaína', 'nazista', 'suicídio', 'automutilação', 'jogo', 'cassino', 'apostas', 'ódio', 'racismo', 'estupro', 'abuso sexual', 'tortura', 'assédio sexual', 'pedofilia', 'canibalismo', 'estupro coletivo', 'decapitação', 'execução', 'fogueira', 'bestialidade', 'necrofilia', 'zoofilia'],
+    el: ['πορνό', 'σεξ', 'σεξουαλικός', 'γυμνός', 'βία', 'σκοτώνω', 'φόνος', 'τρομοκρατία', 'βόμβα', 'όπλο', 'πιστόλι', 'ναρκωτικά', 'μαριχουάνα', 'κοκαΐνη', 'ναζί', 'αυτοκτονία', 'αυτοτραυματισμός', 'τζόγος', 'καζίνο', 'στοίχημα', 'μίσος', 'ρατσισμός', 'βιασμός', 'σεξουαλική επίθεση', 'βασανιστήρια', 'σεξουαλική παρενόχληση', 'παιδοφιλία', 'κανιβαλισμός', 'ομαδικός βιασμός', 'αποκεφαλισμός', 'εκτέλεση', 'κάψιμο', 'κτηνοβασία', 'νεκροφιλία', 'ζωοφιλία'],
+    sv: ['porr', 'sex', 'sexuell', 'naken', 'våld', 'döda', 'mord', 'terrorism', 'bomb', 'vapen', 'pistol', 'droger', 'marijuana', 'kokain', 'nazist', 'självmord', 'självskadebeteende', 'spel', 'kasino', 'vadslagning', 'hat', 'rasism', 'våldtäkt', 'sexuella övergrepp', 'tortyren', 'sexuella trakasserier', 'pedofili', 'kannibalism', 'gruppvåldtäkt', 'halshuggning', 'avrättning', 'bränning', 'tidelag', 'nekrofili', 'zoofili'],
+    fi: ['porno', 'seksi', 'seksuaalinen', 'alaston', 'väkivalta', 'tappaa', 'murha', 'terrorismi', 'pommi', 'ase', 'pistooli', 'huumeet', 'marihuana', 'kokaiini', 'natsi', 'itsemurha', 'itseään vahingoittava', 'uhkapeli', 'kasino', 'vedonlyönti', 'viha', 'rasismi', 'raiskaus', 'seksuaalinen väkivalta', 'kidutus', 'seksuaalinen häirintä', 'pedofilia', 'kannibalismi', 'joukkoraiskaus', 'mestaus', 'teloitus', 'polttaminen', 'eläimeen sekaantuminen', 'nekrofilia', 'zoofilia'],
+    mn: ['порно', 'секс', 'бэлгийн', 'нүцгэн', 'хүчирхийлэл', 'алах', 'аллага', 'терроризм', 'бөмбөг', 'зэвсэг', 'буу', 'мансууруулах', 'хар тамхи', 'кокаин', 'нацист', 'амиа', 'өөрийгөө', 'мөрийтэй', 'казино', 'бооцоо', 'үзэн', 'арьс', 'хүчин', 'бэлгийн хүчирхийлэл', 'эрүү шүүлт', 'бэлгийн дарамт', 'педофили', 'хүн идэх', 'бүлэглэн хүчирхийлэх', 'толгой авах', 'цаазаар авах', 'шатаах', 'малын гаж дон', 'цогцос сонирхох', 'амьтан сонирхох'],
+    sw: ['picha', 'ngono', 'kujamiiana', 'uchi', 'vurugu', 'ua', 'mauaji', 'ugaidi', 'bomu', 'silaha', 'bunduki', 'dawa', 'bangi', 'kokeini', 'kujiua', 'kujidhuru', 'kamari', 'kasino', 'kuweka', 'chuki', 'ubaguzi', 'ubakaji', 'shambulio la kingono', 'utesaji', 'unyanyasaji wa kijinsia', 'ulawiti wa watoto', 'ulaji watu', 'ubakaji wa genge', 'kukata kichwa', 'kunyongwa', 'kuchoma', 'ngono na wanyama', 'necrophilia', 'zoophilia'],
+    nl: ['pornografie', 'seks', 'naakt', 'geweld', 'moord', 'terreur', 'bom', 'wapen', 'drugs', 'marihuana', 'cocaïne', 'nazi', 'zelfmoord', 'gokken', 'casino', 'haat', 'racisme', 'verkrachting', 'mishandeling', 'pedofilie', 'kannibalisme', 'onthoofding', 'executie', 'bestialiteit', 'necrofilie'],
+    no: ['pornografi', 'seks', 'naken', 'vold', 'drap', 'mord', 'terror', 'bombe', 'våpen', 'narkotika', 'marihuana', 'kokain', 'nazi', 'selvmord', 'gambling', 'casino', 'hat', 'rasisme', 'voldtekt', 'overgrep', 'pedofili', 'kannibalisme', 'halshugging', 'henrettelse', 'dyresex'],
+    da: ['pornografi', 'sex', 'nøgen', 'vold', 'drab', 'mord', 'terror', 'bombe', 'våben', 'stoffer', 'hash', 'kokain', 'nazi', 'selvmord', 'spil', 'kasino', 'had', 'racisme', 'voldtægt', 'overgreb', 'pædofili', 'kannibalisme', 'halshugning', 'henrettelse', 'dyresex'],
+    fil: ['pornograpiya', 'sex', 'hubad', 'karahasan', 'patayin', 'pagpatay', 'terorismo', 'bomba', 'armas', 'baril', 'droga', 'marijuana', 'cocaine', 'nazi', 'pagpapakamatay', 'sugal', 'casino', 'poot', 'rasismo', 'panggagahasa', 'pang-aabuso', 'pedophilia', 'kanibalismo', 'pagpugot', 'pagbitay'],
+    hu: ['pornográfia', 'szex', 'meztelen', 'erőszak', 'ölés', 'gyilkosság', 'terrorizmus', 'bomba', 'fegyver', 'kábítószer', 'marihuána', 'kokain', 'náci', 'öngyilkosság', 'szerencsejáték', 'kaszinó', 'gyűlölet', 'rasszizmus', 'nemi erőszak', 'bántalmazás', 'pedofília', 'kannibalizmus', 'lefejezés', 'kivégzés']
 };
-// 수정: 구글 애드센스 정책 준수를 위해 금칙어 목록을 추가
-const DISALLOWED_KEYWORDS = [
-    // --- English (en) ---
-    'porn', 'porno', 'sex', 'sexual', 'nude', 'fetish', 'xxx', 'violence', 'kill', 'murder', 'terror', 'terrorist', 'bomb', 'weapon', 'gun', 'drug', 'marijuana', 'cocaine', 'heroin', 'nazi', 'hitler', 'suicide', 'self-harm', 'gamble', 'casino', 'betting', 'hate', 'racist', 'rape', 'sexual assault', 'torture', 'sexual harassment', 'pedophilia', 'cannibalism', 'gang rape', 'beheading', 'execution', 'burning to death', 'bestiality', 'necrophilia', 'zoophilia',
-    
-    // --- Korean (ko) ---
-    '포르노', '성인', '섹스', '성관계', '나체', '야동', '폭력', '살인', '죽이다', '테러', '폭탄', '무기', '총', '마약', '대마초', '필로폰', '헤로인', '나치', '히틀러', '자살', '자해', '도박', '카지노', '토토', '혐오', '인종차별', '강간', '겁탈', '고문', '성추행', '성폭행', '소아성애', '식인', '윤간', '참수', '처형', '화형', '수간', '시체애', '동물성애',
 
-    // --- Japanese (ja) ---
-    'ポルノ', 'アダルト', 'セックス', '性行為', 'ヌード', '暴力', '殺人', '殺す', 'テロ', '爆弾', '武器', '銃', '麻薬', '覚醒剤', '大麻', 'ナチス', 'ヒトラー', '自殺', '自傷', 'ギャンブル', 'カジノ', '賭博', 'ヘイト', '差別', 'レイプ', '強姦', '拷問', 'セクハラ', '性的暴行', '小児性愛', 'カニバリズム', '輪姦', '斬首', '処刑', '火あぶり', '獣姦', '死体愛好', '動物性愛',
+// Latin/Cyrillic/Greek → Unicode 단어경계 정규식. CJK·Arabic·Devanagari·Bengali·Thai → substring.
+const WORD_BOUNDARY_LANGS = new Set(['en','es','fr','de','ch','it','pt','pl','ru','uk','tr','sv','fi','nl','no','da','fil','hu','ms','id','sw','vi','el','mn']);
 
-    // --- Chinese (zh) ---
-    '色情', '成人', '性爱', '裸体', '暴力', '谋杀', '杀人', '恐怖主义', '炸弹', '武器', '枪', '毒品', '大麻', '海洛因', '纳粹', '希特勒', '自杀', '自残', '赌博', '赌场', '仇恨', '种族歧视', '强奸', '性侵', '酷刑', '性骚扰', '恋童癖', '食人', '轮奸', '斩首', '处决', '火刑', '兽交', '恋尸癖', '恋兽癖',
+// 정규식 특수문자 escape
+function escapeRegExp(s) {
+    return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
 
-    // --- Spanish (es) ---
-    'pornografía', 'porno', 'sexo', 'sexual', 'desnudo', 'violencia', 'matar', 'asesinato', 'terrorismo', 'bomba', 'arma', 'pistola', 'drogas', 'marihuana', 'cocaína', 'nazi', 'suicidio', 'autolesión', 'juego', 'casino', 'apuestas', 'odio', 'racismo', 'violación', 'abuso sexual', 'tortura', 'acoso sexual', 'pedofilia', 'canibalismo', 'violación en grupo', 'decapitación', 'ejecución', 'hoguera', 'bestialismo', 'necrofilia', 'zoofilia',
+// 모듈 로드 시 단어경계 언어용 단일 정규식 사전 컴파일 (요청당 재컴파일 방지)
+const DISALLOWED_REGEX_BY_LANG = {};
+for (const [lang, list] of Object.entries(DISALLOWED_BY_LANG)) {
+    if (!WORD_BOUNDARY_LANGS.has(lang) || list.length === 0) continue;
+    const alternation = list.map(k => escapeRegExp(k.toLowerCase())).join('|');
+    DISALLOWED_REGEX_BY_LANG[lang] = new RegExp(`(?<!\\p{L})(?:${alternation})(?!\\p{L})`, 'iu');
+}
 
-    // --- French (fr) ---
-    'pornographie', 'porno', 'sexe', 'sexuel', 'nu', 'violence', 'tuer', 'meurtre', 'terrorisme', 'bombe', 'arme', 'pistolet', 'drogue', 'cannabis', 'cocaïne', 'nazi', 'suicide', 'automutilation', 'jeu', 'casino', 'pari', 'haine', 'racisme', 'viol', 'agression sexuelle', 'torture', 'harcèlement sexuel', 'pédophilie', 'cannibalisme', 'viol collectif', 'décapitation', 'exécution', 'bûcher', 'bestialité', 'nécrophilie', 'zoophilie',
-
-    // --- German / Swiss German (de, ch) ---
-    'pornografie', 'sex', 'sexuell', 'nackt', 'gewalt', 'töten', 'mord', 'terrorismus', 'bombe', 'waffe', 'pistole', 'drogen', 'cannabis', 'kokain', 'nazi', 'hitler', 'selbstmord', 'selbstverletzung', 'glücksspiel', 'casino', 'wette', 'hass', 'rassismus', 'vergewaltigung', 'sexuelle nötigung', 'folter', 'sexuelle belästigung', 'pädophilie', 'kannibalismus', 'gruppenvergewaltigung', 'enthauptung', 'hinrichtung', 'verbrennung', 'sodomie', 'nekrophilie', 'zoophilie',
-
-    // --- Arabic (ar) ---
-    'إباحي', 'جنس', 'جنسي', 'عاري', 'عنف', 'قتل', 'إرهاب', 'قنبلة', 'سلاح', 'مسدس', 'مخدرات', 'حشيش', 'كوكايين', 'نازي', 'انتحار', 'إيذاء النفس', 'قمار', 'كازينو', 'رهان', 'كراهية', 'عنصرية', 'اغتصاب', 'اعتداء جنسي', 'تعذيب', 'تحرش جنسي', 'بيدوفيليا', 'أكل لحوم البشر', 'اغتصاب جماعي', 'قطع الرأس', 'إعدام', 'حرق', 'بهيمية', 'نيكروفيليا', 'زوفيليا',
-
-    // --- Bengali (bn) ---
-    'পর্ন', 'যৌন', 'সেক্স', 'নগ্ন', 'সহিংসতা', 'হত্যা', 'খুন', 'সন্ত্রাস', 'বোমা', 'অস্ত্র', 'বন্দুক', 'মাদক', 'গাঁজা', 'কোকেন', 'নাৎসি', 'আত্মহত্যা', 'আত্মক্ষতি', 'জুয়া', 'ক্যাসিনো', 'বাজি', 'ঘৃণা', 'বর্ণবাদ', 'ধর্ষণ', 'যৌন নির্যাতন', 'নির্যাতন', 'যৌন হয়রানি', 'পেডোফিলিয়া', 'নরমাংসভোজী', 'গণধর্ষণ', 'শিরশ্ছেদ', 'মৃত্যুদণ্ড', 'আগুনে পোড়ানো', 'পশুকামিতা', 'নেক্রোফিলিয়া', 'জুফিলিয়া',
-
-    // --- Vietnamese (vi) ---
-    'khiêu dâm', 'tình dục', 'quan hệ tình dục', 'khỏa thân', 'bạo lực', 'giết', 'giết người', 'khủng bố', 'bom', 'vũ khí', 'súng', 'ma túy', 'cần sa', 'cocain', 'phát xít', 'tự tử', 'tự hại', 'cờ bạc', 'sòng bạc', 'cá cược', 'thù hận', 'phân biệt chủng tộc', 'hiếp dâm', 'cưỡng hiếp', 'tra tấn', 'quấy rối tình dục', 'ấu dâm', 'ăn thịt người', 'hiếp dâm tập thể', 'chặt đầu', 'hành quyết', 'thiêu sống', 'thú giao', 'ái tử thi', 'ái thú',
-
-    // --- Thai (th) ---
-    'โป๊', 'เซ็กซ์', 'เพศ', 'เปลือย', 'ความรุนแรง', 'ฆ่า', 'ฆาตกรรม', 'การก่อการร้าย', 'ระเบิด', 'อาวุธ', 'ปืน', 'ยาเสพติด', 'กัญชา', 'โคเคน', 'นาซี', 'ฆ่าตัวตาย', 'ทำร้ายตัวเอง', 'การพนัน', 'คาสิโน', 'เดิมพัน', 'เกลียดชัง', 'เหยียดเชื้อชาติ', 'ข่มขืน', 'ล่วงละเมิดทางเพศ', 'ทรมาน', 'คุกคามทางเพศ', 'ใคร่เด็ก', 'กินเนื้อมนุษย์', 'รุมโทรม', 'ตัดหัว', 'ประหารชีวิต', 'เผาทั้งเป็น', 'สมสู่กับสัตว์', 'เนโครฟีเลีย', 'ซูฟีเลีย',
-
-    // --- Hindi (hi) ---
-    'पॉर्न', 'सेक्स', 'यौन', 'नग्न', 'हिंसा', 'मारना', 'हत्या', 'आतंक', 'बम', 'हथियार', 'बंदूक', 'ड्रग्स', 'गांजा', 'कोकीन', 'नाजी', 'आत्महत्या', 'आत्म-हानि', 'जुआ', 'कैसीनो', 'सट्टेबाजी', 'नफरत', 'जातिवाद', 'बलात्कार', 'यौन हमला', 'यातना', 'यौन उत्पीड़न', 'बाल यौन शोषण', 'नरभक्षण', 'सामूहिक बलात्कार', 'सिर कलम', 'फांसी', 'दाह', 'पशुगमन', 'शव संभोग', 'पशु प्रेम',
-
-    // --- Indonesian (id) ---
-    'pornografi', 'seks', 'seksual', 'telanjang', 'kekerasan', 'membunuh', 'pembunuhan', 'terorisme', 'bom', 'senjata', 'pistol', 'narkoba', 'ganja', 'kokain', 'nazi', 'bunuh diri', 'melukai diri', 'judi', 'kasino', 'taruhan', 'kebencian', 'rasisme', 'pemerkosaan', 'kekerasan seksual', 'penyiksaan', 'pelecehan seksual', 'pedofilia', 'kanibalisme', 'pemerkosaan massal', 'pemenggalan', 'eksekusi', 'bakar hidup-hidup', 'bestialitas', 'nekrofilia', 'zoofilia',
-
-    // --- Malay (ms) ---
-    'pornografi', 'seks', 'seksual', 'keganasan', 'bunuh', 'pembunuhan', 'keganasan', 'bom', 'senjata', 'pistol', 'dadah', 'ganja', 'kokain', 'nazi', 'bunuh diri', 'cederakan diri', 'judi', 'kasino', 'pertaruhan', 'kebencian', 'perkauman', 'rogol', 'serangan seksual', 'seksa', 'gangguan seksual', 'pedofilia', 'kanibalisme', 'rogol berkumpulan', 'pancung', 'hukum mati', 'bakar', 'bestialiti', 'nekrofilia', 'zoofilia',
-
-    // --- Turkish (tr) ---
-    'pornografi', 'seks', 'cinsel', 'çıplak', 'şiddet', 'öldürmek', 'cinayet', 'terör', 'bomba', 'silah', 'tabanca', 'uyuşturucu', 'esrar', 'kokain', 'nazi', 'intihar', 'kendine zarar', 'kumar', 'kumarhane', 'bahis', 'nefret', 'ırkçılık', 'tecavüz', 'cinsel saldırı', 'işkence', 'cinsel taciz', 'pedofili', 'yamyamlık', 'toplu tecavüz', 'kafa kesme', 'idam', 'yakma', 'zoofili', 'nekrofili', 'hayvanlarla seks',
-
-    // --- Russian (ru) ---
-    'порно', 'секс', 'сексуальный', 'голый', 'насилие', 'убить', 'убийство', 'террор', 'бомба', 'оружие', 'пистолет', 'наркотики', 'марихуана', 'кокаин', 'нацист', 'самоубийство', 'членовредительство', 'азартные игры', 'казино', 'ставки', 'ненависть', 'расизм', 'изнасилование', 'сексуальное насилие', 'пытки', 'сексуальные домогательства', 'педофилия', 'каннибализм', 'групповое изнасилование', 'обезглавливание', 'казнь', 'сожжение', 'скотоложство', 'некрофилия', 'зоофилия',
-
-    // --- Ukrainian (uk) ---
-    'порно', 'секс', 'сексуальний', 'голий', 'насильство', 'вбити', 'вбивство', 'террор', 'бомба', 'зброя', 'пістолет', 'наркотики', 'марихуана', 'кокаїн', 'нацист', 'самогубство', 'самоушкодження', 'азартні ігри', 'казино', 'ставки', 'ненависть', 'расизм', 'згвалтування', 'сексуальне насильство', 'тортури', 'сексуальні домагання', 'педофілія', 'канібалізм', 'групове згвалтування', 'обезголовлення', 'страта', 'спалення', 'скотолозтва', 'некрофілія', 'зоофілія',
-
-    // --- Polish (pl) ---
-    'pornografia', 'seks', 'seksualny', 'nagi', 'przemoc', 'zabić', 'morderstwo', 'terroryzm', 'bomba', 'broń', 'pistolet', 'narkotyki', 'marihuana', 'kokaina', 'nazista', 'samobójstwo', 'samookaleczenie', 'hazard', 'kasyno', 'zakłady', 'nienawiść', 'rasizm', 'gwałt', 'napaść seksualna', 'tortury', 'molestowanie seksualne', 'pedofilia', 'kanibalizm', 'gwałt zbiorowy', 'ścięcie', 'egzekucja', 'spalenie', 'bestialstwo', 'nekrofilia', 'zoofilia',
-
-    // --- Italian (it) ---
-    'pornografia', 'sesso', 'sessuale', 'nudo', 'violenza', 'uccidere', 'omicidio', 'terrorismo', 'bomba', 'arma', 'pistola', 'droga', 'marijuana', 'cocaina', 'nazista', 'suicidio', 'autolesionismo', 'gioco d\'azzardo', 'casinò', 'scommesse', 'odio', 'razzismo', 'stupro', 'violenza sessuale', 'tortura', 'molestie sessuali', 'pedofilia', 'cannibalismo', 'stupro di gruppo', 'decapitazione', 'esecuzione', 'rogo', 'bestialità', 'necrofilia', 'zoofilia',
-
-    // --- Portuguese (pt) ---
-    'pornografia', 'sexo', 'sexual', 'nu', 'violência', 'matar', 'assassinato', 'terrorismo', 'bomba', 'arma', 'pistola', 'drogas', 'maconha', 'cocaína', 'nazista', 'suicídio', 'automutilação', 'jogo', 'cassino', 'apostas', 'ódio', 'racismo', 'estupro', 'abuso sexual', 'tortura', 'assédio sexual', 'pedofilia', 'canibalismo', 'estupro coletivo', 'decapitação', 'execução', 'fogueira', 'bestialidade', 'necrofilia', 'zoofilia',
-
-    // --- Greek (el) ---
-    'πορνό', 'σεξ', 'σεξουαλικός', 'γυμνός', 'βία', 'σκοτώνω', 'φόνος', 'τρομοκρατία', 'βόμβα', 'όπλο', 'πιστόλι', 'ναρκωτικά', 'μαριχουάνα', 'κοκαΐνη', 'ναζί', 'αυτοκτονία', 'αυτοτραυματισμός', 'τζόγος', 'καζίνο', 'στοίχημα', 'μίσος', 'ρατσισμός', 'βιασμός', 'σεξουαλική επίθεση', 'βασανιστήρια', 'σεξουαλική παρενόχληση', 'παιδοφιλία', 'κανιβαλισμός', 'ομαδικός βιασμός', 'αποκεφαλισμός', 'εκτέλεση', 'κάψιμο', 'κτηνοβασία', 'νεκροφιλία', 'ζωοφιλία',
-
-    // --- Swedish (sv) ---
-    'porr', 'sex', 'sexuell', 'naken', 'våld', 'döda', 'mord', 'terrorism', 'bomb', 'vapen', 'pistol', 'droger', 'marijuana', 'kokain', 'nazist', 'självmord', 'självskadebeteende', 'spel', 'kasino', 'vadslagning', 'hat', 'rasism', 'våldtäkt', 'sexuella övergrepp', 'tortyren', 'sexuella trakasserier', 'pedofili', 'kannibalism', 'gruppvåldtäkt', 'halshuggning', 'avrättning', 'bränning', 'tidelag', 'nekrofili', 'zoofili',
-
-    // --- Finnish (fi) ---
-    'porno', 'seksi', 'seksuaalinen', 'alaston', 'väkivalta', 'tappaa', 'murha', 'terrorismi', 'pommi', 'ase', 'pistooli', 'huumeet', 'marihuana', 'kokaiini', 'natsi', 'itsemurha', 'itseään vahingoittava', 'uhkapeli', 'kasino', 'vedonlyönti', 'viha', 'rasismi', 'raiskaus', 'seksuaalinen väkivalta', 'kidutus', 'seksuaalinen häirintä', 'pedofilia', 'kannibalismi', 'joukkoraiskaus', 'mestaus', 'teloitus', 'polttaminen', 'eläimeen sekaantuminen', 'nekrofilia', 'zoofilia',
-
-    // --- Mongolian (mn) ---
-    'порно', 'секс', 'бэлгийн', 'нүцгэн', 'хүчирхийлэл', 'алах', 'аллага', 'терроризм', 'бөмбөг', 'зэвсэг', 'буу', 'мансууруулах', 'хар тамхи', 'кокаин', 'нацист', 'амиа', 'өөрийгөө', 'мөрийтэй', 'казино', 'бооцоо', 'үзэн', 'арьс', 'хүчин', 'бэлгийн хүчирхийлэл', 'эрүү шүүлт', 'бэлгийн дарамт', 'педофили', 'хүн идэх', 'бүлэглэн хүчирхийлэх', 'толгой авах', 'цаазаар авах', 'шатаах', 'малын гаж дон', 'цогцос сонирхох', 'амьтан сонирхох',
-
-    // --- Swahili (sw) ---
-    'picha', 'ngono', 'kujamiiana', 'uchi', 'vurugu', 'ua', 'mauaji', 'ugaidi', 'bomu', 'silaha', 'bunduki', 'dawa', 'bangi', 'kokeini', 'nazi', 'kujiua', 'kujidhuru', 'kamari', 'kasino', 'kuweka', 'chuki', 'ubaguzi', 'ubakaji', 'shambulio la kingono', 'utesaji', 'unyanyasaji wa kijinsia', 'ulawiti wa watoto', 'ulaji watu', 'ubakaji wa genge', 'kukata kichwa', 'kunyongwa', 'kuchoma', 'ngono na wanyama', 'necrophilia', 'zoophilia',
-
-    // --- Dutch (nl) ---
-    'pornografie', 'seks', 'naakt', 'geweld', 'moord', 'terreur', 'bom', 'wapen', 'drugs', 'marihuana', 'cocaïne', 'nazi', 'zelfmoord', 'gokken', 'casino', 'haat', 'racisme', 'verkrachting', 'mishandeling', 'pedofilie', 'kannibalisme', 'onthoofding', 'executie', 'bestialiteit', 'necrofilie',
-
-    // --- Norwegian (no) ---
-    'pornografi', 'seks', 'naken', 'vold', 'drap', 'mord', 'terror', 'bombe', 'våpen', 'narkotika', 'marihuana', 'kokain', 'nazi', 'selvmord', 'gambling', 'casino', 'hat', 'rasisme', 'voldtekt', 'overgrep', 'pedofili', 'kannibalisme', 'halshugging', 'henrettelse', 'dyresex',
-
-    // --- Danish (da) ---
-    'pornografi', 'sex', 'nøgen', 'vold', 'drab', 'mord', 'terror', 'bombe', 'våben', 'stoffer', 'hash', 'kokain', 'nazi', 'selvmord', 'spil', 'kasino', 'had', 'racisme', 'voldtægt', 'overgreb', 'pædofili', 'kannibalisme', 'halshugning', 'henrettelse', 'dyresex',
-
-    // --- Filipino (fil) ---
-    'pornograpiya', 'sex', 'hubad', 'karahasan', 'patayin', 'pagpatay', 'terorismo', 'bomba', 'armas', 'baril', 'droga', 'marijuana', 'cocaine', 'nazi', 'pagpapakamatay', 'sugal', 'casino', 'poot', 'rasismo', 'panggagahasa', 'pang-aabuso', 'pedophilia', 'kanibalismo', 'pagpugot', 'pagbitay',
-
-    // --- Hungarian (hu) ---
-    'pornográfia', 'szex', 'meztelen', 'erőszak', 'ölés', 'gyilkosság', 'terrorizmus', 'bomba', 'fegyver', 'kábítószer', 'marihuána', 'kokain', 'náci', 'öngyilkosság', 'szerencsejáték', 'kaszinó', 'gyűlölet', 'rasszizmus', 'nemi erőszak', 'bántalmazás', 'pedofília', 'kannibalizmus', 'lefejezés', 'kivégzés'
-];
+// 요청 언어의 금칙어만 검사. 페이지 언어 = 콘텐츠 언어 가정.
+function isDisallowedTopic(lang, lowered) {
+    const list = DISALLOWED_BY_LANG[lang];
+    if (!list || list.length === 0) return false;
+    if (WORD_BOUNDARY_LANGS.has(lang)) {
+        const re = DISALLOWED_REGEX_BY_LANG[lang];
+        return re ? re.test(lowered) : false;
+    }
+    return list.some(k => lowered.includes(k.toLowerCase()));
+}
 
 // 수정: 다국어 에러 메시지 정의
 const ERROR_MESSAGES = {
@@ -476,26 +450,25 @@ app.post('/generate-poem', async (req, res) => {
     const rawForm = typeof req.body.form === 'string' ? req.body.form : 'auto';
     const form = ALLOWED_FORMS.has(rawForm) ? rawForm : 'auto';
 
-    // 수정: 필수 입력값 검증 실패 시 다국어 에러 메시지 반환
+    // 수정: 검증 순서 재배치 — 미지원 언어 먼저 차단 (이후 단계의 언어별 로직 안전)
+    if (!SUPPORTED_LANGUAGES.has(language)) {
+        return res.status(400).json({ error: getErrorMessage(language, 'unsupportedLang') });
+    }
+
+    // 수정: 필수 입력값 검증
     if (!rawTopic) {
         return res.status(400).json({ error: getErrorMessage(language, 'missingTopic') });
     }
 
-    // 수정: 길이 제한 초과 시 다국어 에러 메시지 반환
+    // 수정: 길이 제한
     if (rawTopic.length > MAX_TOPIC_LENGTH) {
         return res.status(400).json({ error: getErrorMessage(language, 'topicTooLong', MAX_TOPIC_LENGTH) });
     }
 
-    // 수정: 금칙어 포함 시 다국어 에러 메시지 반환
+    // 수정: 요청 언어 금칙어만 검사 (단어경계/substring 분기) — 'nazi'(sw=코코넛) 등 cross-language 오탐 해소
     const loweredTopic = rawTopic.toLowerCase();
-    const matchedKeyword = DISALLOWED_KEYWORDS.find((keyword) => loweredTopic.includes(keyword));
-    if (matchedKeyword) {
+    if (isDisallowedTopic(language, loweredTopic)) {
         return res.status(400).json({ error: getErrorMessage(language, 'disallowedTopic') });
-    }
-
-    // 수정: 미지원 언어 요청 시 다국어 에러 메시지 반환
-    if (!SUPPORTED_LANGUAGES.has(language)) {
-        return res.status(400).json({ error: getErrorMessage(language, 'unsupportedLang') });
     }
 
     const langPrompt = languagePromptMap[language];
@@ -552,5 +525,9 @@ app.post('/generate-poem', async (req, res) => {
     }
 });
 
+// 테스트용 export — 운영 동작 무관
 module.exports.handler = serverless(app); // app을 serverless()함수로 감싸서
                                           // AWSLambda에서 실행할 수 있도록 만듦
+module.exports.app = app;
+module.exports.isDisallowedTopic = isDisallowedTopic;
+module.exports.SUPPORTED_LANGUAGES = SUPPORTED_LANGUAGES;
