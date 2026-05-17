@@ -1,0 +1,35 @@
+# 비-언어 약속페이지 정규화
+/about         /about.html         301
+/contact       /contact.html       301
+/privacy       /privacy.html       301
+/terms         /terms.html         301
+/use-cases     /use-cases.html     301
+/gallery       /gallery.html       301
+/faq           /faq.html           301
+/about-author  /about-author.html  301
+
+# 언어별 약속페이지 정규화 (:lang = ko/en/기타)
+/:lang/about         /:lang/about.html         301
+/:lang/contact       /:lang/contact.html       301
+/:lang/privacy       /:lang/privacy.html       301
+/:lang/terms         /:lang/terms.html         301
+/:lang/use-cases     /:lang/use-cases.html     301
+/:lang/gallery       /:lang/gallery.html       301
+/:lang/gallery-1     /:lang/gallery-1.html     301
+/:lang/gallery-2     /:lang/gallery-2.html     301
+/:lang/gallery-3     /:lang/gallery-3.html     301
+/:lang/gallery-4     /:lang/gallery-4.html     301
+/:lang/faq           /:lang/faq.html           301
+/:lang/about-author  /:lang/about-author.html  301
+
+# 블로그 게시글 정규화
+/blog/:lang/article-1   /blog/:lang/article-1.html   301
+/blog/:lang/article-2   /blog/:lang/article-2.html   301
+/blog/:lang/article-3   /blog/:lang/article-3.html   301
+/blog/:lang/article-4   /blog/:lang/article-4.html   301
+/blog/:lang/article-5   /blog/:lang/article-5.html   301
+/blog/:lang/article-6   /blog/:lang/article-6.html   301
+/blog/:lang/article-7   /blog/:lang/article-7.html   301
+/blog/:lang/article-8   /blog/:lang/article-8.html   301
+/blog/:lang/article-9   /blog/:lang/article-9.html   301
+/blog/:lang/article-10  /blog/:lang/article-10.html  301
