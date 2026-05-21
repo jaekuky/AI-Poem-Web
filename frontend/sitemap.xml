@@ -2,9 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ai-and-poem.art/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/about.html" />
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-05-20</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/author.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/author.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/author.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/author.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-05-20</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/ko/author.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/author.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/author.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/author.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-05-20</lastmod>
+  </url>
+  <url>
+    <loc>https://ai-and-poem.art/en/author.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/author.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/author.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/author.html" />
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-05-20</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/contact.html</loc>

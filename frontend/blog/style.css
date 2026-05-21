@@ -804,3 +804,17 @@ body.has-cookie-banner {
         margin: 0 2px;
     }
 }
+/* Article byline — visible "by Ryu" at top of article, links to author profile */
+.article-byline {
+    color: #bbb;
+    font-size: 0.95em;
+    margin: 6px 0 18px;
+    font-style: italic;
+}
+.article-byline a {
+    color: #ff9a9e;
+    text-decoration: none;
+}
+.article-byline a:hover {
+    text-decoration: underline;
+}
