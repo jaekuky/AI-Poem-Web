@@ -285,7 +285,57 @@ body {
     text-decoration: none;
 }
 
-
+/* 두 줄 푸터(v2) — blog/index.html 및 blog/{ko,en}/* 전용. frontend/style.css와 동일 규칙 */
+.site-footer--v2 {
+  margin: 40px 0 20px;
+  text-align: center;
+  font-size: 0.9em;
+}
+.site-footer--v2 .footer-primary,
+.site-footer--v2 .footer-secondary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 0;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+.site-footer--v2 a {
+  color: #ffffff;
+  text-decoration: underline;
+  margin: 0 8px;
+}
+.site-footer--v2 a:hover {
+  text-decoration: none;
+}
+.site-footer--v2 .footer-secondary a {
+  font-size: 0.92em;
+}
+.site-footer--v2 span {
+  color: #ffffff;
+  opacity: 0.6;
+}
+.site-footer--v2 .footer-copyright {
+  margin-top: 12px;
+  font-size: 0.85em;
+  color: #cccccc;
+}
+@media (max-width: 768px) {
+  .site-footer--v2 a {
+    font-size: 0.8em;
+    margin: 0 4px;
+  }
+  .site-footer--v2 .footer-secondary a {
+    font-size: 0.78em;
+  }
+  .site-footer--v2 .footer-primary,
+  .site-footer--v2 .footer-secondary {
+    gap: 2px 0;
+  }
+  .site-footer--v2 span {
+    margin: 0 2px;
+  }
+}
 
 /* 수정: 쿠키 동의 배너가 페이지 하단에서 겹치지 않도록 바디 여백 추가 */
 body.has-cookie-banner {
