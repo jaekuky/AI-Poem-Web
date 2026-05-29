@@ -1,5 +1,9 @@
 # AI & Poem 프로젝트 — Claude 작업 가이드
 
+## Language
+- Always respond in Korean (한국어) regardless of the language of the codebase or file content.
+- Plans, explanations, and all communication must be in Korean.
+
 ## 라이브 환경
 - 운영 URL — `https://ai-and-poem.art/` (root = ko 메인), `/ko/`, `/en/`
 - 프론트엔드 — Cloudflare Pages, 정적 HTML, 빌드 단계 없음 (edit-then-deploy)
