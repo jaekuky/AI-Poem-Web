@@ -824,6 +824,16 @@ body.has-cookie-banner {
   font-size: 1.2em;
 }
 
+.content-section.centered p.contact-intro { text-align: left; }
+
+ul.contact-topics,
+ul.contact-channels {
+  text-align: left;
+  padding-left: 2em;
+}
+
+ul.contact-channels a { color: skyblue; }
+
 .contact-email {
   background: rgba(255, 255, 255, 0.2);
   padding: 15px 30px;
