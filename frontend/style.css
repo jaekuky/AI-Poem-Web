@@ -27,11 +27,15 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-.header-left h1 {
+.header-left .logo {
   font-size: 1.7em;
+  font-weight: bold;
+  margin: 0;
 }
-.header-left h3 {
+.header-left .tagline {
   font-size: 1em;
+  font-weight: bold;
+  margin: 0;
 }
 
 /* 추가: 헤더 로고 링크 스타일 */
@@ -202,6 +206,7 @@ body {
 }
 
 /* 수정: 섹션 제목 가독성 향상 */
+.seo-section h1,
 .seo-section h2 {
   font-size: 1.4rem;
   margin-bottom: 12px;
@@ -327,6 +332,7 @@ body {
 .privacy_container a,
 .terms_container a {
   color: aqua;
+  overflow-wrap: anywhere;
 }
 
 /* 푸터 스타일을 정의해 모든 페이지에서 일관된 링크 표시 */
@@ -693,10 +699,10 @@ body.has-cookie-banner {
     white-space: nowrap; /* 텍스트 줄바꿈 방지 */
   }
 
-  .header-left h1 {
+  .header-left .logo {
     font-size: 1.5rem; /* 제목 크기 가독성 있게 조정 */
   }
-  .header-left h3 {
+  .header-left .tagline {
     font-size: 0.8rem;
   }
 
@@ -801,9 +807,18 @@ body.has-cookie-banner {
   text-align: center;
 }
 
+.content-section h1,
 .content-section h2 {
   color: #ff9a9e;
   margin-top: 30px;
+  font-size: 1.5em;
+}
+/* 하위 제목(기존 h3에서 승격)은 기존 h3 외형 유지 */
+.content-section h2.content-sub {
+  color: #fff;
+  margin-top: 0;
+  font-size: 1.17em;
+  text-align: start;
 }
 
 .content-section p {
@@ -1074,8 +1089,9 @@ ul.contact-channels a { color: skyblue; }
     background: rgba(255, 255, 255, 0.1);
 }
 
-.gallery-hub-card h3 {
+.gallery-hub-card h2 {
     color: #ff9a9e;
+    margin-top: 0;
     margin-bottom: 8px;
     font-size: 1.15em;
 }

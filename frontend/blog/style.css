@@ -29,12 +29,16 @@ body {
     justify-content: center;
 }
 
-.header-left h1 {
+.header-left .logo {
     font-size: 1.7em;
+    font-weight: bold;
+    margin: 0;
 }
 
-.header-left h3 {
+.header-left .tagline {
     font-size: 1em;
+    font-weight: bold;
+    margin: 0;
 }
 
 /* 헤더 로고 링크 스타일 */
@@ -182,6 +186,7 @@ body {
 }
 
 /* 수정: 섹션 제목 가독성 향상 */
+.seo-section h1,
 .seo-section h2 {
     font-size: 1.4rem;
     margin-bottom: 12px;
@@ -357,6 +362,10 @@ body.has-cookie-banner {
 .blog-header {
     text-align: center;
     margin-bottom: 40px;
+}
+
+.blog-header h1 {
+    font-size: 1.5em;
 }
 
 .blog-list {
@@ -580,11 +589,11 @@ body.has-cookie-banner {
         align-items: center;
     }
 
-    .header-left h1 {
+    .header-left .logo {
         font-size: 1.4em;
     }
 
-    .header-left h3 {
+    .header-left .tagline {
         font-size: 0.85em;
     }
 
@@ -713,11 +722,11 @@ body.has-cookie-banner {
         align-items: center;
     }
 
-    .header-left h1 {
+    .header-left .logo {
         font-size: 1.2rem;
     }
 
-    .header-left h3 {
+    .header-left .tagline {
         font-size: 0.65rem;
     }
 
