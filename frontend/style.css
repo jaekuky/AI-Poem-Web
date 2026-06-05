@@ -274,7 +274,7 @@ body {
 }
 
 .blog-preview h3 a {
-  color: #ff9a9e;
+  color: skyblue;
   text-decoration: none;
 }
 
@@ -328,11 +328,29 @@ body {
   margin-bottom: 1.1em;
 }
 
-/* 개인정보처리방침 및 이용악관 링크 색상 변경 */
+/* 개인정보처리방침 및 이용악관 링크 색상 변경 (skyblue 기본 / 연보라 방문) */
 .privacy_container a,
 .terms_container a {
-  color: aqua;
+  color: skyblue;
   overflow-wrap: anywhere;
+}
+.privacy_container a:visited,
+.terms_container a:visited {
+  color: #c8a2e9;
+}
+
+/* 외부 링크 가독성 — skyblue 기본 / 연보라 방문 / 호버 밝은 하늘색 */
+a[href^="http"]:not([href*="ai-and-poem.art"]),
+a[href^="mailto"] {
+  color: skyblue;
+}
+a[href^="http"]:not([href*="ai-and-poem.art"]):visited,
+a[href^="mailto"]:visited {
+  color: #c8a2e9;
+}
+a[href^="http"]:not([href*="ai-and-poem.art"]):hover,
+a[href^="mailto"]:hover {
+  color: #b0e2ff;
 }
 
 /* 푸터 스타일을 정의해 모든 페이지에서 일관된 링크 표시 */
@@ -813,6 +831,16 @@ body.has-cookie-banner {
   margin-top: 30px;
   font-size: 1.5em;
 }
+/* content-section 본문 링크 가독성 — skyblue 기본 / 연보라 방문 (about·author 등) */
+.content-section a {
+  color: skyblue;
+}
+.content-section a:visited {
+  color: #c8a2e9;
+}
+.content-section a:hover {
+  color: #b0e2ff;
+}
 /* 하위 제목(기존 h3에서 승격)은 기존 h3 외형 유지 */
 .content-section h2.content-sub {
   color: #fff;
@@ -989,14 +1017,14 @@ ul.contact-channels a { color: skyblue; }
 
 .gallery-author-info-link {
     display: inline-block;
-    color: #ff9a9e;
+    color: skyblue;
     text-decoration: none;
     font-size: 0.95em;
 }
 
 .gallery-author-info-link:hover {
     text-decoration: underline;
-    color: #ffb3b6;
+    color: #b0e2ff;
 }
 
 /* Gallery Related Posts */

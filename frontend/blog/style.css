@@ -464,6 +464,18 @@ body.has-cookie-banner {
     margin-bottom: 10px;
 }
 
+/* 본문 링크 가독성 — 어두운 배경 대비 확보 (skyblue 기본 / 연보라 방문) */
+.article-content a {
+    color: skyblue;
+    text-decoration: underline; /* 색에만 의존하지 않도록 밑줄 유지 (WCAG 1.4.1) */
+}
+.article-content a:visited {
+    color: #c8a2e9;
+}
+.article-content a:hover {
+    color: #b0e2ff;
+}
+
 .article-container .back-link {
     display: block;
     margin-top: 60px;
@@ -511,14 +523,14 @@ body.has-cookie-banner {
 
 .author-info-link {
     display: inline-block;
-    color: #ff9a9e;
+    color: skyblue;
     text-decoration: none;
     font-size: 0.95em;
 }
 
 .author-info-link:hover {
     text-decoration: underline;
-    color: #ffb3b6;
+    color: #b0e2ff;
 }
 
 /* =========================================
@@ -871,7 +883,7 @@ body.has-cookie-banner {
     font-style: italic;
 }
 .article-byline a {
-    color: #ff9a9e;
+    color: skyblue;
     text-decoration: none;
 }
 .article-byline a:hover {
