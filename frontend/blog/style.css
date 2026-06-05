@@ -877,3 +877,20 @@ body.has-cookie-banner {
 .article-byline a:hover {
     text-decoration: underline;
 }
+
+/* Poem quote — 본문과 시각적으로 구분되는 시 인용 블록 */
+.poem-quote {
+    border-left: 3px solid #ff9a9e;
+    padding: 4px 0 4px 18px;
+    margin: 22px 0;
+    font-style: italic;
+    color: #ddd;
+    line-height: 1.9;
+}
+.poem-quote cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.85em;
+    font-style: normal;
+    color: #999;
+}
