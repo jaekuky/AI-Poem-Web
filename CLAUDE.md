@@ -92,3 +92,43 @@
 ### J. 시각 장식 남용 [S2]
 - 과도한 **볼드** → 본문에서 거의 제거
 - 대시(—) 남용 → 쉼표 또는 별도 문장으로
+
+
+## English AI Writing Pattern Rules (blader/humanizer)
+
+When writing English text, apply these 29-pattern checks automatically.
+
+### Vocabulary (Pattern 7 — remove these words)
+delve, tapestry, landscape (abstract), testament, pivotal, vibrant, nestled,
+groundbreaking, breathtaking, showcasing, fostering, underscoring, highlighting,
+crucial, align with, intricate, interplay, garner, enduring, valuable
+
+### Structure
+- No "Challenges and Future Prospects" boilerplate sections (Pattern 6)
+- No inline-header bullet lists with bold + colon (Pattern 16) → convert to prose
+- No fragmented headers followed by one-line restatements (Pattern 29)
+- Sentence case in headings, not Title Case (Pattern 17)
+
+### Style
+- Em dash (—) → comma or period (Pattern 14)
+- Curly quotes → straight quotes (Pattern 19)
+- No emojis in headers/bullets (Pattern 18)
+- No bold emphasis in body text (Pattern 15)
+- Use is/are/has instead of serves as/stands as/represents (Pattern 8)
+
+### Voice & Communication
+- No chatbot artifacts: "I hope this helps", "Let me know", "Certainly!" (Pattern 20)
+- No knowledge cutoff disclaimers: "as of my training", "based on available info" (Pattern 21)
+- No sycophantic openers: "Great question!", "You're absolutely right!" (Pattern 22)
+- No signposting: "Let's dive in", "Here's what you need to know" (Pattern 28)
+
+### Filler & Hedging
+- Remove filler: "In order to" → "To", "Due to the fact that" → "Because" (Pattern 23)
+- No vague positive conclusions (Pattern 25) → replace with specific facts
+- No persuasive authority tropes: "At its core", "The real question is" (Pattern 27)
+
+### Core rules
+- Preserve all facts, numbers, proper nouns, and direct quotes
+- Vary sentence rhythm — mix short punchy sentences with longer ones
+- Add opinions and specific details; remove vague claims
+- Two-pass audit: after rewrite, ask "what still sounds AI?" then revise again
