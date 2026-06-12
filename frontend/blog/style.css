@@ -906,3 +906,70 @@ body.has-cookie-banner {
     font-style: normal;
     color: #999;
 }
+
+/* 프롬프트 예시 — 사용자가 그대로 복사하는 코드블록 (poem-quote와 구분) */
+.article-content pre {
+    max-width: 100%;
+    margin: 20px 0;
+}
+.prompt-example {
+    display: block;
+    box-sizing: border-box;
+    max-width: 100%;
+    background: #1b1b1f;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-left: 3px solid skyblue;
+    border-radius: 8px;
+    padding: 16px 18px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.95em;
+    line-height: 1.7;
+    color: #e8e8e8;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+/* 도구 출력 — 좋은 예 / 아쉬운 예 (산문 톤, poem-quote와 시각적으로 구분) */
+.tool-output {
+    margin: 24px 0;
+    border-radius: 8px;
+    padding: 8px 18px 4px;
+    line-height: 1.7;
+}
+.tool-output figcaption {
+    font-size: 0.85em;
+    font-weight: bold;
+    margin: 8px 0;
+}
+.tool-output blockquote {
+    margin: 0 0 8px;
+    font-style: normal;
+    color: #ddd;
+}
+.tool-output.good {
+    background: rgba(80, 200, 120, 0.08);
+    border-left: 3px solid #3fb96b;
+}
+.tool-output.good figcaption {
+    color: #6fe39a;
+}
+.tool-output.bad {
+    background: rgba(230, 120, 120, 0.08);
+    border-left: 3px solid #e06666;
+}
+.tool-output.bad figcaption {
+    color: #f2a0a0;
+}
+
+/* 인덱스 카드 카테고리 라벨 */
+.blog-category {
+    display: inline-block;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: #6fe39a;
+    border: 1px solid rgba(111, 227, 154, 0.4);
+    border-radius: 4px;
+    padding: 1px 8px;
+    margin-bottom: 6px;
+}

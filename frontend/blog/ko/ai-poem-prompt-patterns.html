@@ -1,0 +1,311 @@
+<!-- AI 시 작법 프롬프트 패턴 가이드 (ko, 단일 언어) -->
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- [SEO] Robots meta tag 추가 -->
+  <meta name="robots" content="index, follow">
+  <title>
+   AI에게 좋은 시를 만들게 하는 5가지 프롬프트 패턴 - AI &amp; Poem
+  </title>
+  <meta name="description" content="AI &amp; Poem을 운영하며 직접 검증한 프롬프트 패턴 5가지. 같은 주제에서 더 좋은 시를 끌어내는 방법을, 도구의 좋은 예와 아쉬운 예를 나란히 두고 정리했습니다.">
+  <!-- 수정: 스타일을 'frontend/blog/style.css'로 통합 -->
+      <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "홈",
+            "item": "https://ai-and-poem.art/ko/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "블로그",
+            "item": "https://ai-and-poem.art/blog/ko/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI에게 좋은 시를 만들게 하는 5가지 프롬프트 패턴"
+        }
+    ]
+}
+    </script>
+    <link href="../style.css" rel="stylesheet"/>
+  <!-- 수정: SEO를 위한 Canonical 태그 추가 -->
+  <link href="https://ai-and-poem.art/blog/ko/ai-poem-prompt-patterns.html" rel="canonical"/>
+  <meta name="google-adsense-account" content="ca-pub-7349192768683799">
+  <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799">
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI에게 좋은 시를 만들게 하는 5가지 프롬프트 패턴",
+    "description": "운영자가 도구를 만들며 직접 검증한, AI에게 좋은 시를 만들게 하는 프롬프트 패턴 5가지",
+    "datePublished": "2026-06-09T09:00:00+09:00",
+    "dateModified": "2026-06-09T09:00:00+09:00",
+    "author": { "@id": "https://ai-and-poem.art/author#person", "@type": "Person", "name": "Ryu" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ai-and-poem.art",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ai-and-poem.art/image/robot_poet.png"
+      }
+    },
+    "image": "https://ai-and-poem.art/image/robot_poet.png",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ai-and-poem.art/blog/ko/ai-poem-prompt-patterns.html"
+    },
+    "inLanguage": "ko"
+  }
+  </script>
+     <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CVHJYZWNC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1CVHJYZWNC');
+    </script>
+
+</head>
+ <body>
+  <div class="header">
+   <div class="header-left">
+    <div class="logo">
+     <a href="../../ko/index.html" style="text-decoration:none; color:white;">
+      AI &amp; Poem
+     </a>
+    </div>
+    <p class="tagline">
+     AI로 시쓰고, 바로 들으세요
+    </p>
+   </div>
+  </div>
+  <div class="article-container">
+   <header class="article-header">
+    <h1 class="article-title">
+     AI에게 좋은 시를 만들게 하는 5가지 프롬프트 패턴
+    </h1>
+   </header>
+   <p class="article-byline">by <a href="/author">Ryu</a> · 2026년 6월 9일 · 읽는 시간 7분</p>
+   <article class="article-content">
+
+    <!-- ========== 도입 ========== -->
+    <p>
+     AI &amp; Poem을 만들고 운영하면서 저는 같은 도구에 하루에도 수백 번 프롬프트를 넣습니다. 그러다 한 가지를 알게 됐습니다. 모델도 같고 버튼도 같은데, 나오는 시의 질은 프롬프트에서 갈립니다. "사랑에 대한 시 써 줘"라고 치면 어디서 본 듯한 문장이 돌아옵니다. 운율은 고른데 마음에 남지 않습니다. 그런데 같은 도구에 조건 몇 개를 더 얹으면 결과가 달라집니다.
+    </p>
+    <p>
+     아래 다섯 가지는 제가 직접 넣어 보고 결과를 비교하며 추린 패턴입니다. 거창한 이론은 아닙니다. 막연한 한 줄을 구체적인 한 편으로 바꾸는 손잡이입니다. 각 패턴마다 제가 쓰는 프롬프트 예시와, 같은 자리에서 도구가 내놓은 좋은 예·아쉬운 예를 나란히 두었습니다. 프롬프트는 그대로 복사해서 <a href="../../ko/index.html">AI &amp; Poem</a>에 넣어 보셔도 됩니다.
+    </p>
+
+    <!-- ========== 패턴 1 ========== -->
+    <h2>
+     1. 주제 말고 장면을 줘라
+    </h2>
+    <p>
+     '가을', '이별', '엄마' 같은 큰 단어를 그대로 넣으면 AI는 그 단어에 가장 흔하게 붙는 표현을 끌어옵니다. 평균을 따라가니 안전하지만 밋밋합니다. 주제를 장면으로 좁히면 달라집니다. 언제, 어디서, 누가, 무엇을 하고 있는지를 한 문장으로 묶어 주면 시가 디테일을 잡습니다.
+    </p>
+    <pre><code class="prompt-example">비 오는 밤 편의점 앞에서 우산 없이 막차를 기다리는
+사람의 마음을 4행으로 써 줘. '외롭다' 같은 직접적인
+감정 단어는 쓰지 말고.</code></pre>
+    <figure class="tool-output good">
+     <figcaption>AI &amp; Poem 출력 — 좋은 예</figcaption>
+     <blockquote>
+      젖은 어깨를 신호등이 자꾸 빨갛게 칠한다<br/>
+      봉지커피가 식어 가는 속도로<br/>
+      막차는 오지 않고<br/>
+      나는 우산을 안 가져온 사람이 된다
+     </blockquote>
+    </figure>
+    <p>
+     반대로 장면 없이 주제만 던지면 이런 결과가 나옵니다. 틀리진 않았지만, 누구의 비도 아닙니다.
+    </p>
+    <figure class="tool-output bad">
+     <figcaption>AI &amp; Poem 출력 — 아쉬운 예 (프롬프트: "비에 대한 시 써 줘")</figcaption>
+     <blockquote>
+      비가 내리네 슬프게 내리네<br/>
+      내 마음에도 비가 내리네<br/>
+      그리움이 빗물처럼 흐르고<br/>
+      오늘도 나는 너를 생각하네
+     </blockquote>
+    </figure>
+
+    <!-- ========== 패턴 2 ========== -->
+    <h2>
+     2. 화자를 정하라
+    </h2>
+    <p>
+     시가 누구의 입에서 나오는지를 정하면 어휘와 시선이 함께 정해집니다. 그냥 '직장에 대한 시'가 아니라 '첫 출근한 신입사원이 1인칭으로 말하는 시'라고 하면, AI는 그 사람이 볼 법한 것만 골라 보여 줍니다. 나이, 직업, 처지, 시점을 한 조각이라도 박아 두면 화자가 생깁니다.
+    </p>
+    <pre><code class="prompt-example">막 첫 출근한 신입사원의 들뜸과 불안을 1인칭 화자로,
+3행으로 써 줘.</code></pre>
+    <figure class="tool-output good">
+     <figcaption>AI &amp; Poem 출력 — 좋은 예</figcaption>
+     <blockquote>
+      사원증을 두 번 긁고서야 문이 열렸다<br/>
+      모두가 아는 길을 나만 지도를 켜고 걷는다<br/>
+      점심 메뉴 고르기가 오늘 가장 큰 결정이다
+     </blockquote>
+    </figure>
+    <p>
+     화자를 비워 두면 시도 비어 버립니다. 아래는 같은 소재를 화자 없이 맡겼을 때입니다.
+    </p>
+    <figure class="tool-output bad">
+     <figcaption>AI &amp; Poem 출력 — 아쉬운 예 (프롬프트: "직장에 대한 시 써 줘")</figcaption>
+     <blockquote>
+      매일 아침 우리는 일터로 향하네<br/>
+      바쁜 일상 속에 꿈을 잃지 않으려<br/>
+      오늘도 묵묵히 최선을 다하네
+     </blockquote>
+    </figure>
+
+    <!-- ========== 패턴 3 ========== -->
+    <h2>
+     3. 형식과 제약을 함께 줘라
+    </h2>
+    <p>
+     AI는 멈출 곳을 알려 주지 않으면 자꾸 길어지고 설명조로 흐릅니다. 행수와 형식, 그리고 쓰지 말 단어를 같이 정해 주면 출력이 단단해집니다. AI &amp; Poem에는 자유시·하이쿠 같은 형식 셀렉터가 있어서, 형식을 고른 뒤 프롬프트에서 제약을 한 번 더 못 박으면 효과가 큽니다.
+    </p>
+    <pre><code class="prompt-example">이별을 하이쿠 형식(3행)으로 써 줘. 계절을 가리키는
+말을 하나 넣고, '눈물'과 '슬픔'은 쓰지 마.</code></pre>
+    <figure class="tool-output good">
+     <figcaption>AI &amp; Poem 출력 — 좋은 예</figcaption>
+     <blockquote>
+      벚꽃 다 진 길<br/>
+      네 우산만 남기고<br/>
+      봄이 접힌다
+     </blockquote>
+    </figure>
+
+     
+    <figure>
+      <img src="/image/blog/ai-poem-prompt-patterns-01.png"
+           alt="AI &amp; Poem 입력창에 형식 셀렉터로 하이쿠를 고르고 제약을 넣은 프롬프트와 생성 결과 화면"
+           loading="lazy" width="800" height="887">
+      <figcaption>형식 셀렉터로 하이쿠를 고른 뒤 제약을 추가한 실제 생성 화면</figcaption>
+    </figure>
+    
+
+    <p>
+     제약을 빼면 형식이 풀리고, 시 대신 설명이 나옵니다.
+    </p>
+    <figure class="tool-output bad">
+     <figcaption>AI &amp; Poem 출력 — 아쉬운 예 (프롬프트: "이별 시 써 줘")</figcaption>
+     <blockquote>
+      우리의 이별은 너무나 가슴 아픈 일이었고<br/>
+      나는 흐르는 눈물을 멈출 수가 없었으며<br/>
+      그 슬픔은 영원히 잊지 못할 기억으로 남아<br/>
+      오랫동안 내 마음을 무겁게 짓눌렀습니다
+     </blockquote>
+    </figure>
+
+    <!-- ========== 패턴 4 ========== -->
+    <h2>
+     4. 감각 하나를 지정하라
+    </h2>
+    <p>
+     시가 상투적으로 흐르는 건 대개 시각에만 기대기 때문입니다. 후각이나 청각, 촉각 하나로만 써 보라고 막으면 AI는 덜 닳은 표현을 찾습니다. 한 감각으로 좁히는 제약이 오히려 시야를 넓힙니다.
+    </p>
+    <pre><code class="prompt-example">할머니의 부엌을 후각 하나로만 묘사해서 4행으로 써 줘.
+눈에 보이는 모습은 쓰지 말고 냄새로만.</code></pre>
+    <figure class="tool-output good">
+     <figcaption>AI &amp; Poem 출력 — 좋은 예</figcaption>
+     <blockquote>
+      문을 열면 참기름이 먼저 마중을 나온다<br/>
+      간장이 졸아붙은 냄비 바닥 냄새<br/>
+      행주에 밴 쉰내까지도 따뜻해서<br/>
+      나는 그 부엌을 코로 기억한다
+     </blockquote>
+    </figure>
+    <p>
+     감각을 지정하지 않으면 다시 눈에 보이는 상투적 묘사로 돌아갑니다.
+    </p>
+    <figure class="tool-output bad">
+     <figcaption>AI &amp; Poem 출력 — 아쉬운 예 (프롬프트: "할머니 부엌에 대한 시")</figcaption>
+     <blockquote>
+      따뜻한 햇살이 드는 정겨운 부엌에서<br/>
+      할머니의 주름진 손이 분주히 움직이고<br/>
+      사랑이 가득 담긴 밥상을 차리시네
+     </blockquote>
+    </figure>
+
+    <!-- ========== 패턴 5 ========== -->
+    <h2>
+     5. 한 번에 끝내지 마라
+    </h2>
+    <p>
+     가장 자주 잊는 패턴입니다. 첫 출력은 완성본이 아니라 재료입니다. 마음에 안 드는 한 행만 집어서 다시 시키면, 처음부터 새로 받는 것보다 훨씬 빠르게 좋아집니다. 추상어 한 단어를 만질 수 있는 사물로 바꿔 달라는 요청이 특히 잘 듣습니다.
+    </p>
+    <pre><code class="prompt-example">방금 그 시에서 '슬픔'이라는 단어를 빼고, 그 자리에
+손으로 만질 수 있는 사물 하나로 바꿔 줘.</code></pre>
+    <figure class="tool-output good">
+     <figcaption>AI &amp; Poem 출력 — 좋은 예 (재프롬프트 후)</figcaption>
+     <blockquote>
+      식탁에 슬픔이 놓여 있었다<br/>
+      → 식탁에 식어 버린 네 몫의 국이 놓여 있었다
+     </blockquote>
+    </figure>
+    <p>
+     '슬픔'이라고 적으면 독자는 슬픔을 읽지만, 식어 버린 국 한 그릇을 놓으면 독자가 직접 슬픔에 도착합니다. 이 교정은 사람이 방향만 잡아 주면 AI가 금세 해냅니다.
+    </p>
+
+    <!-- ========== 마무리 ========== -->
+    <h2>
+     결국 다섯 개는 한 가지를 말한다
+    </h2>
+    <p>
+     장면을 주고, 화자를 정하고, 형식을 묶고, 감각을 좁히고, 다시 고치는 일. 다섯 패턴은 모두 '구체적으로'라는 한마디로 모입니다. AI는 막연한 부탁에는 평균으로 답하고, 구체적인 부탁에는 그만큼 구체적으로 답합니다. 좋은 시를 직접 쓰는 능력보다, 무엇을 빼고 무엇을 못 박을지 정하는 감각이 먼저입니다.
+    </p>
+    <p>
+     위 프롬프트를 그대로 <a href="../../ko/index.html">AI &amp; Poem</a>에 넣어 보시고, 마음에 안 드는 한 줄을 골라 다섯 번째 패턴으로 고쳐 보시길 권합니다. 시인들이 같은 자리에서 어떻게 다르게 썼는지 궁금하시면 <a href="isang-ogamdo.html">이상 「오감도」</a>, <a href="jeongjiyong-hyangsu.html">정지용 「향수」</a>, <a href="kimsowol-jindallaekkot.html">김소월 「진달래꽃」</a>도 함께 읽어 보세요. 사람만 할 수 있는 선택이 어디에 있는지 또렷해집니다.
+    </p>
+
+   </article>
+   <aside class="author-info">
+    <h3 class="author-info-title">글쓴이 소개</h3>
+    <div class="author-info-body">
+     <div class="author-info-name">류재국 (Ryu Jae-kuk)</div>
+     <p class="author-info-desc">AI &amp; Poem 서비스 기획자 겸 개발자. 인공지능 기술과 문학의 교차점에서, 누구나 시로 자신을 표현할 수 있는 세상을 만들고 있습니다.</p>
+     <a href="../../ko/author.html" class="author-info-link">저자 프로필 보기 →</a>
+    </div>
+   </aside>
+   <nav class="related-posts" aria-label="관련 글">
+    <h3 class="related-posts-title">관련 글</h3>
+    <ul class="related-posts-list">
+     <li><a href="isang-ogamdo.html">이상 「오감도 시제1호」 전문과 해설: AI 시대에 다시 읽는 낯섦의 시학</a></li>
+     <li><a href="jeongjiyong-hyangsu.html">정지용 「향수」 전문과 해설: AI 시대에 다시 읽는 고향의 그리움</a></li>
+     <li><a href="kimsowol-jindallaekkot.html">김소월 「진달래꽃」 전문과 해설: AI 시대에 다시 읽는 이별의 정한</a></li>
+    </ul>
+   </nav>
+   <a class="back-link" href="index.html">
+    ← 목록으로 돌아가기
+   </a>
+  </div>
+  <footer class="site-footer site-footer--v2">
+        <nav class="footer-primary" aria-label="사이트 콘텐츠">
+            <a href="index.html">블로그</a><span>|</span>
+            <a href="../../ko/gallery.html">갤러리</a><span>|</span>
+            <a href="../../ko/faq.html">FAQ</a><span>|</span>
+            <a href="../../ko/use-cases.html">활용 사례</a>
+        </nav>
+        <nav class="footer-secondary" aria-label="법적 정보">
+            <a href="../../ko/about.html">소개</a><span>|</span>
+            <a href="../../ko/privacy.html">개인정보 처리방침</a><span>|</span>
+            <a href="../../ko/terms.html">이용약관</a><span>|</span>
+            <a href="../../ko/contact.html">문의하기</a><span>|</span>
+            <a href="../../ko/author.html">저자</a>
+        </nav>
+        <p class="footer-copyright">© 2026 ai-and-poem.art. All rights reserved.</p>
+    </footer>
+ </body>
+</html>
