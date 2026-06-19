@@ -973,3 +973,58 @@ body.has-cookie-banner {
     padding: 1px 8px;
     margin-bottom: 6px;
 }
+
+/* 본문 이미지 — 모바일에서 컨테이너 폭을 넘지 않게 (width/height 속성은 CLS 방지용 유지) */
+.article-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* TTS 음성 샘플 — 좋은 예 / 아쉬운 예 (poem-quote·tool-output figure와 시각적으로 구분) */
+figure.tts-sample {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 24px 0;
+    border-radius: 8px;
+    padding: 12px 18px 14px;
+    line-height: 1.7;
+}
+.tts-sample figcaption {
+    font-size: 0.85em;
+    font-weight: bold;
+    margin: 4px 0 10px;
+}
+/* 도구가 생성한 시 본문 — figure용 .tool-output 베이스를 blockquote 문맥에 맞게 중화 */
+.tts-sample blockquote.tool-output {
+    margin: 0 0 12px;
+    padding: 0;
+    border-radius: 0;
+    font-style: normal;
+    color: #ddd;
+    line-height: 1.9;
+}
+.tts-sample.good {
+    background: rgba(80, 200, 120, 0.08);
+    border-left: 3px solid #3fb96b;
+}
+.tts-sample.good figcaption {
+    color: #6fe39a;
+}
+.tts-sample.bad {
+    background: rgba(230, 120, 120, 0.08);
+    border-left: 3px solid #e06666;
+}
+.tts-sample.bad figcaption {
+    color: #f2a0a0;
+}
+.tts-sample audio {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 12px 0 4px;
+}
+.tts-sample .note {
+    margin: 8px 0 0;
+    font-size: 0.9em;
+    color: #aaa;
+}
