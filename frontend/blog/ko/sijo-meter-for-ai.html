@@ -1,0 +1,281 @@
+<!-- 한국어 시조 율격을 AI에게 정확히 전달하는 프롬프트 가이드 (ko, 단일 언어) -->
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>
+   한국어 시조의 율격을 AI에게 맞게 설명하는 방법 - AI &amp; Poem
+  </title>
+  <meta name="description" content="AI가 한국어 음절을 정확히 세도록 평시조 율격(종장 규칙 포함)을 프롬프트로 전달하는 방법. 율격을 지킨 예와 어긴 예를 음보별 음절 수와 함께 비교합니다.">
+      <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "홈",
+            "item": "https://ai-and-poem.art/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "블로그",
+            "item": "https://ai-and-poem.art/blog/ko/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "한국어 시조의 율격을 AI에게 맞게 설명하는 방법"
+        }
+    ]
+}
+    </script>
+    <link href="/blog/style.css" rel="stylesheet"/>
+  <link href="https://ai-and-poem.art/blog/ko/sijo-meter-for-ai" rel="canonical"/>
+  <!-- Open Graph / Twitter Card (소셜 공유용) -->
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="AI &amp; Poem"/>
+  <meta property="og:title" content="한국어 시조의 율격을 AI에게 맞게 설명하는 방법"/>
+  <meta property="og:description" content="평시조 율격(종장 규칙 포함)을 AI에게 정확히 전달하는 프롬프트 방법"/>
+  <meta property="og:url" content="https://ai-and-poem.art/blog/ko/sijo-meter-for-ai"/>
+  <meta property="og:image" content="https://ai-and-poem.art/image/blog/sijo-meter-for-ai-og.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="한국어 시조의 율격을 AI에게 맞게 설명하는 방법"/>
+  <meta name="twitter:description" content="평시조 율격(종장 규칙 포함)을 AI에게 정확히 전달하는 프롬프트 방법"/>
+  <meta name="twitter:image" content="https://ai-and-poem.art/image/blog/sijo-meter-for-ai-og.png"/>
+  <meta name="google-adsense-account" content="ca-pub-7349192768683799">
+  <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799">
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "한국어 시조의 율격을 AI에게 맞게 설명하는 방법",
+    "description": "AI가 한국어 음절을 정확히 세도록 평시조 율격(종장 규칙 포함)을 프롬프트로 전달하는 방법",
+    "datePublished": "2026-06-19T09:00:00+09:00",
+    "dateModified": "2026-06-19T09:00:00+09:00",
+    "author": { "@id": "https://ai-and-poem.art/author#person", "@type": "Person", "name": "Ryu" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ai-and-poem.art",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ai-and-poem.art/image/robot_poet.png"
+      }
+    },
+    "image": "https://ai-and-poem.art/image/blog/sijo-meter-for-ai-og.png",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ai-and-poem.art/blog/ko/sijo-meter-for-ai"
+    },
+    "inLanguage": "ko"
+  }
+  </script>
+     <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CVHJYZWNC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1CVHJYZWNC');
+    </script>
+
+</head>
+ <body>
+  <div class="header">
+   <div class="header-left">
+    <div class="logo">
+     <a href="/" style="text-decoration:none; color:white;">
+      AI &amp; Poem
+     </a>
+    </div>
+    <p class="tagline">
+     AI로 시쓰고, 바로 들으세요
+    </p>
+   </div>
+  </div>
+  <div class="article-container">
+   <header class="article-header">
+    <h1 class="article-title">
+     한국어 시조의 율격을 AI에게 맞게 설명하는 방법
+    </h1>
+   </header>
+   <p class="article-byline">by <a href="/author">Ryu</a> · 2026년 6월 19일 · 읽는 시간 8분</p>
+   <article class="article-content">
+
+    <!-- ========== 도입 ========== -->
+    <p>
+     AI &amp; Poem에 시조 기능을 붙이고 가장 먼저 부딪힌 벽이 음절이었습니다. "봄을 소재로 시조 한 수 써 줘"라고 치면 분위기는 그럴듯한 석 줄이 나옵니다. 그런데 음보마다 글자를 세 보면 율격이 어긋나 있습니다. 종장 첫머리가 네 글자로 늘어지거나, 둘째 음보가 두 글자로 짧게 끝나 버립니다. 시조의 골격이 무너진 셈입니다.
+    </p>
+    <p>
+     원인은 분명합니다. 모델은 한국어를 글자가 아니라 토큰 단위로 끊어 처리해서, "이 음보가 몇 음절인지" 같은 셈을 본문 안에서 정확히 못 합니다. 그래서 "시조 써 줘"만으로는 운에 맡기는 꼴입니다. 모델을 탓하기보다 율격을 숫자로 떠먹이고, 출력한 뒤 스스로 세어 보게 만들면 됩니다. 단, 이렇게 상세한 지시는 자유 입력이 되는 범용 챗봇(ChatGPT·Claude 등)에서 통합니다. AI &amp; Poem은 형식에서 '시조'를 고르고 주제어만 넣으면 빠른 초안을 주지만 음수율을 약 70%만 맞추므로, 정밀한 율격은 도구를 직접 운영하며 효과를 본 아래 방법으로 챗봇에서 다듬는 편이 낫습니다.
+    </p>
+
+    <!-- ========== 평시조 율격 ========== -->
+    <h2>
+     평시조의 율격부터 정확히
+    </h2>
+    <p>
+     기본형은 평시조입니다. 초장·중장·종장 세 장으로 이루어지고, 각 장은 네 음보씩, 모두 열두 음보입니다. 글자 수는 45자 안팎입니다. 음보마다 세 글자나 네 글자가 기본이고, 한두 글자는 더하거나 빼도 됩니다. 음수율의 기본형을 표로 정리하면 이렇습니다.
+    </p>
+    <div class="meter-table-wrap">
+     <table class="meter-table">
+      <thead>
+       <tr><th>장</th><th>음보 1</th><th>음보 2</th><th>음보 3</th><th>음보 4</th></tr>
+      </thead>
+      <tbody>
+       <tr><td>초장</td><td>3</td><td>4</td><td>3(4)</td><td>4</td></tr>
+       <tr><td>중장</td><td>3</td><td>4</td><td>3(4)</td><td>4</td></tr>
+       <tr><td>종장</td><td>3 <em>(고정)</em></td><td>5 이상</td><td>4</td><td>3</td></tr>
+      </tbody>
+     </table>
+    </div>
+    <p>
+     괄호는 한두 음절을 더하거나 빼도 되는 자리입니다. 초장과 중장은 이 정도 여유가 있습니다. 문제는 종장입니다.
+    </p>
+
+    <!-- ========== 종장 규칙 ========== -->
+    <h2>
+     종장이 시조를 시조로 만든다
+    </h2>
+    <p>
+     시조와 다른 정형시를 가르는 지점이 종장에 있습니다. 두 규칙은 가감 없이 지켜야 합니다.
+    </p>
+    <p>
+     종장 첫 음보는 세 음절로 고정입니다. 두 음절도 네 음절도 안 됩니다. 이어지는 둘째 음보는 다섯 음절 이상으로, 다른 음보보다 길게 늘여서 마지막 호흡을 만듭니다. 이 한 번의 길이 변화가 시조에 매듭을 짓습니다. AI가 가장 자주 어기는 자리이자, 사람이 가장 먼저 검사할 곳입니다.
+    </p>
+
+    <!-- ========== 프롬프트 패턴 ========== -->
+    <h2>
+     율격을 AI에게 전달하는 프롬프트
+    </h2>
+    <p>
+     핵심은 세 가지입니다. 음절 수를 숫자로 못 박고, 종장 규칙을 따로 강조하고, 출력한 뒤 스스로 세어 검증하게 합니다. 아래 프롬프트는 ChatGPT·Claude 같은 챗봇에 그대로 붙여 넣는 용도입니다. <a href="/">AI &amp; Poem</a>에서는 같은 방식이 통하지 않으니(주제어만 받는 구조라), 초안만 받고 정밀한 율격은 이 프롬프트로 챗봇에서 맞추세요.
+    </p>
+    <p>먼저 음절 수를 숫자로 지정합니다.</p>
+    <pre><code class="prompt-example">평시조 한 수를 써 줘. 초장·중장·종장 3장에 각 장 4음보,
+음보별 음절 수를 초장 3·4·3·4, 중장 3·4·3·4,
+종장 3·5·4·3에 맞춰 줘. 소재는 봄비.</code></pre>
+    <p>그다음 종장 규칙만 따로 한 번 더 못 박습니다.</p>
+    <pre><code class="prompt-example">특히 종장을 조심해 줘. 종장 첫 음보는 반드시 3음절,
+둘째 음보는 5음절 이상이어야 해. 이 둘만큼은 절대 어기지 마.</code></pre>
+    <p>마지막으로, 다 쓰고 나서 스스로 세어 검증하도록 시킵니다. 이 한 줄이 성공률을 크게 올립니다.</p>
+    <pre><code class="prompt-example">시를 쓴 뒤 각 음보 옆에 괄호로 음절 수를 적어 줘.
+예: 봄비가(3) 내린 뒤에(4). 다 적고 나서 종장 첫 음보가
+3음절인지, 둘째가 5음절 이상인지 네가 직접 확인하고
+틀렸으면 고쳐서 다시 내 줘.</code></pre>
+    <p>음절을 잘못 세는 일이 잦으면 세는 방식까지 지정합니다.</p>
+    <pre><code class="prompt-example">음절은 한글 글자 수로 세어 줘. 받침은 따로 세지 마.
+'꽃잎'은 2음절(꽃·잎)이야. 헷갈리면 [봄][비][가]처럼
+글자를 하나씩 끊어 나열한 뒤 개수를 세 줘.</code></pre>
+
+    <!-- ========== 좋은 예 / 어긴 예 ========== -->
+    <h2>
+     율격을 지킨 예와 어긴 예
+    </h2>
+    <p>
+     아래 둘은 같은 소재(봄비)를 챗봇에 넣고 받은 결과입니다. 위 검증 프롬프트를 함께 준 쪽과, 그냥 '봄비로 시조 써 줘'만 준 쪽의 차이입니다. 각 음보 뒤 괄호 숫자가 음절 수입니다.
+    </p>
+    <figure class="tool-output good">
+     <figcaption>챗봇 출력 — 율격을 지킨 예 (검증 프롬프트 사용)</figcaption>
+     <blockquote>
+      봄비가(3) 내린 뒤에(4) 마당이(3) 젖어 든다(4)<br/>
+      처마 밑(3) 물방울이(4) 하늘을(3) 매달았다(4)<br/>
+      가만히(3) 손 모아 본다(5) 봄이 닿는(4) 손끝에(3)
+     </blockquote>
+    </figure>
+    <p>
+     종장 첫 음보 "가만히"가 3음절, 둘째 음보 "손 모아 본다"가 5음절입니다. 두 규칙을 모두 지켰습니다.
+    </p>
+    <figure class="tool-output bad">
+     <figcaption>챗봇 출력 — 율격을 어긴 예 (프롬프트: "봄비로 시조 써 줘")</figcaption>
+     <blockquote>
+      봄비가(3) 조용히(3) 내리는(3) 정원 안에서(5)<br/>
+      꽃들이(3) 비를 맞아(4) 더욱더(3) 싱그럽게 피어나(7)<br/>
+      아름다운(4) 봄(1) 풍경이(3) 그곳에 펼쳐지네(7)
+     </blockquote>
+    </figure>
+    <p>
+     종장 첫 음보 "아름다운"이 4음절이라 3음절 고정 규칙을 어겼고, 둘째 음보 "봄"이 1음절이라 5음절 이상 규칙도 어겼습니다. 초장·중장도 끝 음보가 5~7음절로 늘어져 호흡이 풀렸습니다. 분위기는 비슷해도 시조의 골격이 무너졌습니다.
+    </p>
+
+    <!-- ========== 스크린샷 ========== -->
+    <figure>
+      <img src="/image/blog/sijo-meter-for-ai-01.png"
+           alt="ChatGPT·Claude 같은 챗봇에 음보별 음절 수를 숫자로 지정하고 종장 규칙을 강조한 프롬프트를 넣어 시조를 생성하고 음절 수를 검증한 화면"
+           loading="lazy" width="1200" height="1256">
+      <figcaption>챗봇에 음절 수를 숫자로 못 박고 종장 규칙을 강조해 생성·검증한 화면</figcaption>
+    </figure>
+
+    <!-- ========== 고전 시조 ========== -->
+    <h2>
+     기준이 되는 한 수
+    </h2>
+    <p>
+     율격이 헷갈릴 때는 잘 알려진 옛 시조를 기준으로 삼으면 됩니다. 황진이의 시조가 종장 구조를 또렷이 보여 줍니다.
+    </p>
+    <blockquote>
+     청산리 벽계수야 수이 감을 자랑 마라<br/>
+     일도창해하면 다시 오기 어려워라<br/>
+     명월이 만공산하니 쉬어 간들 어떠리
+     <footer><cite>황진이, 16세기 평시조</cite></footer>
+    </blockquote>
+    <p>
+     종장 "명월이"가 세 음절로 시작해 "만공산하니"로 길게 받습니다. 이 호흡을 머릿속에 두고 AI 출력과 맞대 보면, 어디가 어긋났는지 금세 잡힙니다.
+    </p>
+
+    <!-- ========== 마무리 ========== -->
+    <h2>
+     숫자로 떠먹이고, 세어 보게 하라
+    </h2>
+    <p>
+     AI는 한국어 음절을 잘 못 셉니다. 그러니 율격을 분위기로 부탁하면 분위기만 돌아옵니다. 음보별 음절 수를 숫자로 지정하고, 종장 두 규칙을 따로 강조하고, 출력 뒤 스스로 세어 고치게 하면 성공률이 확 올라갑니다. 마지막 검산은 사람 몫입니다. 종장 첫 음보가 세 음절인지, 둘째가 다섯 음절 이상인지만 확인해도 대부분의 어긋남은 거기서 걸립니다.
+    </p>
+    <p>
+     <a href="/">AI &amp; Poem</a>으로 시조 초안을 빠르게 받은 뒤, 위 프롬프트로 챗봇에서 율격을 다듬어 보세요. 같은 원리로 자유시를 다듬는 법이 궁금하시면 <a href="ai-poem-prompt-patterns">프롬프트 패턴 5가지</a>도 함께 읽어 보시길 권합니다.
+    </p>
+
+   </article>
+   <aside class="author-info">
+    <h3 class="author-info-title">글쓴이 소개</h3>
+    <div class="author-info-body">
+     <div class="author-info-name">류재국 (Ryu Jae-kuk)</div>
+     <p class="author-info-desc">AI &amp; Poem 서비스 기획자 겸 개발자. 인공지능 기술과 문학의 교차점에서, 누구나 시로 자신을 표현할 수 있는 세상을 만들고 있습니다.</p>
+     <a href="/author" class="author-info-link">저자 프로필 보기 →</a>
+    </div>
+   </aside>
+   <nav class="related-posts" aria-label="관련 글">
+    <h3 class="related-posts-title">관련 글</h3>
+    <ul class="related-posts-list">
+     <li><a href="ai-poem-prompt-patterns">AI에게 좋은 시를 만들게 하는 5가지 프롬프트 패턴</a></li>
+     <li><a href="poems-for-tts-reading">TTS 낭독에 잘 어울리는 시를 뽑는 법</a></li>
+     <li><a href="wedding-speech-poem-tips">결혼식 축사용 시를 만들 때 주의할 7가지</a></li>
+    </ul>
+   </nav>
+   <a class="back-link" href="index">
+    ← 목록으로 돌아가기
+   </a>
+  </div>
+  <footer class="site-footer site-footer--v2">
+        <nav class="footer-primary" aria-label="사이트 콘텐츠">
+            <a href="index">블로그</a><span>|</span>
+            <a href="/gallery">갤러리</a><span>|</span>
+            <a href="/faq">FAQ</a><span>|</span>
+            <a href="/use-cases">활용 사례</a>
+        </nav>
+        <nav class="footer-secondary" aria-label="법적 정보">
+            <a href="/about">소개</a><span>|</span>
+            <a href="/privacy">개인정보 처리방침</a><span>|</span>
+            <a href="/terms">이용약관</a><span>|</span>
+            <a href="/contact">문의하기</a><span>|</span>
+            <a href="/author">저자</a>
+        </nav>
+        <p class="footer-copyright">© 2026 ai-and-poem.art. All rights reserved.</p>
+    </footer>
+ </body>
+</html>

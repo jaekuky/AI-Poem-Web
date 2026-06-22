@@ -962,6 +962,40 @@ body.has-cookie-banner {
     color: #f2a0a0;
 }
 
+/* 율격 음수율 표 — 모바일에서 래퍼 안에서만 가로 스크롤 (본문 폭은 넘지 않음) */
+.meter-table-wrap {
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+    -webkit-overflow-scrolling: touch;
+}
+.meter-table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 360px;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+.meter-table th,
+.meter-table td {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    padding: 8px 12px;
+    text-align: center;
+    white-space: nowrap;
+}
+.meter-table thead th {
+    background: rgba(255, 255, 255, 0.06);
+    font-weight: bold;
+}
+.meter-table td:first-child {
+    font-weight: bold;
+}
+.meter-table em {
+    font-style: normal;
+    font-size: 0.85em;
+    color: #6fe39a;
+}
+
 /* 인덱스 카드 카테고리 라벨 */
 .blog-category {
     display: inline-block;
