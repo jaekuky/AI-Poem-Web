@@ -464,6 +464,23 @@ body.has-cookie-banner {
     margin-bottom: 10px;
 }
 
+.article-content .references {
+    margin-top: 36px;
+    font-size: 0.88em;
+    line-height: 1.65;
+    color: #ccc;
+}
+
+.article-content .references h2 {
+    font-size: 1.25em;
+    margin-top: 0;
+}
+
+.article-content .references a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
 /* 본문 링크 가독성 — 어두운 배경 대비 확보 (skyblue 기본 / 연보라 방문) */
 .article-content a {
     color: skyblue;

@@ -1,0 +1,201 @@
+<!-- 한국어 시조 율격과 LLM 토큰화 한계 분석 (ko, 단일 언어) -->
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>
+   LLM은 왜 한국어 시조의 율격을 못 맞출까 — 토큰화가 음절을 가리는 문제 - AI &amp; Poem
+  </title>
+  <meta name="description" content="한국어 시조의 음수율을 LLM이 자주 어기는 이유를 토큰화와 음절 세기 한계로 풀고, 도구 제작 중 마주친 70% 벽과 연결한 분석">
+  <link href="/blog/style.css" rel="stylesheet"/>
+  <link href="https://ai-and-poem.art/blog/ko/llm-korean-sijo-meter.html" rel="canonical"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="AI &amp; Poem"/>
+  <meta property="og:title" content="LLM은 왜 한국어 시조의 율격을 못 맞출까 — 토큰화가 음절을 가리는 문제"/>
+  <meta property="og:description" content="시조 음수율을 LLM이 어기는 이유를 토큰화로 풀다"/>
+  <meta property="og:url" content="https://ai-and-poem.art/blog/ko/llm-korean-sijo-meter.html"/>
+  <meta property="og:image" content="https://ai-and-poem.art/image/blog/llm-korean-sijo-meter-og.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="LLM은 왜 한국어 시조의 율격을 못 맞출까 — 토큰화가 음절을 가리는 문제"/>
+  <meta name="twitter:description" content="시조 음수율을 LLM이 어기는 이유를 토큰화로 풀다"/>
+  <meta name="twitter:image" content="https://ai-and-poem.art/image/blog/llm-korean-sijo-meter-og.png"/>
+  <meta name="google-adsense-account" content="ca-pub-7349192768683799">
+  <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799">
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "홈",
+      "item": "https://ai-and-poem.art/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "블로그",
+      "item": "https://ai-and-poem.art/blog/ko/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "LLM은 왜 한국어 시조의 율격을 못 맞출까 — 토큰화가 음절을 가리는 문제"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "LLM은 왜 한국어 시조의 율격을 못 맞출까 — 토큰화가 음절을 가리는 문제",
+  "description": "한국어 시조의 음수율을 LLM이 자주 어기는 이유를 토큰화와 음절 세기 한계로 풀고, 도구를 만들며 부딪힌 70% 벽과 연결한 분석",
+  "datePublished": "2026-06-30T20:00:00+09:00",
+  "dateModified": "2026-06-30T20:00:00+09:00",
+  "author": {
+    "@id": "https://ai-and-poem.art/author#person",
+    "@type": "Person",
+    "name": "Ryu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ai-and-poem.art",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ai-and-poem.art/image/robot_poet.png"
+    }
+  },
+  "image": "https://ai-and-poem.art/image/blog/llm-korean-sijo-meter-og.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ai-and-poem.art/blog/ko/llm-korean-sijo-meter.html"
+  },
+  "inLanguage": "ko",
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "An Empirical Study of Tokenization Strategies for Various Korean NLP Tasks",
+      "url": "https://aclanthology.org/2020.aacl-main.17/",
+      "datePublished": "2020",
+      "author": [
+        { "@type": "Person", "name": "Kyubyong Park" },
+        { "@type": "Person", "name": "Joohong Lee" },
+        { "@type": "Person", "name": "Seongbo Jang" },
+        { "@type": "Person", "name": "Dawoon Jung" }
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "How Tokenization Limits Phonological Knowledge Representation in Language Models and How to Improve Them",
+      "url": "https://arxiv.org/abs/2604.17105",
+      "datePublished": "2026",
+      "author": [
+        { "@type": "Person", "name": "Disen Liao" },
+        { "@type": "Person", "name": "Freda Shi" }
+      ]
+    }
+  ]
+}
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CVHJYZWNC"></script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag() { dataLayer.push(arguments); }
+   gtag('js', new Date());
+   gtag('config', 'G-1CVHJYZWNC');
+  </script>
+ </head>
+ <body>
+  <div class="header">
+   <div class="header-left">
+    <div class="logo">
+     <a href="/index.html" style="text-decoration:none; color:white;">
+      AI &amp; Poem
+     </a>
+    </div>
+    <p class="tagline">
+     AI로 시쓰고, 바로 들으세요
+    </p>
+   </div>
+   <nav class="header-right nav-links" aria-label="주요 링크">
+    <a class="header-link" href="/index.html">홈</a>
+    <a class="header-link" href="/blog/ko/index.html">블로그</a>
+    <a class="header-link" href="/author">저자</a>
+   </nav>
+  </div>
+  <div class="article-container">
+   <header class="article-header">
+    <h1 class="article-title">
+     LLM은 왜 한국어 시조의 율격을 못 맞출까 — 토큰화가 음절을 가리는 문제
+    </h1>
+   </header>
+   <p class="article-byline">by <a href="/author">Ryu</a> · 2026년 6월 30일 · 읽는 시간 5분</p>
+   <article class="article-content">
+    <h2>문제</h2>
+    <p>
+     AI &amp; Poem에 시조 모드를 붙일 때, 제가 가장 오래 붙잡은 값은 분위기가 아니라 음절 수였습니다. "시조 써 줘"라고 하면 모델은 그럴듯한 3행을 냅니다. 하지만 음보를 세면 종장 첫 음보가 네 글자로 늘거나 둘째 음보가 너무 짧아집니다. 형식에서 "시조"를 고르고 짧은 주제어를 넣는 현재 도구에서는 초안의 음수율이 약 70% 선에서 멈췄습니다.
+    </p>
+    <h2>원인: 토큰화</h2>
+    <p>
+     Park, Lee, Jang, Jung은 ACL의 AACL-IJCNLP 2020 논문 <a href="https://aclanthology.org/2020.aacl-main.17/">An Empirical Study of Tokenization Strategies for Various Korean NLP Tasks</a>에서 한국어 NLP 과제별 토큰화 전략을 비교합니다. 논문은 BPE 하나가 모든 한국어 과제에서 늘 최선은 아니며, 기계번역과 자연어 이해 과제에서는 형태소 분절 뒤 BPE를 붙인 방식이 좋은 결과를 냈다고 보고합니다.
+    </p>
+    <p>
+     이 논문은 시조를 다루지 않습니다. 제 해석은 여기서 시작합니다. 모델이 한국어를 사람이 보는 글자 하나, 곧 음절 단위로 붙잡지 않고 여러 토큰 경계로 다시 자른다면, "이 음보가 몇 음절인가"라는 질문은 생성 중 계속 흔들립니다. 시조에서 음절 수는 장식이 아니라 골격입니다.
+    </p>
+    <p>
+     Liao와 Shi의 2026년 arXiv 논문 <a href="https://arxiv.org/abs/2604.17105">How Tokenization Limits Phonological Knowledge Representation in Language Models and How to Improve Them</a>은 더 직접적인 단서를 줍니다. 저자들은 서브워드 토큰화가 압운 같은 지역 음운 특징과 음절화 같은 전역 운율 구조 표현을 약하게 만들며, 토큰 경계와 음절 경계가 어긋날수록 음운 과제 성능이 떨어진다고 설명합니다.
+    </p>
+    <p>
+     이 발견도 한국어 시조 실험 결과가 아닙니다. 그래도 제가 겪은 70% 벽과 맞물립니다. LLM은 의미를 매끄럽게 잇는 데 강하지만, 한국어 정형시가 요구하는 글자 단위 검산에는 약합니다. 그 차이가 시조 모드에서 바로 보였습니다.
+    </p>
+    <h2>운영자의 해석</h2>
+    <p>
+     평시조는 3장 6구 12음보로 짜입니다. 초장과 중장은 대략 3·4·3·4 계열로 움직이고, 종장은 첫 음보 3음절 고정, 둘째 음보 5음절 이상이라는 매듭을 둡니다. 한 글자 차이가 사소하지 않습니다. 종장 첫 음보가 네 글자가 되면 마감의 탄력이 풀립니다.
+    </p>
+    <p>
+     그래서 시조는 LLM에 불리한 장르입니다. 자유시는 의미와 이미지가 먼저 버티지만, 시조는 글자 수가 틀리면 형식 자체가 무너집니다. 제가 만든 도구에서 "달빛" 같은 주제어 하나로 빠른 초안은 얻을 수 있었지만, 종장 규칙까지 안정적으로 맞추려면 별도 검산이 필요했습니다.
+    </p>
+    <h2>우회법</h2>
+    <p>
+     우회는 간단합니다. 음수율을 숫자로 먹이고, 출력 뒤 모델이 직접 세게 합니다. 다만 이 지시는 자유 입력 챗봇(ChatGPT·Claude 등)에 맞습니다. AI &amp; Poem은 시 형식 셀렉터와 짧은 주제어로 초안을 빠르게 만드는 도구입니다. 실제 프롬프트는 자매글 <a href="sijo-meter-for-ai">시조 율격을 AI에게 맞게 설명하는 법</a>에 따로 정리했습니다.
+    </p>
+    <h2>마무리</h2>
+    <p>
+     저는 이 문제를 결함 하나로 보지 않습니다. 한국어 정형시는 LLM이 언어를 어떻게 쪼개 보는지 드러내는 시험지입니다. AI 시대에 시조를 다룬다는 말은, 모델이 잘 쓰는 문장과 사람이 지키는 율격 사이를 끝까지 세어 보는 일입니다.
+    </p>
+    <section class="references" aria-labelledby="references-title">
+     <h2 id="references-title">참고 자료</h2>
+     <ul>
+      <li>Kyubyong Park, Joohong Lee, Seongbo Jang, Dawoon Jung. <a href="https://aclanthology.org/2020.aacl-main.17/">An Empirical Study of Tokenization Strategies for Various Korean NLP Tasks</a>. AACL-IJCNLP 2020, Association for Computational Linguistics.</li>
+      <li>Disen Liao, Freda Shi. <a href="https://arxiv.org/abs/2604.17105">How Tokenization Limits Phonological Knowledge Representation in Language Models and How to Improve Them</a>. arXiv, 2026. ACL 2026.</li>
+     </ul>
+    </section>
+   </article>
+   <a class="back-link" href="/blog/ko/index.html">
+    목록으로 돌아가기
+   </a>
+  </div>
+  <footer class="site-footer site-footer--v2">
+   <nav class="footer-primary" aria-label="사이트 콘텐츠">
+    <a href="/index.html">홈</a><span>|</span>
+    <a href="/blog/ko/index.html">블로그</a><span>|</span>
+    <a href="/gallery">갤러리</a><span>|</span>
+    <a href="/faq">FAQ</a><span>|</span>
+    <a href="/use-cases">활용 사례</a>
+   </nav>
+   <nav class="footer-secondary" aria-label="법적 정보">
+    <a href="/about">소개</a><span>|</span>
+    <a href="/privacy">개인정보 처리방침</a><span>|</span>
+    <a href="/terms">이용약관</a><span>|</span>
+    <a href="/contact">문의</a><span>|</span>
+    <a href="/author">저자</a>
+   </nav>
+   <p class="footer-copyright">© 2026 ai-and-poem.art. All rights reserved.</p>
+  </footer>
+ </body>
+</html>
