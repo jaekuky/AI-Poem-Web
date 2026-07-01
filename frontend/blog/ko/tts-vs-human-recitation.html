@@ -1,0 +1,219 @@
+<!-- TTS 음성 낭독과 사람 낭독 차이 분석 (ko, 단일 언어) -->
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>
+   TTS 음성 낭독과 사람의 시 낭독의 차이 — 무엇이 빠지고, 무엇이 더해지는가 - AI &amp; Poem
+  </title>
+  <meta name="description" content="TTS 운율의 문맥 적합성 한계와 사람 낭독자가 의미에 맞춰 자동으로 조절하는 감정 운율을 대조해, AI &amp; Poem의 TTS 기능이 할 수 있는 일과 없는 일을 정리한 분석">
+  <link href="/blog/style.css" rel="stylesheet"/>
+  <link href="https://ai-and-poem.art/blog/ko/tts-vs-human-recitation.html" rel="canonical"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="AI &amp; Poem"/>
+  <meta property="og:title" content="TTS 음성 낭독과 사람의 시 낭독의 차이 — 무엇이 빠지고, 무엇이 더해지는가"/>
+  <meta property="og:description" content="TTS가 놓치는 것과 사람이 더하는 것을 연구로 짚다"/>
+  <meta property="og:url" content="https://ai-and-poem.art/blog/ko/tts-vs-human-recitation.html"/>
+  <meta property="og:image" content="https://ai-and-poem.art/image/blog/tts-vs-human-recitation-og.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="TTS 음성 낭독과 사람의 시 낭독의 차이 — 무엇이 빠지고, 무엇이 더해지는가"/>
+  <meta name="twitter:description" content="TTS가 놓치는 것과 사람이 더하는 것을 연구로 짚다"/>
+  <meta name="twitter:image" content="https://ai-and-poem.art/image/blog/tts-vs-human-recitation-og.png"/>
+  <meta name="google-adsense-account" content="ca-pub-7349192768683799">
+  <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799">
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "홈",
+      "item": "https://ai-and-poem.art/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "블로그",
+      "item": "https://ai-and-poem.art/blog/ko/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "TTS 음성 낭독과 사람의 시 낭독의 차이 — 무엇이 빠지고, 무엇이 더해지는가"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "TTS 음성 낭독과 사람의 시 낭독의 차이 — 무엇이 빠지고, 무엇이 더해지는가",
+  "description": "TTS 운율의 문맥 적합성 한계와 사람 낭독자가 의미에 맞춰 자동으로 조절하는 감정 운율을 대조해, AI & Poem의 TTS 기능이 할 수 있는 일과 없는 일을 정리한 분석",
+  "datePublished": "2026-07-01T20:00:00+09:00",
+  "dateModified": "2026-07-01T20:00:00+09:00",
+  "author": {
+    "@id": "https://ai-and-poem.art/author#person",
+    "@type": "Person",
+    "name": "Ryu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ai-and-poem.art",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ai-and-poem.art/image/robot_poet.png"
+    }
+  },
+  "image": "https://ai-and-poem.art/image/blog/tts-vs-human-recitation-og.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ai-and-poem.art/blog/ko/tts-vs-human-recitation.html"
+  },
+  "inLanguage": "ko",
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "CAMP: a Two-Stage Approach to Modelling Prosody in Context",
+      "url": "https://arxiv.org/abs/2011.01175",
+      "datePublished": "2020",
+      "author": [
+        { "@type": "Person", "name": "Zack Hodari" },
+        { "@type": "Person", "name": "Alexis Moinet" },
+        { "@type": "Person", "name": "Sri Karlapati" },
+        { "@type": "Person", "name": "Jaime Lorenzo-Trueba" },
+        { "@type": "Person", "name": "Thomas Merritt" },
+        { "@type": "Person", "name": "Arnaud Joly" },
+        { "@type": "Person", "name": "Ammar Abbas" },
+        { "@type": "Person", "name": "Penny Karanasou" },
+        { "@type": "Person", "name": "Thomas Drugman" }
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Prosody-Based Sound-Emotion Associations in Poetry",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6068276/",
+      "datePublished": "2018",
+      "author": [
+        { "@type": "Person", "name": "Maria Kraxenberger" },
+        { "@type": "Person", "name": "Winfried Menninghaus" },
+        { "@type": "Person", "name": "Anna Roth" },
+        { "@type": "Person", "name": "Mathias Scharinger" }
+      ]
+    }
+  ]
+}
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CVHJYZWNC"></script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag() { dataLayer.push(arguments); }
+   gtag('js', new Date());
+   gtag('config', 'G-1CVHJYZWNC');
+  </script>
+ </head>
+ <body>
+  <div class="header">
+   <div class="header-left">
+    <div class="logo">
+     <a href="/index.html" style="text-decoration:none; color:white;">
+      AI &amp; Poem
+     </a>
+    </div>
+    <p class="tagline">
+     AI로 시쓰고, 바로 들으세요
+    </p>
+   </div>
+   <nav class="header-right nav-links" aria-label="주요 링크">
+    <a class="header-link" href="/index.html">홈</a>
+    <a class="header-link" href="/blog/ko/index.html">블로그</a>
+    <a class="header-link" href="/author">저자</a>
+   </nav>
+  </div>
+  <div class="article-container">
+   <header class="article-header">
+    <h1 class="article-title">
+     TTS 음성 낭독과 사람의 시 낭독의 차이 — 무엇이 빠지고, 무엇이 더해지는가
+    </h1>
+   </header>
+   <p class="article-byline">by <a href="/author">Ryu</a> · 2026년 7월 1일 · 읽는 시간 5분</p>
+   <article class="article-content">
+    <h2>도입</h2>
+    <p>
+     AI &amp; Poem에 TTS 재생을 붙인 뒤, 저는 생성한 시를 계속 들어 봤습니다. 음질은 맑았습니다. 발음도 대체로 또렷했습니다. 그런데 이상하게도 "읽어 준다"는 느낌은 강한데, 사람이 시를 낭독한다는 느낌은 약했습니다.
+    </p>
+    <h2>TTS가 놓치는 것</h2>
+    <p>
+     Hodari 등 Amazon Research 연구진은 2020년 arXiv 논문 <a href="https://arxiv.org/abs/2011.01175">CAMP: a Two-Stage Approach to Modelling Prosody in Context</a>에서 운율 모델링을 별도 문제로 다룹니다. 논문은 문맥 정보가 충분하지 않으면 적절한 운율을 정하는 일이 잘 정의되지 않는다고 설명합니다. 제안 모델은 자연음성과의 격차를 26% 줄였지만, 그 수치 자체가 음질과 문맥 적합성이 다른 문제임을 보여 줍니다.
+    </p>
+    <p>
+     이 논문은 한국어 시나 AI &amp; Poem을 다루지 않습니다. 제 해석은 여기서 시작합니다. 시는 산문보다 행간, 쉼표, 줄바꿈 하나가 해석입니다. 문맥 없이 예측한 평탄한 운율은 정보 전달에는 충분해도, "어디서 숨을 쉴지"를 고르는 낭독에는 모자랍니다.
+    </p>
+    <p>
+     제가 TTS를 들으며 느낀 간극도 거기에 있었습니다. 문장은 맞게 읽히는데, 시가 품은 망설임이나 뒤늦은 깨달음까지 목소리가 따라오지는 못했습니다. 결함이라기보다 역할 차이였습니다.
+    </p>
+    <h2>사람이 더하는 것</h2>
+    <p>
+     Kraxenberger, Menninghaus, Roth, Scharinger는 2018년 Frontiers in Psychology 논문 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6068276/">Prosody-Based Sound-Emotion Associations in Poetry</a>에서 사람이 독일어 시를 읽을 때 감정 내용에 맞춰 피치와 속도를 바꾸는지 실험했습니다. 기쁨 평정 1단위당 평균 피치는 1.68Hz 올랐고, 슬픔 평정 1단위당 1.58Hz 내려갔습니다. 뜻을 아는 독일어 청자에게는 운율 조작보다 시의 의미 내용이 감정 판단을 더 크게 밀었습니다.
+    </p>
+    <p>
+     이 결과도 한국어 낭독 연구는 아닙니다. 다만 제가 AI &amp; Poem의 TTS를 운영하며 본 장면과 닿아 있습니다. 사람이 낭독에 더하는 것은 예쁜 목소리만이 아닙니다. 뜻을 이해한 뒤, 왜 여기서 목소리가 낮아져야 하는지 판단하는 힘입니다.
+    </p>
+    <h2>무엇이 빠지고, 무엇이 더해지는가</h2>
+    <p>
+     빠지는 것은 음질이 아닙니다. 문맥에 맞는 운율 선택입니다. TTS는 깨끗하게 읽을 수 있지만, 시의 줄바꿈과 침묵을 해석하는 데 약합니다.
+    </p>
+    <p>
+     더해지는 것은 사람의 의미 이해입니다. 사람은 슬픈 행을 느리게 붙잡고, 밝은 행에서 속도와 높이를 바꿉니다. 그 변화는 장식보다 판단에 가깝습니다.
+    </p>
+    <h2>AI &amp; Poem은 지금 무엇을 하는가</h2>
+    <p>
+     AI &amp; Poem의 TTS는 32개 언어로 생성한 시를 빠르게 미리 듣는 기능입니다. 낭독 리듬을 점검하는 데 유용하지만, 사람이 뜻을 이해하며 조절하는 낭독을 대신한다고 말하지 않습니다. 축사나 헌시처럼 직접 읽을 자리라면 TTS로 흐름을 확인하고, 실제 발화는 사람이 맡는 편이 낫습니다. 더 실용적인 기준은 <a href="poems-for-tts-reading">TTS 낭독에 잘 어울리는 시를 뽑는 법</a>에 따로 적었습니다.
+    </p>
+    <h2>마무리</h2>
+    <p>
+     저는 TTS의 한계를 실패로 보지 않습니다. 오히려 사람 낭독의 값을 또렷하게 보여주는 대비점으로 봅니다. 기계가 맑게 읽을수록, 사람이 뜻을 알고 잠깐 멈추는 순간이 더 선명해집니다.
+    </p>
+    <section class="references" aria-labelledby="references-title">
+     <h2 id="references-title">참고 자료</h2>
+     <ul>
+      <li>Zack Hodari, Alexis Moinet, Sri Karlapati, Jaime Lorenzo-Trueba, Thomas Merritt, Arnaud Joly, Ammar Abbas, Penny Karanasou, Thomas Drugman. <a href="https://arxiv.org/abs/2011.01175">CAMP: a Two-Stage Approach to Modelling Prosody in Context</a>. arXiv, 2020.</li>
+      <li>Maria Kraxenberger, Winfried Menninghaus, Anna Roth, Mathias Scharinger. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6068276/">Prosody-Based Sound-Emotion Associations in Poetry</a>. Frontiers in Psychology, 2018.</li>
+     </ul>
+    </section>
+   </article>
+   <nav class="related-posts" aria-label="관련 글">
+    <h3 class="related-posts-title">관련 글</h3>
+    <ul class="related-posts-list">
+     <li><a href="poems-for-tts-reading">TTS 낭독에 잘 어울리는 시를 뽑는 법</a></li>
+     <li><a href="llm-korean-sijo-meter">LLM은 왜 한국어 시조의 율격을 못 맞출까 — 토큰화가 음절을 가리는 문제</a></li>
+    </ul>
+   </nav>
+   <a class="back-link" href="/blog/ko/index.html">
+    목록으로 돌아가기
+   </a>
+  </div>
+  <footer class="site-footer site-footer--v2">
+   <nav class="footer-primary" aria-label="사이트 콘텐츠">
+    <a href="/index.html">홈</a><span>|</span>
+    <a href="/blog/ko/index.html">블로그</a><span>|</span>
+    <a href="/gallery">갤러리</a><span>|</span>
+    <a href="/faq">FAQ</a><span>|</span>
+    <a href="/use-cases">활용 사례</a>
+   </nav>
+   <nav class="footer-secondary" aria-label="법적 정보">
+    <a href="/about">소개</a><span>|</span>
+    <a href="/privacy">개인정보 처리방침</a><span>|</span>
+    <a href="/terms">이용약관</a><span>|</span>
+    <a href="/contact">문의</a><span>|</span>
+    <a href="/author">저자</a>
+   </nav>
+   <p class="footer-copyright">© 2026 ai-and-poem.art. All rights reserved.</p>
+  </footer>
+ </body>
+</html>
