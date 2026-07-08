@@ -1,0 +1,199 @@
+<!-- 한국 근대시 한자어와 LLM 토크나이저 충돌 분석 (ko, 단일 언어) -->
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>
+   한국 근대시의 한자어와 LLM 토크나이저의 충돌 - AI &amp; Poem
+  </title>
+  <meta name="description" content="한글 표기 뒤에 숨은 한자 뿌리를 LLM이 진짜로 이해하는지 실험한 2025년 연구로, 근대시가 즐겨 쓰는 저빈도 한자어에서 이 한계가 왜 더 크게 나타나는지와 AI &amp; Poem에 무엇을 뜻하는지 정리한 분석">
+  <link href="/blog/style.css" rel="stylesheet"/>
+  <link href="https://ai-and-poem.art/blog/ko/hanja-tokenizer-conflict.html" rel="canonical"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="AI &amp; Poem"/>
+  <meta property="og:title" content="한국 근대시의 한자어와 LLM 토크나이저의 충돌"/>
+  <meta property="og:description" content="한자어의 숨은 뜻을 LLM이 놓치는 이유를 2025년 연구로 짚다"/>
+  <meta property="og:url" content="https://ai-and-poem.art/blog/ko/hanja-tokenizer-conflict.html"/>
+  <meta property="og:image" content="https://ai-and-poem.art/image/blog/hanja-tokenizer-conflict-og.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="한국 근대시의 한자어와 LLM 토크나이저의 충돌"/>
+  <meta name="twitter:description" content="한자어의 숨은 뜻을 LLM이 놓치는 이유를 2025년 연구로 짚다"/>
+  <meta name="twitter:image" content="https://ai-and-poem.art/image/blog/hanja-tokenizer-conflict-og.png"/>
+  <meta name="google-adsense-account" content="ca-pub-7349192768683799">
+  <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799">
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "홈",
+      "item": "https://ai-and-poem.art/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "블로그",
+      "item": "https://ai-and-poem.art/blog/ko/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "한국 근대시의 한자어와 LLM 토크나이저의 충돌"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "한국 근대시의 한자어와 LLM 토크나이저의 충돌",
+  "description": "한글 표기 뒤에 숨은 한자 뿌리를 LLM이 진짜로 이해하는지 실험한 2025년 연구로, 근대시가 즐겨 쓰는 저빈도 한자어에서 이 한계가 왜 더 크게 나타나는지와 AI & Poem에 무엇을 뜻하는지 정리한 분석",
+  "datePublished": "2026-07-03T20:00:00+09:00",
+  "dateModified": "2026-07-03T20:00:00+09:00",
+  "author": {
+    "@id": "https://ai-and-poem.art/author#person",
+    "@type": "Person",
+    "name": "Ryu"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ai-and-poem.art",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ai-and-poem.art/image/robot_poet.png"
+    }
+  },
+  "image": "https://ai-and-poem.art/image/blog/hanja-tokenizer-conflict-og.png",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ai-and-poem.art/blog/ko/hanja-tokenizer-conflict.html"
+  },
+  "inLanguage": "ko",
+  "citation": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Beyond Distribution: Investigating Language Models' Understanding of Sino-Korean Morphemes",
+      "url": "https://aclanthology.org/2025.findings-emnlp.569.pdf",
+      "datePublished": "2025",
+      "author": [
+        { "@type": "Person", "name": "Taehee Jeon" }
+      ]
+    }
+  ]
+}
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CVHJYZWNC"></script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag() { dataLayer.push(arguments); }
+   gtag('js', new Date());
+   gtag('config', 'G-1CVHJYZWNC');
+  </script>
+ </head>
+ <body>
+  <div class="header">
+   <div class="header-left">
+    <div class="logo">
+     <a href="/index.html" style="text-decoration:none; color:white;">
+      AI &amp; Poem
+     </a>
+    </div>
+    <p class="tagline">
+     AI로 시쓰고, 바로 들으세요
+    </p>
+   </div>
+   <nav class="header-right nav-links" aria-label="주요 링크">
+    <a class="header-link" href="/index.html">홈</a>
+    <a class="header-link" href="/blog/ko/index.html">블로그</a>
+    <a class="header-link" href="/author">저자</a>
+   </nav>
+  </div>
+  <div class="article-container">
+   <header class="article-header">
+    <h1 class="article-title">
+     한국 근대시의 한자어와 LLM 토크나이저의 충돌
+    </h1>
+   </header>
+   <p class="article-byline">by <a href="/author">Ryu</a> · 2026년 7월 3일 · 읽는 시간 5분</p>
+   <article class="article-content">
+    <h2>도입</h2>
+    <p>
+     AI &amp; Poem으로 정지용·윤동주 느낌의 근대시풍 초안을 뽑아 보면, 한자어는 자주 나옵니다. 문제는 그 단어들이 너무 안전하다는 점입니다. "고독", "영혼", "운명"처럼 뜻이 곧장 열리는 말은 매끄럽지만, 근대시 특유의 낯선 결은 약합니다. 한자어를 쓰는데도 평평하게 읽히는 순간이 있었습니다.
+    </p>
+    <h2>연구 소개</h2>
+    <p>
+     Taehee Jeon(고려대)은 EMNLP 2025 Findings 논문 <a href="https://aclanthology.org/2025.findings-emnlp.569.pdf">Beyond Distribution: Investigating Language Models' Understanding of Sino-Korean Morphemes</a>에서 한글만 본 모델이 한자어 형태소를 실제로 잡는지 묻습니다. 논문은 Choo와 O'Grady를 인용해 한자어가 한국어 어휘의 57% 이상이라고 설명합니다. 실험은 같은 한글 음절이 같은 한자 뿌리를 공유하는 진짜 쌍과, 한글 음절만 같은 가짜 쌍을 나눴습니다. 생명(生命)과 생산(生産)은 생(生)을 공유하지만, 생명(生命)과 생략(省略)은 표기상 "생"만 같습니다.
+    </p>
+    <h2>핵심 결과</h2>
+    <p>
+     결과만 보면 BERT는 75%, fastText는 71% 정확도로 진짜 쌍과 가짜 쌍을 구별했습니다. 우연 50%보다 높습니다. 그러나 회귀분석은 이 성능이 한자 뿌리 이해보다 대상 단어의 학습 데이터 빈도에 크게 기대고 있음을 보였습니다. 저자는 사람이 국어·국립·국사가 國을 공유한다는 사실을 쉽게 알아채지만, 모델은 그런 형태소 층위의 패턴을 체계적으로 잡지 못하고 단어를 따로 처리한다고 설명합니다.
+    </p>
+    <h2>운영자의 해석 1</h2>
+    <p>
+     이 논문은 표준국어대사전 예문 기반의 일반 어휘를 다룹니다. 근대시나 AI &amp; Poem을 실험하지 않았습니다. 여기서부터는 운영자인 제 해석입니다. 발견은 한국 근대시와 정확히 부딪힙니다. 근대 시인들은 흔한 한자어보다 뜻의 그늘이 깊은 말을 골라 씁니다. <a href="jeongjiyong-hyangsu">정지용 「향수」</a>와 <a href="yoondongju-seosi">윤동주 「서시」</a>를 읽을 때도 단어 하나가 시대감과 윤리를 함께 끌고 옵니다.
+    </p>
+    <p>
+     저빈도 한자어일수록 논문이 말한 "빈도가 만드는 이해의 착시"는 더 위험해집니다. 자주 본 말은 모델이 그럴듯하게 붙잡습니다. 드물고 함축적인 말은 표면 문맥에 기대어 미끄러질 수 있습니다. 근대시풍 초안에서 단어가 무난한 쪽으로 모이는 이유도 저는 여기서 찾습니다.
+    </p>
+    <h2>운영자의 해석 2</h2>
+    <p>
+     AI &amp; Poem은 시 형식 셀렉터와 짧은 주제어로 초안을 빠르게 만드는 도구입니다. 근대시풍을 고르면 분위기는 곧잘 따라옵니다. 하지만 모델은 함축적인 저빈도 한자어보다 흔하고 안전한 한자어로 수렴하는 경향을 보였습니다. 도구를 방어할 일도, 깎아내릴 일도 아닙니다. 초안의 역할이 거기까지인 경우가 많았습니다.
+    </p>
+    <p>
+     이 한계는 자매글에서 다룬 문제와 같은 줄에 있습니다. <a href="llm-korean-sijo-meter">시조의 70% 벽</a>은 형식에서, <a href="tts-vs-human-recitation">TTS의 평탄한 운율</a>은 소리에서, <a href="ai-poetry-simplicity-preference">단순성 선호</a>는 내용에서 드러났습니다. 이번에는 어휘의 결입니다.
+    </p>
+    <h2>AI &amp; Poem은 이 한계를 어떻게 다루는가</h2>
+    <p>
+     근대시풍을 의도했다면 AI &amp; Poem의 초안은 참고점으로 보는 편이 맞습니다. 한자어 선택이 작품의 중심이라면 운영자가 직접 고쳐야 합니다. 흔한 단어를 덜고, 저빈도이지만 문맥에 맞는 한자어를 넣고, 그 말이 행 안에서 너무 설명적으로 풀리지 않는지 다시 읽어야 합니다.
+    </p>
+    <h2>마무리</h2>
+    <p>
+     저는 이 충돌을 도구의 실패보다 편집 지점으로 봅니다. LLM은 빠르게 초안을 냅니다. 근대시의 한자어는 사람이 다시 고릅니다. 그 사이에서 AI &amp; Poem의 쓰임도 더 또렷해집니다.
+    </p>
+    <section class="references" aria-labelledby="references-title">
+     <h2 id="references-title">참고 자료</h2>
+     <ul>
+      <li>Taehee Jeon. <a href="https://aclanthology.org/2025.findings-emnlp.569.pdf">Beyond Distribution: Investigating Language Models' Understanding of Sino-Korean Morphemes</a>. Findings of the Association for Computational Linguistics: EMNLP 2025, pages 10762-10772, 2025.</li>
+     </ul>
+    </section>
+   </article>
+   <nav class="related-posts" aria-label="관련 글">
+    <h3 class="related-posts-title">관련 글</h3>
+    <ul class="related-posts-list">
+     <li><a href="llm-korean-sijo-meter">시조의 70% 벽</a></li>
+     <li><a href="tts-vs-human-recitation">TTS의 평탄한 운율</a></li>
+     <li><a href="ai-poetry-simplicity-preference">AI 시의 단순성 선호</a></li>
+     <li><a href="jeongjiyong-hyangsu">정지용 「향수」</a></li>
+     <li><a href="yoondongju-seosi">윤동주 「서시」</a></li>
+    </ul>
+   </nav>
+   <a class="back-link" href="/blog/ko/index.html">
+    목록으로 돌아가기
+   </a>
+  </div>
+  <footer class="site-footer site-footer--v2">
+   <nav class="footer-primary" aria-label="사이트 콘텐츠">
+    <a href="/index.html">홈</a><span>|</span>
+    <a href="/blog/ko/index.html">블로그</a><span>|</span>
+    <a href="/gallery">갤러리</a><span>|</span>
+    <a href="/faq">FAQ</a><span>|</span>
+    <a href="/use-cases">활용 사례</a>
+   </nav>
+   <nav class="footer-secondary" aria-label="법적 정보">
+    <a href="/about">소개</a><span>|</span>
+    <a href="/privacy">개인정보 처리방침</a><span>|</span>
+    <a href="/terms">이용약관</a><span>|</span>
+    <a href="/contact">문의</a><span>|</span>
+    <a href="/author">저자</a>
+   </nav>
+   <p class="footer-copyright">© 2026 ai-and-poem.art. All rights reserved.</p>
+  </footer>
+ </body>
+</html>
