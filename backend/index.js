@@ -142,11 +142,11 @@ const DISALLOWED_BY_LANG = {
     fi: ['porno', 'seksi', 'seksuaalinen', 'alaston', 'väkivalta', 'tappaa', 'murha', 'terrorismi', 'pommi', 'ase', 'pistooli', 'huumeet', 'marihuana', 'kokaiini', 'natsi', 'itsemurha', 'itseään vahingoittava', 'uhkapeli', 'kasino', 'vedonlyönti', 'viha', 'rasismi', 'raiskaus', 'seksuaalinen väkivalta', 'kidutus', 'seksuaalinen häirintä', 'pedofilia', 'kannibalismi', 'joukkoraiskaus', 'mestaus', 'teloitus', 'polttaminen', 'eläimeen sekaantuminen', 'nekrofilia', 'zoofilia'],
     mn: ['порно', 'секс', 'бэлгийн', 'нүцгэн', 'хүчирхийлэл', 'алах', 'аллага', 'терроризм', 'бөмбөг', 'зэвсэг', 'буу', 'мансууруулах', 'хар тамхи', 'кокаин', 'нацист', 'амиа', 'өөрийгөө', 'мөрийтэй', 'казино', 'бооцоо', 'үзэн', 'арьс', 'хүчин', 'бэлгийн хүчирхийлэл', 'эрүү шүүлт', 'бэлгийн дарамт', 'педофили', 'хүн идэх', 'бүлэглэн хүчирхийлэх', 'толгой авах', 'цаазаар авах', 'шатаах', 'малын гаж дон', 'цогцос сонирхох', 'амьтан сонирхох'],
     sw: ['picha', 'ngono', 'kujamiiana', 'uchi', 'vurugu', 'ua', 'mauaji', 'ugaidi', 'bomu', 'silaha', 'bunduki', 'dawa', 'bangi', 'kokeini', 'kujiua', 'kujidhuru', 'kamari', 'kasino', 'kuweka', 'chuki', 'ubaguzi', 'ubakaji', 'shambulio la kingono', 'utesaji', 'unyanyasaji wa kijinsia', 'ulawiti wa watoto', 'ulaji watu', 'ubakaji wa genge', 'kukata kichwa', 'kunyongwa', 'kuchoma', 'ngono na wanyama', 'necrophilia', 'zoophilia'],
-    nl: ['pornografie', 'seks', 'naakt', 'geweld', 'moord', 'terreur', 'bom', 'wapen', 'drugs', 'marihuana', 'cocaïne', 'nazi', 'zelfmoord', 'gokken', 'casino', 'haat', 'racisme', 'verkrachting', 'mishandeling', 'pedofilie', 'kannibalisme', 'onthoofding', 'executie', 'bestialiteit', 'necrofilie'],
-    no: ['pornografi', 'seks', 'naken', 'vold', 'drap', 'mord', 'terror', 'bombe', 'våpen', 'narkotika', 'marihuana', 'kokain', 'nazi', 'selvmord', 'gambling', 'casino', 'hat', 'rasisme', 'voldtekt', 'overgrep', 'pedofili', 'kannibalisme', 'halshugging', 'henrettelse', 'dyresex'],
-    da: ['pornografi', 'sex', 'nøgen', 'vold', 'drab', 'mord', 'terror', 'bombe', 'våben', 'stoffer', 'hash', 'kokain', 'nazi', 'selvmord', 'spil', 'kasino', 'had', 'racisme', 'voldtægt', 'overgreb', 'pædofili', 'kannibalisme', 'halshugning', 'henrettelse', 'dyresex'],
-    fil: ['pornograpiya', 'sex', 'hubad', 'karahasan', 'patayin', 'pagpatay', 'terorismo', 'bomba', 'armas', 'baril', 'droga', 'marijuana', 'cocaine', 'nazi', 'pagpapakamatay', 'sugal', 'casino', 'poot', 'rasismo', 'panggagahasa', 'pang-aabuso', 'pedophilia', 'kanibalismo', 'pagpugot', 'pagbitay'],
-    hu: ['pornográfia', 'szex', 'meztelen', 'erőszak', 'ölés', 'gyilkosság', 'terrorizmus', 'bomba', 'fegyver', 'kábítószer', 'marihuána', 'kokain', 'náci', 'öngyilkosság', 'szerencsejáték', 'kaszinó', 'gyűlölet', 'rasszizmus', 'nemi erőszak', 'bántalmazás', 'pedofília', 'kannibalizmus', 'lefejezés', 'kivégzés']
+    nl: ['pornografie', 'seks', 'naakt', 'geweld', 'moord', 'terreur', 'bom', 'wapen', 'drugs', 'marihuana', 'cocaïne', 'nazi', 'zelfmoord', 'gokken', 'casino', 'haat', 'racisme', 'verkrachting', 'mishandeling', 'pedofilie', 'kannibalisme', 'onthoofding', 'executie', 'bestialiteit', 'necrofilie', 'seksueel', 'doden', 'pistool', 'zelfbeschadiging', 'weddenschap', 'marteling', 'aanranding', 'seksuele intimidatie', 'groepsverkrachting', 'verbranding', 'zoöfilie'],
+    no: ['pornografi', 'seks', 'naken', 'vold', 'drap', 'mord', 'terror', 'bombe', 'våpen', 'narkotika', 'marihuana', 'kokain', 'nazi', 'selvmord', 'gambling', 'casino', 'hat', 'rasisme', 'voldtekt', 'overgrep', 'pedofili', 'kannibalisme', 'halshugging', 'henrettelse', 'dyresex', 'seksuell', 'drepe', 'pistol', 'selvskading', 'veddemål', 'tortur', 'seksuelt overgrep', 'seksuell trakassering', 'gruppevoldtekt', 'brenning', 'nekrofili', 'zoofili'],
+    da: ['pornografi', 'sex', 'nøgen', 'vold', 'drab', 'mord', 'terror', 'bombe', 'våben', 'stoffer', 'hash', 'kokain', 'nazi', 'selvmord', 'spil', 'kasino', 'had', 'racisme', 'voldtægt', 'overgreb', 'pædofili', 'kannibalisme', 'halshugning', 'henrettelse', 'dyresex', 'seksuel', 'dræbe', 'pistol', 'marihuana', 'selvskade', 'væddemål', 'tortur', 'seksuelt overgreb', 'seksuel chikane', 'gruppevoldtægt', 'afbrænding', 'nekrofili', 'zoofili'],
+    fil: ['pornograpiya', 'sex', 'hubad', 'karahasan', 'patayin', 'pagpatay', 'terorismo', 'bomba', 'armas', 'baril', 'droga', 'marijuana', 'cocaine', 'nazi', 'pagpapakamatay', 'sugal', 'casino', 'poot', 'rasismo', 'panggagahasa', 'pang-aabuso', 'pedophilia', 'kanibalismo', 'pagpugot', 'pagbitay', 'sekswal', 'pananakit sa sarili', 'pagpusta', 'tortyur', 'pang-aabusong sekswal', 'panliligalig', 'grupong panggagahasa', 'pagsunog', 'bestiality', 'necrophilia', 'zoophilia'],
+    hu: ['pornográfia', 'szex', 'meztelen', 'erőszak', 'ölés', 'gyilkosság', 'terrorizmus', 'bomba', 'fegyver', 'kábítószer', 'marihuána', 'kokain', 'náci', 'öngyilkosság', 'szerencsejáték', 'kaszinó', 'gyűlölet', 'rasszizmus', 'nemi erőszak', 'bántalmazás', 'pedofília', 'kannibalizmus', 'lefejezés', 'kivégzés', 'szexuális', 'pisztoly', 'önkárosítás', 'sportfogadás', 'kínzás', 'szexuális zaklatás', 'szexuális bántalmazás', 'csoportos nemi erőszak', 'elégetés', 'bestialitás', 'nekrofília', 'zoofília']
 };
 
 // Latin/Cyrillic/Greek → Unicode 단어경계 정규식. CJK·Arabic·Devanagari·Bengali·Thai → substring.
@@ -506,7 +506,12 @@ app.post('/generate-poem', async (req, res) => {
         if (!data.choices || data.choices.length === 0) {
             return res.status(500).json({ error: getErrorMessage(language, 'generationError') });
         }
-        const poem = data.choices[0].message.content.trim();
+        const content = data.choices[0]?.message?.content;
+        if (!content) {
+            // content_filter 등으로 content가 null인 경우
+            return res.status(500).json({ error: getErrorMessage(language, 'generationError') });
+        }
+        const poem = content.trim();
 
         res.json({ poem });
     } catch (error) {
