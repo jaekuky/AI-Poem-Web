@@ -47,6 +47,34 @@
   <meta name="twitter:description" content="1950년대 최초의 컴퓨터 시 실험부터 GPT 시대까지, AI 시 창작의 역사를 연대기순으로 깊이 있게 탐구합니다. 크리스토퍼 스트레이치의 러브레터 생성기에서 현대 AI 시 생성기까지의 여정.">
   <meta name="twitter:image" content="https://ai-and-poem.art/image/robot_poet-og.png">
   <meta name="google-adsense-account" content="ca-pub-7349192768683799">
+  <!-- Google Consent Mode v2: 저장된 동의를 읽어 기본값 설정 (기본 거부) -->
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      (function () {
+          var consent = {
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              analytics_storage: 'denied'
+          };
+          try {
+              var raw = localStorage.getItem('aiAndPoemCookieConsent');
+              var saved = raw === 'accepted'
+                  ? { analytics: true, advertising: true }
+                  : JSON.parse(raw);
+              if (saved && typeof saved === 'object') {
+                  if (saved.analytics) consent.analytics_storage = 'granted';
+                  if (saved.advertising) {
+                      consent.ad_storage = 'granted';
+                      consent.ad_user_data = 'granted';
+                      consent.ad_personalization = 'granted';
+                  }
+              }
+          } catch (e) { /* 파싱 실패 시 기본 거부 유지 */ }
+          gtag('consent', 'default', consent);
+      })();
+  </script>
   <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799">
   </script>
   <link href="https://ai-and-poem.art/blog/en/article-8.html" hreflang="en" rel="alternate"/>
@@ -226,5 +254,6 @@
         </nav>
         <p class="footer-copyright">© 2026 ai-and-poem.art. All rights reserved.</p>
     </footer>
- </body>
+ <script src="../../script.js" defer></script>
+</body>
 </html>

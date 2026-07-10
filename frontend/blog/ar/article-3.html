@@ -22,6 +22,34 @@
   <meta name="twitter:description" content="كيف كتب الشعراء المشهورون؟ استكشف عادات الكتابة لدى الشعراء العظماء وابحث عن الإلهام لشعرك الخاص.">
   <meta name="twitter:image" content="https://ai-and-poem.art/image/robot_poet-og.png">
   <meta name="google-adsense-account" content="ca-pub-7349192768683799">
+  <!-- Google Consent Mode v2: 저장된 동의를 읽어 기본값 설정 (기본 거부) -->
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      (function () {
+          var consent = {
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              analytics_storage: 'denied'
+          };
+          try {
+              var raw = localStorage.getItem('aiAndPoemCookieConsent');
+              var saved = raw === 'accepted'
+                  ? { analytics: true, advertising: true }
+                  : JSON.parse(raw);
+              if (saved && typeof saved === 'object') {
+                  if (saved.analytics) consent.analytics_storage = 'granted';
+                  if (saved.advertising) {
+                      consent.ad_storage = 'granted';
+                      consent.ad_user_data = 'granted';
+                      consent.ad_personalization = 'granted';
+                  }
+              }
+          } catch (e) { /* 파싱 실패 시 기본 거부 유지 */ }
+          gtag('consent', 'default', consent);
+      })();
+  </script>
   <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7349192768683799">
   </script>
      <!-- Google tag (gtag.js) -->
@@ -106,5 +134,6 @@
     شروط الخدمة
    </a>
   </footer>
- </body>
+ <script src="../../script.js" defer></script>
+</body>
 </html>
