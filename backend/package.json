@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "evaluate:sijo": "node scripts/evaluate-sijo.js"
+  },
   "dependencies": {
     "axios": "^1.9.0",
     "body-parser": "^1.20.3",
