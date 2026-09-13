@@ -4,7 +4,7 @@ slug: hwangjini-dongjitdal
 category: 명시 해설
 author: Ryu
 date: 2026-__-__
-og_image: https://ai-and-poem.art/image/blog/hwangjini-dongjitdal-og.png
+og_image: https://ai-and-poem.art/image/blog/ko/hwangjini-dongjitdal-og.png
 lang: ko
 ---
 
