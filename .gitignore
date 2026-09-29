@@ -7,9 +7,13 @@ coverage/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-backend.zip
+*.zip
 .DS_Store
+.wrangler/
+.context/
+tmp/
 .claude/
 .playwright-mcp/
 .conductor/settings.local.toml
 .conductor/settings.local.json
+ko-free-verse.json
