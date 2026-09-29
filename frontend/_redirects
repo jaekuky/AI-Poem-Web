@@ -4,5 +4,10 @@
 
 /about-author             /author.html         301
 /about-author.html        /author.html         301
+# fil·hi는 author 페이지가 없어 영어 저자 페이지로 보낸다. /:lang/ 규칙보다 먼저 일치해야 한다.
+/fil/about-author         /en/author.html      301
+/fil/about-author.html    /en/author.html      301
+/hi/about-author          /en/author.html      301
+/hi/about-author.html     /en/author.html      301
 /:lang/about-author       /:lang/author.html   301
 /:lang/about-author.html  /:lang/author.html   301

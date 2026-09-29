@@ -125,3 +125,52 @@ test('모든 html lang 값에서 쿠키 배너 개인정보 링크가 실제 페
         assert.ok(sitePath && servedFile(sitePath), `lang="${lang}" → ${href}`);
     }
 });
+
+// 아이콘 링크가 없으면 브라우저는 /favicon.ico를 요청한다. HTML이 직접 참조하지 않아도 지우면 안 되는 파일이다.
+test('아이콘 링크가 없는 페이지가 요청하는 루트 favicon.ico가 존재', () => {
+    const withoutIcon = htmlFiles.filter(file => !/<link\b[^>]*\brel="(?:shortcut )?icon"/i.test(read(file)));
+    assert.ok(withoutIcon.length === 0 || fileSet.has('favicon.ico'),
+        `${withoutIcon.length}쪽이 /favicon.ico를 요청 (예: ${withoutIcon[0]})`);
+});
+
+test('색인 대상 페이지와 sitemap 목록이 일치', () => {
+    const listed = new Set([...read('sitemap.xml').matchAll(/<loc>([^<]+)<\/loc>/g)]
+        .map(match => servedFile(toSitePath(match[1], site))));
+    const indexable = htmlFiles.filter(file => /<meta\b[^>]*name="robots"[^>]*content="index\b/i.test(read(file)));
+    assert.deepEqual(indexable.filter(file => !listed.has(file)), [], 'sitemap에 없는 색인 페이지');
+    assert.deepEqual([...listed].filter(file => !indexable.includes(file)), [], 'sitemap에 있는 비색인 페이지');
+});
+
+test('한 페이지 안에서 같은 hreflang을 두 번 선언하지 않음', () => {
+    const duplicated = htmlFiles.filter(file => {
+        const codes = [...read(file).matchAll(/<link\b[^>]*\bhreflang="([^"]+)"/g)].map(match => match[1]);
+        return new Set(codes).size !== codes.length;
+    });
+    assert.deepEqual(duplicated, []);
+});
+
+// _redirects를 위에서부터 읽어 처음 일치한 규칙의 대상 경로를 돌려준다(:name 자리표시자 지원).
+function redirectTarget(requestPath) {
+    for (const line of read('_redirects').split('\n')) {
+        const [from, to] = line.trim().split(/\s+/);
+        if (!from || from.startsWith('#') || !to) continue;
+        const names = [];
+        const pattern = from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+            .replace(/:(\w+)/g, (_, name) => { names.push(name); return '([^/]+)'; });
+        const match = requestPath.match(new RegExp(`^${pattern}$`));
+        if (match) return names.reduce((target, name, index) => target.replace(`:${name}`, match[index + 1]), to);
+    }
+    return null;
+}
+
+test('about-author 리다이렉트가 모든 언어에서 실제 페이지로 연결', () => {
+    const langs = files.filter(file => /^[a-z]+\/index\.html$/.test(file) && !file.startsWith('blog/'))
+        .map(file => file.split('/')[0]);
+    assert.ok(langs.length > 0);
+    for (const prefix of ['', ...langs.map(lang => `/${lang}`)]) {
+        for (const slug of ['about-author', 'about-author.html']) {
+            const target = redirectTarget(`${prefix}/${slug}`);
+            assert.ok(target && servedFile(target), `${prefix}/${slug} → ${target}`);
+        }
+    }
+});
