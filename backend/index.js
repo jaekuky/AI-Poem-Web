@@ -4,6 +4,9 @@ const cors = require('cors'); // CORS 허용을 위해 필요
 const bodyParser = require('body-parser');
 const axios = require('axios'); // HTTP 요청을 위해 axios 사용
 const { performance } = require('node:perf_hooks');
+const crypto = require('node:crypto');
+const { PollyClient, SynthesizeSpeechCommand } = require('@aws-sdk/client-polly');
+const { DynamoDBClient, PutItemCommand } = require('@aws-sdk/client-dynamodb');
 require('dotenv').config(); // 환경 변수 사용을 위해 dotenv 사용
 
 const app = express();
@@ -28,6 +31,17 @@ app.use(bodyParser.json({ limit: '1mb' }));
 
 // OpenAI API 키 설정 (환경 변수에서 가져옴)
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const TTS_ENABLED_LANGUAGES = new Set((process.env.TTS_ENABLED_LANGS || '')
+    .split(',').map(value => value.trim()).filter(Boolean));
+const TTS_PROVIDER = process.env.TTS_PROVIDER || 'openai';
+const TTS_TOKEN_SECRET = process.env.TTS_TOKEN_SECRET || '';
+const TTS_NONCE_TABLE = process.env.TTS_NONCE_TABLE || '';
+const TTS_TOKEN_TTL_SECONDS = 600;
+const TTS_MAX_CHARS = 3000;
+const TTS_PROVIDERS = new Set(['polly', 'openai']);
+const TTS_SUPPORTED_LANGUAGES = new Set(['ko', 'en']);
+const pollyClient = new PollyClient({ region: process.env.AWS_REGION || 'ap-northeast-2' });
+const dynamoClient = new DynamoDBClient({ region: process.env.AWS_REGION || 'ap-northeast-2' });
 
 //  언어별 프롬프트 매핑을 라우트 밖으로 이동해 반복 생성을 방지
 const languagePromptMap = {
@@ -644,6 +658,177 @@ const getErrorMessage = (lang, key, arg) => {
     return message || ERROR_MESSAGES['ko'][key];
 };
 
+function isTtsEnabledFor(language) {
+    return TTS_SUPPORTED_LANGUAGES.has(language) && TTS_ENABLED_LANGUAGES.has(language) &&
+        TTS_PROVIDERS.has(TTS_PROVIDER) &&
+        Boolean(TTS_TOKEN_SECRET && TTS_NONCE_TABLE) &&
+        (TTS_PROVIDER !== 'openai' || Boolean(OPENAI_API_KEY));
+}
+
+function poemHash(poem) {
+    return crypto.createHash('sha256').update(poem, 'utf8').digest('hex');
+}
+
+function encodeTtsTokenPart(value) {
+    return Buffer.from(value, 'utf8').toString('base64url');
+}
+
+function signTtsTokenPart(value) {
+    return crypto.createHmac('sha256', TTS_TOKEN_SECRET).update(value).digest('base64url');
+}
+
+function issueTtsToken(poem, language, now = Date.now()) {
+    if (!isTtsEnabledFor(language)) return null;
+    const payload = {
+        hash: poemHash(poem),
+        language,
+        exp: Math.floor(now / 1000) + TTS_TOKEN_TTL_SECONDS,
+        jti: crypto.randomUUID()
+    };
+    const encoded = encodeTtsTokenPart(JSON.stringify(payload));
+    return `${encoded}.${signTtsTokenPart(encoded)}`;
+}
+
+function verifyTtsToken(token, poem, language, now = Date.now()) {
+    if (typeof token !== 'string' || !TTS_TOKEN_SECRET) return null;
+    const [encoded, signature, extra] = token.split('.');
+    if (!encoded || !signature || extra) return null;
+    const expected = signTtsTokenPart(encoded);
+    const actualBytes = Buffer.from(signature);
+    const expectedBytes = Buffer.from(expected);
+    if (actualBytes.length !== expectedBytes.length ||
+        !crypto.timingSafeEqual(actualBytes, expectedBytes)) return null;
+    try {
+        const payload = JSON.parse(Buffer.from(encoded, 'base64url').toString('utf8'));
+        if (!payload || typeof payload !== 'object' || typeof payload.jti !== 'string' ||
+            typeof payload.exp !== 'number' || payload.language !== language ||
+            payload.hash !== poemHash(poem) || payload.exp <= Math.floor(now / 1000)) return null;
+        return payload;
+    } catch {
+        return null;
+    }
+}
+
+function escapeSsml(text) {
+    return text.replace(/[&<>"']/g, character => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;'
+    })[character]);
+}
+
+function poemToSsml(poem) {
+    const lines = poem.split(/\r?\n/).map(line => line.trim()).filter(Boolean);
+    return `<speak>${lines.map(line => `<p>${escapeSsml(line)}</p>`).join('')}</speak>`;
+}
+
+async function audioStreamToBuffer(stream) {
+    if (Buffer.isBuffer(stream)) return stream;
+    if (stream instanceof Uint8Array) return Buffer.from(stream);
+    if (stream && typeof stream.transformToByteArray === 'function') {
+        return Buffer.from(await stream.transformToByteArray());
+    }
+    const chunks = [];
+    for await (const chunk of stream || []) chunks.push(Buffer.from(chunk));
+    return Buffer.concat(chunks);
+}
+
+async function consumeTtsNonce(payload) {
+    try {
+        await dynamoClient.send(new PutItemCommand({
+            TableName: TTS_NONCE_TABLE,
+            Item: {
+                jti: { S: payload.jti },
+                expiresAt: { N: String(payload.exp) }
+            },
+            ConditionExpression: 'attribute_not_exists(jti)'
+        }));
+    } catch (error) {
+        if (error.name === 'ConditionalCheckFailedException') {
+            const reuseError = new Error('TTS token already used');
+            reuseError.code = 'TTS_TOKEN_USED';
+            reuseError.statusCode = 403;
+            throw reuseError;
+        }
+        throw error;
+    }
+}
+
+async function synthesizeWithPolly(poem, language) {
+    const voice = language === 'ko' ? 'Seoyeon' : 'Joanna';
+    const response = await pollyClient.send(new SynthesizeSpeechCommand({
+        Engine: 'neural',
+        OutputFormat: 'mp3',
+        SampleRate: '24000',
+        Text: poemToSsml(poem),
+        TextType: 'ssml',
+        VoiceId: voice
+    }));
+    return audioStreamToBuffer(response.AudioStream);
+}
+
+async function synthesizeWithOpenAi(poem, language) {
+    const response = await axios.post('https://api.openai.com/v1/audio/speech', {
+        model: 'gpt-4o-mini-tts',
+        voice: language === 'ko' ? 'marin' : 'cedar',
+        input: poem,
+        response_format: 'mp3',
+        instructions: language === 'ko'
+            ? '시를 또렷하고 차분하게 읽으십시오. 각 줄의 끝에서 자연스럽게 쉬십시오.'
+            : 'Read this poem clearly and calmly. Pause naturally at each line ending.'
+    }, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${OPENAI_API_KEY}`
+        },
+        responseType: 'arraybuffer',
+        timeout: 30000
+    });
+    return Buffer.from(response.data);
+}
+
+async function synthesizeSpeech(poem, language) {
+    if (TTS_PROVIDER === 'polly') return synthesizeWithPolly(poem, language);
+    if (TTS_PROVIDER === 'openai') return synthesizeWithOpenAi(poem, language);
+    const error = new Error('Unsupported TTS provider');
+    error.statusCode = 503;
+    throw error;
+}
+
+let ttsRuntime = { consumeNonce: consumeTtsNonce, synthesizeSpeech };
+
+function setTtsRuntimeForTest(overrides) {
+    ttsRuntime = { ...ttsRuntime, ...overrides };
+}
+
+function respondWithPoem(res, poem, language) {
+    const response = { poem };
+    const ttsToken = issueTtsToken(poem, language);
+    if (ttsToken) response.ttsToken = ttsToken;
+    return res.json(response);
+}
+
+app.post('/synthesize-speech', async (req, res) => {
+    const poem = typeof req.body.poem === 'string' ? req.body.poem : '';
+    const language = typeof req.body.language === 'string' ? req.body.language : '';
+    const token = req.body.ttsToken;
+
+    if (!isTtsEnabledFor(language)) return res.status(404).json({ error: 'TTS_NOT_ENABLED' });
+    if (!poem.trim() || poem.length > TTS_MAX_CHARS) return res.status(400).json({ error: 'INVALID_TTS_TEXT' });
+
+    const payload = verifyTtsToken(token, poem, language);
+    if (!payload) return res.status(403).json({ error: 'INVALID_TTS_TOKEN' });
+
+    try {
+        await ttsRuntime.consumeNonce(payload);
+        const audio = await ttsRuntime.synthesizeSpeech(poem, language);
+        res.set({ 'Content-Type': 'audio/mpeg', 'Cache-Control': 'no-store' });
+        return res.status(200).send(audio);
+    } catch (error) {
+        const statusCode = error.statusCode || 503;
+        console.error('TTS 합성 실패', { statusCode, code: error.code, provider: TTS_PROVIDER, language });
+        return res.status(statusCode).json({ error: error.code || 'TTS_UNAVAILABLE' });
+    }
+});
+
 app.post('/generate-poem', async (req, res) => {
     const rawTopic = typeof req.body.topic === 'string' ? req.body.topic.trim() : '';
     // 수정: 언어 설정이 없으면 기본값 'ko' 사용
@@ -695,7 +880,7 @@ app.post('/generate-poem', async (req, res) => {
             const result = await generateSijo(rawTopic);
             console.info('시조 생성 완료', { model: result.model, attempts: result.attempts,
                 durationMs: Math.round(result.durationMs), syllables: result.syllables });
-            return res.json({ poem: result.poem });
+            return respondWithPoem(res, result.poem, language);
         }
         const response = await axios.post('https://api.openai.com/v1/chat/completions', {
             model: 'gpt-4o-mini',
@@ -721,7 +906,7 @@ app.post('/generate-poem', async (req, res) => {
         }
         const poem = content.trim();
 
-        res.json({ poem });
+        return respondWithPoem(res, poem, language);
     } catch (error) {
         if (error instanceof SijoGenerationError) {
             console.warn('시조 생성 실패', { code: error.code });
@@ -742,11 +927,14 @@ app.post('/generate-poem', async (req, res) => {
     }
 });
 
-// 테스트용 export — 운영 동작 무관
-module.exports.handler = serverless(app); // app을 serverless()함수로 감싸서
-                                          // AWSLambda에서 실행할 수 있도록 만듦
+// Lambda 응답은 MP3 바이너리만 Base64로 인코딩한다.
+module.exports.handler = serverless(app, { binary: ['audio/mpeg'] });
 module.exports.app = app;
 module.exports.isDisallowedTopic = isDisallowedTopic;
 module.exports.SUPPORTED_LANGUAGES = SUPPORTED_LANGUAGES;
 module.exports.validateSijo = validateSijo;
 module.exports.generateSijo = generateSijo;
+module.exports.issueTtsToken = issueTtsToken;
+module.exports.verifyTtsToken = verifyTtsToken;
+module.exports.poemToSsml = poemToSsml;
+module.exports.setTtsRuntimeForTest = setTtsRuntimeForTest;

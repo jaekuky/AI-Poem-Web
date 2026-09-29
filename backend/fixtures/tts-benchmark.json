@@ -1,0 +1,27 @@
+[
+  {
+    "id": "ko-free-verse",
+    "language": "ko",
+    "text": "비가 그친 골목에\n젖은 간판 하나가 빛난다\n나는 천천히 우산을 접는다"
+  },
+  {
+    "id": "ko-sijo",
+    "language": "ko",
+    "text": "찬바람 문풍지를 흔들어 잠을 깨네\n흰 눈은 골목마다 소리 없이 내려앉네\n이 밤도 지나고 나면 새벽빛이 오리라"
+  },
+  {
+    "id": "ko-symbols",
+    "language": "ko",
+    "text": "밤 열한 시 삼십 분, 버스는 떠났다\n나는 마지막 불빛을 세며\n집으로 가는 길을 천천히 외웠다"
+  },
+  {
+    "id": "en-free-verse",
+    "language": "en",
+    "text": "Rain rests on the rail\na sparrow shakes silver from its wing\nmorning enters without a word"
+  },
+  {
+    "id": "en-rhyme",
+    "language": "en",
+    "text": "The harbor keeps one lamp against the rain\nA boat replies with light across the bay\nBy dawn the quiet water speaks again\nAnd all the dark has found a softer way"
+  }
+]

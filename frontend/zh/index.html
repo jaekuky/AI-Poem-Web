@@ -199,7 +199,16 @@
     <div id="poem"></div>
     <div class="buttons">
       <!-- '시 낭송' 버튼  -->
-      <button disabled="" id="tts-button">🔊 朗诵诗歌</button>
+      <button id="tts-button" type="button" disabled>🔊 朗诵诗歌</button>
+      <button id="tts-stop-button" type="button" disabled aria-label="Stop">■</button>
+      <label id="tts-speed-label" for="tts-speed">Speed</label>
+      <select id="tts-speed" aria-labelledby="tts-speed-label">
+        <option value="0.8">0.8×</option>
+        <option value="1" selected>1.0×</option>
+        <option value="1.2">1.2×</option>
+      </select>
+      <span id="tts-ai-notice">AI voice</span>
+      <p id="tts-status" role="status" aria-live="polite"></p>
     </div>
   </div>
   <!-- Service Overview Section -->

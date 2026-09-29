@@ -298,9 +298,50 @@ body {
   margin-inline-end: 10px;
   max-width: 200px;
 }
+
+.buttons #tts-stop-button,
+.buttons #tts-speed {
+  min-height: 40px;
+  padding: 8px 12px;
+  font-size: 15px;
+}
+
+.buttons #tts-stop-button {
+  margin-inline-end: 8px;
+}
+
+.buttons #tts-speed-label {
+  font-size: 14px;
+  margin-inline-end: 4px;
+}
+
+.buttons #tts-speed {
+  margin-inline-end: 10px;
+}
+
+.buttons #tts-ai-notice {
+  color: #d8d8d8;
+  font-size: 13px;
+}
+
+.buttons #tts-status {
+  flex-basis: 100%;
+  min-height: 1.5em;
+  margin: 6px 0 0;
+  text-align: center;
+  color: #e5e5e5;
+  font-size: 14px;
+}
+
 #tts-button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+#tts-stop-button:disabled,
+#tts-speed:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
 }
 
 /* 개인정보처리방침 및 이용약관 컨테이너 기본 레이아웃 */

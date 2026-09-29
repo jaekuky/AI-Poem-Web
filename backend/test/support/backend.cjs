@@ -9,12 +9,12 @@ const backendRequire = createRequire(filename);
 
 // 테스트에서 실제 API 키를 읽거나 외부 요청을 보내지 않는다.
 function loadBackend({ post = async () => { throw new Error('Unexpected API request'); },
-    now, apiKey = 'mock-key' } = {}) {
+    now, apiKey = 'mock-key', env = {} } = {}) {
     const context = {
         module: { exports: {} },
-        process: { env: { OPENAI_API_KEY: apiKey } },
+        process: { env: { OPENAI_API_KEY: apiKey, ...env } },
         console: { info() {}, warn() {}, error() {} },
-        AbortController, setTimeout, clearTimeout,
+        AbortController, Buffer, setTimeout, clearTimeout,
         require(name) {
             if (name === 'axios') return { post };
             if (name === 'dotenv') return { config() {} };
@@ -56,4 +56,27 @@ async function endpoint(t, options) {
     };
 }
 
-module.exports = { loadBackend, validSijo, completion, endpoint };
+async function ttsEndpoint(t, options) {
+    const backend = loadBackend(options);
+    const server = backend.app.listen(0, '127.0.0.1');
+    await new Promise(resolve => server.once('listening', resolve));
+    t.after(() => new Promise(resolve => {
+        server.close(resolve);
+        server.closeAllConnections();
+    }));
+    return {
+        backend,
+        request: async body => {
+            const response = await fetch(`http://127.0.0.1:${server.address().port}/synthesize-speech`, {
+                method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body)
+            });
+            const contentType = response.headers.get('content-type') || '';
+            const bodyValue = contentType.startsWith('application/json')
+                ? await response.json()
+                : Buffer.from(await response.arrayBuffer());
+            return { status: response.status, headers: response.headers, body: bodyValue };
+        }
+    };
+}
+
+module.exports = { loadBackend, validSijo, completion, endpoint, ttsEndpoint };

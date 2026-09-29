@@ -701,14 +701,488 @@ const formLabelMap = {
     'fil':'Anyo ng tula','hu':'Versforma',
 };
 
+const POEM_API_URL ='https://oy3rkh5hgszlzgiibdxxmbpxte0mknfg.lambda-url.ap-northeast-2.on.aws';
+const TTS_SPEED_STORAGE_KEY = 'aiAndPoemTtsSpeed';
+const TTS_SPEEDS = new Set(['0.8', '1', '1.2']);
+const TTS_REQUEST_TIMEOUT_MS = 35000;
+const serverTtsLanguages = new Set(['ko', 'en']);
+const ttsTextMap = {
+    ko: {
+        play: '시 낭송', pause: '일시 정지', resume: '계속 듣기', stop: '정지', speed: '속도',
+        ready: '낭독을 준비했습니다.', loading: 'AI 음성을 준비 중입니다.', playing: 'AI 음성을 재생 중입니다.',
+        paused: '낭독을 일시 정지했습니다.', stopped: '낭독을 멈췄습니다.',
+        unsupported: '이 기기에 선택한 언어 음성이 없습니다.', error: '음성을 재생하지 못했습니다.',
+        fallback: '고품질 음성에 연결하지 못해 기기 음성을 사용합니다.', retry: '기기 음성으로 듣기', ai: 'AI 음성'
+    },
+    en: {
+        play: 'Recite poem', pause: 'Pause', resume: 'Resume', stop: 'Stop', speed: 'Speed',
+        ready: 'Narration is ready.', loading: 'Preparing AI voice.', playing: 'Playing AI voice.',
+        paused: 'Narration paused.', stopped: 'Narration stopped.',
+        unsupported: 'This device has no voice for selected language.', error: 'Could not play voice.',
+        fallback: 'High-quality voice unavailable. Using device voice.', retry: 'Use device voice', ai: 'AI voice'
+    },
+    ja: { play:'詩を朗読', pause:'一時停止', resume:'再開', stop:'停止', speed:'速度', ready:'朗読の準備ができました。', loading:'AI音声を準備中です。', playing:'AI音声を再生中です。', paused:'朗読を一時停止しました。', stopped:'朗読を停止しました。', unsupported:'この端末には選択した言語の音声がありません。', error:'音声を再生できませんでした。', fallback:'高品質音声が使えません。端末音声を使います。', retry:'端末音声で聞く', ai:'AI音声' },
+    zh: { play:'朗诵诗歌', pause:'暂停', resume:'继续', stop:'停止', speed:'速度', ready:'朗诵已准备好。', loading:'正在准备 AI 语音。', playing:'正在播放 AI 语音。', paused:'朗诵已暂停。', stopped:'朗诵已停止。', unsupported:'此设备没有所选语言的语音。', error:'无法播放语音。', fallback:'高质量语音不可用，改用设备语音。', retry:'使用设备语音', ai:'AI 语音' },
+    es: { play:'Recitar poema', pause:'Pausar', resume:'Reanudar', stop:'Detener', speed:'Velocidad', ready:'Narración preparada.', loading:'Preparando voz de IA.', playing:'Reproduciendo voz de IA.', paused:'Narración pausada.', stopped:'Narración detenida.', unsupported:'Este dispositivo no tiene voz para idioma seleccionado.', error:'No se pudo reproducir voz.', fallback:'Voz de alta calidad no disponible. Se usa voz del dispositivo.', retry:'Usar voz del dispositivo', ai:'Voz de IA' },
+    fr: { play:'Réciter poème', pause:'Pause', resume:'Reprendre', stop:'Arrêter', speed:'Vitesse', ready:'Lecture prête.', loading:'Préparation de voix IA.', playing:'Lecture de voix IA.', paused:'Lecture en pause.', stopped:'Lecture arrêtée.', unsupported:'Cet appareil n’a pas de voix pour langue choisie.', error:'Lecture audio impossible.', fallback:'Voix haute qualité indisponible. Voix de l’appareil utilisée.', retry:'Utiliser voix de l’appareil', ai:'Voix IA' },
+    ru: { play:'Прочитать стихотворение', pause:'Пауза', resume:'Продолжить', stop:'Остановить', speed:'Скорость', ready:'Чтение готово.', loading:'Подготовка голоса ИИ.', playing:'Воспроизводится голос ИИ.', paused:'Чтение приостановлено.', stopped:'Чтение остановлено.', unsupported:'На устройстве нет голоса выбранного языка.', error:'Не удалось воспроизвести голос.', fallback:'Качественный голос недоступен. Используется голос устройства.', retry:'Использовать голос устройства', ai:'Голос ИИ' },
+    it: { play:'Recita poesia', pause:'Pausa', resume:'Riprendi', stop:'Ferma', speed:'Velocità', ready:'Lettura pronta.', loading:'Preparazione voce IA.', playing:'Riproduzione voce IA.', paused:'Lettura in pausa.', stopped:'Lettura fermata.', unsupported:'Dispositivo senza voce per lingua scelta.', error:'Impossibile riprodurre voce.', fallback:'Voce di alta qualità non disponibile. Uso voce dispositivo.', retry:'Usa voce dispositivo', ai:'Voce IA' },
+    de: { play:'Gedicht vorlesen', pause:'Pause', resume:'Fortsetzen', stop:'Stopp', speed:'Tempo', ready:'Lesung bereit.', loading:'KI-Stimme wird vorbereitet.', playing:'KI-Stimme wird abgespielt.', paused:'Lesung pausiert.', stopped:'Lesung gestoppt.', unsupported:'Dieses Gerät hat keine Stimme für ausgewählte Sprache.', error:'Stimme konnte nicht abgespielt werden.', fallback:'Hochwertige Stimme nicht verfügbar. Geräte-Stimme wird genutzt.', retry:'Geräte-Stimme nutzen', ai:'KI-Stimme' },
+    ms: { play:'Dengar puisi', pause:'Jeda', resume:'Sambung', stop:'Berhenti', speed:'Kelajuan', ready:'Bacaan sedia.', loading:'Menyediakan suara AI.', playing:'Memainkan suara AI.', paused:'Bacaan dijeda.', stopped:'Bacaan dihentikan.', unsupported:'Peranti ini tiada suara untuk bahasa dipilih.', error:'Suara tidak dapat dimainkan.', fallback:'Suara berkualiti tinggi tiada. Guna suara peranti.', retry:'Guna suara peranti', ai:'Suara AI' },
+    bn: { play:'কবিতা শুনুন', pause:'বিরতি', resume:'চালিয়ে যান', stop:'বন্ধ করুন', speed:'গতি', ready:'আবৃত্তি প্রস্তুত।', loading:'AI কণ্ঠ প্রস্তুত হচ্ছে।', playing:'AI কণ্ঠ চলছে।', paused:'আবৃত্তি বিরতিতে আছে।', stopped:'আবৃত্তি বন্ধ হয়েছে।', unsupported:'এই যন্ত্রে নির্বাচিত ভাষার কণ্ঠ নেই।', error:'কণ্ঠ চালানো যায়নি।', fallback:'উচ্চমানের কণ্ঠ নেই। যন্ত্রের কণ্ঠ ব্যবহার হচ্ছে।', retry:'যন্ত্রের কণ্ঠ ব্যবহার করুন', ai:'AI কণ্ঠ' },
+    vi: { play:'Đọc thơ', pause:'Tạm dừng', resume:'Tiếp tục', stop:'Dừng', speed:'Tốc độ', ready:'Bản đọc đã sẵn sàng.', loading:'Đang chuẩn bị giọng AI.', playing:'Đang phát giọng AI.', paused:'Đã tạm dừng bản đọc.', stopped:'Đã dừng bản đọc.', unsupported:'Thiết bị không có giọng cho ngôn ngữ đã chọn.', error:'Không thể phát giọng.', fallback:'Giọng chất lượng cao không sẵn có. Dùng giọng thiết bị.', retry:'Dùng giọng thiết bị', ai:'Giọng AI' },
+    el: { play:'Απαγγελία ποιήματος', pause:'Παύση', resume:'Συνέχεια', stop:'Διακοπή', speed:'Ταχύτητα', ready:'Η απαγγελία είναι έτοιμη.', loading:'Προετοιμασία φωνής AI.', playing:'Αναπαραγωγή φωνής AI.', paused:'Η απαγγελία μπήκε σε παύση.', stopped:'Η απαγγελία σταμάτησε.', unsupported:'Η συσκευή δεν έχει φωνή για επιλεγμένη γλώσσα.', error:'Η φωνή δεν αναπαράχθηκε.', fallback:'Η φωνή υψηλής ποιότητας δεν είναι διαθέσιμη. Χρήση φωνής συσκευής.', retry:'Χρήση φωνής συσκευής', ai:'Φωνή AI' },
+    pt: { play:'Ouvir poema', pause:'Pausar', resume:'Retomar', stop:'Parar', speed:'Velocidade', ready:'Leitura pronta.', loading:'A preparar voz de IA.', playing:'A reproduzir voz de IA.', paused:'Leitura em pausa.', stopped:'Leitura parada.', unsupported:'Este dispositivo não tem voz para idioma selecionado.', error:'Não foi possível reproduzir voz.', fallback:'Voz de alta qualidade indisponível. Uso voz do dispositivo.', retry:'Usar voz do dispositivo', ai:'Voz de IA' },
+    pl: { play:'Odczytaj wiersz', pause:'Wstrzymaj', resume:'Wznów', stop:'Zatrzymaj', speed:'Prędkość', ready:'Czytanie gotowe.', loading:'Przygotowanie głosu AI.', playing:'Odtwarzanie głosu AI.', paused:'Czytanie wstrzymane.', stopped:'Czytanie zatrzymane.', unsupported:'Urządzenie nie ma głosu dla wybranego języka.', error:'Nie udało się odtworzyć głosu.', fallback:'Głos wysokiej jakości niedostępny. Używany głos urządzenia.', retry:'Użyj głosu urządzenia', ai:'Głos AI' },
+    ch: { play:'Gedicht vorläse', pause:'Pause', resume:'Wiitermache', stop:'Stopp', speed:'Tempo', ready:'Vorlesig bereit.', loading:'KI-Stimm wird vorbereitet.', playing:'KI-Stimm lauft.', paused:'Vorlesig pausiert.', stopped:'Vorlesig gstoppt.', unsupported:'Uf däm Grät git es kei Stimm für die gwählti Sprach.', error:'Stimm cha nöd abgspilt werde.', fallback:'Hochwertigi Stimm nöd verfügbar. Grät-Stimm wird bruucht.', retry:'Grät-Stimm nutze', ai:'KI-Stimm' },
+    uk: { play:'Прослухати вірш', pause:'Пауза', resume:'Продовжити', stop:'Зупинити', speed:'Швидкість', ready:'Читання готове.', loading:'Підготовка голосу ШІ.', playing:'Відтворюється голос ШІ.', paused:'Читання призупинено.', stopped:'Читання зупинено.', unsupported:'На пристрої немає голосу вибраної мови.', error:'Не вдалося відтворити голос.', fallback:'Якісний голос недоступний. Використовується голос пристрою.', retry:'Використати голос пристрою', ai:'Голос ШІ' },
+    tr: { play:'Şiiri oku', pause:'Duraklat', resume:'Sürdür', stop:'Durdur', speed:'Hız', ready:'Okuma hazır.', loading:'Yapay zekâ sesi hazırlanıyor.', playing:'Yapay zekâ sesi çalıyor.', paused:'Okuma duraklatıldı.', stopped:'Okuma durduruldu.', unsupported:'Bu cihazda seçilen dil için ses yok.', error:'Ses oynatılamadı.', fallback:'Yüksek kaliteli ses yok. Cihaz sesi kullanılıyor.', retry:'Cihaz sesini kullan', ai:'Yapay zekâ sesi' },
+    sv: { play:'Recitera dikt', pause:'Pausa', resume:'Fortsätt', stop:'Stoppa', speed:'Hastighet', ready:'Uppläsning klar.', loading:'Förbereder AI-röst.', playing:'Spelar AI-röst.', paused:'Uppläsning pausad.', stopped:'Uppläsning stoppad.', unsupported:'Enheten har ingen röst för valt språk.', error:'Kunde inte spela upp röst.', fallback:'Högkvalitativ röst saknas. Enhetens röst används.', retry:'Använd enhetens röst', ai:'AI-röst' },
+    hi: { play:'कविता सुनाएँ', pause:'रोकें', resume:'जारी रखें', stop:'बंद करें', speed:'गति', ready:'पाठ तैयार है।', loading:'AI आवाज़ तैयार हो रही है।', playing:'AI आवाज़ चल रही है।', paused:'पाठ रोका गया।', stopped:'पाठ बंद हुआ।', unsupported:'इस डिवाइस में चुनी भाषा की आवाज़ नहीं है।', error:'आवाज़ नहीं चल सकी।', fallback:'उच्च गुणवत्ता की आवाज़ उपलब्ध नहीं है। डिवाइस आवाज़ उपयोग हो रही है।', retry:'डिवाइस आवाज़ उपयोग करें', ai:'AI आवाज़' },
+    id: { play:'Bacakan puisi', pause:'Jeda', resume:'Lanjutkan', stop:'Berhenti', speed:'Kecepatan', ready:'Bacaan siap.', loading:'Menyiapkan suara AI.', playing:'Memutar suara AI.', paused:'Bacaan dijeda.', stopped:'Bacaan dihentikan.', unsupported:'Perangkat tidak memiliki suara untuk bahasa dipilih.', error:'Suara tidak dapat diputar.', fallback:'Suara berkualitas tinggi tidak tersedia. Memakai suara perangkat.', retry:'Pakai suara perangkat', ai:'Suara AI' },
+    th: { play:'อ่านบทกวี', pause:'หยุดชั่วคราว', resume:'เล่นต่อ', stop:'หยุด', speed:'ความเร็ว', ready:'พร้อมอ่านแล้ว', loading:'กำลังเตรียมเสียง AI', playing:'กำลังเล่นเสียง AI', paused:'หยุดอ่านชั่วคราวแล้ว', stopped:'หยุดอ่านแล้ว', unsupported:'อุปกรณ์นี้ไม่มีเสียงสำหรับภาษาที่เลือก', error:'ไม่สามารถเล่นเสียงได้', fallback:'ไม่มีเสียงคุณภาพสูง จึงใช้เสียงของอุปกรณ์', retry:'ใช้เสียงของอุปกรณ์', ai:'เสียง AI' },
+    fi: { play:'Lue runo', pause:'Tauko', resume:'Jatka', stop:'Lopeta', speed:'Nopeus', ready:'Luku on valmis.', loading:'Valmistellaan tekoälyääntä.', playing:'Toistetaan tekoälyääntä.', paused:'Luku keskeytettiin.', stopped:'Luku lopetettiin.', unsupported:'Laitteessa ei ole ääntä valitulle kielelle.', error:'Ääntä ei voitu toistaa.', fallback:'Laadukas ääni ei ole saatavilla. Käytetään laitteen ääntä.', retry:'Käytä laitteen ääntä', ai:'Tekoälyääni' },
+    ar: { play:'تلاوة القصيدة', pause:'إيقاف مؤقت', resume:'متابعة', stop:'إيقاف', speed:'السرعة', ready:'التلاوة جاهزة.', loading:'جارٍ تجهيز صوت الذكاء الاصطناعي.', playing:'جارٍ تشغيل صوت الذكاء الاصطناعي.', paused:'تم إيقاف التلاوة مؤقتًا.', stopped:'تم إيقاف التلاوة.', unsupported:'لا يحتوي هذا الجهاز على صوت للغة المختارة.', error:'تعذر تشغيل الصوت.', fallback:'الصوت عالي الجودة غير متاح. سيُستخدم صوت الجهاز.', retry:'استخدم صوت الجهاز', ai:'صوت الذكاء الاصطناعي' },
+    mn: { play:'Шүлэг унших', pause:'Түр зогсоох', resume:'Үргэлжлүүлэх', stop:'Зогсоох', speed:'Хурд', ready:'Уншихад бэлэн.', loading:'AI хоолой бэлдэж байна.', playing:'AI хоолой тоглож байна.', paused:'Уншлагыг түр зогсоов.', stopped:'Уншлагыг зогсоов.', unsupported:'Энэ төхөөрөмжид сонгосон хэлний хоолой алга.', error:'Хоолой тоглуулж чадсангүй.', fallback:'Өндөр чанартай хоолой алга. Төхөөрөмжийн хоолойг ашиглана.', retry:'Төхөөрөмжийн хоолойг ашиглах', ai:'AI хоолой' },
+    sw: { play:'Soma shairi', pause:'Sitisha', resume:'Endelea', stop:'Acha', speed:'Kasi', ready:'Usomaji uko tayari.', loading:'Inaandaa sauti ya AI.', playing:'Inacheza sauti ya AI.', paused:'Usomaji umesitishwa.', stopped:'Usomaji umesimamishwa.', unsupported:'Kifaa hakina sauti ya lugha iliyochaguliwa.', error:'Sauti haikuweza kuchezwa.', fallback:'Sauti bora haipatikani. Kutumia sauti ya kifaa.', retry:'Tumia sauti ya kifaa', ai:'Sauti ya AI' },
+    nl: { play:'Draag gedicht voor', pause:'Pauze', resume:'Doorgaan', stop:'Stoppen', speed:'Snelheid', ready:'Voordracht klaar.', loading:'AI-stem voorbereiden.', playing:'AI-stem wordt afgespeeld.', paused:'Voordracht gepauzeerd.', stopped:'Voordracht gestopt.', unsupported:'Dit apparaat heeft geen stem voor gekozen taal.', error:'Stem kon niet worden afgespeeld.', fallback:'Hoogwaardige stem niet beschikbaar. Apparaatstem wordt gebruikt.', retry:'Gebruik apparaatstem', ai:'AI-stem' },
+    no: { play:'Resiter dikt', pause:'Pause', resume:'Fortsett', stop:'Stopp', speed:'Hastighet', ready:'Opplesning klar.', loading:'Forbereder KI-stemme.', playing:'Spiller KI-stemme.', paused:'Opplesning satt på pause.', stopped:'Opplesning stoppet.', unsupported:'Enheten har ingen stemme for valgt språk.', error:'Kunne ikke spille av stemme.', fallback:'Høykvalitetsstemme er ikke tilgjengelig. Enhetsstemme brukes.', retry:'Bruk enhetsstemme', ai:'KI-stemme' },
+    da: { play:'Oplæs digt', pause:'Pause', resume:'Fortsæt', stop:'Stop', speed:'Hastighed', ready:'Oplæsning klar.', loading:'Forbereder AI-stemme.', playing:'Afspiller AI-stemme.', paused:'Oplæsning sat på pause.', stopped:'Oplæsning stoppet.', unsupported:'Enheden har ingen stemme for valgt sprog.', error:'Stemmen kunne ikke afspilles.', fallback:'Stemmen i høj kvalitet er ikke tilgængelig. Enhedens stemme bruges.', retry:'Brug enhedens stemme', ai:'AI-stemme' },
+    fil: { play:'Bigkasin ang tula', pause:'I-pause', resume:'Ipagpatuloy', stop:'Ihinto', speed:'Bilis', ready:'Handa na ang pagbigkas.', loading:'Inihahanda ang boses ng AI.', playing:'Pinapatugtog ang boses ng AI.', paused:'Naka-pause ang pagbigkas.', stopped:'Huminto ang pagbigkas.', unsupported:'Walang boses para sa napiling wika ang device na ito.', error:'Hindi ma-play ang boses.', fallback:'Walang mataas na kalidad na boses. Boses ng device ang gagamitin.', retry:'Gamitin ang boses ng device', ai:'Boses ng AI' },
+    hu: { play:'Vers felolvasása', pause:'Szünet', resume:'Folytatás', stop:'Leállítás', speed:'Sebesség', ready:'Felolvasás kész.', loading:'AI-hang előkészítése.', playing:'AI-hang lejátszása.', paused:'Felolvasás szünetel.', stopped:'Felolvasás leállt.', unsupported:'Az eszközön nincs hang kiválasztott nyelvhez.', error:'A hang nem játszható le.', fallback:'Kiváló minőségű hang nem érhető el. Eszköz hangját használjuk.', retry:'Eszköz hangjának használata', ai:'AI-hang' }
+};
+
+function getTtsText(language) {
+    return ttsTextMap[language] || ttsTextMap.en;
+}
+
+function getStoredTtsSpeed() {
+    try {
+        const stored = localStorage.getItem(TTS_SPEED_STORAGE_KEY);
+        return TTS_SPEEDS.has(stored) ? Number(stored) : 1;
+    } catch {
+        return 1;
+    }
+}
+
+function trackTtsEvent(action, details) {
+    try {
+        const consent = JSON.parse(localStorage.getItem('aiAndPoemCookieConsent'));
+        if (!consent || consent.analytics !== true || typeof gtag !== 'function') return;
+        gtag('event', `tts_${action}`, details);
+    } catch {
+        // 동의 값을 읽지 못하면 분석 전송을 생략한다.
+    }
+}
+
+function splitPoemForSpeech(poem, maxLength = 240) {
+    const chunks = [];
+    for (const rawLine of poem.split(/\r?\n/)) {
+        let line = rawLine.trim();
+        while (line.length > maxLength) {
+            const windowText = line.slice(0, maxLength + 1);
+            const punctuation = Math.max(windowText.lastIndexOf('.'), windowText.lastIndexOf('!'),
+                windowText.lastIndexOf('?'), windowText.lastIndexOf('…'), windowText.lastIndexOf('。'));
+            const boundary = punctuation > maxLength / 2 ? punctuation + 1 : windowText.lastIndexOf(' ');
+            const cut = boundary > 0 ? boundary : maxLength;
+            chunks.push(line.slice(0, cut).trim());
+            line = line.slice(cut).trim();
+        }
+        if (line) chunks.push(line);
+    }
+    return chunks;
+}
+
+class PoemTtsController {
+    constructor({ button, stopButton, speedSelect, speedLabel, aiNotice, status, language }) {
+        this.button = button;
+        this.stopButton = stopButton;
+        this.speedSelect = speedSelect;
+        this.speedLabel = speedLabel;
+        this.aiNotice = aiNotice;
+        this.status = status;
+        this.synthesis = window.speechSynthesis;
+        this.supported = Boolean(this.synthesis && window.SpeechSynthesisUtterance);
+        this.state = 'idle';
+        this.speed = getStoredTtsSpeed();
+        this.speedSelect.value = String(this.speed);
+        this.run = 0;
+        this.poem = '';
+        // 시 생성 전에도 버튼 문구를 페이지 언어로 표시한다.
+        this.language = language;
+        this.ttsToken = null;
+        this.queue = [];
+        this.queueIndex = 0;
+        this.currentSource = null;
+        this.audio = null;
+        this.audioUrl = null;
+        this.serverRequest = null;
+        this.fallbackRun = null;
+        if (this.supported) {
+            const refreshVoices = () => {
+                if (this.checkVoiceWait) this.checkVoiceWait();
+                if (this.state === 'unsupported' && this.poem && this.selectVoice()) {
+                    this.state = 'ready';
+                    this.announce('ready');
+                    this.updateControls();
+                }
+            };
+            refreshVoices();
+            if (typeof this.synthesis.addEventListener === 'function') {
+                this.synthesis.addEventListener('voiceschanged', refreshVoices);
+            } else {
+                this.synthesis.onvoiceschanged = refreshVoices;
+            }
+        }
+        this.updateControls();
+    }
+
+    text(key) {
+        return getTtsText(this.language)[key];
+    }
+
+    announce(key) {
+        this.status.textContent = this.text(key);
+    }
+
+    updateControls() {
+        const hasPoem = Boolean(this.poem);
+        const active = this.state === 'playing' || this.state === 'paused' || this.state === 'loading';
+        const label = this.state === 'playing' ? this.text('pause') :
+            this.state === 'paused' ? this.text('resume') :
+            this.state === 'error' && this.hadServerFailure ? this.text('retry') : this.text('play');
+        this.button.textContent = `🔊 ${label}`;
+        this.button.setAttribute('aria-label', label);
+        this.button.setAttribute('aria-pressed', String(this.state === 'playing' || this.state === 'paused'));
+        const stopLabel = this.text('stop');
+        this.stopButton.textContent = `■ ${stopLabel}`;
+        this.stopButton.setAttribute('aria-label', stopLabel);
+        this.stopButton.setAttribute('title', stopLabel);
+        this.speedLabel.textContent = this.text('speed');
+        this.aiNotice.textContent = this.text('ai');
+        this.aiNotice.hidden = !((this.ttsToken || this.serverRequest || this.audioUrl) &&
+            serverTtsLanguages.has(this.language));
+        this.button.disabled = !hasPoem || this.state === 'loading' || this.state === 'unsupported';
+        this.stopButton.disabled = !active;
+        this.speedSelect.disabled = !hasPoem;
+    }
+
+    setPoem(poem, language, ttsToken) {
+        this.stop({ announce: false, discard: true });
+        this.poem = poem;
+        this.language = language;
+        this.ttsToken = typeof ttsToken === 'string' ? ttsToken : null;
+        this.hadServerFailure = false;
+        this.state = 'ready';
+        this.announce('ready');
+        this.updateControls();
+    }
+
+    clear() {
+        this.stop({ announce: false, discard: true });
+        this.poem = '';
+        this.ttsToken = null;
+        this.state = 'idle';
+        this.status.textContent = '';
+        this.updateControls();
+    }
+
+    selectVoice() {
+        const requested = (languageMap[this.language]?.ttsLang || 'ko-KR').replace('_', '-').toLowerCase();
+        const base = requested.split('-')[0];
+        const voices = this.synthesis.getVoices();
+        return voices.find(voice => voice.lang.replace('_', '-').toLowerCase() === requested) ||
+            voices.find(voice => voice.lang.replace('_', '-').toLowerCase().split('-')[0] === base) || null;
+    }
+
+    waitForVoice() {
+        if (!this.supported || this.selectVoice()) return Promise.resolve();
+        return new Promise(resolve => {
+            let done = false;
+            const finish = () => {
+                if (done) return;
+                done = true;
+                clearTimeout(timer);
+                this.cancelVoiceWait = null;
+                this.checkVoiceWait = null;
+                resolve();
+            };
+            const timer = setTimeout(finish, 1200);
+            this.cancelVoiceWait = finish;
+            this.checkVoiceWait = () => { if (this.selectVoice()) finish(); };
+            this.checkVoiceWait();
+        });
+    }
+
+    async toggle() {
+        if (this.state === 'loading') return;
+        if (this.state === 'playing') return this.pause();
+        if (this.state === 'paused') return this.resume();
+        return this.start();
+    }
+
+    async start() {
+        if (!this.poem || this.state === 'loading') return;
+        const run = ++this.run;
+        this.releaseAudio();
+        if (this.supported) this.synthesis.cancel();
+        this.state = 'loading';
+        this.announce('loading');
+        this.updateControls();
+        const useServer = (this.audioUrl || this.serverRequest || this.ttsToken) &&
+            serverTtsLanguages.has(this.language);
+        if (useServer) {
+            try {
+                await this.startServerAudio(run);
+                return;
+            } catch {
+                return this.fallbackToBrowser(run);
+            }
+        }
+        try {
+            await this.startBrowserAudio(run);
+        } catch {
+            if (run === this.run) this.markError();
+        }
+    }
+
+    async getServerAudioUrl() {
+        if (this.audioUrl) return this.audioUrl;
+        if (this.serverRequest) return this.serverRequest.promise;
+
+        const body = JSON.stringify({ poem: this.poem, language: this.language, ttsToken: this.ttsToken });
+        // 서버가 이미 소비했을 수 있으므로 같은 토큰으로 다시 요청하지 않는다.
+        this.ttsToken = null;
+        const request = { controller: new AbortController() };
+        this.serverRequest = request;
+        request.timer = setTimeout(() => request.controller.abort(), TTS_REQUEST_TIMEOUT_MS);
+        request.promise = (async () => {
+            try {
+                const response = await fetch(`${POEM_API_URL}/synthesize-speech`, {
+                    method: 'POST', headers: { 'Content-Type': 'application/json' }, mode: 'cors',
+                    signal: request.controller.signal, body
+                });
+                if (!response.ok) throw new Error('TTS server unavailable');
+                const blob = await response.blob();
+                if (request.controller.signal.aborted || this.serverRequest !== request) return null;
+                if (!blob.size || !blob.type.startsWith('audio/')) throw new Error('Invalid TTS audio');
+                this.audioUrl = URL.createObjectURL(blob);
+                return this.audioUrl;
+            } catch (error) {
+                if (this.serverRequest === request) this.hadServerFailure = true;
+                throw error;
+            } finally {
+                clearTimeout(request.timer);
+                if (this.serverRequest === request) {
+                    this.serverRequest = null;
+                    this.updateControls();
+                }
+            }
+        })();
+        return request.promise;
+    }
+
+    async startServerAudio(run) {
+        const url = await this.getServerAudioUrl();
+        if (run !== this.run || !url) return;
+        const audio = new Audio(url);
+        this.audio = audio;
+        audio.playbackRate = this.speed;
+        audio.preservesPitch = true;
+        this.currentSource = 'server';
+        audio.onended = () => {
+            if (run !== this.run || this.audio !== audio) return;
+            this.releaseAudio();
+            this.currentSource = null;
+            this.state = 'stopped';
+            this.announce('stopped');
+            this.updateControls();
+            trackTtsEvent('complete', { language: this.language, source: 'server', speed: this.speed });
+        };
+        audio.onerror = () => {
+            if (this.audio === audio) this.fallbackToBrowser(run);
+        };
+        await audio.play();
+        if (run !== this.run || this.audio !== audio || this.fallbackRun === run) return;
+        this.state = 'playing';
+        this.announce('playing');
+        this.updateControls();
+        trackTtsEvent('play', { language: this.language, source: 'server', speed: this.speed });
+    }
+
+    async fallbackToBrowser(run) {
+        if (run !== this.run || this.fallbackRun === run) return;
+        this.fallbackRun = run;
+        this.releaseAudio({ discard: true });
+        this.currentSource = null;
+        this.ttsToken = null;
+        this.hadServerFailure = true;
+        this.state = 'loading';
+        this.announce('fallback');
+        this.updateControls();
+        trackTtsEvent('error', { language: this.language, source: 'server', speed: this.speed });
+        try {
+            await this.startBrowserAudio(run);
+        } catch {
+            if (run === this.run) this.markError();
+        }
+    }
+
+    async startBrowserAudio(run) {
+        if (!this.supported) return this.markUnsupported();
+        await this.waitForVoice();
+        if (run !== this.run) return;
+        const voice = this.selectVoice();
+        if (!voice) return this.markUnsupported();
+        this.currentSource = 'browser';
+        this.currentVoice = voice;
+        this.queue = splitPoemForSpeech(this.poem);
+        this.queueIndex = 0;
+        if (!this.queue.length) return this.markError();
+        // cancel()은 합성 엔진의 일시정지 상태를 해제하지 않는다.
+        if (this.synthesis.paused) this.synthesis.resume();
+        this.state = 'playing';
+        this.announce(this.hadServerFailure ? 'fallback' : 'playing');
+        this.updateControls();
+        this.speakNext(run);
+        trackTtsEvent('play', { language: this.language, source: 'browser', speed: this.speed });
+    }
+
+    speakNext(run) {
+        if (run !== this.run || this.state !== 'playing') return;
+        if (this.queueIndex >= this.queue.length) {
+            this.currentSource = null;
+            this.state = 'stopped';
+            this.announce('stopped');
+            this.updateControls();
+            trackTtsEvent('complete', { language: this.language, source: 'browser', speed: this.speed });
+            return;
+        }
+        const utterance = new SpeechSynthesisUtterance(this.queue[this.queueIndex]);
+        utterance.lang = languageMap[this.language]?.ttsLang || 'ko-KR';
+        utterance.voice = this.currentVoice;
+        utterance.rate = this.speed;
+        utterance.onend = () => {
+            if (run !== this.run || this.state !== 'playing') return;
+            this.queueIndex += 1;
+            this.speakNext(run);
+        };
+        utterance.onerror = () => {
+            if (run !== this.run) return;
+            this.markError();
+            trackTtsEvent('error', { language: this.language, source: 'browser', speed: this.speed });
+        };
+        this.synthesis.speak(utterance);
+    }
+
+    pause() {
+        if (this.currentSource === 'server' && this.audio) this.audio.pause();
+        if (this.currentSource === 'browser') this.synthesis.pause();
+        this.state = 'paused';
+        this.announce('paused');
+        this.updateControls();
+        trackTtsEvent('pause', { language: this.language, source: this.currentSource, speed: this.speed });
+    }
+
+    async resume() {
+        const run = this.run;
+        if (this.currentSource === 'server' && this.audio) {
+            const audio = this.audio;
+            this.state = 'loading';
+            this.updateControls();
+            try {
+                await audio.play();
+            } catch {
+                return this.fallbackToBrowser(run);
+            }
+            if (run !== this.run || this.audio !== audio || this.fallbackRun === run) return;
+        }
+        if (this.currentSource === 'browser') this.synthesis.resume();
+        this.state = 'playing';
+        this.announce(this.currentSource === 'browser' && this.hadServerFailure ? 'fallback' : 'playing');
+        this.updateControls();
+        trackTtsEvent('resume', { language: this.language, source: this.currentSource, speed: this.speed });
+    }
+
+    setSpeed(value) {
+        if (!TTS_SPEEDS.has(value)) return;
+        this.speed = Number(value);
+        try { localStorage.setItem(TTS_SPEED_STORAGE_KEY, value); } catch {}
+        if (this.currentSource === 'server' && this.audio) this.audio.playbackRate = this.speed;
+        this.updateControls();
+        trackTtsEvent('speed', { language: this.language, source: this.currentSource || 'none', speed: this.speed });
+    }
+
+    releaseAudio({ discard = false } = {}) {
+        if (this.audio) {
+            this.audio.onended = null;
+            this.audio.onerror = null;
+            this.audio.pause();
+            this.audio.removeAttribute('src');
+            this.audio.load();
+        }
+        this.audio = null;
+        if (discard) {
+            if (this.audioUrl) URL.revokeObjectURL(this.audioUrl);
+            this.audioUrl = null;
+        }
+    }
+
+    stop({ announce = true, discard = false } = {}) {
+        this.run += 1;
+        if (this.cancelVoiceWait) this.cancelVoiceWait();
+        if (this.supported) this.synthesis.cancel();
+        this.releaseAudio({ discard });
+        // 같은 시의 합성은 제한시간 안에 마쳐 캐시한다. 새 시·페이지 종료는 취소한다.
+        if (discard) {
+            const request = this.serverRequest;
+            this.serverRequest = null;
+            if (request) {
+                clearTimeout(request.timer);
+                request.controller.abort();
+            }
+            this.ttsToken = null;
+        }
+        this.currentSource = null;
+        if (this.poem) {
+            this.state = 'stopped';
+            if (announce) this.announce('stopped');
+        }
+        this.updateControls();
+        if (announce) trackTtsEvent('stop', { language: this.language, source: 'none', speed: this.speed });
+    }
+
+    markUnsupported() {
+        this.state = 'unsupported';
+        this.status.textContent = this.text('unsupported');
+        this.updateControls();
+    }
+
+    markError() {
+        this.state = 'error';
+        this.announce('error');
+        this.updateControls();
+    }
+}
+
 const languageSelect = document.getElementById('language');
 const processingVideo = document.getElementById('processing-video');
 const topicInput = document.getElementById('topic');
 const poemDiv = document.getElementById('poem');
 const ttsButton = document.getElementById('tts-button');
+const ttsStopButton = document.getElementById('tts-stop-button');
+const ttsSpeedSelect = document.getElementById('tts-speed');
+const ttsSpeedLabel = document.getElementById('tts-speed-label');
+const ttsAiNotice = document.getElementById('tts-ai-notice');
+const ttsStatus = document.getElementById('tts-status');
 
 // index 페이지 전용 기능: 필수 요소가 모두 존재할 때만 실행
-if (languageSelect && topicInput && poemDiv && ttsButton) {
+if (languageSelect && topicInput && poemDiv && ttsButton && ttsStopButton && ttsSpeedSelect &&
+    ttsSpeedLabel && ttsAiNotice && ttsStatus) {
+const ttsController = new PoemTtsController({
+    button: ttsButton, stopButton: ttsStopButton, speedSelect: ttsSpeedSelect,
+    speedLabel: ttsSpeedLabel, aiNotice: ttsAiNotice, status: ttsStatus, language: languageSelect.value
+});
 
 // 수정: 시 형식 셀렉터 — 페이지 언어에 맞춰 라벨/옵션 채우기
 (function populateFormSelector() {
@@ -752,6 +1226,7 @@ topicInput.addEventListener('input', () => {
 document.getElementById('language').addEventListener('change', function() {
     const language = languageSelect.value;
     if (!languageMap[language]) return;
+    ttsController.stop({ announce: false });
     location.href = `https://ai-and-poem.art/${language}/`;
 });
 
@@ -767,12 +1242,11 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
     const formSelect = document.getElementById('poem-form-select');
     const form = formSelect && formSelect.value ? formSelect.value : 'auto';
 
+    ttsController.clear();
     poemDiv.textContent = processingMessage[language] || processingMessage['ko'];
 
     // 비디오 재생
     processingVideo.play();
-    // TTS 버튼 비활성화
-    ttsButton.disabled = true;
     // 중복 제출 방지
     submitButton.disabled = true;
 
@@ -781,7 +1255,7 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
     const timeoutId = setTimeout(() => controller.abort(), 30000);
 
     try {
-        const response = await fetch('https://oy3rkh5hgszlzgiibdxxmbpxte0mknfg.lambda-url.ap-northeast-2.on.aws/generate-poem', {
+        const response = await fetch(`${POEM_API_URL}/generate-poem`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -803,8 +1277,7 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
             const poem = data.poem;
             poemDiv.textContent = poem;
 
-            // TTS 버튼 활성화
-            ttsButton.disabled = false;
+            ttsController.setPoem(poem, language, data.ttsToken);
 
             // 비디오 정지
             processingVideo.pause();
@@ -818,6 +1291,7 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
 
             // 비디오 정지
             processingVideo.pause();
+            ttsController.clear();
         }
     } catch (error) {
         clearTimeout(timeoutId);
@@ -825,24 +1299,17 @@ document.getElementById('poem-form').addEventListener('submit', async function(e
 
         // 비디오 정지
         processingVideo.pause();
+        ttsController.clear();
     } finally {
         // 제출 버튼 복구
         submitButton.disabled = false;
     }
 });
 
-// TTS 버튼 함수
-ttsButton.addEventListener('click', function(event) {
-    if (!('speechSynthesis' in window)) return;
-    const language = languageSelect.value;
-    const poem = poemDiv.textContent;
-    const ttsLang = languageMap[language]?.ttsLang || 'ko-KR';
-
-    window.speechSynthesis.cancel(); // 이전/대기 중 낭독 중단 후 새로 시작 (반복 클릭 시 큐 누적 방지)
-    const utterance = new SpeechSynthesisUtterance(poem);
-    utterance.lang = ttsLang;
-    window.speechSynthesis.speak(utterance);
-});
+ttsButton.addEventListener('click', () => { ttsController.toggle(); });
+ttsStopButton.addEventListener('click', () => { ttsController.stop(); });
+ttsSpeedSelect.addEventListener('change', () => { ttsController.setSpeed(ttsSpeedSelect.value); });
+window.addEventListener('pagehide', () => { ttsController.stop({ announce: false, discard: true }); });
 
 } // end of index 페이지 전용 기능
 

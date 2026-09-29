@@ -4,9 +4,12 @@
   },
   "scripts": {
     "test": "node --test test/*.test.js",
-    "evaluate:sijo": "node scripts/evaluate-sijo.js"
+    "evaluate:sijo": "node scripts/evaluate-sijo.js",
+    "evaluate:tts": "node scripts/evaluate-tts.js"
   },
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.1135.0",
+    "@aws-sdk/client-polly": "^3.1135.0",
     "axios": "^1.9.0",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
