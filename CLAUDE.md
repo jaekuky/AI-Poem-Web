@@ -24,8 +24,8 @@
 
 ## 정책 준수 (수익화 핵심)
 - AdSense 거부 사유 대응 — `ko`/`en`만 색인, 나머지 29개 언어는 noindex (4.9에서 정리)
-- `backend/index.js`의 `DISALLOWED_KEYWORDS`는 다국어 금칙어, 신규 추가 시 같은 카테고리로 모든 언어에 보강
-- CORS 허용 — `ai-and-poem-jaekuky.pages.dev`, `ai-and-poem.art` 만 (`backend/index.js:11`)
+- `backend/index.js`의 `DISALLOWED_BY_LANG`는 다국어 금칙어, 신규 추가 시 같은 카테고리로 모든 언어에 보강
+- CORS 허용 — `ai-and-poem-jaekuky.pages.dev`, `ai-and-poem.art` 만 (`backend/index.js`의 `corsOptions`)
 
 ## 검증
 - 라이브 변경 확인 — Chrome으로 `ai-and-poem.art` 열고 `document.body.innerText` 검사

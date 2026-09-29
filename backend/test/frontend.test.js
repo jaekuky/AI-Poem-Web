@@ -19,7 +19,7 @@ function element(value = '') {
 }
 
 function page(fetch, { voices = [{ lang: 'ko-KR', name: 'Korean test voice' }], storage = {},
-    playAudio, browserSupported = true, language = 'ko' } = {}) {
+    playAudio, browserSupported = true, htmlLang = 'ko', language = 'ko' } = {}) {
     const elements = new Map();
     for (const id of ['language', 'processing-video', 'topic', 'poem', 'tts-button', 'tts-stop-button',
         'tts-speed', 'tts-speed-label', 'tts-ai-notice', 'tts-status', 'poetry-writing-button',
@@ -77,7 +77,7 @@ function page(fetch, { voices = [{ lang: 'ko-KR', name: 'Korean test voice' }], 
             revokeObjectURL(url) { revokedUrls.push(url); }
         },
         document: {
-            documentElement: { lang: 'ko' },
+            documentElement: { lang: htmlLang },
             getElementById: id => elements.get(id) || null,
             querySelector: () => null
         },
@@ -527,8 +527,15 @@ test('음성 목록 대기 중 정지는 타이머 해제, 늦은 음성 추가�
     assert.equal(ui.spoken.length, 0);
 });
 
+test('스위스 독일어 페이지(html lang="de-CH")는 ch 시 형식 옵션 사용', () => {
+    const ui = page(async () => ({ ok: true, json: async () => ({ poem }) }), { htmlLang: 'de-CH' });
+    const options = ui.elements.get('poem-form-select').innerHTML;
+    assert.match(options, /Freii Värs/);
+    assert.doesNotMatch(options, /Sonnet/);
+});
+
 test('시 생성 전에도 낭독 버튼·정지·속도 문구는 페이지 언어로 표시', () => {
-    const ui = page(async () => ({ ok: true, json: async () => ({ poem }) }), { language: 'en' });
+    const ui = page(async () => ({ ok: true, json: async () => ({ poem }) }), { language: 'en', htmlLang: 'en' });
     assert.equal(ui.elements.get('tts-button').textContent, '🔊 Recite poem');
     assert.equal(ui.elements.get('tts-stop-button').textContent, '■ Stop');
     assert.equal(ui.elements.get('tts-speed-label').textContent, 'Speed');

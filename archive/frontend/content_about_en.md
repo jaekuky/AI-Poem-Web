@@ -25,4 +25,4 @@ The AI reads each poem aloud with a tone and pacing that matches its atmosphere.
 
 ## Operator
 
-This service is designed and operated by Ryu Jae-kuk. See the [author page](/author) for full details.
+This service is designed and operated by Ryu Jae-kuk. See the [author page](/en/author) for full details.

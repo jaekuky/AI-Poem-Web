@@ -701,6 +701,12 @@ const formLabelMap = {
     'fil':'Anyo ng tula','hu':'Versforma',
 };
 
+// html lang(BCP 47)을 사이트 언어 코드로 변환 — ch 페이지는 de-CH, zh 블로그는 zh-CN
+function getDocumentLang(fallback) {
+    const lang = (document.documentElement.lang || fallback).toLowerCase();
+    return { 'de-ch': 'ch', 'zh-cn': 'zh' }[lang] || lang;
+}
+
 const POEM_API_URL ='https://oy3rkh5hgszlzgiibdxxmbpxte0mknfg.lambda-url.ap-northeast-2.on.aws';
 const TTS_SPEED_STORAGE_KEY = 'aiAndPoemTtsSpeed';
 const TTS_SPEEDS = new Set(['0.8', '1', '1.2']);
@@ -1190,7 +1196,7 @@ const ttsController = new PoemTtsController({
     const formLabel = document.querySelector('[data-i18n-form-label]');
     if (!formSelect) return;
 
-    const pageLang = (document.documentElement.lang || 'ko').toLowerCase();
+    const pageLang = getDocumentLang('ko');
     const options = formOptionsMap[pageLang] || formOptionsMap['en'];
     const labelText = formLabelMap[pageLang] || formLabelMap['en'];
 
@@ -1316,7 +1322,7 @@ window.addEventListener('pagehide', () => { ttsController.stop({ announce: false
 // 쿠키 동의 배너 (모든 페이지에서 실행)
 const pageLang = languageSelect
     ? languageSelect.value
-    : (document.documentElement.lang || 'en');
+    : getDocumentLang('en');
 const cookieConsentKey = 'aiAndPoemCookieConsent';
 
 function getPrivacyUrl(lang) {

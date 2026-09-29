@@ -30,4 +30,4 @@ Built on the belief that poetry should be open to everyone, AI & Poem lowers the
 
 ## Contact
 
-For inquiries or collaboration proposals, please reach out through our [contact](/contact) page.
+For inquiries or collaboration proposals, please reach out through our [contact](/en/contact) page.
