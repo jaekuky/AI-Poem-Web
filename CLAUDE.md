@@ -10,8 +10,9 @@
 - 백엔드 — `backend/index.js` 단일 파일, AWS Lambda (`serverless-http` 래핑)
 
 ## Multi-file invariant (편집 시 반드시 동기화)
-- **한국어 메인 본문 3-way 동기화** — `frontend/index.html` · `frontend/ko/index.html` · `frontend/content_ko_main.md`
-- **영어 메인 본문 2-way 동기화** — `frontend/en/index.html` · `frontend/content_en_main.md`
+- 한국어 메인 본문 3-way 동기화: `frontend/index.html` · `frontend/ko/index.html` · `archive/frontend/content_ko_main.md`
+- 영어 메인 본문 2-way 동기화: `frontend/en/index.html` · `archive/frontend/content_en_main.md`
+- 편집 원고·미발행 초안·미사용 이미지는 `archive/frontend/`에 보관. 배포 대상은 `frontend/`이며, 보관 파일 목록과 복원 방법은 `archive/README.md` 참조.
 - **공통 UI 변경 시 31개 언어 HTML 일괄 편집** — `frontend/<lang>/index.html` 각 파일 (lang = ko/en/ja/zh/es/fr/...)
 - **시 형식 추가 시** — `backend/index.js`의 `ALLOWED_FORMS`·`FORM_PROMPTS` + `frontend/script.js`의 `formOptionsMap` 동시 갱신
 - **새 언어 기능 추가 시** — `frontend/script.js`의 5개 맵 모두 갱신 (`languageMap`, `processingMessage`, `errorMessage`, `consentMessageMap`, `formOptionsMap`)

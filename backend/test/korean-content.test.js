@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const frontend = path.resolve(__dirname, '../../frontend');
+const archivedFrontend = path.resolve(__dirname, '../../archive/frontend');
 const read = file => fs.readFileSync(path.join(frontend, file), 'utf8');
 const plain = html => html.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&')
     .replace(/&quot;/g, '"').replace(/\s+/g, ' ').trim();
@@ -23,7 +24,7 @@ const koreanPages = walk(frontend).filter(filename => filename.endsWith('.html')
 
 test('한국어 페이지와 원고에 과거 시조 70% 안내가 남지 않음', () => {
     assert.ok(koreanPages.length > 0);
-    const manuscripts = walk(frontend).filter(filename => filename.endsWith('.md'))
+    const manuscripts = [...walk(frontend), ...walk(archivedFrontend)].filter(filename => filename.endsWith('.md'))
         .map(filename => ({ filename, html: fs.readFileSync(filename, 'utf8') }));
     for (const { filename, html } of [...koreanPages, ...manuscripts]) {
         assert.doesNotMatch(html, /시조의\s*70\s*%\s*벽|음수율[^<\n]*(?:70\s*%|70퍼센트)/, filename);
@@ -55,7 +56,7 @@ test('한국어 메인 두 페이지와 원고의 시조 안내 동기화', () =
     const root = paragraphs('index.html');
     assert.equal(root.length, 2);
     assert.deepEqual(root, paragraphs('ko/index.html'));
-    const manuscript = read('content_ko_main.md').replace(/\*\*/g, '');
+    const manuscript = fs.readFileSync(path.join(archivedFrontend, 'content_ko_main.md'), 'utf8').replace(/\*\*/g, '');
     for (const paragraph of root) assert.ok(manuscript.includes(paragraph));
     for (const meter of ['3·4·3(4)·4', '3·5·4·3']) assert.ok(root[0].includes(meter));
     assert.match(root[1], /자연스러움까지 보장하지는 않습니다/);
