@@ -27,5 +27,5 @@ test('31개 언어의 TTS 문구와 루트 포함 32개 제어 화면을 유지'
 test('TTS 속도 선택지와 서버 음성 제한을 고정', () => {
     const controlMarkup = fs.readFileSync(path.join(frontend, 'index.html'), 'utf8');
     for (const value of ['0.8', '1', '1.2']) assert.match(controlMarkup, new RegExp(`value="${value}"`));
-    assert.match(script, /const serverTtsLanguages = new Set\(\['ko', 'en'\]\);/);
+    assert.match(script, /const serverTtsLanguages = new Set\(\['ko', 'en', 'ja'\]\);/);
 });

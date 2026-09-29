@@ -39,7 +39,14 @@ const TTS_NONCE_TABLE = process.env.TTS_NONCE_TABLE || '';
 const TTS_TOKEN_TTL_SECONDS = 600;
 const TTS_MAX_CHARS = 3000;
 const TTS_PROVIDERS = new Set(['polly', 'openai']);
-const TTS_SUPPORTED_LANGUAGES = new Set(['ko', 'en']);
+const TTS_SUPPORTED_LANGUAGES = new Set(['ko', 'en', 'ja']);
+const POLLY_VOICES = { ko: 'Seoyeon', en: 'Joanna', ja: 'Kazuha' };
+const OPENAI_TTS_VOICES = { ko: 'marin', en: 'cedar', ja: 'marin' };
+const OPENAI_TTS_INSTRUCTIONS = {
+    ko: '시를 또렷하고 차분하게 읽으십시오. 각 줄의 끝에서 자연스럽게 쉬십시오.',
+    en: 'Read this poem clearly and calmly. Pause naturally at each line ending.',
+    ja: '詩をはっきりと落ち着いて読んでください。各行の終わりで自然に間を置いてください。'
+};
 const pollyClient = new PollyClient({ region: process.env.AWS_REGION || 'ap-northeast-2' });
 const dynamoClient = new DynamoDBClient({ region: process.env.AWS_REGION || 'ap-northeast-2' });
 
@@ -753,14 +760,13 @@ async function consumeTtsNonce(payload) {
 }
 
 async function synthesizeWithPolly(poem, language) {
-    const voice = language === 'ko' ? 'Seoyeon' : 'Joanna';
     const response = await pollyClient.send(new SynthesizeSpeechCommand({
         Engine: 'neural',
         OutputFormat: 'mp3',
         SampleRate: '24000',
         Text: poemToSsml(poem),
         TextType: 'ssml',
-        VoiceId: voice
+        VoiceId: POLLY_VOICES[language]
     }));
     return audioStreamToBuffer(response.AudioStream);
 }
@@ -768,12 +774,10 @@ async function synthesizeWithPolly(poem, language) {
 async function synthesizeWithOpenAi(poem, language) {
     const response = await axios.post('https://api.openai.com/v1/audio/speech', {
         model: 'gpt-4o-mini-tts',
-        voice: language === 'ko' ? 'marin' : 'cedar',
+        voice: OPENAI_TTS_VOICES[language],
         input: poem,
         response_format: 'mp3',
-        instructions: language === 'ko'
-            ? '시를 또렷하고 차분하게 읽으십시오. 각 줄의 끝에서 자연스럽게 쉬십시오.'
-            : 'Read this poem clearly and calmly. Pause naturally at each line ending.'
+        instructions: OPENAI_TTS_INSTRUCTIONS[language]
     }, {
         headers: {
             'Content-Type': 'application/json',

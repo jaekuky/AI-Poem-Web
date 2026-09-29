@@ -4,7 +4,7 @@ const { loadBackend, completion, endpoint, ttsEndpoint } = require('./support/ba
 
 const config = {
     env: {
-        TTS_ENABLED_LANGS: 'ko,en',
+        TTS_ENABLED_LANGS: 'ko,en,ja',
         TTS_PROVIDER: 'openai',
         TTS_TOKEN_SECRET: 'tts-test-secret',
         TTS_NONCE_TABLE: 'tts-nonces'
@@ -79,7 +79,7 @@ test('Lambda 응답은 MP3의 비 ASCII 바이트를 보존하고 JSON 오류는
     assert.equal(JSON.parse(invalid.body).error, 'INVALID_TTS_TOKEN');
 });
 
-for (const [language, voice] of [['ko', 'marin'], ['en', 'cedar']]) {
+for (const [language, voice, instructions] of [['ko', 'marin', /^시를/], ['en', 'cedar', /^Read/], ['ja', 'marin', /^詩を/]]) {
     test(`OpenAI ${language} 요청은 ${voice}와 MP3를 사용`, async t => {
         const calls = [];
         const audio = Buffer.from([0xff, 0xfb, 0x90, 0x00]);
@@ -97,7 +97,7 @@ for (const [language, voice] of [['ko', 'marin'], ['en', 'cedar']]) {
         assert.equal(calls[0].body.voice, voice);
         assert.equal(calls[0].body.input, poem);
         assert.equal(calls[0].body.response_format, 'mp3');
-        assert.ok(calls[0].body.instructions);
+        assert.match(calls[0].body.instructions, instructions);
         assert.equal(calls[0].options.responseType, 'arraybuffer');
         assert.equal(calls[0].options.timeout, 30000);
         assert.equal(calls[0].options.headers.Authorization, 'Bearer mock-key');
@@ -111,6 +111,7 @@ test('기본 공급자는 OpenAI이며 활성화에 키·언어·비밀값·테�
     for (const key of ['TTS_ENABLED_LANGS', 'TTS_TOKEN_SECRET', 'TTS_NONCE_TABLE']) {
         assert.equal(loadBackend({ env: { ...env, [key]: '' } }).issueTtsToken(poem, 'ko'), null);
     }
+    assert.equal(loadBackend({ env: { ...env, TTS_ENABLED_LANGS: 'ko,en' } }).issueTtsToken(poem, 'ja'), null);
 });
 
 test('위조·만료·재사용 토큰은 공급자 호출 전에 차단', async t => {
@@ -140,8 +141,8 @@ test('위조·만료·재사용 토큰은 공급자 호출 전에 차단', async
 test('활성 언어 밖 요청과 긴 원문은 차단', async t => {
     const { backend, request } = await ttsEndpoint(t, config);
     backend.setTtsRuntimeForTest(oneTimeRuntime());
-    const jaToken = backend.issueTtsToken(poem, 'ja');
-    const disabled = await request({ poem, language: 'ja', ttsToken: jaToken });
+    const zhToken = backend.issueTtsToken(poem, 'zh');
+    const disabled = await request({ poem, language: 'zh', ttsToken: zhToken });
     assert.equal(disabled.status, 404);
 
     const longPoem = '가'.repeat(3001);

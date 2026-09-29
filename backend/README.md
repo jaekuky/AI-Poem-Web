@@ -43,17 +43,18 @@ npm run evaluate:sijo
 
 ## 서버 음성
 
-한국어·영어 서버 음성 공급자는 OpenAI로 선택했다. 모델은 `gpt-4o-mini-tts`,
-한국어 음성은 `marin`, 영어 음성은 `cedar`, 출력은 MP3다.
+한국어·영어·일본어 서버 음성 공급자는 OpenAI로 선택했다. 모델은 `gpt-4o-mini-tts`,
+한국어·일본어 음성은 `marin`, 영어 음성은 `cedar`, 출력은 MP3다.
 2026-09-26 벤치마크 전체 평균은 OpenAI 2.5점, AWS Polly 2.25점이었다.
-다른 29개 언어와 서버 음성 미설정·실패 시에는 브라우저 TTS를 사용한다.
+일본어는 벤치마크 없이 같은 공급자로 추가했다. Polly 전환 시 일본어 음성은 `Kazuha`다.
+다른 28개 언어와 서버 음성 미설정·실패 시에는 브라우저 TTS를 사용한다.
 모델·음성·출력 형식은 [OpenAI 음성 API](https://developers.openai.com/api/reference/resources/audio/subresources/speech/methods/create) 기준이다.
 
 서버 음성을 켜려면 `backend/.env.example`의 아래 값을 배포 환경에 설정한다.
 
 ```text
 OPENAI_API_KEY=<OpenAI API 키>
-TTS_ENABLED_LANGS=ko,en
+TTS_ENABLED_LANGS=ko,en,ja
 TTS_PROVIDER=openai
 TTS_TOKEN_SECRET=<충분히 긴 무작위 비밀값>
 TTS_NONCE_TABLE=<DynamoDB 테이블 이름>
@@ -67,7 +68,7 @@ TTL 속성은 숫자 `expiresAt`다. Lambda 역할에는 해당 테이블의 `dy
 OpenAI 운영 경로에는 Polly 권한이 필요 없다. 테이블은 nonce와 만료만 저장한다.
 서버는 시 원문과 MP3를 저장하지 않는다.
 
-`/generate-poem`은 기존 `poem` 필드를 유지한다. 서버 TTS가 켜진 `ko`·`en` 응답에는 10분짜리
+`/generate-poem`은 기존 `poem` 필드를 유지한다. 서버 TTS가 켜진 `ko`·`en`·`ja` 응답에는 10분짜리
 일회용 `ttsToken`이 추가된다. `POST /synthesize-speech`는 아래 본문을 받고 `audio/mpeg`와
 `Cache-Control: no-store`를 반환한다. Lambda 핸들러는 `audio/mpeg`를 Base64로 인코딩해
 바이너리 손상을 막는다. JSON 성공·오류 응답은 텍스트로 유지한다.
@@ -88,7 +89,7 @@ OpenAI 운영 경로에는 Polly 권한이 필요 없다. 테이블은 nonce와 
 브라우저 요청 취소가 이미 시작한 서버 합성까지 취소하지는 않는다.
 실패·시간 초과 때는 기기 음성으로 한 번만 전환하며, 기기 음성이 나중에 준비되면 재생 버튼을 복구한다.
 
-회귀 테스트는 `npm test`로 실행한다. Lambda 바이너리 전달, 한국어·영어 OpenAI 요청,
+회귀 테스트는 `npm test`로 실행한다. Lambda 바이너리 전달, 한국어·영어·일본어 OpenAI 요청,
 반복 재생, 합성 중 정지·재시작, 요청 취소·시간 초과, 중복 오류, 음성 목록 지연을 검사한다.
 테스트는 모의 응답을 사용하며 실제 OpenAI·AWS 요청을 보내지 않는다.
 

@@ -711,7 +711,7 @@ const POEM_API_URL ='https://oy3rkh5hgszlzgiibdxxmbpxte0mknfg.lambda-url.ap-nort
 const TTS_SPEED_STORAGE_KEY = 'aiAndPoemTtsSpeed';
 const TTS_SPEEDS = new Set(['0.8', '1', '1.2']);
 const TTS_REQUEST_TIMEOUT_MS = 35000;
-const serverTtsLanguages = new Set(['ko', 'en']);
+const serverTtsLanguages = new Set(['ko', 'en', 'ja']);
 const ttsTextMap = {
     ko: {
         play: '시 낭송', pause: '일시 정지', resume: '계속 듣기', stop: '정지', speed: '속도',
