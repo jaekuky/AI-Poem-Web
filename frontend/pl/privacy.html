@@ -71,64 +71,104 @@
 <body>
     <div class="privacy_container">
         <h1>Polityka prywatności</h1>
-        <p>Data wejścia w życie: 24 marca 2025 r.</p>
+        <p>Data wejścia w życie: <time datetime="2026-10-05">5 października 2026 r.</time></p>
+        <p>AI &amp; Poem („Usługa”, „my”) to generator wierszy oparty na AI, dostępny pod adresem <a href="https://ai-and-poem.art/">https://ai-and-poem.art</a>; jego operatorem jest Ryu Jae-kuk. Ta polityka wyjaśnia, jakie informacje przetwarzamy, w jakim celu, kto je otrzymuje, jak długo je przechowujemy i jakie masz możliwości wyboru.</p>
+        <p>Ta polityka jest publikowana w języku koreańskim i angielskim. Pozostałe wersje językowe są tłumaczeniami. Jeśli wersja koreańska i angielska się różnią, rozstrzyga wersja koreańska. Jeśli tłumaczenie różni się od wersji angielskiej, rozstrzyga wersja angielska.</p>
 
-        <p>AI &amp; Poem („Serwis”, „my”) udostępnia narzędzie do generowania poezji przy użyciu sztucznej inteligencji pod adresem https://ai-and-poem.art/. Niniejsza Polityka prywatności wyjaśnia, w jaki sposób zbieramy, wykorzystujemy, ujawniamy i chronimy informacje, gdy korzystasz z Serwisu. Korzystając z Serwisu, akceptujesz zasady opisane w tej polityce.</p>
-
-        <h2>1. Jakie dane zbieramy</h2>
-        <p>Zbieramy jedynie minimalne ilości danych potrzebnych do działania Serwisu i zgodności z zasadami Google AdSense.</p>
+        <h2>1. Jakie informacje przetwarzamy</h2>
         <ul>
-            <li><strong>Wprowadzony temat:</strong> Tekst podany jako temat wiersza jest przetwarzany wyłącznie w celu wygenerowania żądanego utworu i nie jest przechowywany po wysłaniu odpowiedzi.</li>
-            <li><strong>Dane eksploatacyjne:</strong> Nasz dostawca hostingu i narzędzia analityczne mogą automatycznie rejestrować adresy IP, typ przeglądarki, informacje o urządzeniu, znaczniki czasu itp. w celach bezpieczeństwa, diagnostycznych i statystycznych.</li>
-            <li><strong>Pliki cookie i podobne technologie:</strong> Używamy niezbędnych plików cookie do utrzymania podstawowych funkcji witryny. Google AdSense i Google Analytics mogą ustawiać pliki cookie w celu dostarczania, personalizacji i pomiaru reklam oraz analizy ruchu zgodnie z własnymi politykami.</li>
+            <li>Gdy prosisz o wiersz, otrzymujemy wpisany temat (do 200 znaków) oraz wybrany język i formę wiersza.</li>
+            <li>Gdy naciśniesz przycisk czytania na stronie koreańskiej, angielskiej lub japońskiej, otrzymujemy tekst wygenerowanego wiersza i jego język, aby utworzyć głos AI. Na stronach w innych językach albo gdy głos AI jest niedostępny, wiersz czyta wbudowany głos Twojego urządzenia. Niektóre przeglądarki używają głosów online, które wysyłają tekst do dostawcy przeglądarki lub systemu operacyjnego.</li>
+            <li>Gdy piszesz do nas e-mail, otrzymujemy Twój adres e-mail i wiadomość.</li>
+            <li>Podczas wczytywania stron Cloudflare (nasz dostawca hostingu) przetwarza Twój adres IP, informacje o przeglądarce i czas żądania. Google przetwarza podobne dane, gdy działają skrypty analityczne lub reklamowe. Nasz serwer backendowy przechowuje tylko dzienniki operacyjne, takie jak kody błędów, czasy przetwarzania i identyfikatory żądań. Nie zapisuje Twojego adresu IP, tematu ani wiersza.</li>
+            <li>Twoja przeglądarka przechowuje dwa wpisy w pamięci lokalnej: <code>aiAndPoemCookieConsent</code> z Twoimi wyborami dotyczącymi zgody i <code>aiAndPoemTtsSpeed</code> z prędkością czytania. Google Analytics i Google AdSense mogą zapisywać pliki cookie zależnie od Twojej zgody.</li>
+        </ul>
+        <p>Nie zbieramy imion, nazwisk ani numerów telefonów. Usługa nie ma kont użytkowników.</p>
+
+        <h2>2. Do czego używamy informacji</h2>
+        <ul>
+            <li>Aby tworzyć wiersze i odczyty, o które prosisz, oraz zapobiegać dwukrotnemu użyciu tego samego żądania odczytu.</li>
+            <li>Aby odpowiadać na Twoje wiadomości.</li>
+            <li>Aby dbać o bezpieczeństwo Usługi, zapobiegać nadużyciom i naprawiać błędy.</li>
+            <li>Aby mierzyć ruch za pomocą Google Analytics, tylko jeśli zezwolisz na analityczne pliki cookie.</li>
+            <li>Aby wyświetlać reklamy za pomocą Google AdSense. Reklamy są spersonalizowane tylko wtedy, gdy zezwolisz na reklamowe pliki cookie.</li>
+        </ul>
+        <p>Jeśli przebywasz w EOG, Wielkiej Brytanii lub Szwajcarii, podstawami prawnymi są świadczenie usługi, o którą prosisz (wiersze, czytanie i odpowiedzi), Twoja zgoda na analityczne i reklamowe pliki cookie oraz nasz prawnie uzasadniony interes w bezpieczeństwie i niezawodnym działaniu.</p>
+
+        <h2>3. Dostawcy usług</h2>
+        <p>Nie sprzedajemy ani nie wynajmujemy danych osobowych. Poniżsi dostawcy przetwarzają dane, aby Usługa mogła działać.</p>
+        <ul>
+            <li>OpenAI OpCo, LLC (Stany Zjednoczone) tworzy wiersze na podstawie Twojego tematu i generuje głos AI z tekstu wiersza. Zgodnie ze swoją <a href="https://developers.openai.com/api/docs/guides/your-data" target="_blank" rel="noopener">polityką danych API</a> OpenAI przechowuje dane wejściowe i wyjściowe do 30 dni w celu wykrywania nadużyć i nie używa ich do trenowania swoich modeli. Kontakt: <a href="mailto:privacy@openai.com">privacy@openai.com</a>.</li>
+            <li>Amazon Web Services obsługuje nasz backend w swoim regionie Seul w Republice Korei. Obejmuje to serwer AWS Lambda, dzienniki operacyjne Amazon CloudWatch oraz wpisy Amazon DynamoDB o jednorazowych tokenach odczytu.</li>
+            <li>Cloudflare, Inc. (Stany Zjednoczone) hostuje stronę i dostarcza ją przez swoją globalną sieć. Kontakt: <a href="mailto:privacyquestions@cloudflare.com">privacyquestions@cloudflare.com</a>.</li>
+            <li>Google LLC (Stany Zjednoczone) dostarcza Google Analytics 4 (identyfikator pomiaru <code>G-1CVHJYZWNC</code>), Google AdSense (identyfikator wydawcy <code>ca-pub-7349192768683799</code>) oraz skrzynkę Gmail, na którą trafiają wiadomości. Z Google możesz się skontaktować przez <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">formularz kontaktowy dotyczący prywatności</a>.</li>
         </ul>
 
-        <h2>2. Jak wykorzystujemy dane</h2>
+        <h2>4. Przekazywanie danych za granicę</h2>
+        <p>Część danych opuszcza Republikę Korei. Każde przekazanie odbywa się przez szyfrowane połączenie (HTTPS) w chwili, gdy korzystasz z danej funkcji.</p>
         <ul>
-            <li>Do obsługi, utrzymania i ulepszania Serwisu.</li>
-            <li>Do generowania wierszy na podstawie próśb użytkowników.</li>
-            <li>Do wypełniania obowiązków prawnych i egzekwowania Regulaminu.</li>
-            <li>Do wspierania reklam i analityki zgodnych z polityką programu Google AdSense.</li>
+            <li>OpenAI w Stanach Zjednoczonych otrzymuje temat, język i formę wiersza, gdy prosisz o wiersz, oraz tekst wiersza, gdy prosisz o odczyt AI. OpenAI przechowuje je do 30 dni w celu wykrywania nadużyć.</li>
+            <li>Cloudflare w Stanach Zjednoczonych otrzymuje przez swoją globalną sieć dane połączenia podczas wczytywania stron i przechowuje je zgodnie z własną polityką przechowywania.</li>
+            <li>Google w Stanach Zjednoczonych otrzymuje dane połączenia i dane z plików cookie na potrzeby analityki i reklam oraz przechowuje wiadomości e-mail. Okresy przechowywania podano w sekcji 7.</li>
         </ul>
+        <p>AWS przetwarza dane naszego backendu w regionie Seul. W przypadku użytkowników z EOG, Wielkiej Brytanii i Szwajcarii Unia Europejska i Wielka Brytania uznają, że Republika Korei zapewnia odpowiedni stopień ochrony danych. Przekazywanie danych do Stanów Zjednoczonych opiera się na zabezpieczeniach oferowanych przez tych dostawców, takich jak standardowe klauzule umowne lub Ramy ochrony danych UE–USA (Data Privacy Framework).</p>
+        <p>Możesz odmówić przekazywania danych do OpenAI, nie korzystając z generowania wierszy i odczytu AI, ale wtedy te funkcje nie działają. Analityczne i reklamowe pliki cookie możesz odrzucić w ustawieniach plików cookie, a reszta strony nadal działa. Dane połączenia są potrzebne, aby w ogóle dostarczyć stronę.</p>
 
-        <h2>3. Partnerzy reklamowi i analityczni</h2>
-        <p>Współpracujemy z Google AdSense przy wyświetlaniu reklam. Google może zbierać lub otrzymywać informacje z Twojej przeglądarki lub urządzenia za pośrednictwem plików cookie i podobnych technologii oraz wykorzystywać je do pomiaru i personalizacji reklam. Więcej informacji znajdziesz na <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">https://policies.google.com/technologies/ads</a>.</p>
+        <h2>5. Reklamy</h2>
+        <p>Zewnętrzni dostawcy, w tym Google, używają plików cookie do wyświetlania reklam na podstawie wcześniejszych wizyt użytkownika w tej lub innych witrynach. Dzięki reklamowym plikom cookie Google i jego partnerzy mogą wyświetlać naszym użytkownikom reklamy na podstawie ich wizyt w tej witrynie i/lub innych witrynach w internecie. Zobacz, <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">jak Google używa plików cookie w reklamach</a>.</p>
+        <p>Możesz wyłączyć reklamy spersonalizowane w <a href="https://adssettings.google.com" target="_blank" rel="noopener">ustawieniach reklam Google</a>. Możesz też zrezygnować z używania plików cookie do reklam spersonalizowanych przez niektórych zewnętrznych dostawców na stronie <a href="https://optout.aboutads.info" target="_blank" rel="noopener">aboutads.info</a>. O tym, jak Google wykorzystuje dane z witryn korzystających z jego usług, przeczytasz w <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">zasadach Google dotyczących witryn partnerów</a>.</p>
+        <p>Jeśli nie zezwolisz na reklamowe pliki cookie, wyświetlane reklamy nie są spersonalizowane.</p>
 
-        <p>Korzystamy również z Google Analytics, aby zrozumieć wzorce użytkowania. Dane analityczne są agregowane i pseudonimizowane, aby pomóc nam ulepszać Serwis.</p>
+        <h2>6. Pliki cookie i zgoda</h2>
+        <p>Podczas pierwszej wizyty baner pyta, czy zezwalasz na analityczne i reklamowe pliki cookie. Oba rodzaje pozostają wyłączone, dopóki na nie nie zezwolisz. Niezbędny wpis zapisuje tylko Twoje wybory.</p>
+        <p>Zgodę możesz w każdej chwili zmienić lub wycofać przyciskiem „Ustawienia plików cookie” na dole każdej strony. Po wycofaniu zgody przestajemy używać analitycznych i reklamowych plików cookie. Pliki cookie zapisane już na urządzeniu możesz usunąć w ustawieniach przeglądarki.</p>
+        <p>Korzystamy z trybu zgody Google (Consent Mode). Jeśli odrzucisz analityczne pliki cookie, Google Analytics może nadal otrzymywać pomiary, które nie używają plików cookie. Jeśli przebywasz w EOG, Wielkiej Brytanii lub Szwajcarii, komunikat Google o zgodzie również zapyta o Twoje wybory dotyczące reklam, a Google AdSense zastosuje wybór dokonany w tym komunikacie.</p>
 
-        <h2>4. Okres przechowywania danych</h2>
-        <p>Nie przechowujemy tematów ani wygenerowanych wierszy dłużej niż jest to konieczne do realizacji Twojej prośby. Logi serwera i raporty analityczne są przechowywane tylko przez czas potrzebny do celów bezpieczeństwa, rozwiązywania problemów i zgodności, a następnie poddawane pseudonimizacji lub agregacji.</p>
-
-        <h2>5. Udostępnianie danych</h2>
-        <p>Nie sprzedajemy ani nie wynajmujemy danych osobowych. Możemy przekazywać ograniczone dane zaufanym dostawcom usług (np. hosting, analiza, partnerzy reklamowi), którzy wspierają działanie Serwisu i są zobowiązani do ich ochrony oraz wykorzystywania wyłącznie w określonych celach.</p>
-
-        <h2>6. Transfer danych za granicę</h2>
-        <p>Serwis opiera się na globalnej infrastrukturze chmurowej i CDN, dlatego dane mogą być przetwarzane lub przechowywane w różnych regionach. Korzystając z Serwisu poza tymi regionami, podlegasz lokalnym przepisom dotyczącym ochrony danych. Stosujemy odpowiednie środki techniczne i organizacyjne zgodne z wymaganiami prawnymi i umownymi, aby zapewnić bezpieczeństwo danych.</p>
-
-        <h2>7. Twoje prawa i wybory</h2>
+        <h2>7. Przechowywanie i usuwanie</h2>
         <ul>
-            <li>Możesz nie wprowadzać tematu – w takim przypadku nie będziemy mogli wygenerować wiersza.</li>
-            <li>Możesz blokować pliki cookie w ustawieniach przeglądarki, co może jednak ograniczyć funkcje, takie jak personalizacja reklam.</li>
-            <li>Jeśli mieszkasz w regionie z określonymi prawami do prywatności (np. UE lub Kalifornia), możesz się z nami skontaktować, aby uzyskać dostęp do przechowywanych danych osobowych lub zażądać ich usunięcia. Ponieważ nie zapisujemy wprowadzonych tekstów, nasze możliwości lokalizowania konkretnych informacji są ograniczone.</li>
+            <li>Tematy, teksty wierszy i nagrania odczytu nie są zapisywane na naszych serwerach. Usuwamy je zaraz po wysłaniu odpowiedzi. Nagranie odczytu pozostaje tylko w pamięci przeglądarki, dopóki strona jest otwarta.</li>
+            <li>OpenAI przechowuje dane wejściowe i wyjściowe API do 30 dni.</li>
+            <li>Wpisy o jednorazowych tokenach odczytu zawierają tylko losowy identyfikator i czas wygaśnięcia. Tokeny wygasają po 10 minutach, a wpisy są potem usuwane automatycznie.</li>
+            <li>Dzienniki operacyjne backendu są usuwane po 30 dniach.</li>
+            <li>Wiadomości e-mail są usuwane rok po naszej odpowiedzi.</li>
+            <li>Google Analytics przechowuje dane o zdarzeniach powiązane z identyfikatorami do 14 miesięcy.</li>
+            <li>Cloudflare przechowuje dzienniki połączeń zgodnie z własną polityką przechowywania.</li>
+            <li>Dane w pamięci przeglądarki pozostają na Twoim urządzeniu, dopóki ich nie usuniesz.</li>
         </ul>
+        <p>Po upływie okresu przechowywania trwale usuwamy dane elektroniczne tak, aby nie dało się ich odzyskać, przez automatyczne wygaśnięcie lub ręczne usunięcie. Nie prowadzimy dokumentacji papierowej.</p>
 
-        <p><strong>Rezygnacja z reklam spersonalizowanych:</strong> Możesz wyłączyć reklamy spersonalizowane w <a href="https://adssettings.google.com" target="_blank" rel="noopener">Ustawieniach reklam Google</a>. Niektóre sieci zewnętrzne honorują również rezygnację zgłoszoną na <a href="https://optout.aboutads.info" target="_blank" rel="noopener">NAI/youradchoices</a>.</p>
+        <h2>8. Twoje prawa</h2>
+        <ul>
+            <li>Możesz poprosić nas o dostęp do swoich danych osobowych, ich sprostowanie lub usunięcie, zaprzestanie ich przetwarzania albo ich kopię. Aby złożyć wniosek, napisz do nas e-mail. Ponieważ nie przechowujemy tematów ani wierszy, możemy nie mieć żadnych danych na Twój temat.</li>
+            <li>Zgodę na pliki cookie możesz w każdej chwili wycofać przyciskiem „Ustawienia plików cookie”.</li>
+            <li>Jeśli przebywasz w EOG, Wielkiej Brytanii lub Szwajcarii, możesz też złożyć skargę do organu ochrony danych.</li>
+        </ul>
+        <p>Odpowiadamy w terminie wymaganym przez obowiązujące prawo.</p>
 
-        <p><strong>Informacja dla użytkowników z EOG/Wielkiej Brytanii/Szwajcarii:</strong> Korzystamy z certyfikowanej przez Google platformy CMP zintegrowanej z IAB TCF, aby zbierać, przechowywać i przekazywać zgody dotyczące plików cookie oraz identyfikatorów urządzeń. Możesz wrócić do „Ustawień plików cookie (zarządzanie zgodą)” w stopce strony, aby w dowolnym momencie zaktualizować lub wycofać swoje preferencje.</p>
+        <h2>9. Dzieci</h2>
+        <p>Usługa nie jest przeznaczona dla dzieci poniżej 14 lat. Jeśli prawo lokalne ustala wyższy wiek wyrażania zgody na usługi online, w niektórych krajach UE do 16 lat, młodsi użytkownicy potrzebują zgody rodzica lub opiekuna. Jeśli uważasz, że dziecko przekazało nam dane osobowe, skontaktuj się z nami, a je usuniemy.</p>
 
-        <p>Aby poznać sposób, w jaki Google wykorzystuje dane na stronach i w aplikacjach partnerów, odwiedź <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">https://policies.google.com/technologies/partner-sites</a>.</p>
+        <h2>10. Bezpieczeństwo</h2>
+        <p>Wszystkie połączenia używają HTTPS. Tylko operator ma dostęp do ustawień serwera i kluczy API, a przechowujemy wyłącznie dane potrzebne Usłudze. Żadna metoda przesyłania ani przechowywania danych nie jest całkowicie bezpieczna.</p>
 
-        <h2>8. Prywatność dzieci</h2>
-        <p>Serwis nie jest przeznaczony dla dzieci poniżej 13. roku życia i świadomie nie gromadzimy ich danych osobowych. Jeśli uważasz, że dziecko przesłało nam informacje, skontaktuj się z nami, aby je usunąć.</p>
+        <h2>11. Zmiany polityki</h2>
+        <p>Gdy zmieniamy tę politykę, publikujemy nową wersję na tej stronie z nową datą wejścia w życie. O ważnych zmianach możemy też informować w witrynie.</p>
 
-        <h2>9. Bezpieczeństwo</h2>
-        <p>Stosujemy rozsądne środki administracyjne, techniczne i fizyczne w celu ochrony informacji, jednak żadna metoda transmisji lub przechowywania danych nie jest w pełni bezpieczna.</p>
-
-        <h2>10. Zmiany w polityce</h2>
-        <p>Możemy aktualizować tę politykę, aby odzwierciedlać praktyki operacyjne, wymogi prawne lub ulepszenia Serwisu. Zmiany publikujemy z nową datą wejścia w życie i, w razie potrzeby, dodatkowymi powiadomieniami.</p>
-
-        <h2>11. Kontakt</h2>
-        <p>W przypadku pytań dotyczących Polityki prywatności lub przetwarzania danych napisz do nas na adres <a href="mailto:aiandpoem@gmail.com">aiandpoem@gmail.com</a>.</p>
+        <h2>12. Kontakt</h2>
+        <p>Za sprawy prywatności odpowiada operator, Ryu Jae-kuk. Pytania lub wnioski dotyczące tej polityki wysyłaj na adres <a href="mailto:aiandpoem@gmail.com">aiandpoem@gmail.com</a>.</p>
     </div>
+
+    <footer class="site-footer">
+        <a href="about.html">O</a>
+        <span>|</span>
+        <a href="../blog/pl/index.html">Bloga</a>
+        <span>|</span>
+        <a href="contact.html">Kontakt</a>
+        <span>|</span>
+        <a href="privacy.html">Polityka prywatności</a>
+        <span>|</span>
+        <a href="terms.html">Warunki świadczenia usług</a>
+    </footer>
+    <script src="../script.js" defer></script>
 </body>
 </html>

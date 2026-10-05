@@ -71,82 +71,91 @@
 <body>
     <div class="privacy_container">
         <h1>Privacy Policy</h1>
-        <p>Effective Date: May 22, 2026</p>
+        <p>Effective date: <time datetime="2026-10-05">October 5, 2026</time></p>
+        <p>AI &amp; Poem ("the Service", "we") is an AI poetry generator at <a href="https://ai-and-poem.art/">https://ai-and-poem.art</a>, operated by Ryu Jae-kuk. This policy explains what information we process, why we process it, who receives it, how long we keep it, and what choices you have.</p>
+        <p>This policy is published in Korean and English. Other language versions are translations. If the Korean and English versions differ, the Korean version prevails. If a translation differs from the English version, the English version prevails.</p>
 
-        <p>AI &amp; Poem ("Service", "we", "us") provides an AI poetry generation tool at <a href="https://ai-and-poem.art/">https://ai-and-poem.art</a>. The Service is operated by Ryu Jae-kuk. This Privacy Policy explains what information we collect, how we use it, who we share it with, and how we protect it. By accessing or using the Service, you agree to this Policy.</p>
-
-        <h2>1. Information We Collect</h2>
-        <p>We collect the following categories of information to operate the Service and comply with Google AdSense policies.</p>
+        <h2>1. Information we process</h2>
         <ul>
-            <li><strong>Automatically collected (server logs).</strong> Cloudflare Pages (frontend hosting) and AWS CloudWatch (backend Lambda logs) automatically record IP addresses, User-Agent strings, timestamps, Referer, and request paths as infrastructure logs.</li>
-            <li><strong>Voluntarily submitted (poem topic).</strong> The poem topic you type (up to 200 characters) is used solely to generate the requested poem and is not stored in the backend after we send the response. We do not operate any database or object storage (stateless Lambda).</li>
-            <li><strong>Cookies and local storage.</strong> We store consent state in browser local storage under the key <code>aiAndPoemCookieConsent</code> (a JSON object with essential/analytics/advertising consent flags). Google AdSense (publisher ID <code>ca-pub-7349192768683799</code>) and Google Analytics 4 (measurement ID <code>G-1CVHJYZWNC</code>) may also set cookies and similar technologies under their own policies.</li>
+            <li>When you request a poem, we receive the topic you type (up to 200 characters) and the language and poem form you choose.</li>
+            <li>When you press the narration button on a Korean, English, or Japanese page, we receive the generated poem text and its language to create an AI voice. On other language pages, or when the AI voice is unavailable, your device's built-in voice reads the poem. Some browsers use online voices that send the text to the browser or operating system provider.</li>
+            <li>When you email us, we receive your email address and message.</li>
+            <li>When pages load, Cloudflare (our website host) processes your IP address, browser information, and the time of the request. Google processes similar data when analytics or ad scripts run. Our backend server keeps only operational logs such as error codes, processing time, and request IDs. It does not record your IP address, topic, or poem.</li>
+            <li>Your browser keeps two local storage entries: <code>aiAndPoemCookieConsent</code> for your consent choices and <code>aiAndPoemTtsSpeed</code> for your narration speed. Google Analytics and Google AdSense may set cookies depending on your consent.</li>
+        </ul>
+        <p>We do not collect names or phone numbers. The Service has no user accounts.</p>
+
+        <h2>2. How we use information</h2>
+        <ul>
+            <li>To generate the poems and narration you request, and to stop a narration request from being used twice.</li>
+            <li>To answer your inquiries.</li>
+            <li>To keep the Service secure, prevent abuse, and fix errors.</li>
+            <li>To measure traffic with Google Analytics, only if you allow analytics cookies.</li>
+            <li>To show ads with Google AdSense. Ads are personalized only if you allow advertising cookies.</li>
+        </ul>
+        <p>If you are in the EEA, the UK, or Switzerland, our legal bases are providing the service you request (poems, narration, and replies), your consent for analytics and advertising cookies, and our legitimate interest in security and reliable operation.</p>
+
+        <h2>3. Service providers</h2>
+        <p>We do not sell or rent personal information. The providers below process data to run the Service.</p>
+        <ul>
+            <li>OpenAI OpCo, LLC (United States) generates poems from your topic and creates the AI voice from the poem text. Under its <a href="https://developers.openai.com/api/docs/guides/your-data" target="_blank" rel="noopener">API data policy</a>, OpenAI keeps inputs and outputs for up to 30 days to monitor abuse and does not use them to train its models. Contact: <a href="mailto:privacy@openai.com">privacy@openai.com</a>.</li>
+            <li>Amazon Web Services runs our backend in its Seoul region in the Republic of Korea. This covers the AWS Lambda server, Amazon CloudWatch operational logs, and Amazon DynamoDB records of one-time narration tokens.</li>
+            <li>Cloudflare, Inc. (United States) hosts the website and delivers it through its global network. Contact: <a href="mailto:privacyquestions@cloudflare.com">privacyquestions@cloudflare.com</a>.</li>
+            <li>Google LLC (United States) provides Google Analytics 4 (measurement ID <code>G-1CVHJYZWNC</code>), Google AdSense (publisher ID <code>ca-pub-7349192768683799</code>), and the Gmail mailbox that receives inquiries. Contact Google through its <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">privacy contact form</a>.</li>
         </ul>
 
-        <h2>2. Collection Method</h2>
+        <h2>4. International transfers</h2>
+        <p>Some data leaves the Republic of Korea. Each transfer is sent over an encrypted connection (HTTPS) at the moment you use the related feature.</p>
         <ul>
-            <li><strong>Automatic collection.</strong> Infrastructure logs (IP / User-Agent / timestamp) and cookies set by advertising and analytics partners are collected automatically when pages load and when ads or events fire.</li>
-            <li><strong>Voluntary submission.</strong> The poem topic text is collected only when you fill in the input form and press the submit button.</li>
-            <li>We do not separately collect identifying information such as name, email, or phone number on the client side.</li>
+            <li>OpenAI in the United States receives the topic, language, and poem form when you request a poem, and the poem text when you request AI narration. It keeps them for up to 30 days to monitor abuse.</li>
+            <li>Cloudflare in the United States and its global network receives connection data when pages load. It keeps that data under its own retention policy.</li>
+            <li>Google in the United States receives connection and cookie data for analytics and ads, and stores inquiry emails. Retention periods are listed in section 7.</li>
         </ul>
+        <p>AWS processes our backend data in the Seoul region. For users in the EEA, the UK, and Switzerland, the European Union and the United Kingdom recognize the Republic of Korea as providing adequate data protection. Transfers to the United States rely on safeguards offered by these providers, such as standard contractual clauses or the EU-U.S. Data Privacy Framework.</p>
+        <p>You can refuse the transfer to OpenAI by not using poem generation and AI narration, but those features then do not work. You can refuse analytics and advertising cookies in the cookie settings, and the rest of the site keeps working. Connection data is needed to deliver the website itself.</p>
 
-        <h2>3. How We Use Information</h2>
+        <h2>5. Advertising</h2>
+        <p>Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this website or other websites. Google's use of advertising cookies enables it and its partners to serve ads to our users based on their visits to this site and/or other sites on the Internet. See <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">how Google uses cookies in advertising</a>.</p>
+        <p>You can opt out of personalized advertising in <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a>. You can also opt out of some third-party vendors' use of cookies for personalized advertising at <a href="https://optout.aboutads.info" target="_blank" rel="noopener">aboutads.info</a>. To learn how Google uses data from sites that use its services, see <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google's partner sites policy</a>.</p>
+        <p>If you do not allow advertising cookies, the ads you see are not personalized.</p>
+
+        <h2>6. Cookies and consent</h2>
+        <p>On your first visit, a banner asks whether to allow analytics and advertising cookies. Both stay off until you allow them. The essential entry only stores your choices.</p>
+        <p>You can change or withdraw your consent at any time with the "Cookie Settings" button at the bottom of every page. After you withdraw, we stop using analytics and advertising cookies. You can delete cookies already stored on your device in your browser settings.</p>
+        <p>We use Google Consent Mode. If you decline analytics cookies, Google Analytics may still receive measurements that do not use cookies. If you are in the EEA, the UK, or Switzerland, Google's consent message also asks for your advertising choices, and Google AdSense follows the choice you make there.</p>
+
+        <h2>7. Retention and deletion</h2>
         <ul>
-            <li>To generate the AI poems you request and return the response.</li>
-            <li>To operate, maintain, and improve the Service and perform statistical analysis.</li>
-            <li>To serve ads, measure ads, and personalize ads through Google AdSense.</li>
-            <li>To comply with our Terms of Service and applicable laws, and to prevent abuse.</li>
+            <li>Topics, poem text, and narration audio are not stored on our servers. We discard them once the response is sent. Narration audio stays only in your browser's memory while the page is open.</li>
+            <li>OpenAI keeps API inputs and outputs for up to 30 days.</li>
+            <li>One-time narration token records contain only a random ID and an expiry time. Tokens expire after 10 minutes, and the records are then deleted automatically.</li>
+            <li>Backend operational logs are deleted after 30 days.</li>
+            <li>Inquiry emails are deleted one year after we reply.</li>
+            <li>Google Analytics keeps event data linked to identifiers for up to 14 months.</li>
+            <li>Cloudflare keeps connection logs under its own retention policy.</li>
+            <li>Browser storage stays on your device until you delete it.</li>
         </ul>
+        <p>When a retention period ends, we permanently delete electronic records so they cannot be restored, either by automatic expiry or by manual deletion. We keep no paper records.</p>
 
-        <h2>4. Third-Party Sharing and Processors</h2>
-        <p>We do not sell or rent personal information. We share or entrust data with the third parties listed below to operate the Service.</p>
+        <h2>8. Your rights</h2>
         <ul>
-            <li><strong>Google AdSense</strong> — ad delivery, measurement, and personalization (publisher ID <code>ca-pub-7349192768683799</code>). See <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">https://policies.google.com/technologies/ads</a>.</li>
-            <li><strong>Google Analytics 4</strong> — traffic analytics (measurement ID <code>G-1CVHJYZWNC</code>).</li>
-            <li><strong>OpenAI, L.L.C.</strong> — your poem topic is forwarded to OpenAI's GPT API to generate the poem. Servers are located in the United States.</li>
-            <li><strong>Cloudflare, Inc.</strong> — Cloudflare Pages static hosting and global CDN.</li>
-            <li><strong>Amazon Web Services (AWS).</strong> — AWS Lambda backend (Seoul region <code>ap-northeast-2</code>) and CloudWatch logs.</li>
+            <li>You can ask us to give you access to, correct, delete, or stop processing your personal information, or to give you a copy of it. Email us to make a request. Because we do not store topics or poems, we may hold no data about you.</li>
+            <li>You can withdraw cookie consent at any time with the "Cookie Settings" button.</li>
+            <li>If you are in the EEA, the UK, or Switzerland, you can also complain to your local data protection authority.</li>
         </ul>
+        <p>We respond within the time required by applicable law.</p>
 
-        <h2>5. Data Retention</h2>
-        <p>Your poem topic and the generated poem are discarded as soon as the request is fulfilled; we do not store them in any database or object storage. Infrastructure access logs (Cloudflare, AWS CloudWatch) are retained according to each provider's retention policy.</p>
-
-        <h2>6. International Transfers</h2>
-        <p>The Service relies on global cloud infrastructure, so data may be processed in multiple countries. Primary processing locations include:</p>
-        <ul>
-            <li>Cloudflare global edge network.</li>
-            <li>AWS Lambda Seoul region (<code>ap-northeast-2</code>).</li>
-            <li>OpenAI API (United States).</li>
-        </ul>
-        <p>We apply reasonable technical and administrative safeguards consistent with applicable laws and contractual requirements.</p>
-
-        <h2>7. Your Rights and Choices</h2>
-        <ul>
-            <li>You may request access to, correction of, or deletion of your personal data at any time. Because poem topics and generated poems are not stored, the scope of data we can later access or delete is limited.</li>
-            <li>You can block cookies via your browser settings, but personalized ads and some features may be limited as a result.</li>
-            <li>You can reset or withdraw your cookie consent at any time via "Cookie Settings" at the bottom of the page.</li>
-            <li>Residents of regions with specific privacy rights (e.g., EU/UK/California) may exercise additional rights granted by their local laws.</li>
-        </ul>
-
-        <h2>8. Personalized Ads Opt-Out</h2>
-        <p>You can opt out of personalized ads directly through these channels:</p>
-        <ul>
-            <li>Google Ads Settings: <a href="https://adssettings.google.com" target="_blank" rel="noopener">https://adssettings.google.com</a></li>
-            <li>Third-party ad-network opt-out: <a href="https://optout.aboutads.info" target="_blank" rel="noopener">https://optout.aboutads.info</a></li>
-            <li>How Google uses data on partner sites: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">https://policies.google.com/technologies/partner-sites</a></li>
-        </ul>
-
-        <h2>9. Children's Privacy</h2>
-        <p>The Service is not directed to children under 13, and we do not knowingly collect personal information from children. If we learn that a child has provided information, we will delete it promptly.</p>
+        <h2>9. Children</h2>
+        <p>The Service is not directed to children under 14. Where local law sets a higher age for consenting to online services, up to 16 in some EU countries, younger users need permission from a parent or guardian. If you believe a child has given us personal information, contact us and we will delete it.</p>
 
         <h2>10. Security</h2>
-        <p>We apply reasonable administrative, technical, and physical safeguards, but no method of internet transmission or storage is completely secure.</p>
+        <p>All connections use HTTPS. Only the operator can access server settings and API keys, and we keep only the data the Service needs. No method of transmission or storage is completely secure.</p>
 
-        <h2>11. Changes to This Policy</h2>
-        <p>We may update this Policy to reflect changes in laws, operational practices, or the Service. We will post the revised Policy with a new effective date, and we may give additional notice of material changes through on-site announcements.</p>
+        <h2>11. Changes to this policy</h2>
+        <p>When we change this policy, we post the new version on this page with a new effective date. We may also announce important changes on the site.</p>
 
         <h2>12. Contact</h2>
-        <p>For questions about this Privacy Policy or our data practices, email us at <a href="mailto:aiandpoem@gmail.com">aiandpoem@gmail.com</a>.</p>
+        <p>The operator, Ryu Jae-kuk, is responsible for privacy matters. For questions or requests about this policy, email <a href="mailto:aiandpoem@gmail.com">aiandpoem@gmail.com</a>.</p>
     </div>
 
     <footer class="site-footer site-footer--v2">
@@ -165,5 +174,6 @@
         </nav>
         <p class="footer-copyright">© 2026 ai-and-poem.art. All rights reserved.</p>
     </footer>
+    <script src="../script.js" defer></script>
 </body>
 </html>

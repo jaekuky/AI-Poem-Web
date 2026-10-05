@@ -16,6 +16,7 @@
 - **공통 UI 변경 시 31개 언어 HTML 일괄 편집** — `frontend/<lang>/index.html` 각 파일 (lang = ko/en/ja/zh/es/fr/...)
 - **시 형식 추가 시** — `backend/index.js`의 `ALLOWED_FORMS`·`FORM_PROMPTS` + `frontend/script.js`의 `formOptionsMap` 동시 갱신
 - **새 언어 기능 추가 시** — `frontend/script.js`의 5개 맵 모두 갱신 (`languageMap`, `processingMessage`, `errorMessage`, `consentMessageMap`, `formOptionsMap`)
+- **privacy·terms 개정 시** — 루트·`ko`·`en` 원본을 먼저 고치고 29개 언어를 같은 구조로 번역. `backend/test/legal-sync.test.js`가 시행일(`<time datetime>`)·절·목록·식별자·링크와 쿠키 설정 버튼 이름 일치를 검사
 
 ## 커밋 컨벤션
 - 메시지 형식 — `<X.Y> <한국어 설명>` (예: `5.1 시 형식 셀렉터 추가`)

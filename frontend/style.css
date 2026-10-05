@@ -358,6 +358,14 @@ body {
 .terms_container h1 {
   margin-bottom: 1em;
 }
+/* Datenschutzerklärung처럼 긴 단어 제목이 모바일 폭을 넘지 않게 한다 */
+.privacy_container h1,
+.privacy_container h2,
+.terms_container h1,
+.terms_container h2 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
 /* 개인정보처리방침 및 이용약관 제목 간격을 폰트 크기 1.3배로 설정 */
 .privacy_container h2,
 .terms_container h2 {
@@ -366,6 +374,11 @@ body {
 /* 개인정보처리방침 및 이용약관 문단 간격을 폰트 크기 1.1배로 설정 */
 .privacy_container p,
 .terms_container p {
+  margin-bottom: 1.1em;
+}
+/* 목록 바로 뒤 문단이 마지막 항목에 붙어 보이지 않게 목록 아래도 문단과 같은 간격을 둔다 */
+.privacy_container ul,
+.terms_container ul {
   margin-bottom: 1.1em;
 }
 
@@ -1220,5 +1233,32 @@ ul.contact-channels a { color: skyblue; }
   }
   .site-footer--v2 span {
     margin: 0 2px;
+  }
+}
+
+/* 푸터 "쿠키 설정" 버튼 — script.js가 넣으며 옆 링크와 같은 모양으로 표시 */
+.site-footer .footer-cookie-settings {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0 8px;
+  color: #ffffff;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.site-footer .footer-cookie-settings:hover {
+  text-decoration: none;
+}
+.site-footer--v2 .footer-secondary .footer-cookie-settings {
+  font-size: 0.92em;
+}
+@media (max-width: 768px) {
+  .site-footer .footer-cookie-settings {
+    font-size: 0.8em;
+    margin: 0 4px;
+  }
+  .site-footer--v2 .footer-secondary .footer-cookie-settings {
+    font-size: 0.78em;
   }
 }

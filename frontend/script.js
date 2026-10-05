@@ -161,7 +161,7 @@ const consentMessageMap = {
         acceptAll: '모두 수락',
         essentialOnly: '필수만 수락',
         settings: '설정',
-        privacyLink: '개인정보처리방침',
+        privacyLink: '개인정보 처리방침',
         settingsTitle: '쿠키 설정',
         essential: '필수 쿠키',
         essentialDesc: '서비스 운영에 반드시 필요한 쿠키입니다. 비활성화할 수 없습니다.',
@@ -1349,7 +1349,7 @@ function dismissBanner(banner) {
     document.body.classList.remove('has-cookie-banner');
 }
 
-function createSettingsModal(lang, onSave) {
+function createSettingsModal(lang, onSave, current = {}) {
     const t = consentMessageMap[lang] || consentMessageMap['en'];
     const fallback = consentMessageMap['en'];
 
@@ -1420,9 +1420,9 @@ function createSettingsModal(lang, onSave) {
         return row;
     }
 
-    // GDPR opt-in: 사전 체크된 동의는 무효이므로 기본 꺼짐
-    const analyticsChecked = false;
-    const advertisingChecked = false;
+    // GDPR opt-in: 사전 체크된 동의는 무효이므로 저장된 동의가 없으면 꺼짐
+    const analyticsChecked = current.analytics === true;
+    const advertisingChecked = current.advertising === true;
 
     const essentialRow = createRow(
         t.essential || fallback.essential,
@@ -1560,4 +1560,36 @@ if (existingConsent === 'accepted') {
     }
 } else {
     document.body.classList.remove('has-cookie-banner');
+}
+
+function readConsent() {
+    try {
+        const saved = JSON.parse(localStorage.getItem(cookieConsentKey));
+        return saved && typeof saved === 'object' ? saved : {};
+    } catch {
+        return {};
+    }
+}
+
+// 푸터 "쿠키 설정" 버튼 — 동의한 뒤에도 선택을 바꾸거나 철회한다
+const siteFooter = document.querySelector('footer.site-footer');
+if (siteFooter) {
+    const settingsButton = document.createElement('button');
+    settingsButton.type = 'button';
+    settingsButton.className = 'footer-cookie-settings';
+    settingsButton.textContent = (consentMessageMap[pageLang] || consentMessageMap['en']).settingsTitle;
+    settingsButton.onclick = () => {
+        createSettingsModal(languageSelect ? languageSelect.value : pageLang, (choices) => {
+            saveConsent(choices);
+            const banner = document.getElementById('cookie-consent-banner');
+            if (banner) dismissBanner(banner);
+        }, readConsent());
+    };
+    const separator = document.createElement('span');
+    separator.textContent = '|';
+    const footerTarget = siteFooter.querySelector('.footer-secondary') || siteFooter;
+    footerTarget.appendChild(separator);
+    // 기존 푸터 마크업처럼 구분선 뒤에 공백을 둔다(플렉스 푸터에서는 무시된다).
+    footerTarget.appendChild(document.createTextNode(' '));
+    footerTarget.appendChild(settingsButton);
 }

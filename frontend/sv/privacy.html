@@ -71,66 +71,105 @@
 </head>
 <body>
     <div class="privacy_container">
-        <!-- 수정: 본문을 스웨덴어로 현지화 -->
         <h1>Integritetspolicy</h1>
-        <p>Giltighetsdatum: 24 mars 2025</p>
+        <p>Gäller från: <time datetime="2026-10-05">5 oktober 2026</time></p>
+        <p>AI &amp; Poem (”tjänsten”, ”vi”) är en AI-diktgenerator på <a href="https://ai-and-poem.art/">https://ai-and-poem.art</a> som drivs av Ryu Jae-kuk. Den här policyn förklarar vilka uppgifter vi behandlar, varför vi behandlar dem, vem som tar emot dem, hur länge vi sparar dem och vilka val du har.</p>
+        <p>Den här policyn publiceras på koreanska och engelska. Andra språkversioner är översättningar. Om den koreanska och den engelska versionen skiljer sig åt gäller den koreanska versionen. Om en översättning skiljer sig från den engelska versionen gäller den engelska versionen.</p>
 
-        <p>AI &amp; Poem ("Tjänsten", "vi") erbjuder ett AI-baserat verktyg för diktgenerering på https://ai-and-poem.art/. Denna integritetspolicy beskriver hur vi samlar in, använder, delar och skyddar information när du använder Tjänsten. Genom att få åtkomst till eller använda Tjänsten godkänner du denna policy.</p>
-
-        <h2>1. Information som vi samlar in</h2>
-        <p>Vi samlar endast in den minsta mängd data som krävs för att driva Tjänsten och följa Google AdSense-policyerna.</p>
+        <h2>1. Uppgifter vi behandlar</h2>
         <ul>
-            <li><strong>Ämne du skickar in:</strong> Texten du anger som diktämne behandlas enbart för att skapa den dikt du begär och lagras inte efter att svaret har skickats.</li>
-            <li><strong>Användningsdata:</strong> Vår hostingpartner och analysverktyg kan automatiskt logga IP-adresser, webbläsartyp, enhetsinformation, tidsstämplar och liknande data för säkerhet, felsökning och statistik.</li>
-            <li><strong>Cookies och liknande tekniker:</strong> Vi använder nödvändiga cookies för att upprätthålla webbplatsens grundläggande funktioner. Google AdSense och Google Analytics kan sätta cookies för att leverera, anpassa och mäta annonser samt analysera trafik enligt sina respektive policyer.</li>
+            <li>När du begär en dikt tar vi emot ämnet du skriver (högst 200 tecken) och det språk och den diktform du väljer.</li>
+            <li>När du trycker på uppläsningsknappen på en koreansk, engelsk eller japansk sida tar vi emot den genererade dikttexten och dess språk för att skapa en AI-röst. På sidor på andra språk, eller när AI-rösten inte är tillgänglig, läser enhetens inbyggda röst upp dikten. Vissa webbläsare använder onlineröster som skickar texten till webbläsarens eller operativsystemets leverantör.</li>
+            <li>När du mejlar oss tar vi emot din e-postadress och ditt meddelande.</li>
+            <li>När sidor laddas behandlar Cloudflare (vårt webbhotell) din IP-adress, webbläsarinformation och tidpunkten för begäran. Google behandlar liknande uppgifter när analys- eller annonsskript körs. Vår backendserver sparar bara driftloggar, till exempel felkoder, behandlingstider och begäran-ID:n. Den registrerar inte din IP-adress, ditt ämne eller din dikt.</li>
+            <li>Din webbläsare sparar två poster i den lokala lagringen: <code>aiAndPoemCookieConsent</code> för dina samtyckesval och <code>aiAndPoemTtsSpeed</code> för din uppläsningshastighet. Google Analytics och Google AdSense kan sätta cookies beroende på ditt samtycke.</li>
+        </ul>
+        <p>Vi samlar inte in namn eller telefonnummer. Tjänsten har inga användarkonton.</p>
+
+        <h2>2. Hur vi använder uppgifterna</h2>
+        <ul>
+            <li>För att skapa de dikter och uppläsningar du begär och för att hindra att en uppläsningsbegäran används två gånger.</li>
+            <li>För att svara på dina frågor.</li>
+            <li>För att hålla tjänsten säker, förhindra missbruk och rätta fel.</li>
+            <li>För att mäta trafik med Google Analytics, bara om du tillåter analyscookies.</li>
+            <li>För att visa annonser med Google AdSense. Annonserna är personanpassade bara om du tillåter annonscookies.</li>
+        </ul>
+        <p>Om du befinner dig i EES, Storbritannien eller Schweiz är våra rättsliga grunder att tillhandahålla den tjänst du begär (dikter, uppläsning och svar), ditt samtycke till analys- och annonscookies och vårt berättigade intresse av säkerhet och tillförlitlig drift.</p>
+
+        <h2>3. Tjänsteleverantörer</h2>
+        <p>Vi säljer eller hyr inte ut personuppgifter. Leverantörerna nedan behandlar uppgifter för att driva tjänsten.</p>
+        <ul>
+            <li>OpenAI OpCo, LLC (USA) skapar dikter utifrån ditt ämne och skapar AI-rösten utifrån dikttexten. Enligt sin <a href="https://developers.openai.com/api/docs/guides/your-data" target="_blank" rel="noopener">datapolicy för API:et</a> sparar OpenAI indata och utdata i upp till 30 dagar för att övervaka missbruk och använder dem inte för att träna sina modeller. Kontakt: <a href="mailto:privacy@openai.com">privacy@openai.com</a>.</li>
+            <li>Amazon Web Services kör vår backend i sin region Seoul i Republiken Korea. Det omfattar AWS Lambda-servern, driftloggarna i Amazon CloudWatch och posterna om engångstoken för uppläsning i Amazon DynamoDB.</li>
+            <li>Cloudflare, Inc. (USA) står för webbhotellet och levererar webbplatsen via sitt globala nätverk. Kontakt: <a href="mailto:privacyquestions@cloudflare.com">privacyquestions@cloudflare.com</a>.</li>
+            <li>Google LLC (USA) tillhandahåller Google Analytics 4 (mät-ID <code>G-1CVHJYZWNC</code>), Google AdSense (utgivar-ID <code>ca-pub-7349192768683799</code>) och den Gmail-brevlåda som tar emot frågor. Du når Google via dess <a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">kontaktformulär för integritetsfrågor</a>.</li>
         </ul>
 
-        <h2>2. Hur vi använder informationen</h2>
+        <h2>4. Överföringar till andra länder</h2>
+        <p>Vissa uppgifter lämnar Republiken Korea. Varje överföring sker via en krypterad anslutning (HTTPS) när du använder den aktuella funktionen.</p>
         <ul>
-            <li>För att driva, underhålla och förbättra Tjänsten.</li>
-            <li>För att generera AI-dikter baserat på användarnas förfrågningar.</li>
-            <li>För att uppfylla rättsliga skyldigheter och verkställa våra användarvillkor.</li>
-            <li>För att stödja annonsering och analys i linje med Google AdSense-programmet.</li>
+            <li>OpenAI i USA tar emot ämne, språk och diktform när du begär en dikt, och dikttexten när du begär AI-uppläsning. OpenAI sparar dem i upp till 30 dagar för att övervaka missbruk.</li>
+            <li>Cloudflare i USA tar via sitt globala nätverk emot anslutningsuppgifter när sidor laddas och sparar dem enligt sin egen lagringspolicy.</li>
+            <li>Google i USA tar emot anslutnings- och cookieuppgifter för analys och annonser och lagrar e-post med frågor. Lagringstiderna anges i avsnitt 7.</li>
         </ul>
+        <p>AWS behandlar våra backenduppgifter i regionen Seoul. För användare i EES, Storbritannien och Schweiz gäller att Europeiska unionen och Storbritannien har erkänt att Republiken Korea har en adekvat skyddsnivå. Överföringar till USA bygger på skyddsåtgärder som dessa leverantörer erbjuder, till exempel standardavtalsklausuler eller EU–USA:s ramverk för dataskydd (Data Privacy Framework).</p>
+        <p>Du kan neka överföringen till OpenAI genom att inte använda diktgenerering och AI-uppläsning, men då fungerar inte de funktionerna. Du kan neka analys- och annonscookies i cookieinställningarna, och resten av webbplatsen fungerar som vanligt. Anslutningsuppgifter behövs för att leverera själva webbplatsen.</p>
 
-        <h2>3. Annons- och analyspartners</h2>
-        <p>Vi samarbetar med Google AdSense för att visa annonser. Google kan samla in eller ta emot information från din webbläsare eller enhet via cookies och liknande tekniker och använda den för annonsmätning och personalisering. Läs mer på <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">https://policies.google.com/technologies/ads</a>.</p>
+        <h2>5. Annonser</h2>
+        <p>Tredjepartsleverantörer, inklusive Google, använder cookies för att visa annonser utifrån användarens tidigare besök på den här webbplatsen eller andra webbplatser. Googles användning av annonscookies gör det möjligt för Google och dess partner att visa annonser för våra användare utifrån deras besök på den här webbplatsen och/eller andra webbplatser på internet. Se <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">hur Google använder cookies i annonser</a>.</p>
+        <p>Du kan välja bort personanpassade annonser i <a href="https://adssettings.google.com" target="_blank" rel="noopener">Googles annonsinställningar</a>. Du kan också välja bort vissa tredjepartsleverantörers användning av cookies för personanpassade annonser på <a href="https://optout.aboutads.info" target="_blank" rel="noopener">aboutads.info</a>. Hur Google använder uppgifter från webbplatser som använder Googles tjänster beskrivs i <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Googles policy för partnerwebbplatser</a>.</p>
+        <p>Om du inte tillåter annonscookies är annonserna du ser inte personanpassade.</p>
 
-        <p>Vi använder även Google Analytics för att förstå användningsmönster. Analysdata aggregeras och pseudonymiseras för att hjälpa oss att förbättra Tjänsten.</p>
+        <h2>6. Cookies och samtycke</h2>
+        <p>Vid ditt första besök frågar en banner om du tillåter analys- och annonscookies. Båda är avstängda tills du tillåter dem. Den nödvändiga posten sparar bara dina val.</p>
+        <p>Du kan när som helst ändra eller återkalla ditt samtycke med knappen ”Cookie-inställningar” längst ned på varje sida. När du har återkallat samtycket använder vi inte längre analys- och annonscookies. Cookies som redan finns på din enhet kan du radera i webbläsarens inställningar.</p>
+        <p>Vi använder Googles samtyckesläge (Consent Mode). Om du nekar analyscookies kan Google Analytics ändå ta emot mätningar som inte använder cookies. Om du befinner dig i EES, Storbritannien eller Schweiz frågar även Googles samtyckesmeddelande efter dina val för annonser, och Google AdSense följer det val du gör där.</p>
 
-        <h2>4. Lagringstid</h2>
-        <p>Vi behåller inte diktämnen eller genererade dikter längre än vad som krävs för att fullfölja din begäran. Serverloggar och analysrapporter sparas endast så länge det behövs för säkerhet, felsökning och regelefterlevnad, därefter pseudonymiseras eller aggregeras de.</p>
-
-        <h2>5. Delning av information</h2>
-        <p>Vi säljer eller hyr inte ut personuppgifter. Vi kan dela begränsade data med betrodda tjänsteleverantörer (t.ex. hosting, analys och annons­partner) som stödjer driften av Tjänsten. Dessa partner måste skydda uppgifterna och endast använda dem för de syften vi anger i våra avtal.</p>
-
-        <h2>6. Internationella överföringar</h2>
-        <p>Eftersom Tjänsten bygger på global moln- och CDN-infrastruktur kan data behandlas eller lagras i flera regioner. När du använder Tjänsten från andra regioner kan lokala integritetslagar skilja sig. Vi tillämpar rimliga tekniska och administrativa åtgärder i enlighet med lagliga och avtalsmässiga krav för att skydda uppgifterna.</p>
-
-        <h2>7. Dina rättigheter och val</h2>
+        <h2>7. Lagring och radering</h2>
         <ul>
-            <li>Du kan avstå från att ange ett diktämne, men då kan vi inte generera någon dikt.</li>
-            <li>Du kan blockera cookies i webbläsarens inställningar, men det kan begränsa funktioner såsom annonsanpassning.</li>
-            <li>Om du bor i en region med särskilda integritetsrättigheter (t.ex. EU eller Kalifornien) kan du kontakta oss för att begära åtkomst till eller radering av personuppgifter vi lagrar. Eftersom vi inte sparar inskriven text är vår möjlighet att lokalisera specifika poster begränsad.</li>
+            <li>Ämnen, dikttexter och uppläsningsljud sparas inte på våra servrar. Vi kasserar dem så snart svaret har skickats. Uppläsningsljudet finns bara i webbläsarens minne medan sidan är öppen.</li>
+            <li>OpenAI sparar API-indata och utdata i upp till 30 dagar.</li>
+            <li>Posterna om engångstoken för uppläsning innehåller bara ett slumpmässigt ID och en utgångstid. Token går ut efter 10 minuter, och posterna raderas sedan automatiskt.</li>
+            <li>Driftloggar från backend raderas efter 30 dagar.</li>
+            <li>E-post med frågor raderas ett år efter vårt svar.</li>
+            <li>Google Analytics sparar händelsedata som är kopplade till identifierare i upp till 14 månader.</li>
+            <li>Cloudflare sparar anslutningsloggar enligt sin egen lagringspolicy.</li>
+            <li>Uppgifter i webbläsarens lagring finns kvar på din enhet tills du raderar dem.</li>
         </ul>
+        <p>När en lagringstid löper ut raderar vi elektroniska uppgifter permanent så att de inte kan återställas, antingen genom automatisk utgång eller manuell radering. Vi har inga pappersdokument.</p>
 
-        <p><strong>Val för anpassade annonser:</strong> Du kan avaktivera personanpassade annonser i Googles <a href="https://adssettings.google.com" target="_blank" rel="noopener">annonsinställningar</a>. Vissa tredjepartsnätverk accepterar också avregistrering via <a href="https://optout.aboutads.info" target="_blank" rel="noopener">NAI/youradchoices</a>.</p>
+        <h2>8. Dina rättigheter</h2>
+        <ul>
+            <li>Du kan be oss om tillgång till dina personuppgifter, rättelse eller radering av dem, att vi slutar behandla dem eller en kopia av dem. Mejla oss för att göra en begäran. Eftersom vi inte sparar ämnen eller dikter kanske vi inte har några uppgifter om dig.</li>
+            <li>Du kan när som helst återkalla ditt cookiesamtycke med knappen ”Cookie-inställningar”.</li>
+            <li>Om du befinner dig i EES, Storbritannien eller Schweiz kan du också klaga hos din dataskyddsmyndighet.</li>
+        </ul>
+        <p>Vi svarar inom den tid som gällande lag kräver.</p>
 
-        <p><strong>Meddelande till användare i EES/Storbritannien/Schweiz:</strong> Vi använder en Google-certifierad CMP som är integrerad med IAB TCF för att samla in, lagra och vidarebefordra samtycke för cookies och enhetsidentifierare. Du kan när som helst återvända till “Cookieinställningar (hantera samtycke)” längst ned på sidan för att ändra eller återkalla ditt samtycke.</p>
+        <h2>9. Barn</h2>
+        <p>Tjänsten riktar sig inte till barn under 14 år. Där lokal lag anger en högre ålder för att samtycka till onlinetjänster, upp till 16 år i vissa EU-länder, behöver yngre användare tillstånd från en förälder eller vårdnadshavare. Om du tror att ett barn har lämnat personuppgifter till oss, kontakta oss så raderar vi dem.</p>
 
-        <p>För att läsa mer om hur Google använder data på partnerwebbplatser och i appar, besök <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">https://policies.google.com/technologies/partner-sites</a>.</p>
+        <h2>10. Säkerhet</h2>
+        <p>Alla anslutningar använder HTTPS. Bara operatören har åtkomst till serverinställningar och API-nycklar, och vi sparar bara de uppgifter som tjänsten behöver. Ingen metod för överföring eller lagring är helt säker.</p>
 
-        <h2>8. Barns integritet</h2>
-        <p>Tjänsten riktar sig inte till barn under 13 år och vi samlar inte medvetet in personuppgifter från barn. Om du tror att ett barn har lämnat information till oss, kontakta oss så att vi kan ta bort den.</p>
+        <h2>11. Ändringar i policyn</h2>
+        <p>När vi ändrar policyn publicerar vi den nya versionen på den här sidan med ett nytt datum för ikraftträdande. Viktiga ändringar kan vi också meddela på webbplatsen.</p>
 
-        <h2>9. Säkerhet</h2>
-        <p>Vi tillämpar rimliga administrativa, tekniska och fysiska skyddsåtgärder för att skydda informationen, men inget överförings- eller lagringssätt är helt säkert.</p>
-
-        <h2>10. Ändringar av denna policy</h2>
-        <p>Vi kan uppdatera denna policy för att spegla vår verksamhet, rättsliga krav eller förbättringar av Tjänsten. Vi publicerar den reviderade policyn med nytt giltighetsdatum och kan lämna ytterligare aviseringar vid större förändringar.</p>
-
-        <h2>11. Kontakt</h2>
-        <p>Om du har frågor om denna integritetspolicy eller våra rutiner kring data, kontakta oss på <a href="mailto:aiandpoem@gmail.com">aiandpoem@gmail.com</a>.</p>
+        <h2>12. Kontakt</h2>
+        <p>Operatören Ryu Jae-kuk ansvarar för integritetsfrågor. Frågor eller begäranden om den här policyn kan du mejla till <a href="mailto:aiandpoem@gmail.com">aiandpoem@gmail.com</a>.</p>
     </div>
+
+    <footer class="site-footer">
+        <a href="about.html">Om</a>
+        <span>|</span>
+        <a href="../blog/sv/index.html">Blogg</a>
+        <span>|</span>
+        <a href="contact.html">Kontakta</a>
+        <span>|</span>
+        <a href="privacy.html">Sekretesspolicy</a>
+        <span>|</span>
+        <a href="terms.html">Användarvillkor</a>
+    </footer>
+    <script src="../script.js" defer></script>
 </body>
 </html>

@@ -72,64 +72,113 @@
 <body>
     <div class="privacy_container">
         <h1>隐私政策</h1>
-        <p>生效日期：2025年3月24日</p>
+        <p>生效日期：<time datetime="2026-10-05">2026年10月5日</time></p>
+        <p>AI &amp; Poem（以下简称“本服务”“我们”）是在 <a href="https://ai-and-poem.art/">https://ai-and-poem.art</a> 提供的 AI 诗歌生成工具，由 Ryu Jae-kuk 运营。本政策说明我们处理哪些信息、为什么处理、由谁接收、保存多久，以及您有哪些选择。</p>
+        <p>本政策以韩语和英语发布。其他语言版本均为译文。如韩文版本与英文版本不一致，以韩文版本为准；如译文与英文版本不一致，以英文版本为准。</p>
 
-        <p>AI &amp; Poem（下称“本服务”“我们”）在 https://ai-and-poem.art/ 提供 AI 诗歌生成工具。本隐私政策说明用户使用本服务时，我们如何收集、使用、披露和保护信息。访问或使用本服务即表示您同意本政策。</p>
-
-        <h2>一、我们收集的信息</h2>
-        <p>我们仅收集运营本服务并遵守 Google AdSense 政策所需的最少数据。</p>
+        <h2>1. 我们处理的信息</h2>
         <ul>
-            <li><strong>您提交的主题：</strong> 作为诗歌主题输入的文本仅用于生成您请求的诗歌，在发送响应后不会保存。</li>
-            <li><strong>使用数据：</strong> 我们的托管提供商和分析工具可能会自动记录 IP 地址、浏览器类型、设备信息、访问时间等数据，用于安全、诊断和统计目的。</li>
-            <li><strong>Cookie 及类似技术：</strong> 我们使用必要的 Cookie 以维持网站的基本功能。Google AdSense 和 Google Analytics 可能设置 Cookie，以根据各自政策提供、个性化、衡量广告并分析流量。</li>
+            <li>当您请求生成诗歌时，我们会收到您输入的主题（最多 200 个字符）以及您选择的语言和诗歌形式。</li>
+            <li>当您在韩语、英语或日语页面按下朗读按钮时，我们会收到生成的诗歌正文及其语言，用于制作 AI 语音。在其他语言页面，或 AI 语音不可用时，由您设备内置的语音朗读诗歌。部分浏览器使用在线语音，会把文本发送给浏览器或操作系统的提供商。</li>
+            <li>当您发送电子邮件联系我们时，我们会收到您的邮箱地址和留言内容。</li>
+            <li>页面加载时，Cloudflare（我们的网站托管商）会处理您的 IP 地址、浏览器信息和请求时间。分析或广告脚本运行时，Google 也会处理类似信息。我们的后端服务器只保存错误代码、处理时间、请求 ID 等运行日志，不记录您的 IP 地址、主题或诗歌正文。</li>
+            <li>您的浏览器在本地存储中保存两个条目：<code>aiAndPoemCookieConsent</code> 保存您的同意选择，<code>aiAndPoemTtsSpeed</code> 保存朗读速度。Google Analytics 和 Google AdSense 可能根据您的同意设置 Cookie。</li>
+        </ul>
+        <p>我们不收集姓名或电话号码。本服务没有用户账户。</p>
+
+        <h2>2. 使用目的</h2>
+        <ul>
+            <li>生成您请求的诗歌和朗读，并防止同一朗读请求被使用两次。</li>
+            <li>回复您的咨询。</li>
+            <li>保障本服务安全、防止滥用并修复错误。</li>
+            <li>仅在您允许分析 Cookie 时，使用 Google Analytics 统计访问情况。</li>
+            <li>通过 Google AdSense 展示广告。仅在您允许广告 Cookie 时展示个性化广告。</li>
+        </ul>
+        <p>如果您位于欧洲经济区（EEA）、英国或瑞士，我们处理信息的法律依据是提供您请求的服务（诗歌、朗读和回复）、您对分析和广告 Cookie 的同意，以及我们在安全和稳定运行方面的正当利益。</p>
+
+        <h2>3. 服务提供商</h2>
+        <p>我们不出售或出租个人信息。以下服务提供商为运行本服务处理数据。</p>
+        <ul>
+            <li>OpenAI OpCo, LLC（美国）根据您的主题生成诗歌，并根据诗歌正文制作 AI 语音。根据其 <a href="https://developers.openai.com/api/docs/guides/your-data" target="_blank" rel="noopener">API 数据政策</a>，OpenAI 为监测滥用最多保存输入和输出 30 天，且不将其用于训练模型。联系方式：<a href="mailto:privacy@openai.com">privacy@openai.com</a>。</li>
+            <li>Amazon Web Services 在大韩民国首尔区域运行我们的后端，包括 AWS Lambda 服务器、Amazon CloudWatch 运行日志，以及记录一次性朗读令牌的 Amazon DynamoDB。</li>
+            <li>Cloudflare, Inc.（美国）托管本网站，并通过其全球网络分发。联系方式：<a href="mailto:privacyquestions@cloudflare.com">privacyquestions@cloudflare.com</a>。</li>
+            <li>Google LLC（美国）提供 Google Analytics 4（衡量 ID <code>G-1CVHJYZWNC</code>）、Google AdSense（发布商 ID <code>ca-pub-7349192768683799</code>）以及接收咨询的 Gmail 邮箱。您可以通过 Google 的<a href="https://support.google.com/policies/contact/general_privacy_form" target="_blank" rel="noopener">隐私权联系表单</a>与其联系。</li>
         </ul>
 
-        <h2>二、信息的使用方式</h2>
+        <h2>4. 跨境传输</h2>
+        <p>部分信息会传输到大韩民国境外。每次您使用相关功能时，传输均通过加密连接（HTTPS）进行。</p>
         <ul>
-            <li>运营、维护并改进本服务；</li>
-            <li>根据用户请求生成 AI 诗歌；</li>
-            <li>履行法律义务并执行我们的《使用条款》；</li>
-            <li>支持符合 Google AdSense 计划政策的广告与分析。</li>
+            <li>位于美国的 OpenAI 在您请求诗歌时收到主题、语言和诗歌形式，在您请求 AI 朗读时收到诗歌正文，并为监测滥用最多保存 30 天。</li>
+            <li>位于美国的 Cloudflare 通过其全球网络在页面加载时收到连接信息，并按照其自身的保留政策保存。</li>
+            <li>位于美国的 Google 收到用于分析和广告的连接信息及 Cookie 信息，并保存咨询邮件。保存期限见第 7 条。</li>
         </ul>
+        <p>后端信息在 AWS 首尔区域处理。对于欧洲经济区、英国和瑞士的用户，欧盟和英国已认定大韩民国提供充分的数据保护水平。向美国服务商的传输以这些服务商提供的保障措施为依据，例如标准合同条款或欧盟-美国数据隐私框架。</p>
+        <p>您可以通过不使用诗歌生成和 AI 朗读来拒绝向 OpenAI 传输，但此时这两项功能无法使用。您可以在 Cookie 设置中拒绝分析和广告 Cookie，拒绝后网站其他功能仍可正常使用。连接信息是传送网站本身所必需的。</p>
 
-        <h2>三、广告与分析合作伙伴</h2>
-        <p>我们与 Google AdSense 合作投放广告。Google 可能通过 Cookie 等技术收集或接收您浏览器或设备的信息，并用于广告测量和个性化。详情请访问 <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">https://policies.google.com/technologies/ads</a>。</p>
+        <h2>5. 广告</h2>
+        <p>第三方供应商（包括 Google）会使用 Cookie，根据用户以前对本网站或其他网站的访问情况投放广告。Google 通过使用广告 Cookie，可以根据用户对本网站和/或互联网上其他网站的访问情况，让 Google 及其合作伙伴向我们的用户投放广告。详情请参阅<a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 如何在广告中使用 Cookie</a>。</p>
+        <p>您可以在 <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google 广告设置</a>中停用个性化广告。您也可以在 <a href="https://optout.aboutads.info" target="_blank" rel="noopener">aboutads.info</a> 上停用部分第三方供应商为个性化广告使用 Cookie。如需了解 Google 如何使用来自使用其服务的网站的信息，请参阅<a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 关于合作伙伴网站的政策</a>。</p>
+        <p>如果您不允许广告 Cookie，您看到的广告不会个性化。</p>
 
-        <p>我们还使用 Google Analytics 了解使用模式，分析数据经过汇总和假名化处理，用于改进本服务。</p>
+        <h2>6. Cookie 与同意</h2>
+        <p>首次访问时，横幅会询问您是否允许分析和广告 Cookie。在您允许之前，两者都保持关闭。必要条目只保存您的选择。</p>
+        <p>您可以随时通过每个页面底部的“Cookie 设置”按钮更改或撤回同意。撤回后，我们不再使用分析和广告 Cookie。已保存在您设备上的 Cookie，可以在浏览器设置中删除。</p>
+        <p>我们使用 Google 同意模式（Consent Mode）。即使您拒绝分析 Cookie，Google Analytics 仍可能收到不使用 Cookie 的统计信息。如果您位于欧洲经济区、英国或瑞士，Google 的同意消息还会另行询问您的广告选择，Google AdSense 会遵循您在其中作出的选择。</p>
 
-        <h2>四、数据保留期限</h2>
-        <p>我们不会在完成请求所需时间之外保留诗歌主题或生成的诗歌。服务器日志和分析报告仅在出于安全、故障排除与合规所需的期限内保存，随后会被假名化或汇总。</p>
-
-        <h2>五、数据共享</h2>
-        <p>我们不会出售或出租个人信息。我们可能与支持本服务运营的可信赖供应商（如托管、分析与广告合作伙伴）共享有限数据，这些合作伙伴必须根据合同保护数据，并仅按我们指定的目的使用。</p>
-
-        <h2>六、跨境数据传输</h2>
-        <p>由于本服务依赖全球云和 CDN 基础设施，数据可能在多个地区处理或存储。当您在这些地区之外使用本服务时，当地隐私法律可能不同；我们会根据适用法律和合同义务采取合理的技术和管理措施来保护数据。</p>
-
-        <h2>七、您的权利与选择</h2>
+        <h2>7. 保存期限与删除</h2>
         <ul>
-            <li>您可以选择不输入诗歌主题，但这样我们将无法生成诗歌；</li>
-            <li>您可以在浏览器设置中阻止 Cookie，不过这可能限制广告个性化等功能；</li>
-            <li>如您居住在具有特定隐私权利的地区（如欧盟或加利福尼亚），可联系我们请求查阅或删除我们持有的个人数据。由于我们不保存输入文本，定位特定记录的能力有限。</li>
+            <li>主题、诗歌正文和朗读音频不保存在我们的服务器上，发送响应后即予丢弃。朗读音频仅在页面打开期间保留在浏览器内存中。</li>
+            <li>OpenAI 最多保存 API 输入和输出 30 天。</li>
+            <li>一次性朗读令牌的记录只包含随机 ID 和过期时间。令牌在 10 分钟后过期，之后记录会被自动删除。</li>
+            <li>后端运行日志在 30 天后删除。</li>
+            <li>咨询邮件在回复之日起 1 年后删除。</li>
+            <li>Google Analytics 最多保存与标识符关联的事件数据 14 个月。</li>
+            <li>Cloudflare 按照其自身的保留政策保存连接日志。</li>
+            <li>浏览器中存储的信息会保留在您的设备上，直到您将其删除。</li>
         </ul>
+        <p>保存期限届满后，我们通过自动过期或手动删除，以无法恢复的方式永久删除电子记录。我们不保留纸质记录。</p>
 
-        <p><strong>个性化广告选项：</strong> 您可以在 Google 的 <a href="https://adssettings.google.com" target="_blank" rel="noopener">广告设置</a> 中关闭个性化广告。部分第三方网络也接受在 <a href="https://optout.aboutads.info" target="_blank" rel="noopener">NAI/youradchoices</a> 提交的退出请求。</p>
+        <h2>8. 您的权利</h2>
+        <ul>
+            <li>您可以通过电子邮件要求查阅、更正、删除个人信息，停止处理，或获取副本。由于我们不保存主题和诗歌，可能没有与您相关的信息。</li>
+            <li>您可以随时通过“Cookie 设置”按钮撤回对 Cookie 的同意。</li>
+            <li>如果您位于欧洲经济区、英国或瑞士，也可以向当地数据保护监管机构投诉。</li>
+        </ul>
+        <p>我们会在适用法律规定的期限内答复。</p>
 
-        <p><strong>面向 EEA/英国/瑞士用户的通知：</strong> 我们使用通过 Google 认证并与 IAB TCF 集成的 CMP，以收集、存储并传递关于 Cookie 和设备标识符的同意。您可随时在页面底部的“Cookie 设置（管理同意）”中重新设置或撤回选择。</p>
+        <h2>9. 儿童</h2>
+        <p>本服务不面向未满 14 周岁的儿童。在规定了更高网络服务同意年龄的国家（部分欧盟国家最高为 16 岁），低于该年龄的用户需要获得父母或监护人的许可。如果您认为儿童向我们提供了个人信息，请与我们联系，我们会及时删除。</p>
 
-        <p>关于 Google 如何在合作伙伴网站和应用中使用数据，请参见 <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">https://policies.google.com/technologies/partner-sites</a>。</p>
+        <h2>10. 安全措施</h2>
+        <p>所有连接均使用 HTTPS 加密。只有运营者可以访问服务器设置和 API 密钥，我们只保存本服务所需的信息。但没有任何互联网传输或存储方式是绝对安全的。</p>
 
-        <h2>八、儿童隐私</h2>
-        <p>本服务并非面向13岁以下儿童，我们不会有意收集儿童的个人信息。如果您认为儿童向我们提供了信息，请联系我们以便删除。</p>
+        <h2>11. 政策变更</h2>
+        <p>修改本政策时，我们会在此页面发布新版本并注明新的生效日期。重要变更也可能在网站上另行通知。</p>
 
-        <h2>九、安全性</h2>
-        <p>我们采用合理的管理、技术和物理措施保护信息，但任何传输或存储方式都无法保证绝对安全。</p>
-
-        <h2>十、本政策的变更</h2>
-        <p>我们可能根据运营实践、法律要求或服务改进更新本政策。更新时将公布新的生效日期，并可能就重大变更提供额外通知。</p>
-
-        <h2>十一、联系我们</h2>
-        <p>如对本隐私政策或数据处理有疑问，请发送邮件至 <a href="mailto:aiandpoem@gmail.com">aiandpoem@gmail.com</a>。</p>
+        <h2>12. 联系我们</h2>
+        <p>个人信息相关事务由运营者 Ryu Jae-kuk 负责。如对本政策有疑问或请求，请发送邮件至 <a href="mailto:aiandpoem@gmail.com">aiandpoem@gmail.com</a>。</p>
     </div>
+
+    <footer class="site-footer">
+        <a href="about.html">服务介绍</a>
+        <span>|</span>
+        <a href="../blog/zh/index.html">博客</a>
+        <span>|</span>
+        <a href="gallery.html">画廊</a>
+        <span>|</span>
+        <a href="faq.html">FAQ</a>
+        <span>|</span>
+        <a href="contact.html">联系我们</a>
+        <span>|</span>
+        <a href="author.html">关于作者</a>
+        <span>|</span>
+        <a href="use-cases.html">使用案例</a>
+        <span>|</span>
+        <a href="privacy.html">隐私政策</a>
+        <span>|</span>
+        <a href="terms.html">服务条款</a>
+
+    </footer>
+    <script src="../script.js" defer></script>
 </body>
 </html>
