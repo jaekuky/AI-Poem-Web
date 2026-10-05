@@ -540,3 +540,39 @@ test('시 생성 전에도 낭독 버튼·정지·속도 문구는 페이지 언
     assert.equal(ui.elements.get('tts-stop-button').textContent, '■ Stop');
     assert.equal(ui.elements.get('tts-speed-label').textContent, 'Speed');
 });
+
+test('서버 음성이 없는 언어의 기기 낭독은 AI 음성이라고 알리지 않음', async () => {
+    const ui = page(async () => ({ ok: true, json: async () => ({ poem }) }), {
+        language: 'de', htmlLang: 'de', voices: [{ lang: 'de-DE', name: 'German test voice' }]
+    });
+    await ui.submit();
+    ui.clickPlay();
+    assert.doesNotMatch(ui.elements.get('tts-status').textContent, /KI/);
+    await flush();
+    assert.equal(ui.spoken.length, 1);
+    assert.equal(ui.elements.get('tts-status').textContent, 'Lesung läuft.');
+    assert.equal(ui.elements.get('tts-ai-notice').hidden, true);
+});
+
+test('토큰 없는 한국어 기기 낭독은 일시정지·재개 뒤에도 기기 낭독 문구 유지', async () => {
+    const ui = page(async () => ({ ok: true, json: async () => ({ poem }) }));
+    await ui.submit();
+    ui.clickPlay();
+    assert.doesNotMatch(ui.elements.get('tts-status').textContent, /AI/);
+    await flush();
+    assert.equal(ui.elements.get('tts-status').textContent, '낭독 중입니다.');
+    ui.clickPlay();
+    assert.equal(ui.elements.get('tts-status').textContent, '낭독을 일시 정지했습니다.');
+    ui.clickPlay();
+    assert.equal(ui.elements.get('tts-status').textContent, '낭독 중입니다.');
+});
+
+test('서버 음성은 준비·재생 상태에 AI 음성 문구와 고지를 표시', async () => {
+    const ui = serverPage();
+    await ui.submit();
+    ui.clickPlay();
+    assert.equal(ui.elements.get('tts-status').textContent, 'AI 음성을 준비 중입니다.');
+    await flush();
+    assert.equal(ui.elements.get('tts-status').textContent, 'AI 음성을 재생 중입니다.');
+    assert.equal(ui.elements.get('tts-ai-notice').hidden, false);
+});
