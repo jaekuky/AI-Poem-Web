@@ -161,6 +161,7 @@ body {
   white-space: pre-wrap;
   text-align: center;
   width: 100%;
+  overflow-wrap: anywhere; /* 긴 합성어(Donaudampfschifffahrtsgesellschaft 등)가 모바일 폭을 넘지 않게 */
 }
 
 /* ✅ poem-form 정책 위반 주의 문구 스타일 추가 */
@@ -246,6 +247,10 @@ body {
   padding: 12px;
   line-height: 1.6;
   margin: 12px 0;
+}
+/* keep-all은 한국어 어절용. 띄어쓰기 없는 일본어 행은 줄이 안 바뀌어 모바일 폭을 넘는다 */
+.seo-section pre:lang(ja) {
+  word-break: normal;
 }
 
 /* Blog Preview Section */
@@ -426,92 +431,6 @@ a[href^="mailto"]:hover {
 
 
 
-
-/* 수정: 태블릿 화면 (768px 이하) 대응 추가 */
-@media screen and (max-width: 768px) {
-  .header {
-    justify-content: center;
-    padding: 10px;
-  }
-
-  .header-left,
-  .header-right {
-    flex-basis: 100%;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .header-right {
-    margin-top: 10px;
-    position: relative;
-  }
-
-  /* 햄버거 메뉴 표시 */
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: rgba(40, 18, 12, 0.95);
-    padding: 10px 0;
-    border-radius: 8px;
-    margin-top: 5px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links .header-link {
-    padding: 10px 0;
-    margin: 0;
-    text-align: center;
-    font-size: 16px;
-    width: 100%;
-  }
-
-  /* 태블릿에서도 라벨은 숨기거나 작게 표시할 수 있음. 여기서는 500px 이하와 유사하게 유연하게 처리 */
-  .container {
-    max-width: 90%;
-  }
-
-  .seo-section {
-    margin: 20px auto;
-    padding: 20px;
-  }
-
-  /* 태블릿에서 content-section 여백 조정 */
-  .content-section {
-    margin: 20px auto;
-    padding: 16px;
-  }
-
-  /* 태블릿에서 privacy/terms 컨테이너 여백 조정 */
-  .privacy_container,
-  .terms_container {
-    margin: 20px auto;
-    padding: 16px;
-    max-width: 95%;
-  }
-
-  /* 태블릿에서 contact 요소 조정 */
-  .contact-info {
-    font-size: 1.1em;
-  }
-
-  .contact-email {
-    padding: 12px 24px;
-  }
-
-  /* Gallery 태블릿 */
-  .gallery-article-container { padding: 30px 16px; }
-  .gallery-article-title { font-size: 1.6em; }
-  .poem-card { padding: 20px; }
-  .gallery-hub-grid { grid-template-columns: repeat(2, 1fr); }
-}
 
 /* 쿠키 동의 배너 */
 body.has-cookie-banner {
@@ -738,124 +657,10 @@ body.has-cookie-banner {
     width: 100%;
     justify-content: flex-end;
   }
-}
 
-@media screen and (max-width: 500px) {
-  /* 수정: 500px 이하 화면에서 헤더 레이아웃을 세로 형태로 변경하여 공간 확보 */
-  .header {
-    flex-direction: column;
-    height: auto;
-    padding-bottom: 10px;
-  }
-
-  .header-left {
-    flex-basis: auto;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    align-items: center; /* Flex 아이템 중앙 정렬 */
-  }
-
-  .header-right {
-    flex-basis: auto;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap; /* 내용이 넘칠 경우 줄바꿈 허용 */
-    padding: 5px 0;
-  }
-
-  /* 수정: 모바일에서 헤더 링크 간격 및 폰트 크기 조정 */
-  .header-right .header-link {
-    margin: 0 8px;
-    font-size: 14px;
-    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
-  }
-
-  .header-left .logo {
-    font-size: 1.5rem; /* 제목 크기 가독성 있게 조정 */
-  }
-  .header-left .tagline {
-    font-size: 0.8rem;
-  }
-
-  #image-box {
-    width: 214px;
-    height: 216px;
-  }
-
-  /* 수정: 언어 선택 라벨 숨김 처리로 공간 절약 (선택창만 표시) */
-  #language-label {
-    display: none;
-  }
-
-  #topic,
-  #language {
-    font-size: 14px;
-  }
-  #poem-form #poetry-writing-button {
-    padding: 5px;
-    font-size: 14px;
-  }
-
-  .header-right #language {
-    width: auto; /* 내용에 맞게 자동 조절 */
-    min-width: 100px;
-    margin-inline-start: 0;
-    margin-top: 5px; /* 줄바꿈 시 간격 */
-  }
-
-  .buttons button {
-    font-size: 14px;
-    padding: 10px 18px;
-    min-height: 44px;
-  }
-
-  /* 수정: 모바일에서 SEO 섹션 패딩을 줄여 가독성 향상 */
-  .seo-section {
-    padding: 16px;
-  }
-
-  /* Gallery 모바일 */
-  .gallery-article-container { padding: 20px 12px; }
-  .gallery-article-title { font-size: 1.4em; }
-  .gallery-article-content p { font-size: 1em; }
-  .poem-card { padding: 16px; margin: 20px 0; }
-  .poem-title { font-size: 1.1em; }
-  .poem-body { font-size: 0.95em; line-height: 1.8; }
-  .gallery-hub-grid { grid-template-columns: 1fr; gap: 14px; }
-  .gallery-cta { padding: 12px 24px; font-size: 1em; }
-  .gallery-author-info, .gallery-related-posts { padding: 16px; }
-
-  /* 모바일에서 content-section 여백 조정 */
-  .content-section {
-    margin: 16px auto;
-    padding: 12px;
-  }
-
-  /* 모바일에서 contact 요소 조정 */
-  .contact-info {
-    font-size: 1em;
-  }
-
-  .contact-email {
-    padding: 10px 20px;
-    font-size: 0.95em;
-  }
-
-  /* 모바일에서 푸터 링크 줄바꿈 처리 */
-  .site-footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 4px 0;
-    line-height: 1.8;
-  }
-  .site-footer a {
-    font-size: 0.8em;
-    margin: 0 4px;
-  }
-  .site-footer span {
-    margin: 0 2px;
+  /* 세로 배치에선 flex-basis 300px이 높이가 되어 배너가 화면 절반을 덮는다 */
+  .cookie-banner-text {
+    flex: none;
   }
 }
 
@@ -869,6 +674,8 @@ body.has-cookie-banner {
   backdrop-filter: blur(10px);
   color: #fff;
   line-height: 1.6;
+  /* 세로 flex 안에서 긴 단어·URL이 상자 폭을 밀어내지 않게 한다(break-word는 min-content에 효과 없음) */
+  overflow-wrap: anywhere;
 }
 
 .content-section.centered {
@@ -884,6 +691,13 @@ body.has-cookie-banner {
   color: #ff9a9e;
   margin-top: 30px;
   font-size: 1.5em;
+}
+/* Anvendelsesmuligheder처럼 긴 합성어 제목은 하이픈으로 나눈다 */
+.content-section h1,
+.content-section h2,
+.content-section h3,
+.content-section summary {
+  hyphens: auto;
 }
 /* content-section 본문 링크 가독성 — skyblue 기본 / 연보라 방문 (about·author 등) */
 .content-section a {
@@ -1182,6 +996,213 @@ ul.contact-channels a { color: skyblue; }
     color: #ccc;
     font-size: 0.95em;
     line-height: 1.5;
+}
+
+/* 수정: 태블릿 화면 (768px 이하) 대응 추가 */
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .header-left,
+  .header-right {
+    flex-basis: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .header-right {
+    margin-top: 10px;
+    position: relative;
+  }
+
+  /* 햄버거 메뉴 표시 */
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(40, 18, 12, 0.95);
+    padding: 10px 0;
+    border-radius: 8px;
+    margin-top: 5px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links .header-link {
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  /* 태블릿에서도 라벨은 숨기거나 작게 표시할 수 있음. 여기서는 500px 이하와 유사하게 유연하게 처리 */
+  .container {
+    max-width: 90%;
+  }
+
+  .seo-section {
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  /* 태블릿에서 content-section 여백 조정 */
+  .content-section {
+    margin: 20px auto;
+    padding: 16px;
+  }
+
+  /* 태블릿에서 privacy/terms 컨테이너 여백 조정 */
+  .privacy_container,
+  .terms_container {
+    margin: 20px auto;
+    padding: 16px;
+    max-width: 95%;
+  }
+
+  /* 태블릿에서 contact 요소 조정 */
+  .contact-info {
+    font-size: 1.1em;
+  }
+
+  .contact-email {
+    padding: 12px 24px;
+  }
+
+  /* Gallery 태블릿 */
+  .gallery-article-container { padding: 30px 16px; }
+  .gallery-article-title { font-size: 1.6em; }
+  .poem-card { padding: 20px; }
+}
+
+@media screen and (max-width: 500px) {
+  /* 수정: 500px 이하 화면에서 헤더 레이아웃을 세로 형태로 변경하여 공간 확보 */
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 10px;
+  }
+
+  .header-left {
+    flex-basis: auto;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    align-items: center; /* Flex 아이템 중앙 정렬 */
+  }
+
+  .header-right {
+    flex-basis: auto;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap; /* 내용이 넘칠 경우 줄바꿈 허용 */
+    padding: 5px 0;
+  }
+
+  /* 수정: 모바일에서 헤더 링크 간격 및 폰트 크기 조정 */
+  .header-right .header-link {
+    margin: 0 8px;
+    font-size: 14px;
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+  }
+
+  .header-left .logo {
+    font-size: 1.5rem; /* 제목 크기 가독성 있게 조정 */
+  }
+  .header-left .tagline {
+    font-size: 0.8rem;
+  }
+
+  #image-box {
+    width: 214px;
+    height: 216px;
+  }
+
+  /* 수정: 언어 선택 라벨 숨김 처리로 공간 절약 (선택창만 표시) */
+  #language-label {
+    display: none;
+  }
+
+  /* iOS Safari는 16px 미만 입력창에 포커스하면 화면을 확대한다 */
+  #topic,
+  #language,
+  .form-options select,
+  .buttons #tts-speed {
+    font-size: 16px;
+  }
+  #poem-form #poetry-writing-button {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .header-right #language {
+    width: auto; /* 내용에 맞게 자동 조절 */
+    min-width: 100px;
+    margin-inline-start: 0;
+    margin-top: 5px; /* 줄바꿈 시 간격 */
+  }
+
+  .buttons button {
+    font-size: 14px;
+    padding: 10px 18px;
+    min-height: 44px;
+  }
+
+  /* 수정: 모바일에서 SEO 섹션 패딩을 줄여 가독성 향상 */
+  .seo-section {
+    padding: 16px;
+  }
+
+  /* Gallery 모바일 */
+  .gallery-article-container { padding: 20px 12px; }
+  .gallery-article-title { font-size: 1.4em; }
+  .gallery-article-content p { font-size: 1em; }
+  .poem-card { padding: 16px; margin: 20px 0; }
+  .poem-title { font-size: 1.1em; }
+  .poem-body { font-size: 0.95em; line-height: 1.8; }
+  .gallery-hub-grid { grid-template-columns: 1fr; gap: 14px; }
+  .gallery-cta { padding: 12px 24px; font-size: 1em; }
+  .gallery-author-info, .gallery-related-posts { padding: 16px; }
+
+  /* 모바일에서 content-section 여백 조정 */
+  .content-section {
+    margin: 16px auto;
+    padding: 12px;
+  }
+
+  /* 모바일에서 contact 요소 조정 */
+  .contact-info {
+    font-size: 1em;
+  }
+
+  .contact-email {
+    padding: 10px 20px;
+    font-size: 0.95em;
+  }
+
+  /* 모바일에서 푸터 링크 줄바꿈 처리 */
+  .site-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 0;
+    line-height: 1.8;
+  }
+  .site-footer a {
+    font-size: 0.8em;
+    margin: 0 4px;
+  }
+  .site-footer span {
+    margin: 0 2px;
+  }
 }
 
 /* 두 줄 푸터(v2) — ko/en/blog-ko/blog-en 전용. 기존 .site-footer는 26개 타 언어에서 그대로 사용 */
