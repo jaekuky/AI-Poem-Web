@@ -18,7 +18,7 @@ We dream of a world where technology lowers the barriers to creation, and where 
 Having learned from millions of literary works, the AI analyzes the user's input topic and produces original, emotionally resonant poems in real time.
 
 **2. Multilingual Support**
-We support over 30 languages — including Korean, English, Japanese, Chinese, and French — so global users can enjoy poetry in their native language.
+We support 31 languages — including Korean, English, Japanese, Chinese, and French — so global users can enjoy poetry in their native language.
 
 **3. Expressive Voice Reading**
 The AI reads each poem aloud with a tone and pacing that matches its atmosphere. Experience the emotion of poetry not only by reading with your eyes, but by hearing it with your ears.

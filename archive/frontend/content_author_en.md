@@ -17,7 +17,7 @@ With hands-on experience in software development, he integrates Natural Language
 
 ## Expertise in AI and Literature
 
-AI & Poem is a multilingual poetry generation service supporting over 30 languages, with careful prompt design that honors each language's poetic tradition and cultural context. The service continuously improves on transformer-based poem generation, TTS (text-to-speech) integration, and content safety filtering.
+AI & Poem is a multilingual poetry generation service supporting 31 languages, with careful prompt design that honors each language's poetic tradition and cultural context. The service continuously improves on transformer-based poem generation, TTS (text-to-speech) integration, and content safety filtering.
 
 ## Service Philosophy
 
