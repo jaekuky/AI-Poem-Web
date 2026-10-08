@@ -77,6 +77,32 @@ test('약관은 책임·변경 주체와 소비자 관할 보호를 분명히 �
     assert.ok(ja.includes('保護および管轄に関する権利はそのまま適用されます。'));
 });
 
+test('처리방침 서문은 서비스가 아니라 운영자를 처리 주체로 정의', () => {
+    const ko = body('ko/privacy.html', 'privacy');
+    const en = body('en/privacy.html', 'privacy');
+    const ja = body('ja/privacy.html', 'privacy');
+
+    assert.ok(ko.includes('류재국(이하 "운영자")'));
+    assert.ok(ko.includes('이 방침은 운영자가 어떤 정보를'));
+    assert.ok(!ko.includes('이 방침은 서비스가'));
+    assert.ok(!body('ko/terms.html', 'terms').includes('서비스가 공지하는'));
+
+    assert.ok(en.includes('operated by Ryu Jae-kuk ("we," "us," or "our")'));
+    assert.ok(!en.includes('"the Service", "we"'));
+
+    assert.ok(ja.includes('Ryu Jae-kuk（以下「運営者」）'));
+    assert.ok(!ja.includes('当方'));
+
+    // 서문 첫 괄호에는 서비스 정의 하나만 두고, 운영자 이름 뒤에 1인칭 정의를 둔다.
+    for (const lang of translated) {
+        const intro = body(`${lang}/privacy.html`, 'privacy').match(/<p>[^<]*AI &amp; Poem[\s\S]*?<\/p>/)[0];
+        const firstParen = intro.match(/[(（][^)）]*[)）]/)[0];
+        const quoteCount = (firstParen.match(/["“”«»‘’„「」]/g) || []).length;
+        assert.equal(quoteCount, 2, `${lang}: ${firstParen}`);
+        assert.ok(/Ryu Jae-kuk\s*[(（]/.test(intro), `${lang}: 운영자 정의 없음`);
+    }
+});
+
 test('privacy는 처리 업체 이름을 원문 그대로 쓰고 화면의 쿠키 설정 버튼 이름을 안내', () => {
     for (const lang of ['ko', 'en', ...translated]) {
         const html = body(`${lang}/privacy.html`, 'privacy');
