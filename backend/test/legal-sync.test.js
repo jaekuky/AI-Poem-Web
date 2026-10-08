@@ -1,4 +1,4 @@
-// privacy·terms 번역본이 영문 원본과 같은 시행일·구조·식별자·링크를 유지하는지 검사
+// privacy·terms 번역본이 영문 원본과 같은 게시일·시행일·구조·식별자·링크를 유지하는지 검사
 const assert = require('node:assert/strict');
 const { test } = require('node:test');
 const fs = require('node:fs');
@@ -24,29 +24,57 @@ function skeleton(file, kind) {
     const html = body(file, kind);
     const count = tag => (html.match(new RegExp(`<${tag}>`, 'g')) || []).length;
     return {
-        date: html.match(/<time datetime="([^"]+)">/)?.[1],
+        dates: [...html.matchAll(/<time datetime="([^"]+)">/g)].map(match => match[1]),
         h2: count('h2'), p: count('p'), li: count('li'),
         codes: [...html.matchAll(/<code>([^<]+)<\/code>/g)].map(match => match[1]),
         links: [...html.matchAll(/href="([^"]+)"/g)].map(match => match[1])
     };
 }
 
-test('번역본 29개는 영문 원본과 시행일·절·문단·목록·식별자·링크가 같음', () => {
+test('번역본 29개는 영문 원본과 게시일·시행일·절·문단·목록·식별자·링크가 같음', () => {
     assert.equal(translated.length, 29);
     for (const kind of kinds) {
         const original = skeleton(`en/${kind}.html`, kind);
-        assert.ok(original.date);
+        assert.equal(original.dates.length, kind === 'terms' ? 2 : 1);
         for (const lang of translated) {
             assert.deepEqual(skeleton(`${lang}/${kind}.html`, kind), original, `${lang}/${kind}.html`);
         }
     }
 });
 
-test('한국어 원본은 영문과 시행일이 같고 루트와 ko 본문이 동일', () => {
+test('한국어 원본은 영문과 게시일·시행일이 같고 루트와 ko 본문이 동일', () => {
     for (const kind of kinds) {
-        assert.equal(skeleton(`ko/${kind}.html`, kind).date, skeleton(`en/${kind}.html`, kind).date);
+        assert.deepEqual(skeleton(`ko/${kind}.html`, kind).dates, skeleton(`en/${kind}.html`, kind).dates);
         assert.equal(body(`${kind}.html`, kind), body(`ko/${kind}.html`, kind));
     }
+});
+
+test('이용약관은 2026-10-08에 게시하고 2026-10-16에 시행', () => {
+    const expected = ['2026-10-08', '2026-10-16'];
+    for (const file of ['terms.html', 'ko/terms.html', 'en/terms.html', 'ja/terms.html']) {
+        assert.deepEqual(skeleton(file, 'terms').dates, expected, file);
+    }
+});
+
+test('약관은 책임·변경 주체와 소비자 관할 보호를 분명히 밝힘', () => {
+    const ko = body('ko/terms.html', 'terms');
+    const en = body('en/terms.html', 'terms');
+    const ja = body('ja/terms.html', 'terms');
+
+    assert.ok(ko.includes('관련 법령이 허용하는 범위에서 운영자는 광고 내용이나 제안에 책임지지 않습니다.'));
+    assert.ok(!ko.includes('서비스는 광고 내용이나 제안에 책임지지 않습니다.'));
+    assert.ok(ko.includes('운영자는 광고와 콘텐츠를 혼동하게 하는 배치를 피하고'));
+    assert.ok(ko.includes('시행일 7일 전까지 서비스에 공지합니다.'));
+    assert.ok(ko.includes('보호와 관할에 관한 권리는 그대로 적용됩니다.'));
+
+    assert.ok(en.includes('To the maximum extent permitted by applicable law, we are not responsible for their content or offers.'));
+    assert.ok(en.includes('at least seven days before it takes effect'));
+    assert.ok(en.includes('protection or jurisdiction rights'));
+
+    assert.ok(ja.includes('適用法令で許される範囲で、運営者は広告の内容や提案について責任を負いません。'));
+    assert.ok(!ja.includes('本サービスは広告の内容や提案について責任を負いません。'));
+    assert.ok(ja.includes('施行日の少なくとも7日前に本サービスで告知します。'));
+    assert.ok(ja.includes('保護および管轄に関する権利はそのまま適用されます。'));
 });
 
 test('privacy는 처리 업체 이름을 원문 그대로 쓰고 화면의 쿠키 설정 버튼 이름을 안내', () => {
