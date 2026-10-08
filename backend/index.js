@@ -803,7 +803,9 @@ function setTtsRuntimeForTest(overrides) {
     ttsRuntime = { ...ttsRuntime, ...overrides };
 }
 
-function respondWithPoem(res, poem, language) {
+function respondWithPoem(res, rawPoem, language) {
+    // 가운데 정렬 pre-wrap에서 행 앞뒤 공백이 정렬을 흐트러뜨리므로 행마다 다듬는다
+    const poem = rawPoem.split(/\r?\n/).map(line => line.trim()).join('\n');
     const response = { poem };
     const ttsToken = issueTtsToken(poem, language);
     if (ttsToken) response.ttsToken = ttsToken;
