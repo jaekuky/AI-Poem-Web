@@ -7,7 +7,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/about.html" />
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/faq.html</loc>
@@ -16,7 +16,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/faq.html" />
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/author.html</loc>
@@ -25,7 +25,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/author.html" />
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/ko/author.html</loc>
@@ -34,7 +34,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/author.html" />
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/en/author.html</loc>
@@ -43,13 +43,16 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/author.html" />
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/contact.html" />
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-07-10</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/ko/</loc>
@@ -58,7 +61,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/en/</loc>
@@ -67,61 +70,61 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/privacy.html" />
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/ko/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/privacy.html" />
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/en/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/privacy.html" />
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/terms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/terms.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/terms.html" />
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/ko/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/terms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/terms.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/terms.html" />
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/en/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/terms.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/terms.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/terms.html" />
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/</loc>
@@ -130,205 +133,205 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
-    <loc>https://ai-and-poem.art/blog/en/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <loc>https://ai-and-poem.art/blog/en/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-10</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/en/article-1.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-1.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-1.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-1.html" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/en/article-2.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-2.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-2.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-2.html" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/en/article-3.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-3.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-3.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-3.html" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/en/article-4.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-4.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-4.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-4.html" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/en/article-5.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-5.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-5.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-5.html" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/en/article-6.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-6.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-6.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-6.html" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/en/article-7.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-7.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-7.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-7.html" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/en/article-8.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-8.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-8.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-8.html" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/en/article-9.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-9.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-9.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-9.html" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/en/article-10.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-10.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-10.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-10.html" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-10</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/article-1.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-1.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-1.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-1.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/article-2.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-2.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-2.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-2.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/article-3.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-3.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-3.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-3.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/article-4.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-4.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-4.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-4.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/article-5.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-5.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-5.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-5.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/article-6.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-6.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-6.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-6.html" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/article-7.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-7.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-7.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-7.html" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/article-8.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-8.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-8.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-8.html" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/article-9.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-9.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-9.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-9.html" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/article-10.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/article-10.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/blog/en/article-10.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/article-10.html" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/yoondongju-seosi.html</loc>
@@ -336,7 +339,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/yoondongju-seosi.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/kimsowol-jindallaekkot.html</loc>
@@ -344,7 +347,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/kimsowol-jindallaekkot.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/jeongjiyong-hyangsu.html</loc>
@@ -352,7 +355,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/jeongjiyong-hyangsu.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/isang-ogamdo.html</loc>
@@ -360,139 +363,133 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/isang-ogamdo.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/ai-poem-prompt-patterns.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/ai-poem-prompt-patterns.html" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/ai-poem-prompt-patterns.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/poems-for-tts-reading.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/poems-for-tts-reading.html" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/poems-for-tts-reading.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/tts-vs-human-recitation.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/tts-vs-human-recitation.html" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/tts-vs-human-recitation.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-07-01</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/wedding-speech-poem-tips.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/wedding-speech-poem-tips.html" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/wedding-speech-poem-tips.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/sijo-meter-for-ai.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/sijo-meter-for-ai.html" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/sijo-meter-for-ai.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-06-19</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/llm-korean-sijo-meter.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/llm-korean-sijo-meter.html" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/llm-korean-sijo-meter.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/ai-poetry-simplicity-preference.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/ai-poetry-simplicity-preference.html" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/ai-poetry-simplicity-preference.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/hanja-tokenizer-conflict.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/hanja-tokenizer-conflict.html" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/hanja-tokenizer-conflict.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/poetry-recitation-revival.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/poetry-recitation-revival.html" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/poetry-recitation-revival.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-07-04</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/case-wedding-toast.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/case-wedding-toast.html" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/case-wedding-toast.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/case-hwangap-tribute.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/case-hwangap-tribute.html" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/case-hwangap-tribute.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/blog/ko/case-birthday-bilingual.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/blog/ko/case-birthday-bilingual.html" />
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/blog/ko/case-birthday-bilingual.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/ko/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/about.html" />
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/ko/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/faq.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/faq.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/faq.html" />
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/ko/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/contact.html" />
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-07-10</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/about.html" />
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/en/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/faq.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/faq.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/faq.html" />
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/contact.html" />
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-07-10</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/</loc>
@@ -501,7 +498,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/" />
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-03-28</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <!-- Use Cases Pages -->
   <url>
@@ -511,7 +508,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/use-cases.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/ko/use-cases.html</loc>
@@ -520,7 +517,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/use-cases.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/en/use-cases.html</loc>
@@ -529,7 +526,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/use-cases.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <!-- Gallery Hub Pages -->
   <url>
@@ -543,21 +540,21 @@
   </url>
   <url>
     <loc>https://ai-and-poem.art/ko/gallery.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/gallery.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/en/gallery.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/en/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-and-poem.art/gallery.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ai-and-poem.art/en/gallery.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery.html" />
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
   </url>
   <!-- Gallery Category Pages: gallery-1 (Love & Farewell) -->
   <url>
@@ -567,7 +564,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-1.html" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/en/gallery-1.html</loc>
@@ -576,7 +573,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-1.html" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
   </url>
   <!-- Gallery Category Pages: gallery-2 (Nature & Seasons) -->
   <url>
@@ -586,7 +583,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-2.html" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/en/gallery-2.html</loc>
@@ -595,7 +592,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-2.html" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
   </url>
   <!-- Gallery Category Pages: gallery-3 (Comfort & Healing) -->
   <url>
@@ -605,7 +602,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-3.html" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/en/gallery-3.html</loc>
@@ -614,7 +611,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-3.html" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
   </url>
   <!-- Gallery Category Pages: gallery-4 (Daily Life & Reflection) -->
   <url>
@@ -624,7 +621,7 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-4.html" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
   <url>
     <loc>https://ai-and-poem.art/en/gallery-4.html</loc>
@@ -633,6 +630,6 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://ai-and-poem.art/ko/gallery-4.html" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
   </url>
 </urlset>

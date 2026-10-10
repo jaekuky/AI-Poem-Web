@@ -141,6 +141,31 @@ test('색인 대상 페이지와 sitemap 목록이 일치', () => {
     assert.deepEqual([...listed].filter(file => !indexable.includes(file)), [], 'sitemap에 있는 비색인 페이지');
 });
 
+// 블로그 페이지는 href가 rel보다 앞에 오므로 태그 전체를 잡은 뒤 속성을 따로 읽는다.
+function linkTags(text) {
+    return [...text.matchAll(/<(?:xhtml:)?link\b[^>]*>/g)].map(([tag]) => {
+        const attribute = name => tag.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1];
+        return { rel: attribute('rel'), hreflang: attribute('hreflang'), href: attribute('href') };
+    });
+}
+
+const hreflangSet = links => JSON.stringify(links.filter(link => link.hreflang)
+    .map(link => `${link.hreflang} ${link.href}`).sort());
+
+test('sitemap의 loc·hreflang이 각 페이지 canonical·hreflang과 일치', () => {
+    const entries = [...read('sitemap.xml').matchAll(/<url>([\s\S]*?)<\/url>/g)].map(match => match[1]);
+    assert.ok(entries.length > 0);
+    const mismatched = [];
+    for (const entry of entries) {
+        const loc = entry.match(/<loc>([^<]+)<\/loc>/)[1];
+        const pageLinks = linkTags(read(servedFile(toSitePath(loc, site))));
+        const canonical = pageLinks.find(link => link.rel === 'canonical')?.href;
+        if (canonical !== loc) mismatched.push(`${loc} → canonical ${canonical}`);
+        if (hreflangSet(linkTags(entry)) !== hreflangSet(pageLinks)) mismatched.push(`${loc} → hreflang`);
+    }
+    assert.deepEqual(mismatched, []);
+});
+
 test('한 페이지 안에서 같은 hreflang을 두 번 선언하지 않음', () => {
     const duplicated = htmlFiles.filter(file => {
         const codes = [...read(file).matchAll(/<link\b[^>]*\bhreflang="([^"]+)"/g)].map(match => match[1]);
