@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "audit:i18n": "node scripts/i18n-audit.mjs",
+    "test:i18n": "node --test scripts/i18n-audit.test.mjs"
+  },
+  "devDependencies": {
+    "cheerio": "^1.1.2"
+  }
+}

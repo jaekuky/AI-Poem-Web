@@ -1,0 +1,2934 @@
+{
+  "generatedAt": "2026-10-10T13:39:08.371Z",
+  "projectRoot": "/Users/jaekukryu/conductor/workspaces/AI-Poem-Web/boston",
+  "siteRoot": "/Users/jaekukryu/conductor/workspaces/AI-Poem-Web/boston/frontend",
+  "origin": "https://ai-and-poem.art",
+  "optionLanguageCount": 31,
+  "optionLanguages": [
+    "ar",
+    "bn",
+    "ch",
+    "da",
+    "de",
+    "el",
+    "en",
+    "es",
+    "fi",
+    "fil",
+    "fr",
+    "hi",
+    "hu",
+    "id",
+    "it",
+    "ja",
+    "ko",
+    "mn",
+    "ms",
+    "nl",
+    "no",
+    "pl",
+    "pt",
+    "ru",
+    "sv",
+    "sw",
+    "th",
+    "tr",
+    "uk",
+    "vi",
+    "zh"
+  ],
+  "selectedLanguages": [
+    "ch"
+  ],
+  "summaries": [
+    {
+      "language": "x-default",
+      "high": 10,
+      "medium": 41,
+      "low": 50,
+      "indexablePages": 9
+    },
+    {
+      "language": "ch",
+      "high": 55,
+      "medium": 65,
+      "low": 58,
+      "indexablePages": 0
+    }
+  ],
+  "findings": [
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-1.html",
+      "line": 91,
+      "code": "A2",
+      "severity": "high",
+      "message": "언어 페이지의 루트 절대 링크가 x-default 페이지로 이동: /author",
+      "suggestion": "상대 경로 또는 /ch/ 경로로 바꾸기.",
+      "commonKey": "root-absolute:/author"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-2.html",
+      "line": 90,
+      "code": "A2",
+      "severity": "high",
+      "message": "언어 페이지의 루트 절대 링크가 x-default 페이지로 이동: /author",
+      "suggestion": "상대 경로 또는 /ch/ 경로로 바꾸기.",
+      "commonKey": "root-absolute:/author"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-3.html",
+      "line": 90,
+      "code": "A2",
+      "severity": "high",
+      "message": "언어 페이지의 루트 절대 링크가 x-default 페이지로 이동: /author",
+      "suggestion": "상대 경로 또는 /ch/ 경로로 바꾸기.",
+      "commonKey": "root-absolute:/author"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-4.html",
+      "line": 90,
+      "code": "A2",
+      "severity": "high",
+      "message": "언어 페이지의 루트 절대 링크가 x-default 페이지로 이동: /author",
+      "suggestion": "상대 경로 또는 /ch/ 경로로 바꾸기.",
+      "commonKey": "root-absolute:/author"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-5.html",
+      "line": 90,
+      "code": "A2",
+      "severity": "high",
+      "message": "언어 페이지의 루트 절대 링크가 x-default 페이지로 이동: /author",
+      "suggestion": "상대 경로 또는 /ch/ 경로로 바꾸기.",
+      "commonKey": "root-absolute:/author"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/index.html",
+      "line": 93,
+      "code": "C3",
+      "severity": "high",
+      "message": "기사 링크 텍스트 \"Wie KI Gedichte schreibt: Die Begegnung von Technik und Emotion\"와 대상 h1 \"Die Prinzipien, wie KI Gedichte schreibt: Die Begegnung von Technologie und Emotion\" 불일치: blog/ch/article-1.html",
+      "suggestion": "메인 미리보기·블로그 목록 제목을 기사 h1과 맞추기.",
+      "commonKey": "article-title:blog/article-1.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/index.html",
+      "line": 106,
+      "code": "C3",
+      "severity": "high",
+      "message": "기사 링크 텍스트 \"5 Tipps für gutes Schreiben: Kreativität mit KI\"와 대상 h1 \"5 Tipps für gutes Dichten: Kreativität mit KI\" 불일치: blog/ch/article-2.html",
+      "suggestion": "메인 미리보기·블로그 목록 제목을 기사 h1과 맞추기.",
+      "commonKey": "article-title:blog/article-2.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/index.html",
+      "line": 118,
+      "code": "C3",
+      "severity": "high",
+      "message": "기사 링크 텍스트 \"Inspiration aus den Schreibtechniken berühmter Dichter\"와 대상 h1 \"Inspiration aus den Schreibweisen berühmter Dichter\" 불일치: blog/ch/article-3.html",
+      "suggestion": "메인 미리보기·블로그 목록 제목을 기사 h1과 맞추기.",
+      "commonKey": "article-title:blog/article-3.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/index.html",
+      "line": 131,
+      "code": "C3",
+      "severity": "high",
+      "message": "기사 링크 텍스트 \"Die Zukunft des KI-Gedichtgenerators: Wird er Autoren ersetzen?\"와 대상 h1 \"Die Zukunft des AI Gedichtgenerators: Wird er die Schriftsteller ersetzen?\" 불일치: blog/ch/article-4.html",
+      "suggestion": "메인 미리보기·블로그 목록 제목을 기사 h1과 맞추기.",
+      "commonKey": "article-title:blog/article-4.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/index.html",
+      "line": 143,
+      "code": "C3",
+      "severity": "high",
+      "message": "기사 링크 텍스트 \"Berührende Reden und Briefe in 10 Sekunden mit KI erstellen\"와 대상 h1 \"Berührende Reden und Briefe, in 10 Sekunden mit AI erstellen\" 불일치: blog/ch/article-5.html",
+      "suggestion": "메인 미리보기·블로그 목록 제목을 기사 h1과 맞추기.",
+      "commonKey": "article-title:blog/article-5.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/about.html",
+      "line": 65,
+      "code": "C1",
+      "severity": "high",
+      "message": "헤더 로고 h1 텍스트가 \"AI & Poem\"이 아님: \"KI & Gedicht\".",
+      "suggestion": "사이트 헤더 로고 h1 텍스트를 AI & Poem으로 통일.",
+      "commonKey": "header-logo:KI & Gedicht"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/author.html",
+      "line": 1,
+      "code": "A3",
+      "severity": "high",
+      "message": "같은 ch 페이지에서 연결되지 않는 페이지: ch/author.html",
+      "suggestion": "언어별 메인, 내비게이션, 블로그 목록 중 적절한 곳에서 링크 추가.",
+      "commonKey": "orphan:author.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/author.html",
+      "line": 1,
+      "code": "C1",
+      "severity": "high",
+      "message": "헤더 로고 h1 텍스트가 \"AI & Poem\"이 아님: \"KI & Gedicht\".",
+      "suggestion": "사이트 헤더 로고 h1 텍스트를 AI & Poem으로 통일.",
+      "commonKey": "header-logo:KI & Gedicht"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/contact.html",
+      "line": 6,
+      "code": "C1",
+      "severity": "high",
+      "message": "헤더 로고 h1 텍스트가 \"AI & Poem\"이 아님: \"KI & Gedicht\".",
+      "suggestion": "사이트 헤더 로고 h1 텍스트를 AI & Poem으로 통일.",
+      "commonKey": "header-logo:KI & Gedicht"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/faq.html",
+      "line": 1,
+      "code": "A3",
+      "severity": "high",
+      "message": "같은 ch 페이지에서 연결되지 않는 페이지: ch/faq.html",
+      "suggestion": "언어별 메인, 내비게이션, 블로그 목록 중 적절한 곳에서 링크 추가.",
+      "commonKey": "orphan:faq.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/faq.html",
+      "line": 1,
+      "code": "C1",
+      "severity": "high",
+      "message": "헤더 로고 h1 텍스트가 \"AI & Poem\"이 아님: \"KI & Gedicht\".",
+      "suggestion": "사이트 헤더 로고 h1 텍스트를 AI & Poem으로 통일.",
+      "commonKey": "header-logo:KI & Gedicht"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/gallery.html",
+      "line": 1,
+      "code": "A3",
+      "severity": "high",
+      "message": "같은 ch 페이지에서 연결되지 않는 페이지: ch/gallery.html",
+      "suggestion": "언어별 메인, 내비게이션, 블로그 목록 중 적절한 곳에서 링크 추가.",
+      "commonKey": "orphan:gallery.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/gallery.html",
+      "line": 1,
+      "code": "C1",
+      "severity": "high",
+      "message": "헤더 로고 h1 텍스트가 \"AI & Poem\"이 아님: \"KI & Gedicht\".",
+      "suggestion": "사이트 헤더 로고 h1 텍스트를 AI & Poem으로 통일.",
+      "commonKey": "header-logo:KI & Gedicht"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 86,
+      "code": "C4",
+      "severity": "high",
+      "message": "FAQ 1 화면과 JSON-LD 불일치. 화면 질문=\"Wie schnäll macht AI & Poem es Gedicht?\", JSON-LD 질문=\"Wie schnäll macht AI & Poem es Gedicht?\".",
+      "suggestion": "summary·답변과 FAQPage mainEntity를 같은 문구로 동기화.",
+      "commonKey": "faq-content:0"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 94,
+      "code": "C4",
+      "severity": "high",
+      "message": "FAQ 2 화면과 JSON-LD 불일치. 화면 질문=\"Cha ich s Gedicht kommerziell bruuche?\", JSON-LD 질문=\"Cha ich s Gedicht kommerziell bruuche?\".",
+      "suggestion": "summary·답변과 FAQPage mainEntity를 같은 문구로 동기화.",
+      "commonKey": "faq-content:1"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 102,
+      "code": "C4",
+      "severity": "high",
+      "message": "FAQ 3 화면과 JSON-LD 불일치. 화면 질문=\"Macht s Tool d Vorlesig automatisch?\", JSON-LD 질문=\"Macht s Tool d Vorlesig automatisch?\".",
+      "suggestion": "summary·답변과 FAQPage mainEntity를 같은 문구로 동기화.",
+      "commonKey": "faq-content:2"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 284,
+      "code": "C3",
+      "severity": "high",
+      "message": "기사 링크 텍스트 \"Blog\"와 대상 h1 \"Die Prinzipien, wie KI Gedichte schreibt: Die Begegnung von Technologie und Emotion\" 불일치: blog/ch/article-1.html",
+      "suggestion": "메인 미리보기·블로그 목록 제목을 기사 h1과 맞추기.",
+      "commonKey": "article-title:blog/article-1.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 284,
+      "code": "C3",
+      "severity": "high",
+      "message": "기사 링크 텍스트 \"Prinzipien und Zukunft von KI-Gedichtgeneratoren\"와 대상 h1 \"Die Prinzipien, wie KI Gedichte schreibt: Die Begegnung von Technologie und Emotion\" 불일치: blog/ch/article-1.html",
+      "suggestion": "메인 미리보기·블로그 목록 제목을 기사 h1과 맞추기.",
+      "commonKey": "article-title:blog/article-1.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 324,
+      "code": "C3",
+      "severity": "high",
+      "message": "기사 링크 텍스트 \"Wie man berührende Hochzeitsreden schreibt\"와 대상 h1 \"5 Tipps für gutes Dichten: Kreativität mit KI\" 불일치: blog/ch/article-2.html",
+      "suggestion": "메인 미리보기·블로그 목록 제목을 기사 h1과 맞추기.",
+      "commonKey": "article-title:blog/article-2.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 330,
+      "code": "C3",
+      "severity": "high",
+      "message": "기사 링크 텍스트 \"Sammlung emotionaler Zitate, die in sozialen Netzwerken beliebt sind\"와 대상 h1 \"Inspiration aus den Schreibweisen berühmter Dichter\" 불일치: blog/ch/article-3.html",
+      "suggestion": "메인 미리보기·블로그 목록 제목을 기사 h1과 맞추기.",
+      "commonKey": "article-title:blog/article-3.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/privacy.html",
+      "line": 1,
+      "code": "A5",
+      "severity": "high",
+      "message": "ko 동등 페이지에는 있으나 없는 header: privacy.html",
+      "suggestion": "ko 페이지의 header 구조를 이 페이지에 동기화.",
+      "commonKey": "missing-feature:privacy.html:header"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/terms.html",
+      "line": 1,
+      "code": "A5",
+      "severity": "high",
+      "message": "ko 동등 페이지에는 있으나 없는 header: terms.html",
+      "suggestion": "ko 페이지의 header 구조를 이 페이지에 동기화.",
+      "commonKey": "missing-feature:terms.html:header"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/use-cases.html",
+      "line": 1,
+      "code": "A3",
+      "severity": "high",
+      "message": "같은 ch 페이지에서 연결되지 않는 페이지: ch/use-cases.html",
+      "suggestion": "언어별 메인, 내비게이션, 블로그 목록 중 적절한 곳에서 링크 추가.",
+      "commonKey": "orphan:use-cases.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/use-cases.html",
+      "line": 1,
+      "code": "C1",
+      "severity": "high",
+      "message": "헤더 로고 h1 텍스트가 \"AI & Poem\"이 아님: \"KI & Gedicht\".",
+      "suggestion": "사이트 헤더 로고 h1 텍스트를 AI & Poem으로 통일.",
+      "commonKey": "header-logo:KI & Gedicht"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 27,
+      "code": "C4",
+      "severity": "high",
+      "message": "FAQ 2 화면과 JSON-LD 불일치. 화면 질문=\"회원가입이나 로그인이 필요한가요?\", JSON-LD 질문=\"회원가입이나 로그인이 필요한가요?\".",
+      "suggestion": "summary·답변과 FAQPage mainEntity를 같은 문구로 동기화.",
+      "commonKey": "faq-content:1"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 37,
+      "code": "C4",
+      "severity": "high",
+      "message": "FAQ 4 화면과 JSON-LD 불일치. 화면 질문=\"어떤 언어를 지원하나요?\", JSON-LD 질문=\"어떤 언어를 지원하나요?\".",
+      "suggestion": "summary·답변과 FAQPage mainEntity를 같은 문구로 동기화.",
+      "commonKey": "faq-content:3"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 42,
+      "code": "C4",
+      "severity": "high",
+      "message": "FAQ 5 화면과 JSON-LD 불일치. 화면 질문=\"음성 낭독 기능은 어떻게 사용하나요?\", JSON-LD 질문=\"음성 낭독 기능은 어떻게 사용하나요?\".",
+      "suggestion": "summary·답변과 FAQPage mainEntity를 같은 문구로 동기화.",
+      "commonKey": "faq-content:4"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 47,
+      "code": "C4",
+      "severity": "high",
+      "message": "FAQ 6 화면과 JSON-LD 불일치. 화면 질문=\"어떤 주제로도 시를 만들 수 있나요?\", JSON-LD 질문=\"어떤 주제로도 시를 만들 수 있나요?\".",
+      "suggestion": "summary·답변과 FAQPage mainEntity를 같은 문구로 동기화.",
+      "commonKey": "faq-content:5"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 62,
+      "code": "C4",
+      "severity": "high",
+      "message": "FAQ 9 화면과 JSON-LD 불일치. 화면 질문=\"AI가 시를 어떻게 만드나요?\", JSON-LD 질문=\"AI가 시를 어떻게 만드나요?\".",
+      "suggestion": "summary·답변과 FAQPage mainEntity를 같은 문구로 동기화.",
+      "commonKey": "faq-content:8"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 67,
+      "code": "C4",
+      "severity": "high",
+      "message": "FAQ 10 화면과 JSON-LD 불일치. 화면 질문=\"매번 다른 시가 나오나요?\", JSON-LD 질문=\"매번 다른 시가 나오나요?\".",
+      "suggestion": "summary·답변과 FAQPage mainEntity를 같은 문구로 동기화.",
+      "commonKey": "faq-content:9"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 72,
+      "code": "C4",
+      "severity": "high",
+      "message": "FAQ 11 화면과 JSON-LD 불일치. 화면 질문=\"AI 시와 사람이 쓴 시는 어떻게 다른가요?\", JSON-LD 질문=\"AI 시와 사람이 쓴 시는 어떻게 다른가요?\".",
+      "suggestion": "summary·답변과 FAQPage mainEntity를 같은 문구로 동기화.",
+      "commonKey": "faq-content:10"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 82,
+      "code": "C4",
+      "severity": "high",
+      "message": "FAQ 13 화면과 JSON-LD 불일치. 화면 질문=\"AI 시의 저작권은 누구에게 있나요?\", JSON-LD 질문=\"AI 시의 저작권은 누구에게 있나요?\".",
+      "suggestion": "summary·답변과 FAQPage mainEntity를 같은 문구로 동기화.",
+      "commonKey": "faq-content:12"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 87,
+      "code": "C4",
+      "severity": "high",
+      "message": "FAQ 14 화면과 JSON-LD 불일치. 화면 질문=\"교육 목적으로 활용할 수 있나요?\", JSON-LD 질문=\"교육 목적으로 활용할 수 있나요?\".",
+      "suggestion": "summary·답변과 FAQPage mainEntity를 같은 문구로 동기화.",
+      "commonKey": "faq-content:13"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 92,
+      "code": "C4",
+      "severity": "high",
+      "message": "FAQ 15 화면과 JSON-LD 불일치. 화면 질문=\"치유나 감정 표현에도 시를 활용할 수 있나요?\", JSON-LD 질문=\"치유나 감정 표현에도 시를 활용할 수 있나요?\".",
+      "suggestion": "summary·답변과 FAQPage mainEntity를 같은 문구로 동기화.",
+      "commonKey": "faq-content:14"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/ai-poem-prompt-patterns.html",
+      "suggestion": "ch/ai-poem-prompt-patterns.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/ai-poem-prompt-patterns.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/ai-poetry-simplicity-preference.html",
+      "suggestion": "ch/ai-poetry-simplicity-preference.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/ai-poetry-simplicity-preference.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/article-10.html",
+      "suggestion": "ch/article-10.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/article-10.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/article-6.html",
+      "suggestion": "ch/article-6.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/article-6.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/article-7.html",
+      "suggestion": "ch/article-7.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/article-7.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/article-8.html",
+      "suggestion": "ch/article-8.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/article-8.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/article-9.html",
+      "suggestion": "ch/article-9.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/article-9.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/case-birthday-bilingual.html",
+      "suggestion": "ch/case-birthday-bilingual.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/case-birthday-bilingual.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/case-hwangap-tribute.html",
+      "suggestion": "ch/case-hwangap-tribute.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/case-hwangap-tribute.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/case-wedding-toast.html",
+      "suggestion": "ch/case-wedding-toast.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/case-wedding-toast.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/hanja-tokenizer-conflict.html",
+      "suggestion": "ch/hanja-tokenizer-conflict.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/hanja-tokenizer-conflict.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/isang-ogamdo.html",
+      "suggestion": "ch/isang-ogamdo.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/isang-ogamdo.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/jeongjiyong-hyangsu.html",
+      "suggestion": "ch/jeongjiyong-hyangsu.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/jeongjiyong-hyangsu.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/kimsowol-jindallaekkot.html",
+      "suggestion": "ch/kimsowol-jindallaekkot.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/kimsowol-jindallaekkot.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/llm-korean-sijo-meter.html",
+      "suggestion": "ch/llm-korean-sijo-meter.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/llm-korean-sijo-meter.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/poems-for-tts-reading.html",
+      "suggestion": "ch/poems-for-tts-reading.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/poems-for-tts-reading.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/poetry-recitation-revival.html",
+      "suggestion": "ch/poetry-recitation-revival.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/poetry-recitation-revival.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/sijo-meter-for-ai.html",
+      "suggestion": "ch/sijo-meter-for-ai.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/sijo-meter-for-ai.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/tts-vs-human-recitation.html",
+      "suggestion": "ch/tts-vs-human-recitation.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/tts-vs-human-recitation.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/wedding-speech-poem-tips.html",
+      "suggestion": "ch/wedding-speech-poem-tips.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/wedding-speech-poem-tips.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: blog/yoondongju-seosi.html",
+      "suggestion": "ch/yoondongju-seosi.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:blog/yoondongju-seosi.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: 404.html",
+      "suggestion": "ch/404.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:404.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: gallery-1.html",
+      "suggestion": "ch/gallery-1.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:gallery-1.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: gallery-2.html",
+      "suggestion": "ch/gallery-2.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:gallery-2.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: gallery-3.html",
+      "suggestion": "ch/gallery-3.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:gallery-3.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ko/index.html",
+      "line": 1,
+      "code": "A4",
+      "severity": "high",
+      "message": "ko 기준 누락 페이지: gallery-4.html",
+      "suggestion": "ch/gallery-4.html에 대응 페이지 추가.",
+      "commonKey": "missing-ko-page:gallery-4.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/404.html",
+      "line": 91,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href index.html의 링크 텍스트 7종류: AI & Poem / AI 시 생성하러 가기 → / 홈으로 돌아가기 / 홈",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:index.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/404.html",
+      "line": 91,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href index.html의 링크 텍스트 7종류: AI & Poem / AI 시 생성하러 가기 → / 홈으로 돌아가기 / 홈",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:index.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/404.html",
+      "line": 91,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href index.html의 링크 텍스트 7종류: AI & Poem / AI 시 생성하러 가기 → / 홈으로 돌아가기 / 홈",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:index.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/404.html",
+      "line": 97,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href about.html의 링크 텍스트 2종류: 서비스 소개 / 소개",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:about.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/404.html",
+      "line": 97,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href about.html의 링크 텍스트 2종류: 서비스 소개 / 소개",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:about.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/404.html",
+      "line": 99,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href gallery.html의 링크 텍스트 3종류: 갤러리 / 시 갤러리 / 갤러리 페이지",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:gallery.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/404.html",
+      "line": 99,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href gallery.html의 링크 텍스트 3종류: 갤러리 / 시 갤러리 / 갤러리 페이지",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:gallery.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/404.html",
+      "line": 100,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href faq.html의 링크 텍스트 3종류: FAQ / 자주 묻는 질문 / FAQ 전체 보기 →",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:faq.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/404.html",
+      "line": 100,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href faq.html의 링크 텍스트 3종류: FAQ / 자주 묻는 질문 / FAQ 전체 보기 →",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:faq.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/404.html",
+      "line": 101,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href contact.html의 링크 텍스트 2종류: 문의하기 / 문의 페이지",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:contact.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/404.html",
+      "line": 154,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href author.html의 링크 텍스트 3종류: 저자 / 저자 소개 / 저자 페이지",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:author.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/404.html",
+      "line": 156,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"All rights reserved\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:All rights reserved"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/about.html",
+      "line": 71,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href index.html의 링크 텍스트 7종류: AI & Poem / AI 시 생성하러 가기 → / 홈으로 돌아가기 / 홈",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:index.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/about.html",
+      "line": 79,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href author.html의 링크 텍스트 3종류: 저자 / 저자 소개 / 저자 페이지",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:author.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/about.html",
+      "line": 79,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href author.html의 링크 텍스트 3종류: 저자 / 저자 소개 / 저자 페이지",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:author.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/about.html",
+      "line": 115,
+      "code": "C5",
+      "severity": "medium",
+      "message": "수동 확인, 지원 언어 수 31개. 화면 문장: 한국어, 영어, 일본어, 중국어, 프랑스어 등 31개 언어를 지원하여 글로벌 사용자들이 모국어로 시를 즐깁니다.",
+      "suggestion": "표기 숫자가 실제 option 수 31와 맞는지 확인.",
+      "commonKey": "language-count-manual-check"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/about.html",
+      "line": 143,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"All rights reserved\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:All rights reserved"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/author.html",
+      "line": 11,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href index.html의 링크 텍스트 7종류: AI & Poem / AI 시 생성하러 가기 → / 홈으로 돌아가기 / 홈",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:index.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/author.html",
+      "line": 120,
+      "code": "C5",
+      "severity": "medium",
+      "message": "수동 확인, 지원 언어 수 31개. 화면 문장: AI & Poem은 31개 언어를 지원하는 다국어 시 생성 서비스입니다.",
+      "suggestion": "표기 숫자가 실제 option 수 31와 맞는지 확인.",
+      "commonKey": "language-count-manual-check"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/author.html",
+      "line": 150,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"All rights reserved\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:All rights reserved"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-1.html",
+      "line": 72,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href ch/index.html의 링크 텍스트 4종류: AI & Poem / ← Zurück zur Hauptseite / KI & Gedicht / Heim",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:ch/index.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-1.html",
+      "line": 72,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href blog/ch/index.html의 링크 텍스트 2종류: ← Zurück zur Liste / Blog",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:blog/ch/index.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-1.html",
+      "line": 91,
+      "code": "D2",
+      "severity": "medium",
+      "message": "동명 en 페이지와 같은 2단어 이상 텍스트: Ryu Jae-kuk",
+      "suggestion": "페이지 언어로 번역하거나 공통 고정 문구인지 확인.",
+      "commonKey": "same-en-text:Ryu Jae-kuk"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-1.html",
+      "line": 163,
+      "code": "A5",
+      "severity": "medium",
+      "message": "A5 푸터 구조 불일치: blog/article-1.html (class 또는 링크 href 집합이 ko와 다름).",
+      "suggestion": "ko 동등 페이지의 footer class와 링크 href 집합을 맞추기.",
+      "commonKey": "footer-structure:blog/article-1.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-1.html",
+      "line": 164,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href ch/privacy.html의 링크 텍스트 4종류: Datenschutzrichtlinie / Datenschutzbestimmungen / Datenschutz / Datenschutzerklärung",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:ch/privacy.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-1.html",
+      "line": 171,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href ch/terms.html의 링크 텍스트 2종류: Nutzungsbedingungen / Nutzigsbedingige",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:ch/terms.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-2.html",
+      "line": 90,
+      "code": "D2",
+      "severity": "medium",
+      "message": "동명 en 페이지와 같은 2단어 이상 텍스트: Ryu Jae-kuk",
+      "suggestion": "페이지 언어로 번역하거나 공통 고정 문구인지 확인.",
+      "commonKey": "same-en-text:Ryu Jae-kuk"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-2.html",
+      "line": 150,
+      "code": "A5",
+      "severity": "medium",
+      "message": "A5 푸터 구조 불일치: blog/article-2.html (class 또는 링크 href 집합이 ko와 다름).",
+      "suggestion": "ko 동등 페이지의 footer class와 링크 href 집합을 맞추기.",
+      "commonKey": "footer-structure:blog/article-2.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-3.html",
+      "line": 90,
+      "code": "D2",
+      "severity": "medium",
+      "message": "동명 en 페이지와 같은 2단어 이상 텍스트: Ryu Jae-kuk",
+      "suggestion": "페이지 언어로 번역하거나 공통 고정 문구인지 확인.",
+      "commonKey": "same-en-text:Ryu Jae-kuk"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-3.html",
+      "line": 154,
+      "code": "A5",
+      "severity": "medium",
+      "message": "A5 푸터 구조 불일치: blog/article-3.html (class 또는 링크 href 집합이 ko와 다름).",
+      "suggestion": "ko 동등 페이지의 footer class와 링크 href 집합을 맞추기.",
+      "commonKey": "footer-structure:blog/article-3.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-3.html",
+      "line": 155,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href ch/privacy.html의 링크 텍스트 4종류: Datenschutzrichtlinie / Datenschutzbestimmungen / Datenschutz / Datenschutzerklärung",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:ch/privacy.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-4.html",
+      "line": 90,
+      "code": "D2",
+      "severity": "medium",
+      "message": "동명 en 페이지와 같은 2단어 이상 텍스트: Ryu Jae-kuk",
+      "suggestion": "페이지 언어로 번역하거나 공통 고정 문구인지 확인.",
+      "commonKey": "same-en-text:Ryu Jae-kuk"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-4.html",
+      "line": 140,
+      "code": "A5",
+      "severity": "medium",
+      "message": "A5 푸터 구조 불일치: blog/article-4.html (class 또는 링크 href 집합이 ko와 다름).",
+      "suggestion": "ko 동등 페이지의 footer class와 링크 href 집합을 맞추기.",
+      "commonKey": "footer-structure:blog/article-4.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-5.html",
+      "line": 90,
+      "code": "D2",
+      "severity": "medium",
+      "message": "동명 en 페이지와 같은 2단어 이상 텍스트: Ryu Jae-kuk",
+      "suggestion": "페이지 언어로 번역하거나 공통 고정 문구인지 확인.",
+      "commonKey": "same-en-text:Ryu Jae-kuk"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-5.html",
+      "line": 137,
+      "code": "A5",
+      "severity": "medium",
+      "message": "A5 푸터 구조 불일치: blog/article-5.html (class 또는 링크 href 집합이 ko와 다름).",
+      "suggestion": "ko 동등 페이지의 footer class와 링크 href 집합을 맞추기.",
+      "commonKey": "footer-structure:blog/article-5.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/index.html",
+      "line": 1,
+      "code": "D2",
+      "severity": "medium",
+      "message": "동명 en 페이지와 같은 2단어 이상 텍스트: AI & Poem Blog",
+      "suggestion": "페이지 언어로 번역하거나 공통 고정 문구인지 확인.",
+      "commonKey": "same-en-text:AI & Poem Blog"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/index.html",
+      "line": 72,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href ch/index.html의 링크 텍스트 4종류: AI & Poem / ← Zurück zur Hauptseite / KI & Gedicht / Heim",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:ch/index.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/index.html",
+      "line": 93,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href blog/ch/article-1.html의 링크 텍스트 3종류: Wie KI Gedichte schreibt: Die Begegnung von Technik und Emotion / Blog / Prinzipien und Zukunft von KI-Gedichtgeneratoren",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:blog/ch/article-1.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/index.html",
+      "line": 106,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href blog/ch/article-2.html의 링크 텍스트 2종류: 5 Tipps für gutes Schreiben: Kreativität mit KI / Wie man berührende Hochzeitsreden schreibt",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:blog/ch/article-2.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/index.html",
+      "line": 118,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href blog/ch/article-3.html의 링크 텍스트 2종류: Inspiration aus den Schreibtechniken berühmter Dichter / Sammlung emotionaler Zitate, die in sozialen Netzwerken beliebt sind",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:blog/ch/article-3.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/index.html",
+      "line": 158,
+      "code": "A5",
+      "severity": "medium",
+      "message": "A5 푸터 구조 불일치: blog/index.html (class 또는 링크 href 집합이 ko와 다름).",
+      "suggestion": "ko 동등 페이지의 footer class와 링크 href 집합을 맞추기.",
+      "commonKey": "footer-structure:blog/index.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/about.html",
+      "line": 10,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href ch/about.html의 링크 텍스트 2종류: Um / Über uns",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:ch/about.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/about.html",
+      "line": 65,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href ch/index.html의 링크 텍스트 4종류: AI & Poem / ← Zurück zur Hauptseite / KI & Gedicht / Heim",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:ch/index.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/about.html",
+      "line": 65,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href ch/index.html의 링크 텍스트 4종류: AI & Poem / ← Zurück zur Hauptseite / KI & Gedicht / Heim",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:ch/index.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/about.html",
+      "line": 72,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href blog/ch/index.html의 링크 텍스트 2종류: ← Zurück zur Liste / Blog",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:blog/ch/index.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/about.html",
+      "line": 97,
+      "code": "C5",
+      "severity": "medium",
+      "message": "수동 확인, 지원 언어 수 31개. 화면 문장: Wir unterstützen 31 Sprachen, darunter Koreanisch, Englisch, Japanisch, Chinesisch und Französisch, sodass Benutzer weltweit Gedichte in ihrer Muttersprache genießen können.",
+      "suggestion": "표기 숫자가 실제 option 수 31와 맞는지 확인.",
+      "commonKey": "language-count-manual-check"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/about.html",
+      "line": 106,
+      "code": "A5",
+      "severity": "medium",
+      "message": "A5 푸터 구조 불일치: about.html (class 또는 링크 href 집합이 ko와 다름).",
+      "suggestion": "ko 동등 페이지의 footer class와 링크 href 집합을 맞추기.",
+      "commonKey": "footer-structure:about.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/author.html",
+      "line": 86,
+      "code": "A5",
+      "severity": "medium",
+      "message": "A5 푸터 구조 불일치: author.html (class 또는 링크 href 집합이 ko와 다름).",
+      "suggestion": "ko 동등 페이지의 footer class와 링크 href 집합을 맞추기.",
+      "commonKey": "footer-structure:author.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/contact.html",
+      "line": 36,
+      "code": "D2",
+      "severity": "medium",
+      "message": "동명 en 페이지와 같은 2단어 이상 텍스트: velog.io/@jaekuk2/posts",
+      "suggestion": "페이지 언어로 번역하거나 공통 고정 문구인지 확인.",
+      "commonKey": "same-en-text:velog.io/@jaekuk2/posts"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/contact.html",
+      "line": 37,
+      "code": "D2",
+      "severity": "medium",
+      "message": "동명 en 페이지와 같은 2단어 이상 텍스트: facebook.com/jaekuk",
+      "suggestion": "페이지 언어로 번역하거나 공통 고정 문구인지 확인.",
+      "commonKey": "same-en-text:facebook.com/jaekuk"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/contact.html",
+      "line": 132,
+      "code": "A5",
+      "severity": "medium",
+      "message": "A5 푸터 구조 불일치: contact.html (class 또는 링크 href 집합이 ko와 다름).",
+      "suggestion": "ko 동등 페이지의 footer class와 링크 href 집합을 맞추기.",
+      "commonKey": "footer-structure:contact.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/contact.html",
+      "line": 142,
+      "code": "D2",
+      "severity": "medium",
+      "message": "동명 en 페이지와 같은 2단어 이상 텍스트: © 2026 ai-and-poem.art. All rights reserved.",
+      "suggestion": "페이지 언어로 번역하거나 공통 고정 문구인지 확인.",
+      "commonKey": "same-en-text:© 2026 ai-and-poem.art. All rights reserved."
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/contact.html",
+      "line": 142,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"All rights reserved\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:All rights reserved"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/faq.html",
+      "line": 95,
+      "code": "C5",
+      "severity": "medium",
+      "message": "수동 확인, 지원 언어 수 31개. 화면 문장: Wir unterstützen 31 Sprachen, darunter Schweizerdeutsch, Deutsch, Englisch, Koreanisch, Japanisch, Chinesisch, Spanisch und Französisch.",
+      "suggestion": "표기 숫자가 실제 option 수 31와 맞는지 확인.",
+      "commonKey": "language-count-manual-check"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/faq.html",
+      "line": 104,
+      "code": "A5",
+      "severity": "medium",
+      "message": "A5 푸터 구조 불일치: faq.html (class 또는 링크 href 집합이 ko와 다름).",
+      "suggestion": "ko 동등 페이지의 footer class와 링크 href 집합을 맞추기.",
+      "commonKey": "footer-structure:faq.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/gallery.html",
+      "line": 85,
+      "code": "A5",
+      "severity": "medium",
+      "message": "A5 푸터 구조 불일치: gallery.html (class 또는 링크 href 집합이 ko와 다름).",
+      "suggestion": "ko 동등 페이지의 footer class와 링크 href 집합을 맞추기.",
+      "commonKey": "footer-structure:gallery.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 1,
+      "code": "C4",
+      "severity": "medium",
+      "message": "CreativeWork text와 화면 pre 내용이 일치하지 않음.",
+      "suggestion": "CreativeWork text를 화면에 보이는 시 전문과 동기화.",
+      "commonKey": "creative-work-poem-mismatch"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 1,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"Service Overview\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:Service Overview"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 166,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href ch/about.html의 링크 텍스트 2종류: Um / Über uns",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:ch/about.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 190,
+      "code": "D1",
+      "severity": "medium",
+      "message": "비한국어 화면 텍스트에 한글 포함: 한국어",
+      "suggestion": "페이지 언어로 번역하거나 의도한 고유명사인지 확인.",
+      "commonKey": "hangul-visible-text"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 218,
+      "code": "D2",
+      "severity": "medium",
+      "message": "동명 en 페이지와 같은 2단어 이상 텍스트: Poem form",
+      "suggestion": "페이지 언어로 번역하거나 공통 고정 문구인지 확인.",
+      "commonKey": "same-en-text:Poem form"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 218,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"Poem form\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:Poem form"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 235,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 속성 aria-label=\"Stop\" 발견.",
+      "suggestion": "페이지 언어에 맞는 aria-label로 번역.",
+      "commonKey": "known-untranslated:aria-stop"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 236,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"Speed\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:Speed"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 238,
+      "code": "D2",
+      "severity": "medium",
+      "message": "동명 en 페이지와 같은 2단어 이상 텍스트: 0.8×",
+      "suggestion": "페이지 언어로 번역하거나 공통 고정 문구인지 확인.",
+      "commonKey": "same-en-text:0.8×"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 239,
+      "code": "D2",
+      "severity": "medium",
+      "message": "동명 en 페이지와 같은 2단어 이상 텍스트: 1.0×",
+      "suggestion": "페이지 언어로 번역하거나 공통 고정 문구인지 확인.",
+      "commonKey": "same-en-text:1.0×"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 240,
+      "code": "D2",
+      "severity": "medium",
+      "message": "동명 en 페이지와 같은 2단어 이상 텍스트: 1.2×",
+      "suggestion": "페이지 언어로 번역하거나 공통 고정 문구인지 확인.",
+      "commonKey": "same-en-text:1.2×"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 242,
+      "code": "D2",
+      "severity": "medium",
+      "message": "동명 en 페이지와 같은 2단어 이상 텍스트: AI voice",
+      "suggestion": "페이지 언어로 번역하거나 공통 고정 문구인지 확인.",
+      "commonKey": "same-en-text:AI voice"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 242,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"AI voice\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:AI voice"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 253,
+      "code": "C5",
+      "severity": "medium",
+      "message": "수동 확인, 지원 언어 수 31개. 화면 문장: Mit Unterstützung von 31 Sprachen, darunter Koreanisch, Englisch und Französisch, können Sie Texte für verschiedene Zwecke wie Hochzeitsreden, Liebesbriefe und emotionale SNS-Bildunterschriften in nur 10 Sekunden fertigstellen.",
+      "suggestion": "표기 숫자가 실제 option 수 31와 맞는지 확인.",
+      "commonKey": "language-count-manual-check"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 284,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href blog/ch/article-1.html의 링크 텍스트 3종류: Wie KI Gedichte schreibt: Die Begegnung von Technik und Emotion / Blog / Prinzipien und Zukunft von KI-Gedichtgeneratoren",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:blog/ch/article-1.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 284,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href blog/ch/article-1.html의 링크 텍스트 3종류: Wie KI Gedichte schreibt: Die Begegnung von Technik und Emotion / Blog / Prinzipien und Zukunft von KI-Gedichtgeneratoren",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:blog/ch/article-1.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 324,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href blog/ch/article-2.html의 링크 텍스트 2종류: 5 Tipps für gutes Schreiben: Kreativität mit KI / Wie man berührende Hochzeitsreden schreibt",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:blog/ch/article-2.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 330,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href blog/ch/article-3.html의 링크 텍스트 2종류: Inspiration aus den Schreibtechniken berühmter Dichter / Sammlung emotionaler Zitate, die in sozialen Netzwerken beliebt sind",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:blog/ch/article-3.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 337,
+      "code": "A5",
+      "severity": "medium",
+      "message": "A5 푸터 구조 불일치: index.html (class 또는 링크 href 집합이 ko와 다름).",
+      "suggestion": "ko 동등 페이지의 footer class와 링크 href 집합을 맞추기.",
+      "commonKey": "footer-structure:index.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 346,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href ch/privacy.html의 링크 텍스트 4종류: Datenschutzrichtlinie / Datenschutzbestimmungen / Datenschutz / Datenschutzerklärung",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:ch/privacy.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 348,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href ch/terms.html의 링크 텍스트 2종류: Nutzungsbedingungen / Nutzigsbedingige",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:ch/terms.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/privacy.html",
+      "line": 61,
+      "code": "D2",
+      "severity": "medium",
+      "message": "동명 en 페이지와 같은 2단어 이상 텍스트: G-1CVHJYZWNC",
+      "suggestion": "페이지 언어로 번역하거나 공통 고정 문구인지 확인.",
+      "commonKey": "same-en-text:G-1CVHJYZWNC"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/privacy.html",
+      "line": 84,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"Speed\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:Speed"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/privacy.html",
+      "line": 104,
+      "code": "D2",
+      "severity": "medium",
+      "message": "동명 en 페이지와 같은 2단어 이상 텍스트: ca-pub-7349192768683799",
+      "suggestion": "페이지 언어로 번역하거나 공통 고정 문구인지 확인.",
+      "commonKey": "same-en-text:ca-pub-7349192768683799"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/privacy.html",
+      "line": 119,
+      "code": "D2",
+      "severity": "medium",
+      "message": "동명 en 페이지와 같은 2단어 이상 텍스트: aboutads.info",
+      "suggestion": "페이지 언어로 번역하거나 공통 고정 문구인지 확인.",
+      "commonKey": "same-en-text:aboutads.info"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/privacy.html",
+      "line": 161,
+      "code": "A5",
+      "severity": "medium",
+      "message": "A5 푸터 구조 불일치: privacy.html (class 또는 링크 href 집합이 ko와 다름).",
+      "suggestion": "ko 동등 페이지의 footer class와 링크 href 집합을 맞추기.",
+      "commonKey": "footer-structure:privacy.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/terms.html",
+      "line": 110,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href ch/privacy.html의 링크 텍스트 4종류: Datenschutzrichtlinie / Datenschutzbestimmungen / Datenschutz / Datenschutzerklärung",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:ch:ch/privacy.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/terms.html",
+      "line": 131,
+      "code": "A5",
+      "severity": "medium",
+      "message": "A5 푸터 구조 불일치: terms.html (class 또는 링크 href 집합이 ko와 다름).",
+      "suggestion": "ko 동등 페이지의 footer class와 링크 href 집합을 맞추기.",
+      "commonKey": "footer-structure:terms.html"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/use-cases.html",
+      "line": 90,
+      "code": "A5",
+      "severity": "medium",
+      "message": "A5 푸터 구조 불일치: use-cases.html (class 또는 링크 href 집합이 ko와 다름).",
+      "suggestion": "ko 동등 페이지의 footer class와 링크 href 집합을 맞추기.",
+      "commonKey": "footer-structure:use-cases.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/contact.html",
+      "line": 151,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"All rights reserved\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:All rights reserved"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 207,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href gallery.html의 링크 텍스트 3종류: 갤러리 / 시 갤러리 / 갤러리 페이지",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:gallery.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 209,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href contact.html의 링크 텍스트 2종류: 문의하기 / 문의 페이지",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:contact.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 245,
+      "code": "C5",
+      "severity": "medium",
+      "message": "수동 확인, 지원 언어 수 31개. 화면 문장: 한국어, 영어, 일본어, 중국어, 스페인어, 프랑스어를 포함해 31개 언어를 지원합니다.",
+      "suggestion": "표기 숫자가 실제 option 수 31와 맞는지 확인.",
+      "commonKey": "language-count-manual-check"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 245,
+      "code": "C5",
+      "severity": "medium",
+      "message": "수동 확인, 지원 언어 수 31개. 화면 문장: 31개 언어로 시 쓰기",
+      "suggestion": "표기 숫자가 실제 option 수 31와 맞는지 확인.",
+      "commonKey": "language-count-manual-check"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 330,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"All rights reserved\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:All rights reserved"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/gallery.html",
+      "line": 139,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"All rights reserved\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:All rights reserved"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/index.html",
+      "line": 1,
+      "code": "C4",
+      "severity": "medium",
+      "message": "CreativeWork text와 화면 pre 내용이 일치하지 않음.",
+      "suggestion": "CreativeWork text를 화면에 보이는 시 전문과 동기화.",
+      "commonKey": "creative-work-poem-mismatch"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/index.html",
+      "line": 175,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href faq.html의 링크 텍스트 3종류: FAQ / 자주 묻는 질문 / FAQ 전체 보기 →",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:faq.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/index.html",
+      "line": 225,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"Poem form\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:Poem form"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/index.html",
+      "line": 241,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 속성 aria-label=\"Stop\" 발견.",
+      "suggestion": "페이지 언어에 맞는 aria-label로 번역.",
+      "commonKey": "known-untranslated:aria-stop"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/index.html",
+      "line": 242,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"Speed\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:Speed"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/index.html",
+      "line": 248,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"AI voice\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:AI voice"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/index.html",
+      "line": 358,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"All rights reserved\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:All rights reserved"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/privacy.html",
+      "line": 10,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href index.html의 링크 텍스트 7종류: AI & Poem / AI 시 생성하러 가기 → / 홈으로 돌아가기 / 홈",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:index.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/privacy.html",
+      "line": 103,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"Speed\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:Speed"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/privacy.html",
+      "line": 208,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"All rights reserved\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:All rights reserved"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/terms.html",
+      "line": 167,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"All rights reserved\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:All rights reserved"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/use-cases.html",
+      "line": 88,
+      "code": "C2",
+      "severity": "medium",
+      "message": "같은 언어 href index.html의 링크 텍스트 7종류: AI & Poem / AI 시 생성하러 가기 → / 홈으로 돌아가기 / 홈",
+      "suggestion": "같은 대상 링크의 번역 텍스트를 하나로 통일.",
+      "commonKey": "inconsistent-link-text:x-default:index.html"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/use-cases.html",
+      "line": 109,
+      "code": "C5",
+      "severity": "medium",
+      "message": "수동 확인, 지원 언어 수 31개. 화면 문장: 한국어, 영어, 일본어, 중국어, 프랑스어 등 31개 언어를 지원하니 전 세계 어디서든 모국어로 시를 즐기게 됩니다.",
+      "suggestion": "표기 숫자가 실제 option 수 31와 맞는지 확인.",
+      "commonKey": "language-count-manual-check"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/use-cases.html",
+      "line": 177,
+      "code": "D3",
+      "severity": "medium",
+      "message": "알려진 미번역 문자열 \"All rights reserved\" 발견.",
+      "suggestion": "페이지 언어에 맞는 문구로 번역.",
+      "commonKey": "known-untranslated:All rights reserved"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/404.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 1개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/404.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/404.html",
+      "line": 33,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/404.html",
+      "line": 38,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/404.html",
+      "line": 42,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/about.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 1개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/about.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/about.html",
+      "line": 8,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/about.html",
+      "line": 71,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/about.html",
+      "line": 90,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/about.html",
+      "line": 92,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/author.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 2개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/author.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/author.html",
+      "line": 8,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/author.html",
+      "line": 84,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/author.html",
+      "line": 105,
+      "code": "E5",
+      "severity": "low",
+      "message": "빈 p 요소 발견.",
+      "suggestion": "빈 p 제거 또는 필요한 내용 추가.",
+      "commonKey": "empty-paragraph"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/author.html",
+      "line": 110,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/author.html",
+      "line": 120,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/author.html",
+      "line": 123,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-1.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 6개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-1.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-1.html",
+      "line": 1,
+      "code": "F3",
+      "severity": "low",
+      "message": "페이지 h1 2개.",
+      "suggestion": "문서 주제를 나타내는 h1 하나만 유지.",
+      "commonKey": "multiple-h1"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-1.html",
+      "line": 10,
+      "code": "E3",
+      "severity": "low",
+      "message": "de-CH 페이지에 ß 포함.",
+      "suggestion": "스위스 독일어 표기에 맞게 ss 사용.",
+      "commonKey": "de-ch-eszett"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-1.html",
+      "line": 104,
+      "code": "E1",
+      "severity": "low",
+      "message": "화면 텍스트에 마크다운 잔여 기호: Im Kern der Fähigkeit von KI, Gedichte zu schreiben, steht das **große Sprachmodell (Large Language Model, LLM)**. Modelle wie GPT haben Milliarden von Sätzen und Textdaten gelernt. In diesem Prozess lernt die KI nicht nur, Wörter zu memorieren, sondern auch die probabilistischen Beziehungen zwischen Wörtern, den Kontext und die Nuancen.",
+      "suggestion": "마크다운 기호를 HTML 서식 또는 일반 텍스트로 교체.",
+      "commonKey": "markdown-residue"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-2.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 6개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-2.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-2.html",
+      "line": 1,
+      "code": "F3",
+      "severity": "low",
+      "message": "페이지 h1 2개.",
+      "suggestion": "문서 주제를 나타내는 h1 하나만 유지.",
+      "commonKey": "multiple-h1"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-2.html",
+      "line": 94,
+      "code": "E3",
+      "severity": "low",
+      "message": "de-CH 페이지에 ß 포함.",
+      "suggestion": "스위스 독일어 표기에 맞게 ss 사용.",
+      "commonKey": "de-ch-eszett"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-3.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 6개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-3.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-3.html",
+      "line": 1,
+      "code": "F3",
+      "severity": "low",
+      "message": "페이지 h1 2개.",
+      "suggestion": "문서 주제를 나타내는 h1 하나만 유지.",
+      "commonKey": "multiple-h1"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-3.html",
+      "line": 10,
+      "code": "E3",
+      "severity": "low",
+      "message": "de-CH 페이지에 ß 포함.",
+      "suggestion": "스위스 독일어 표기에 맞게 ss 사용.",
+      "commonKey": "de-ch-eszett"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-4.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 6개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-4.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-4.html",
+      "line": 1,
+      "code": "F3",
+      "severity": "low",
+      "message": "페이지 h1 2개.",
+      "suggestion": "문서 주제를 나타내는 h1 하나만 유지.",
+      "commonKey": "multiple-h1"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-4.html",
+      "line": 110,
+      "code": "E3",
+      "severity": "low",
+      "message": "de-CH 페이지에 ß 포함.",
+      "suggestion": "스위스 독일어 표기에 맞게 ss 사용.",
+      "commonKey": "de-ch-eszett"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-5.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 6개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-5.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/article-5.html",
+      "line": 1,
+      "code": "F3",
+      "severity": "low",
+      "message": "페이지 h1 2개.",
+      "suggestion": "문서 주제를 나타내는 h1 하나만 유지.",
+      "commonKey": "multiple-h1"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/index.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 6개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/index.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/blog/ch/index.html",
+      "line": 100,
+      "code": "E3",
+      "severity": "low",
+      "message": "de-CH 페이지에 ß 포함.",
+      "suggestion": "스위스 독일어 표기에 맞게 ss 사용.",
+      "commonKey": "de-ch-eszett"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/about.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 2개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/about.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/about.html",
+      "line": 7,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/about.html",
+      "line": 65,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/about.html",
+      "line": 66,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/about.html",
+      "line": 80,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/about.html",
+      "line": 81,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/about.html",
+      "line": 82,
+      "code": "E3",
+      "severity": "low",
+      "message": "de-CH 페이지에 ß 포함.",
+      "suggestion": "스위스 독일어 표기에 맞게 ss 사용.",
+      "commonKey": "de-ch-eszett"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/about.html",
+      "line": 101,
+      "code": "E2",
+      "severity": "low",
+      "message": "라틴 문자 문장부호 뒤 공백 누락: n.Er",
+      "suggestion": "문장부호 뒤에 공백 추가.",
+      "commonKey": "punctuation-space:n.Er"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/author.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 2개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/author.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/contact.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 2개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/contact.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/contact.html",
+      "line": 7,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/contact.html",
+      "line": 85,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/contact.html",
+      "line": 112,
+      "code": "E5",
+      "severity": "low",
+      "message": "빈 p 요소 발견.",
+      "suggestion": "빈 p 제거 또는 필요한 내용 추가.",
+      "commonKey": "empty-paragraph"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/contact.html",
+      "line": 112,
+      "code": "E5",
+      "severity": "low",
+      "message": "빈 p 요소 발견.",
+      "suggestion": "빈 p 제거 또는 필요한 내용 추가.",
+      "commonKey": "empty-paragraph"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/faq.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 2개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/faq.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/gallery.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 2개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/gallery.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 50개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 243,
+      "code": "E5",
+      "severity": "low",
+      "message": "빈 p 요소 발견.",
+      "suggestion": "빈 p 제거 또는 필요한 내용 추가.",
+      "commonKey": "empty-paragraph"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 249,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 278,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 320,
+      "code": "E3",
+      "severity": "low",
+      "message": "de-CH 페이지에 ß 포함.",
+      "suggestion": "스위스 독일어 표기에 맞게 ss 사용.",
+      "commonKey": "de-ch-eszett"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/privacy.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 3개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/privacy.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/privacy.html",
+      "line": 118,
+      "code": "E3",
+      "severity": "low",
+      "message": "de-CH 페이지에 ß 포함.",
+      "suggestion": "스위스 독일어 표기에 맞게 ss 사용.",
+      "commonKey": "de-ch-eszett"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/terms.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 3개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/terms.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/terms.html",
+      "line": 89,
+      "code": "E3",
+      "severity": "low",
+      "message": "de-CH 페이지에 ß 포함.",
+      "suggestion": "스위스 독일어 표기에 맞게 ss 사용.",
+      "commonKey": "de-ch-eszett"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/use-cases.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 2개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/use-cases.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/contact.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 1개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/contact.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/contact.html",
+      "line": 8,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/contact.html",
+      "line": 90,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 5개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 7,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 199,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 217,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 224,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 295,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/gallery.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 1개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/gallery.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/gallery.html",
+      "line": 84,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/index.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 25개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/index.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/index.html",
+      "line": 249,
+      "code": "E5",
+      "severity": "low",
+      "message": "빈 p 요소 발견.",
+      "suggestion": "빈 p 제거 또는 필요한 내용 추가.",
+      "commonKey": "empty-paragraph"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/privacy.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 1개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/privacy.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/privacy.html",
+      "line": 76,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/terms.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 3개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/terms.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/terms.html",
+      "line": 80,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/use-cases.html",
+      "line": 1,
+      "code": "F1",
+      "severity": "low",
+      "message": "한글 HTML 주석 1개.",
+      "suggestion": "배포 HTML에서 필요 없는 편집 주석 제거.",
+      "commonKey": "korean-html-comments"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/use-cases.html",
+      "line": 1,
+      "code": "F2",
+      "severity": "low",
+      "message": "function gtag 선언 2개.",
+      "suggestion": "gtag 초기화 선언을 하나로 합치기.",
+      "commonKey": "duplicate-gtag"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/use-cases.html",
+      "line": 7,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/use-cases.html",
+      "line": 88,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/use-cases.html",
+      "line": 109,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/use-cases.html",
+      "line": 115,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/use-cases.html",
+      "line": 116,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/use-cases.html",
+      "line": 122,
+      "code": "E4",
+      "severity": "low",
+      "message": "HTML 본문 또는 속성에 이스케이프되지 않은 & 포함.",
+      "suggestion": "&를 &amp;로 이스케이프.",
+      "commonKey": "unescaped-ampersand"
+    }
+  ],
+  "languageCountMentions": [
+    {
+      "language": "x-default",
+      "file": "frontend/about.html",
+      "line": 115,
+      "code": "C5",
+      "severity": "medium",
+      "message": "수동 확인, 지원 언어 수 31개. 화면 문장: 한국어, 영어, 일본어, 중국어, 프랑스어 등 31개 언어를 지원하여 글로벌 사용자들이 모국어로 시를 즐깁니다.",
+      "suggestion": "표기 숫자가 실제 option 수 31와 맞는지 확인.",
+      "commonKey": "language-count-manual-check"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/author.html",
+      "line": 120,
+      "code": "C5",
+      "severity": "medium",
+      "message": "수동 확인, 지원 언어 수 31개. 화면 문장: AI & Poem은 31개 언어를 지원하는 다국어 시 생성 서비스입니다.",
+      "suggestion": "표기 숫자가 실제 option 수 31와 맞는지 확인.",
+      "commonKey": "language-count-manual-check"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/about.html",
+      "line": 97,
+      "code": "C5",
+      "severity": "medium",
+      "message": "수동 확인, 지원 언어 수 31개. 화면 문장: Wir unterstützen 31 Sprachen, darunter Koreanisch, Englisch, Japanisch, Chinesisch und Französisch, sodass Benutzer weltweit Gedichte in ihrer Muttersprache genießen können.",
+      "suggestion": "표기 숫자가 실제 option 수 31와 맞는지 확인.",
+      "commonKey": "language-count-manual-check"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/faq.html",
+      "line": 95,
+      "code": "C5",
+      "severity": "medium",
+      "message": "수동 확인, 지원 언어 수 31개. 화면 문장: Wir unterstützen 31 Sprachen, darunter Schweizerdeutsch, Deutsch, Englisch, Koreanisch, Japanisch, Chinesisch, Spanisch und Französisch.",
+      "suggestion": "표기 숫자가 실제 option 수 31와 맞는지 확인.",
+      "commonKey": "language-count-manual-check"
+    },
+    {
+      "language": "ch",
+      "file": "frontend/ch/index.html",
+      "line": 253,
+      "code": "C5",
+      "severity": "medium",
+      "message": "수동 확인, 지원 언어 수 31개. 화면 문장: Mit Unterstützung von 31 Sprachen, darunter Koreanisch, Englisch und Französisch, können Sie Texte für verschiedene Zwecke wie Hochzeitsreden, Liebesbriefe und emotionale SNS-Bildunterschriften in nur 10 Sekunden fertigstellen.",
+      "suggestion": "표기 숫자가 실제 option 수 31와 맞는지 확인.",
+      "commonKey": "language-count-manual-check"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 245,
+      "code": "C5",
+      "severity": "medium",
+      "message": "수동 확인, 지원 언어 수 31개. 화면 문장: 한국어, 영어, 일본어, 중국어, 스페인어, 프랑스어를 포함해 31개 언어를 지원합니다.",
+      "suggestion": "표기 숫자가 실제 option 수 31와 맞는지 확인.",
+      "commonKey": "language-count-manual-check"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/faq.html",
+      "line": 245,
+      "code": "C5",
+      "severity": "medium",
+      "message": "수동 확인, 지원 언어 수 31개. 화면 문장: 31개 언어로 시 쓰기",
+      "suggestion": "표기 숫자가 실제 option 수 31와 맞는지 확인.",
+      "commonKey": "language-count-manual-check"
+    },
+    {
+      "language": "x-default",
+      "file": "frontend/use-cases.html",
+      "line": 109,
+      "code": "C5",
+      "severity": "medium",
+      "message": "수동 확인, 지원 언어 수 31개. 화면 문장: 한국어, 영어, 일본어, 중국어, 프랑스어 등 31개 언어를 지원하니 전 세계 어디서든 모국어로 시를 즐기게 됩니다.",
+      "suggestion": "표기 숫자가 실제 option 수 31와 맞는지 확인.",
+      "commonKey": "language-count-manual-check"
+    }
+  ],
+  "commonIssues": []
+}
