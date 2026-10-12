@@ -14,3 +14,13 @@
 | ch 정적 영어 라벨 덮어쓰기 | 정적 HTML에는 `Poem form`, `Speed`, `AI voice`, stop `aria-label="Stop"`가 있다 (`frontend/ch/index.html:218`, `frontend/ch/index.html:235-242`). defer된 `script.js`는 문서 lang `de-CH`를 `ch`로 바꾼 뒤 (`frontend/script.js:704-708`), form label을 `Gedichtform`으로, TTS label을 `Stopp`, `Tempo`, `KI-Stimm`으로 덮어쓴다 (`frontend/script.js:1195-1208`, `frontend/script.js:854-870`). | JavaScript가 실행되면 문제 없음. JavaScript 실패·비활성 시 영어가 남음. | 정적 ch HTML도 Swiss German 라벨로 교체. JavaScript는 보조 갱신만 유지. |
 | 쿠키 동의 방식과 재설정 | 자체 DOM 배너·모달. 상태는 `localStorage.aiAndPoemCookieConsent`에 JSON으로 저장한다 (`frontend/script.js:1324-1347`, `frontend/script.js:1469-1565`). Google Consent Mode v2 `gtag('consent', 'update', ...)`를 호출한다 (`frontend/script.js:1336-1346`). `__tcfapi`, TCF 문자열, 외부 CMP SDK 호출은 `frontend/`에서 찾지 못했다. footer에 "쿠키 설정" 버튼을 동적으로 추가해 동의 변경·철회를 연다 (`frontend/script.js:1576-1597`). 초기 HTML도 저장값을 읽어 gtag 기본 동의를 정한다 (`frontend/ch/index.html:124-137`). | Google 인증 CMP·IAB TCF 구현 아님. EEA 개인화 광고에 TCF가 필요한지는 Google 광고 설정·법률 검토 필요. | TCF가 요구되는 배포라면 인증 CMP를 도입하고, 자체 localStorage 상태와 CMP 동의 신호의 단일 기준을 정함. |
 | 주제·시 저장과 로그 | 프런트는 주제·시를 요청·DOM·TTS controller 메모리에만 둔다 (`frontend/script.js:1245-1278`, `frontend/script.js:1283-1288`, `frontend/script.js:876-890`). localStorage에는 동의와 TTS 속도만 저장한다 (`frontend/script.js:711`, `frontend/script.js:765-771`, `frontend/script.js:1328-1347`). analytics 동의 뒤 TTS 이벤트는 언어·재생원·속도만 gtag로 보낸다 (`frontend/script.js:774-781`, `frontend/script.js:1007`, `frontend/script.js:1017`, `frontend/script.js:1055`). Lambda는 주제를 OpenAI 생성 프롬프트로 전송하고 (`backend/index.js:839-882`, `backend/index.js:891-902`) 시를 응답으로만 돌려준다 (`backend/index.js:806-813`, `backend/index.js:913-915`). DynamoDB에는 TTS 일회용 nonce `jti`, `expiresAt`만 저장하며 주제·시 원문은 저장하지 않는다 (`backend/index.js:741-759`). ch는 서버 TTS 비대상이라 이 nonce도 만들지 않는다. | 영구 저장 코드는 없음. 단, 주제·시는 OpenAI API로 전송됨. OpenAI 실패 시 provider `errorPayload`를 서버 로그에 남긴다 (`backend/index.js:924-928`); 원문 반사 여부는 provider 응답에 좌우됨. | 개인정보 고지에 OpenAI 전송을 명시. 오류 로그에서 provider 응답을 allowlist·마스킹해 입력 반사 위험을 줄임. |
+
+## 브라우저 확인 결과 (2026-10-11, macOS Chrome, iPhone SE 375×667 에뮬레이션)
+
+| 항목 | 확인 결과 | 보고서 대조 |
+| --- | --- | --- |
+| 요청 언어 값 | `/generate-poem` 페이로드 `{topic: "퐁듀", language: "ch", form: "auto"}` | 1번과 일치 |
+| 독일어 음성 목록 | de-DE 10개(Anna, Eddy, Flo, Grandma, Grandpa, Reed, Rocko, Sandy, Shelley, Google Deutsch). de-CH 없음 | — |
+| 낭독 언어·음성 | utterance.lang `de-CH`, voice `Anna`(de-DE, 목록의 첫 de-* 음성). 시를 줄 단위로 합성 | 3번과 일치 |
+| 생성 결과의 마크다운 | 제목이 `**Fondue-Lieb**`로 화면에 표시되고 낭독 텍스트에도 그대로 전달됨. script.js에 마크다운 처리 코드가 없어 API 응답에 포함된 것으로 판단 | 보고서에 없던 문제. 전 언어 공통, 후속 작업 |
+| 행 번호 대조 | `frontend/script.js:33`, `896-902`, `1245-1247`, `1266-1278`, `1576-1580` / `backend/index.js:70`, `924-928` | 모두 일치 |
