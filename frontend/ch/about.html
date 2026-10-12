@@ -62,14 +62,15 @@
 <body>
     <div class="header">
         <div class="header-left">
-            <h1><a href="index.html" class="logo-link">KI & Gedicht</a></h1>
-            <h3>Über KI & Gedicht</h3>
+            <div class="logo"><a href="index.html" class="logo-link">AI &amp; Poem</a></div>
+            <p class="tagline">Über KI &amp; Gedicht</p>
         </div>
         <div class="header-right">
             <button class="hamburger" aria-label="Menü" id="hamburger-btn">&#9776;</button>
             <div class="nav-links" id="nav-links">
-                <a href="index.html" class="header-link">Heim</a>
+                <a href="index.html" class="header-link">Startseite</a>
                 <a href="../blog/ch/index.html" class="header-link">Blog</a>
+                <a href="faq.html" class="header-link">FAQ</a>
                 <a href="contact.html" class="header-link">Kontakt</a>
             </div>
         </div>
@@ -77,7 +78,7 @@
 
     <div class="container">
         <div class="content-section">
-            <h2>Über KI & Gedicht</h2>
+            <h1>Über KI &amp; Gedicht</h1>
             <p>AI & Poem ist ein Webdienst, der die neueste Technologie der künstlichen Intelligenz nutzt, um es jedem zu ermöglichen, einfach und schnell Gedichte zu erstellen und sie mit einer schönen Stimme anzuhören.</p>
             <p>Über die bloße Textgenerierung hinaus haben wir hochwertige Sprachsynthesetechnologie (TTS) kombiniert, um die Emotionen der Poesie durch Klang zu vermitteln.</p>
 
@@ -103,16 +104,20 @@
         </div>
     </div>
 
-    <footer class="site-footer">
-        <a href="about.html">Um</a>
-        <span>|</span>
-        <a href="../blog/ch/index.html">Blog</a>
-        <span>|</span>
-        <a href="contact.html">Kontakt</a>
-        <span>|</span>
-        <a href="privacy.html">Datenschutzrichtlinie</a>
-        <span>|</span>
-        <a href="terms.html">Nutzungsbedingungen</a>
+    <footer class="site-footer site-footer--v2">
+        <nav class="footer-primary" aria-label="Website-Inhalte">
+            <a href="../blog/ch/index.html">Blog</a><span>|</span>
+            <a href="faq.html">FAQ</a><span>|</span>
+            <a href="use-cases.html">Anwendungsfälle</a>
+        </nav>
+        <nav class="footer-secondary" aria-label="Rechtliches">
+            <a href="about.html">Über uns</a><span>|</span>
+            <a href="privacy.html">Datenschutzerklärung</a><span>|</span>
+            <a href="terms.html">Nutzungsbedingungen</a><span>|</span>
+            <a href="contact.html">Kontakt</a><span>|</span>
+            <a href="author.html">Autor</a>
+        </nav>
+        <p class="footer-copyright">© 2026 AI &amp; Poem. Alle Rechte vorbehalten.</p>
     </footer>
     <script src="../script.js" defer></script>
 </body>
